@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+	<metadata>
+		<id>sqlite-studio.portable</id>
+		<version>3.1.1</version>
+		<title>SQLite Studio (Portable)</title>
+		<authors>SalSoft Pawel Salawa</authors>
+		<owners>echizenryoma</owners>
+		<licenseUrl>https://www.gnu.org/copyleft/gpl.html</licenseUrl>
+		<projectUrl>https://sqlitestudio.pl/</projectUrl>
+		<iconUrl>https://sqlitestudio.pl/img/logo.png</iconUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>SQLiteStudio is a SQLite database manager with the following features:
+* Portable - no need to install or uninstall. Just download, unpack and run.
+* Intuitive interface,
+* Powerful, yet light and fast,
+* All SQLite3 and SQLite2 features wrapped within simple GUI,
+* Cross-platform - runs on Windows 9x/2k/XP/2003/Vista/7, Linux, MacOS X and should work * on other Unixes (not tested yet).
+* Exporting to various formats (SQL statements, CSV, HTML, XML, PDF, JSON),
+* Importing data from various formats (CSV, custom text files [regular expressions]),
+* Numerous small additions, like formatting code, history of queries executed in editor * windows, on-the-fly syntax checking, and more,
+* Unicode support,
+* Skinnable (interface can look native for Windows 9x/XP, KDE, GTK, Mac OS X, or draw widgets to fit for other environments, WindowMaker, etc),
+* Configurable colors, fonts and shortcuts.
+* Open source and free - Released under GPLv3 license.
+		</description>
+		<summary>SQLiteStudio is a SQLite database manager.</summary>
+		<releaseNotes>https://sqlitestudio.pl/index.rvt?act=changelog</releaseNotes>
+		<tags>sqlitestudio sqlite studio manager database</tags>
+		<packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/sqlite-studio</packageSourceUrl>
+		<mailingListUrl>https://sqlitestudio.pl/index.rvt?act=contact</mailingListUrl>
+		<bugTrackerUrl>https://sqlitestudio.pl/index.rvt?act=bug</bugTrackerUrl>
+	</metadata>
+	<files>
+    	<file src="tools\**" target="tools" />
+  	</files>
+</package>

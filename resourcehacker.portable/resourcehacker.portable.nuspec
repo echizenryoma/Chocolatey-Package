@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+	<metadata>
+		<id>resourcehacker.portable</id>
+		<version>4.5.30</version>
+		<title>Resource Hacker (Portable)</title>
+		<authors>Angus Johnson</authors>
+		<owners>echizenryoma</owners>
+		<projectUrl>http://www.angusj.com/resourcehacker</projectUrl>
+		<iconUrl>https://cdn.rawgit.com/echizenryoma/Chocolatey-Package/new/resourcehacker.portable/resourcehacker.png</iconUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>Resource Hacker™ has been designed to be the complete resource editing tool: compiling, viewing, decompiling and recompiling resources for both 32bit and 64bit Windows executables. Resource Hacker™ can open any type of Windows executable (*.exe; *.dll; *.scr; *.mui etc) so that individual resources can be added modified or deleted within these files. Resource Hacker™ can create and compile resource script files (*.rc), and edit resource files (*.res) too.</description>
+		<summary>Resource Hacker is a helpful, free program only available for Windows, that belongs to the category Development software and has been created by Angusj.</summary>
+		<releaseNotes>http://www.angusj.com/resourcehacker/#download</releaseNotes>
+		<tags>resourcehacker resource hacker exe</tags>
+		<packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/resourcehacker</packageSourceUrl>
+	</metadata>
+	<files>
+    	<file src="tools\**" target="tools" />
+  	</files>
+</package>

@@ -1,0 +1,14 @@
+.vscode/*
+
+*.7z
+*.msi
+*.nupkg
+*.tmp
+*.zip
+*.exe
+!keygen.exe
+!patch.exe
+
+update_vars*.ps1
+
+*.md

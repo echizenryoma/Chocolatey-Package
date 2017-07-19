@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+	<metadata>
+		<id>battoexeconverter</id>
+		<version>2.4.8.0</version>
+		<title>Bat To Exe Converter</title>
+		<authors>Fatih Kodak</authors>
+		<owners>echizenryoma</owners>
+		<iconUrl>https://cdn.rawgit.com/echizenryoma/Chocolatey-Package/new/battoexeconverter/battoexeconverter.png</iconUrl>
+		<projectUrl>http://www.f2ko.de/en/b2e.php</projectUrl>
+		<mailingListUrl>http://www.f2ko.de/en/imprint.php</mailingListUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>**Features**:
+* Extended commands
+* Visible and invisible applications
+* Executables with administrator priviliges
+* Inclusion of additional files, folders, icon and version information
+* Creation of 32-Bit and 64-Bit EXE files
+* Commandline interface
+* Portable
+* Encryption
+* Multilanguage support
+* Free for commercial and non-commercial use
+		</description>
+		<summary>Bat To Exe Converter can convert BAT (.bat) script files to the EXE (.exe) format.</summary>
+		<tags>battoexeconverter bat exe converter</tags>
+		<packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/battoexeconverter</packageSourceUrl>
+	</metadata>
+	<files>
+    	<file src="tools\**" target="tools" />
+  	</files>
+</package>
