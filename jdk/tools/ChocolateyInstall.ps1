@@ -17,7 +17,8 @@ $PackageArgs = @{
     Url64          = $Url64
     Checksum64     = $Checksum64
     ChecksumType64 = $ChecksumType64
-    SilentArgs     = '/s ADDLOCAL="ToolsFeature,SourceFeature"'
+    FileType       = 'exe'
+    SilentArgs     = '/s'
     Options        = @{
         Headers = @{
             Cookie = 'oraclelicense=accept-securebackup-cookie'
@@ -27,9 +28,9 @@ $PackageArgs = @{
 Install-ChocolateyPackage @PackageArgs
 
 if ($env:chocolateyForceX86 -ne $True) {
-    $JAVA_HOME = Join-Path $env:ProgramFiles "Java" "jdk$JavaVersion"
+    $JAVA_HOME = Join-Path $env:ProgramFiles "Java\jdk$JavaVersion"
 }
 else {
-    $JAVA_HOME = Join-Path  ${env:ProgramFiles(x86)} "Java" "jdk$JavaVersion"
+    $JAVA_HOME = Join-Path ${env:ProgramFiles(x86)} "Java\jdk$JavaVersion"
 }
 Install-ChocolateyEnvironmentVariable -VariableName 'JAVA_HOME' -VariableValue $JAVA_HOME -VariableType 'Machine'
