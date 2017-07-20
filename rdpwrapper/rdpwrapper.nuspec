@@ -7,7 +7,7 @@
 		<version>1.6.1</version>
 		<authors>Stas'M</authors>
 		<owners>echizenryoma</owners>
-		<iconUrl>https://cdn.rawgit.com/echizenryoma/Chocolatey-Package/new/rdpwrapper/rdpwrapper.png</iconUrl>
+		<iconUrl>https://cdn.rawgit.com/echizenryoma/Chocolatey-Package/master/rdpwrapper/rdpwrapper.png</iconUrl>
 		<summary>RDP Wrapper Library</summary>
 		<description>The goal of this project is to enable Remote Desktop Host support and concurrent RDP sessions on reduced functionality systems for home usage.
 		RDP Wrapper works as a layer between Service Control Manager and Terminal Services, so the original termsrv.dll file remains untouched. Also this method is very strong against Windows Update.

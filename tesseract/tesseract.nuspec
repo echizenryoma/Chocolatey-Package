@@ -8,7 +8,7 @@
     <title>Tesseract OCR</title>
     <authors>Google</authors>
     <projectUrl>https://github.com/tesseract-ocr/tesseract</projectUrl>
-	<iconUrl>https://cdn.rawgit.com/echizenryoma/Chocolatey-Package/new/tesseract/tesseract.png</iconUrl>
+	<iconUrl>https://cdn.rawgit.com/echizenryoma/Chocolatey-Package/master/tesseract/tesseract.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>tesseract ocr</tags>
     <summary>Tesseract Open Source OCR Engine</summary>

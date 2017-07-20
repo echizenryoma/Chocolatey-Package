@@ -12,7 +12,7 @@
 		<title>Go programming language</title>
 		<authors>Robert Griesemer, Rob Pike, Ken Thompson</authors>
 		<projectUrl>https://golang.org</projectUrl>
-		<iconUrl>https://cdn.rawgit.com/echizenryoma/Chocolatey-Package/new/golang/golang.svg</iconUrl>
+		<iconUrl>https://cdn.rawgit.com/echizenryoma/Chocolatey-Package/master/golang/golang.svg</iconUrl>
 		<licenseUrl>https://golang.org/LICENSE</licenseUrl>
 		<requireLicenseAcceptance>true</requireLicenseAcceptance>
 		<projectSourceUrl>https://golang.org/change</projectSourceUrl>

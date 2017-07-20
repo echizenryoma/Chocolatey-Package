@@ -6,7 +6,7 @@
 		<title>UltraISO</title>
 		<authors>EZB Systems, Inc.</authors>
 		<owners>echizenryoma</owners>
-		<iconUrl>https://cdn.rawgit.com/echizenryoma/Chocolatey-Package/new/ultraiso/ultraiso.png</iconUrl>
+		<iconUrl>https://cdn.rawgit.com/echizenryoma/Chocolatey-Package/master/ultraiso/ultraiso.png</iconUrl>
 		<description>
  随着大容量硬盘的普及，人们已经习惯将光盘拷贝成光盘映像文件使用,普遍采用的便是大名鼎鼎的ISO 9660国际标准格式，因此光盘映像文件也简称ISO文件。因为ISO文件保留了光盘中的全部数据信息（包括光盘启动信息），你可以方便地采用常用光盘刻录软件（如Nero Burning-ROM）通过CD-R/RW烧录成光碟，也可以通过虚拟光驱软件(如Daemon-Tools)直接使用。
 

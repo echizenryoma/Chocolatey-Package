@@ -8,7 +8,7 @@
 		<owners>echizenryoma</owners>
 		<licenseUrl>http://ipmsg.org/tools/fastcopy.html.en#license</licenseUrl>
 		<projectUrl>http://ipmsg.org/tools/fastcopy.html.en</projectUrl>
-		<iconUrl>https://cdn.rawgit.com/echizenryoma/Chocolatey-Package/new/fastcopy.portable/fastcopy.png</iconUrl>
+		<iconUrl>https://cdn.rawgit.com/echizenryoma/Chocolatey-Package/master/fastcopy.portable/fastcopy.png</iconUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>FastCopy is the Fastest Copy/Delete Software on Windows. 
 
