@@ -14,7 +14,7 @@ $Options = [ordered]@{
 	
     Report        = @{
         Type   = 'markdown'
-        Path   = "$PSScriptRoot\Update-AUPackages.md"
+        Path   = $Env:report_path
         Params = @{
             Github_UserRepo = $Env:github_user_repo
             UserMessage     = "[History](#update-history)"
@@ -25,13 +25,13 @@ $Options = [ordered]@{
     History       = @{
         Lines           = 30
         Github_UserRepo = $Env:github_user_repo
-        Path            = "$PSScriptRoot\Update-History.md"
+        Path            = $Env:history_path
     }
 	
     Gist          = @{
         Id     = $Env:gist_id
         ApiKey = $Env:github_api_key
-        Path   = "$PSScriptRoot\Update-AUPackages.md", "$PSScriptRoot\Update-History.md"
+        Path   = $Env:report_path, $Env:history_path
     }
 	
     Git           = @{
