@@ -7,8 +7,8 @@
 		<authors>EZB Systems, Inc.</authors>
 		<owners>echizenryoma</owners>
 		<iconUrl>https://cdn.rawgit.com/echizenryoma/Chocolatey-Package/master/ultraiso/ultraiso.png</iconUrl>
-		<description>
- 随着大容量硬盘的普及，人们已经习惯将光盘拷贝成光盘映像文件使用,普遍采用的便是大名鼎鼎的ISO 9660国际标准格式，因此光盘映像文件也简称ISO文件。因为ISO文件保留了光盘中的全部数据信息（包括光盘启动信息），你可以方便地采用常用光盘刻录软件（如Nero Burning-ROM）通过CD-R/RW烧录成光碟，也可以通过虚拟光驱软件(如Daemon-Tools)直接使用。
+		<description><![CDATA[
+随着大容量硬盘的普及，人们已经习惯将光盘拷贝成光盘映像文件使用,普遍采用的便是大名鼎鼎的ISO 9660国际标准格式，因此光盘映像文件也简称ISO文件。因为ISO文件保留了光盘中的全部数据信息（包括光盘启动信息），你可以方便地采用常用光盘刻录软件（如Nero Burning-ROM）通过CD-R/RW烧录成光碟，也可以通过虚拟光驱软件(如Daemon-Tools)直接使用。
 
 UltraISO软碟通是一款功能强大而又方便实用的光盘映像文件制作/编辑/转换工具，它可以直接编辑ISO文件和从ISO中提取文件和目录，也可以从CD-ROM制作光盘映像或者将硬盘上的文件制作成ISO文件。同时，你也可以处理ISO文件的启动信息，从而制作可引导光盘。使用UltraISO，你可以随心所欲地制作/编辑/转换光盘映像文件，配合光盘刻录软件烧录出自己所需要的光碟。
 
@@ -29,7 +29,9 @@ UltraISO 采用双窗口统一用户界面，只需使用快捷按钮和鼠标�
 * 自动优化ISO文件存储结构，节省空间。
 * 支持shell文件类型关联，可在Windows资源管理器中通过双击或鼠标右键菜单打开ISO文件。
 * 双窗口操作，使用十分方便。
-* 配合选购插件，可实现N合1启动光盘制作、光盘映像文件管理，甚至软光驱，功能更强大。</description>
+* 配合选购插件，可实现N合1启动光盘制作、光盘映像文件管理，甚至软光驱，功能更强大。
+]]>
+		</description>
 		<summary>UltraISO软碟通是一款功能强大而又方便实用的光盘映像文件制作/编辑/转换工具</summary>
 		<releaseNotes>http://cn.ezbsystems.com/ultraiso/history.htm</releaseNotes>
 		<tags>ultraiso iso edit bootable-usb</tags>
