@@ -31,7 +31,7 @@ $Options = [ordered]@{
     Gist          = @{
         Id     = $Env:gist_id
         ApiKey = $Env:github_api_key
-        Path   = $Env:report_path, $Env:history_path
+        Path   = @($Env:report_path, $Env:history_path)
     }
 	
     Git           = @{
@@ -40,7 +40,7 @@ $Options = [ordered]@{
     }
 
     BeforeEach    = {
-        param($PackageName, $Options )
+        param($PackageName, $Options)
         $p = $Options.ForcedPackages | Where-Object { $_ -match "^${PackageName}(?:\:(.+))*$" }
         if (!$p) {
             return
