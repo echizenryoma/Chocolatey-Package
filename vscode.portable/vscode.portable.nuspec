@@ -23,7 +23,7 @@
 The package uses default install options except that it adds context menu entries and Visual Studio Code isn't started after installation.</description>
 		<summary>Visual Studio Code</summary>
 		<releaseNotes>https://code.visualstudio.com/Updates</releaseNotes>
-		<tags>microsoft visualstudiocode vscode editor ide javascript typescript admin foss cross-platform</tags>
+		<tags>microsoft visualstudiocode vscode editor ide javascript typescript foss cross-platform</tags>
 		<projectSourceUrl>https://github.com/Microsoft/vscode</projectSourceUrl>
 		<packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/vscode.portable</packageSourceUrl>
 		<docsUrl>https://code.visualstudio.com/docs</docsUrl>
