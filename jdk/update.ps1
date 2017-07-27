@@ -31,10 +31,10 @@ function global:au_GetLatest {
 	
     return @{
         Version        = $version
-        URL32          = $json32.filepath -replace "www.oracle.com", "edelivery.oracle.com"
+        URL32          = $json32.filepath -replace "download.oracle.com", "edelivery.oracle.com"
         Checksum32     = $json32.SHA256
         ChecksumType32 = "SHA256"
-        URL64          = $json64.filepath -replace "www.oracle.com", "edelivery.oracle.com"
+        URL64          = $json64.filepath -replace "download.oracle.com", "edelivery.oracle.com"
         Checksum64     = $json64.SHA256
         ChecksumType64 = "SHA256"
         JavaVersion    = $java_version
