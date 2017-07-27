@@ -1,13 +1,13 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'jdk'
-$Url32 = 'http://edelivery.oracle.com/otn-pub/java/jdk/8u141-b15/336fa29ff2bb4ef291e347e091f7f4a7/jdk-8u141-windows-i586.exe'
-$Checksum32 = 'f144354be4bc0df7bba6e97e5c2602b743a87604717d11417de6a1445cfab1e5'
+$Url32 = 'http://download.oracle.com/otn-pub/java/jdk/8u144-b01/090f390dda5b47b9b721c7dfaa008135/jdk-8u144-windows-i586.exe'
+$Checksum32 = 'f2c6657812986aa4b992173da495cdc3620edcdc26927860d7d920958f12575c'
 $ChecksumType32 = 'SHA256'
-$Url64 = 'http://edelivery.oracle.com/otn-pub/java/jdk/8u141-b15/336fa29ff2bb4ef291e347e091f7f4a7/jdk-8u141-windows-x64.exe'
-$Checksum64 = '0e422f42b5085d463bb5096a77084de863c64618905d63e7133bbbb6958a23fd'
+$Url64 = 'http://download.oracle.com/otn-pub/java/jdk/8u144-b01/090f390dda5b47b9b721c7dfaa008135/jdk-8u144-windows-x64.exe'
+$Checksum64 = 'be9f6e920f817757ce1913c9c3f0a5d63046c720f37a95e4a14450a179f48a18'
 $ChecksumType64 = 'SHA256'
-$JavaVersion = '1.8.0_141'
+$JavaVersion = '1.8.0_144'
 
 $PackageArgs = @{
     PackageName    = $PackageName
