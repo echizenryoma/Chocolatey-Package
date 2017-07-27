@@ -12,16 +12,6 @@ $Options = [ordered]@{
     Threads       = 10
     Push          = $Env:au_Push -eq 'true'
 	
-    Report        = @{
-        Type   = 'markdown'
-        Path   = $Env:report_path
-        Params = @{
-            Github_UserRepo = $Env:github_user_repo
-            UserMessage     = "[History](#update-history)"
-            IconSize        = 32
-        }
-    }
-
     History       = @{
         Lines           = 30
         Github_UserRepo = $Env:github_user_repo
@@ -31,7 +21,7 @@ $Options = [ordered]@{
     Gist          = @{
         Id     = $Env:gist_id
         ApiKey = $Env:github_api_key
-        Path   = @($Env:report_path, $Env:history_path)
+        Path   = @($Env:history_path)
     }
 	
     Git           = @{
