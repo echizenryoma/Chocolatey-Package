@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'fastcopy.portable'
-$Url32 = 'https://ipmsg.org/archive/FastCopy330.zip'
-$Url64 = 'https://ipmsg.org/archive/FastCopy330_x64.zip'
+$Url32 = 'https://ipmsg.org/archive/FastCopy331.zip'
+$Url64 = 'https://ipmsg.org/archive/FastCopy331_x64.zip'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 $PackageArgs = @{
