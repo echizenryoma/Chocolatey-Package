@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'sourcetree.portable'
-$Url = 'https://www.sourcetreeapp.com/update/windows/ga/SourceTree-2.1.7-full.nupkg'
-$Checksum = 'b33c7652a287d1d043d08433fe917e40fda01379'
+$Url = 'https://www.sourcetreeapp.com/update/windows/ga/SourceTree-2.1.8-full.nupkg'
+$Checksum = '668936904f6e8163fb133ba9e51b80a351d3cead'
 $ChecksumType = 'sha1'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
