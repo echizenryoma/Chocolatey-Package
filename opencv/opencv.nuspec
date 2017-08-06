@@ -3,7 +3,7 @@
 	<metadata>
 		<id>opencv</id>
 		<title>OpenCV</title>
-		<version>3.2.0</version>
+		<version>3.3.0</version>
 		<authors>Itseez</authors>
 		<owners>Philip Arola</owners>
 		<summary>Open Source Computer Vision</summary>

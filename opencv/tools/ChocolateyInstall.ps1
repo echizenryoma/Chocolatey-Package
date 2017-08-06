@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'opencv'
-$Url64 = 'https://github.com/opencv/opencv/releases/download/3.2.0/opencv-3.2.0-vc14.exe'
+$Url64 = 'https://github.com/opencv/opencv/releases/download/3.3.0/opencv-3.3.0-vc14.exe'
 $InstallationPath = Get-ToolsLocation
 
 $OpenCV_HOME = Join-Path $installationPath 'opencv'
