@@ -9,7 +9,7 @@ function global:au_SearchReplace {
 }
 function global:au_GetLatest {
     $page = Invoke-WebRequest -UseBasicParsing -Uri "http://digi.bib.uni-mannheim.de/tesseract/?C=M;O=D"
-    $Url =  'https://digi.bib.uni-mannheim.de/tesseract/' + ($page.Links | Where-Object {$_.href -NotMatch "dev" -And $_.href -Match "\d+(\.\d+)+-.*\.exe"} | Select-Object -ExpandProperty href -First 1)
+    $url =  'https://digi.bib.uni-mannheim.de/tesseract/' + ($page.Links | Where-Object {$_.href -NotMatch "((dev)|(alpha))" -And $_.href -Match "\d+(\.\d+)+-.*\.exe"} | Select-Object -ExpandProperty href -First 1)
     $version = $url -split "-|\.exe" -match "\d+(\.\d+)*" -join '.'
 
     return @{
