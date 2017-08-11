@@ -10,7 +10,7 @@ $url =  [System.Net.WebUtility]::HtmlDecode(($page.Links | Where-Object outerHTM
 $page = Invoke-WebRequest -UseBasicParsing -Uri $url -WebSession $session
 $url =  [System.Net.WebUtility]::HtmlDecode(($page.Links | Where-Object outerHTML -CLike "*confirm*Download*" | Select-Object -First 1 -ExpandProperty href))
 
-Invoke-WebRequest -WebSession $session -Uri $url -OutFile $filePath
+Invoke-WebRequest -UserAgent 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36' -WebSession $session -Uri $url -OutFile $FilePath
 
 $PackageArgs = @{
     PackageName   = $PackageName
