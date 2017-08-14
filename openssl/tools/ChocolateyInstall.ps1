@@ -34,28 +34,27 @@ Install-ChocolateyEnvironmentVariable -VariableName 'OPENSSL_ROOT_DIR' -Variable
 
 $lib64 = Join-Path $OpenSSL_HOME 'lib64'
 if (Test-Path $lib64) {
+    $dir = Join-Path $lib "static"| Join-Path -ChildPath "x86"
+    New-Item -Path $dir -ItemType Directory -Force
+    Move-Item -File -Path $lib -Include "*.pdb" -Destination $dir -Force
+
+    $dir = Join-Path $lib "static"| Join-Path "x64"
+    New-Item -Path $dir -ItemType Directory -Force
+    Move-Item -File -Path $lib -Include "*.pdb" -Destination $dir -Force
+
     $lib = Join-Path $OpenSSL_HOME 'lib'
-    $files = Get-ChildItem -File -Path $lib -Include "*M*" -Recurse
+    $files = Get-ChildItem -File -Path $lib -Include "*M*"
     foreach ($file in $files) {
         $new = $file.Name.Replace("M", "32M")
         Rename-Item -Path $file.FullName -NewName $new
     }
-	$files = Get-ChildItem -File -Path $lib -Include "*.pdb" -Recurse
-	foreach ($file in $files) {
-        $new = $file.Name.Replace(".pdb", "32.pdb")
-        Rename-Item -Path $file.FullName -NewName $new
-    }
 
-    $files = Get-ChildItem -File -Path $lib64 -Include "*M*" -Recurse
+    $files = Get-ChildItem -File -Path $lib64 -Include "*M*"
     foreach ($file in $files) {
         $new = $file.Name.Replace("M", "64M")
         Rename-Item -Path $file.FullName -NewName $new
     }
-	$files = Get-ChildItem -File -Path $lib64 -Include "*.pdb" -Recurse
-	foreach ($file in $files) {
-        $new = $file.Name.Replace(".pdb", "64.pdb")
-        Rename-Item -Path $file.FullName -NewName $new
-    }
+	
     Move-Item -Path $(Join-Path $lib64 "*") -Destination $lib -Force
     Remove-Item -Path $lib64 -Recurse -Force
 }
