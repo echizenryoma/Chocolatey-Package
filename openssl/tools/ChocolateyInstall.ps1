@@ -35,23 +35,23 @@ Install-ChocolateyEnvironmentVariable -VariableName 'OPENSSL_ROOT_DIR' -Variable
 $lib64 = Join-Path $OpenSSL_HOME 'lib64'
 if (Test-Path $lib64) {
     $lib = Join-Path $OpenSSL_HOME 'lib'
-    $files = Get-ChildItem -File -Path $lib -Include "*M*" -Recurse
+    $files = Get-ChildItem -File -Path $lib -Include "*M*"
     foreach ($file in $files) {
         $new = $file.Name.Replace("M", "32M")
         Rename-Item -Path $file.FullName -NewName $new
     }
-	$files = Get-ChildItem -File -Path $lib -Include "*.pdb" -Recurse
+	$files = Get-ChildItem -File -Path $lib -Include "*.pdb"
 	foreach ($file in $files) {
         $new = $file.Name.Replace(".pdb", "32.pdb")
         Rename-Item -Path $file.FullName -NewName $new
     }
 
-    $files = Get-ChildItem -File -Path $lib64 -Include "*M*" -Recurse
+    $files = Get-ChildItem -File -Path $lib64 -Include "*M*"
     foreach ($file in $files) {
         $new = $file.Name.Replace("M", "64M")
         Rename-Item -Path $file.FullName -NewName $new
     }
-	$files = Get-ChildItem -File -Path $lib64 -Include "*.pdb" -Recurse
+	$files = Get-ChildItem -File -Path $lib64 -Include "*.pdb"
 	foreach ($file in $files) {
         $new = $file.Name.Replace(".pdb", "64.pdb")
         Rename-Item -Path $file.FullName -NewName $new
