@@ -1,11 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'mkvtoolnix.portable'
-$Url32 = 'https://mkvtoolnix.download/windows/releases/14.0.0/mkvtoolnix-32bit-14.0.0.7z'
-$Url64 = 'https://mkvtoolnix.download/windows/releases/14.0.0/mkvtoolnix-64bit-14.0.0.7z'
-$Checksum32 = '04f6c4cca88cf18429dcba358d112490af6ae735'
+$Url32 = 'https://mkvtoolnix.download/windows/releases/15.0.0/mkvtoolnix-32bit-15.0.0.7z'
+$Url64 = 'https://mkvtoolnix.download/windows/releases/15.0.0/mkvtoolnix-64bit-15.0.0.7z'
+$Checksum32 = 'c7b5656dd8a8e869e8d0b7c157262ad4ffb6037a'
 $ChecksumType32 = 'sha1'
-$Checksum64 = '337556f2fc7be01f942b4c21c4fb858d9c333142'
+$Checksum64 = '0316e325e9187e390213e467c7a7232c0c7a2036'
 $ChecksumType64 = 'sha1'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
