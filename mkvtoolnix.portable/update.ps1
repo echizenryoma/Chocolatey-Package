@@ -18,16 +18,16 @@ function global:au_GetLatest {
     $page = Invoke-WebRequest -UseBasicParsing -Uri "$base/.dirindex.php?sort=date&order=desc"
     $version = $page.Links | Where-Object title -Match '\d+(\.\d+){0,2}$' | Select-Object -Property title | Select-Object -First 1 -ExpandProperty title
     $page = Invoke-WebRequest -UseBasicParsing -Uri "$base/$version/sha1sums.txt"
-    $sha1sum = $page.Content -Split '\n' | ConvertFrom-String -PropertyNames sha1sum, file
+    $obj = $page.Content -Split '\n' | ConvertFrom-String -PropertyNames sha1sum, file
     
 	return @{
         Version        = $version.Trim();
-        URL32          = "${base}/${version}/mkvtoolnix-32bit-$version.7z";
-        URL64          = "${base}/${version}/mkvtoolnix-64bit-$version.7z";
+        URL32          = "${base}/${version}/" + ($obj | Where-Object file -Like "*32*7z" | Select-Object -First 1 -ExpandProperty file);
+        URL64          = "${base}/${version}/" + ($obj | Where-Object file -Like "*64*7z" | Select-Object -First 1 -ExpandProperty file);
         ChecksumType32 = 'sha1';
-        Checksum32     = $sha1sum | Where-Object file -Like "*32*7z" | Select-Object -First 1 -ExpandProperty sha1sum;
+        Checksum32     = $obj | Where-Object file -Like "*32*7z" | Select-Object -First 1 -ExpandProperty sha1sum;
         ChecksumType64 = 'sha1';
-        Checksum64     = $sha1sum | Where-Object file -Like "*64*7z" | Select-Object -First 1 -ExpandProperty sha1sum;
+        Checksum64     = $obj | Where-Object file -Like "*64*7z" | Select-Object -First 1 -ExpandProperty sha1sum;
     }
 }
 

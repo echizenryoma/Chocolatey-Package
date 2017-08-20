@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'mkvtoolnix.portable'
-$Url32 = 'https://mkvtoolnix.download/windows/releases/15.0.0/mkvtoolnix-32bit-15.0.0.7z'
-$Url64 = 'https://mkvtoolnix.download/windows/releases/15.0.0/mkvtoolnix-64bit-15.0.0.7z'
+$Url32 = 'https://mkvtoolnix.download/windows/releases/15.0.0/mkvtoolnix-32-bit-15.0.0.7z'
+$Url64 = 'https://mkvtoolnix.download/windows/releases/15.0.0/mkvtoolnix-64-bit-15.0.0.7z'
 $Checksum32 = 'c7b5656dd8a8e869e8d0b7c157262ad4ffb6037a'
 $ChecksumType32 = 'sha1'
 $Checksum64 = '0316e325e9187e390213e467c7a7232c0c7a2036'
