@@ -25,9 +25,9 @@ function global:au_GetLatest {
         URL32          = "${base}/${version}/mkvtoolnix-32bit-$version.7z";
         URL64          = "${base}/${version}/mkvtoolnix-64bit-$version.7z";
         ChecksumType32 = 'sha1';
-        Checksum32     = $sha1sum | Where-Object file -Like "*32bit*7z" | Select-Object -First 1 -ExpandProperty sha1sum;
+        Checksum32     = $sha1sum | Where-Object file -Like "*32*7z" | Select-Object -First 1 -ExpandProperty sha1sum;
         ChecksumType64 = 'sha1';
-        Checksum64     = $sha1sum | Where-Object file -Like "*64bit*7z" | Select-Object -First 1 -ExpandProperty sha1sum;
+        Checksum64     = $sha1sum | Where-Object file -Like "*64*7z" | Select-Object -First 1 -ExpandProperty sha1sum;
     }
 }
 
