@@ -7,7 +7,7 @@ $ChecksumType32 = 'SHA256'
 $Url64 = 'https://storage.googleapis.com/golang/go1.9.windows-amd64.zip'
 $Checksum64 = '874b144b994643cff1d3f5875369d65c01c216bb23b8edddf608facc43966c8b'
 $ChecksumType64 = 'SHA256'
-$installationPath = Get-ToolsLocation
+$InstallationPath = Get-ToolsLocation
 
 $PackageArgs = @{
     PackageName    = $PackageName
@@ -17,11 +17,11 @@ $PackageArgs = @{
     url64          = $Url64
     Checksum64     = $Checksum64
     ChecksumType64 = $ChecksumType64
-    UnzipLocation  = $installationPath
+    UnzipLocation  = $InstallationPath
 }
 Install-ChocolateyZipPackage @PackageArgs
 
-$GOROOT = Join-Path $installationPath 'go'
+$GOROOT = Join-Path $InstallationPath 'go'
 $GOPATH = Join-Path $GOROOT 'opt'
 $GOBIN = Join-Path $GOROOT 'bin'
 Install-ChocolateyEnvironmentVariable -VariableName 'GOROOT' -VariableValue $GOROOT -VariableType 'Machine'
