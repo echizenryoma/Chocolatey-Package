@@ -9,6 +9,15 @@ $Checksum64 = '874b144b994643cff1d3f5875369d65c01c216bb23b8edddf608facc43966c8b'
 $ChecksumType64 = 'SHA256'
 $InstallationPath = Get-ToolsLocation
 
+$GOROOT = Join-Path $InstallationPath 'go'
+$GOPATH = Join-Path $GOROOT 'opt'
+$GOBIN = Join-Path $GOROOT 'bin'
+
+if (Test-Path $GOROOT) {
+    Get-ChildItem -Path $GOROOT -exclude 'opt' |
+    Remove-Item -Recurse -Force | Out-Null
+}
+
 $PackageArgs = @{
     PackageName    = $PackageName
     url            = $Url32
@@ -21,9 +30,6 @@ $PackageArgs = @{
 }
 Install-ChocolateyZipPackage @PackageArgs
 
-$GOROOT = Join-Path $InstallationPath 'go'
-$GOPATH = Join-Path $GOROOT 'opt'
-$GOBIN = Join-Path $GOROOT 'bin'
 Install-ChocolateyEnvironmentVariable -VariableName 'GOROOT' -VariableValue $GOROOT -VariableType 'Machine'
 Install-ChocolateyEnvironmentVariable -VariableName 'GOPATH' -VariableValue $GOPATH -VariableType 'Machine'
 Install-ChocolateyPath -PathToInstall $GOBIN -PathType 'Machine'
