@@ -1,11 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop';
 
 $PackageName = 'nodejs'
-$Url32 = 'https://npm.taobao.org/mirrors/node/v6.11.2/node-v6.11.2-win-x86.7z'
-$Checksum32 = 'e38c74a43f72cce05caeaf77afb49f6979345b7a891abdcd5d9e4b72d34cc710'
+$Url32 = 'https://npm.taobao.org/mirrors/node/v6.11.3/node-v6.11.3-win-x86.7z'
+$Checksum32 = '59e1dd9dbd312cb16a3a2c1a549625c8d5352d1465d91f47889818beeafa625b'
 $ChecksumType32 = 'sha256'
-$Url64 = 'https://npm.taobao.org/mirrors/node/v6.11.2/node-v6.11.2-win-x64.7z'
-$Checksum64 = '9189de5ef26e40bc77c2f999368a136c8dfb13d16298c0037a7cd2135adee4be'
+$Url64 = 'https://npm.taobao.org/mirrors/node/v6.11.3/node-v6.11.3-win-x64.7z'
+$Checksum64 = 'a767bca7033cbbde3294080728b564145ac4fbf13f408a9070d9b5acc5c56068'
 $ChecksumType64 = 'sha256'
 $ToolsPath = $(Get-ToolsLocation)
 
