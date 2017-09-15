@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'fsview.portable'
-$Url32 = 'http://www.faststonesoft.net/DN/FSViewer63.zip'
+$Url32 = 'http://www.faststonesoft.net/DN/FSViewer64.zip'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 $PackageArgs = @{
