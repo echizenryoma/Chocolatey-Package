@@ -5,7 +5,6 @@ $Url = 'https://notepad-plus-plus.org/repository/7.x/7.5.1/npp.7.5.1.bin.7z'
 $Checksum = 'ae1228cd5b5448a37382b22e2abd36c42a41b3c5'
 $ChecksumType = 'sha1'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
-$ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 $PackageArgs = @{
     PackageName   = $PackageName
@@ -18,7 +17,7 @@ Install-ChocolateyZipPackage @PackageArgs
 
 $UrlExtra = 'https://notepad-plus-plus.org/repository/7.x/7.5.1/npp.7.5.1.Installer.exe'
 $FileName = [IO.Path]::GetFileName($UrlExtra)
-$InstallerPath = Join-Path $ToolsPath $FileName
+$InstallerPath = Join-Path $InstallationPath $FileName
 $PackageArgs = @{
     Url      = $UrlExtra
     FileName = $InstallerPath
@@ -31,3 +30,6 @@ if (!(Test-Path $(Join-Path $InstallationPath $NppShellFileName))) {
 }
 regsvr32.exe /s "$(Join-Path $InstallationPath $NppShellFileName)"
 Remove-Item -Path $InstallerPath -Force
+
+Install-BinFile -Name Code -Path $(Join-Path $InstallationPath "notepad++.exe")
+Install-ChocolateyShortcut -ShortcutFilePath "$Env:SystemDrive\Users\Public\Desktop\Notepad++.lnk" -TargetPath $(Join-Path $InstallationPath "notepad++.exe") 

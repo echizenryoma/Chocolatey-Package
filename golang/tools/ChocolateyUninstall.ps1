@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$InstallationPath = Join-Path $env:ChocolateyToolsLocation "go"
+$InstallationPath = Join-Path $(Get-ToolsLocation) 'go'
 Remove-Item $InstallationPath -Recurse -Force
 
 Uninstall-ChocolateyEnvironmentVariable -VariableName 'GOROOT' -VariableType 'Machine'
