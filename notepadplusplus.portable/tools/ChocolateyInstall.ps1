@@ -31,5 +31,5 @@ if (!(Test-Path $(Join-Path $InstallationPath $NppShellFileName))) {
 regsvr32.exe /s "$(Join-Path $InstallationPath $NppShellFileName)"
 Remove-Item -Path $InstallerPath -Force
 
-Install-BinFile -Name Code -Path $(Join-Path $InstallationPath "notepad++.exe")
+Install-BinFile -Name 'notepad++' -Path $(Join-Path $InstallationPath "notepad++.exe")
 Install-ChocolateyShortcut -ShortcutFilePath "$Env:SystemDrive\Users\Public\Desktop\Notepad++.lnk" -TargetPath $(Join-Path $InstallationPath "notepad++.exe") 
