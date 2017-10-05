@@ -1,11 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop';
 
 $PackageName = 'golang'
-$Url32 = 'https://storage.googleapis.com/golang/go1.9.windows-386.zip'
-$Checksum32 = 'ecfe6f5be56acedc56cd9ff735f239a12a7c94f40b0ea9753bbfd17396f5e4b9'
+$Url32 = 'https://storage.googleapis.com/golang/go1.9.1.windows-386.zip'
+$Checksum32 = 'ea9c79c9e6214c9a78a107ef5a7bff775a281bffe8c2d50afa66d2d33998078a'
 $ChecksumType32 = 'SHA256'
-$Url64 = 'https://storage.googleapis.com/golang/go1.9.windows-amd64.zip'
-$Checksum64 = '874b144b994643cff1d3f5875369d65c01c216bb23b8edddf608facc43966c8b'
+$Url64 = 'https://storage.googleapis.com/golang/go1.9.1.windows-amd64.zip'
+$Checksum64 = '8dc72a3881388e4e560c2e45f6be59860b623ad418e7da94e80fee012221cc81'
 $ChecksumType64 = 'SHA256'
 $InstallationPath = Get-ToolsLocation
 
