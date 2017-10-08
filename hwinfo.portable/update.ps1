@@ -13,7 +13,7 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $page = Invoke-WebRequest -UseBasicParsing -Uri 'https://www.hwinfo.com/ver.txt'
-    $html = $page.Content -split '\n' -match '\d+'  | Select-Object -Unique | Sort-Object -Descending
+    $html = $page.Content -split '\n' -match '\d+'  | Select-Object -Unique | Sort-Object
     $version = $html | Select-Object -First 1
     $url_version = ($version -split '-' | Select-Object -First 1).Replace('.', '')
     $version = $version.Replace('-', '.').Trim()
