@@ -3,7 +3,7 @@
 $PackageName = 'hwinfo.portable'
 $Url32 = 'https://www.hwinfo.com/files/hw32_558.zip'
 $Url64 = 'https://www.hwinfo.com/files/hw64_558.zip'
-$ToolsPath = Join-Path $(Get-ToolsLocation) $PackageName
+$ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 $PackageArgs = @{
     PackageName   = $PackageName
