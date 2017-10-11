@@ -3,4 +3,4 @@
 $PackageName = 'mobaxterm'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 Remove-Item $InstallationPath -Recurse -Force | Out-Null
-Uninstall-BinFile -Name 'MobaXTerm'
+Remove-Item "$Env:SystemDrive\Users\Public\Desktop\Moba XTerm.lnk" -Force | Out-Null

@@ -10,4 +10,5 @@ $PackageArgs = @{
     UnzipLocation = $InstallationPath
 }
 Install-ChocolateyZipPackage @PackageArgs
-Install-ChocolateyShortcut -ShortcutFilePath "$Env:SystemDrive\Users\Public\Desktop\MobaXTerm.lnk" -TargetPath $(Join-Path $InstallationPath ([IO.Path]::GetFileName($Url)).Replace("zip", "exe")) 
+$BinFileName = Get-ChildItem -Path $InstallationPath -Filter "*.exe" -File | Select-Object -Last 1
+Install-ChocolateyShortcut -ShortcutFilePath "$Env:SystemDrive\Users\Public\Desktop\Moba XTerm.lnk" -TargetPath $BinFileName
