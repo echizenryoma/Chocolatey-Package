@@ -1,6 +1,4 @@
-﻿$ErrorActionPreference = 'Stop';
-
-$PackageName = 'nodejs'
+﻿$PackageName = 'nodejs'
 $ToolsPath = Join-Path $(Get-ToolsLocation) $PackageName
 
 $EnvPath = [Environment]::GetEnvironmentVariable('Path', [EnvironmentVariableTarget]::Machine) -split ';' -notmatch '\\$PackageName\\'

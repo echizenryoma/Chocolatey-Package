@@ -1,4 +1,2 @@
-﻿$PackageName= 'rdpwrapper'
-$toolsDir = $(Split-Path -Parent $MyInvocation.MyCommand.Definition)
-
-Start-ChocolateyProcessAsAdmin '-u' (Join-Path $toolsDir 'RDPWInst.exe')
+﻿$ToolsPath = $(Split-Path -Parent $MyInvocation.MyCommand.Definition)
+Start-ChocolateyProcessAsAdmin '-u' (Join-Path $ToolsPath 'RDPWInst.exe')
