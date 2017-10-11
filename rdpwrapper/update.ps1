@@ -10,13 +10,13 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $request = Invoke-WebRequest -Uri "https://github.com/stascorp/rdpwrap/releases/latest" -MaximumRedirection 0 -ErrorAction Ignore
-    $url =  $request.Headers.Location
+    $url = $request.Headers.Location
     $version = $url -Split "/" | Select-Object -Last 1
     $version = $version.Replace("v", "").Trim()
 	
     return @{
         Version = $version;
-        URL32 = "https://github.com/stascorp/rdpwrap/releases/download/v${version}/RDPWrap-v${version}.zip";
+        URL32   = "https://github.com/stascorp/rdpwrap/releases/download/v${version}/RDPWrap-v${version}.zip";
     }
 }
 

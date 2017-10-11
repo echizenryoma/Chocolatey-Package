@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package 
+	xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
 	<metadata>
 		<id>upx</id>
 		<version>3.94</version>
@@ -27,6 +28,6 @@
 		<bugTrackerUrl>http://sourceforge.net/p/upx/bugs/</bugTrackerUrl>
 	</metadata>
 	<files>
-    	<file src="tools\**" target="tools" />
-  	</files>
+		<file src="tools\**" target="tools" />
+	</files>
 </package>

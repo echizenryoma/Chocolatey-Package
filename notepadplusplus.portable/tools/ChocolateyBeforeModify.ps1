@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop';
+﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'notepadplusplus'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName

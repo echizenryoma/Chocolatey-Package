@@ -1,16 +1,17 @@
 <?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
-	<metadata>
-		<id>advanced-renamer.portable</id>
-		<version>3.79</version>
-		<title>Advanced Renamer (Portable)</title>
-		<authors>Kim Jensen</authors>
-		<owners>echizenryoma</owners>
-		<licenseUrl>https://www.advancedrenamer.com/user_guide/license</licenseUrl>
-		<projectUrl>http://www.advancedrenamer.com/</projectUrl>
-		<iconUrl>https://cdn.rawgit.com/echizenryoma/Chocolatey-Package/master/advanced-renamer.portable/advanced-renamer.png</iconUrl>
-		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>
+<package 
+  xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>advanced-renamer.portable</id>
+    <version>3.79</version>
+    <title>Advanced Renamer (Portable)</title>
+    <authors>Kim Jensen</authors>
+    <owners>echizenryoma</owners>
+    <licenseUrl>https://www.advancedrenamer.com/user_guide/license</licenseUrl>
+    <projectUrl>http://www.advancedrenamer.com/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/echizenryoma/Chocolatey-Package/master/advanced-renamer.portable/advanced-renamer.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
 Advanced Renamer is a free program for renaming multiple files and folders at once. By configuring renaming methods the names can be manipulated in various ways.
 
 It is easy to set up an advanced batch job using multiple methods on a large amount of files. The 14 different methods enables you to change the names, attributes, and timestamps of files in one go. The files can also be copied or moved to new locations based on information in the files.
@@ -34,15 +35,15 @@ Ever wanted to add the codec or the resolution of a video to the filename? With 
 ##TV shows##
 Add episode title or airdate to video files containing TV Shows after importing show information from the tvmaze.com website.
 		</description>
-		<summary>Advanced Renamer is a free program for renaming multiple files and folders at once. By configuring renaming methods the names can be manipulated in various ways.</summary>
-		<releaseNotes>http://www.advancedrenamer.com/versionlog</releaseNotes>
-		<copyright />
-		<tags>advanced-renamer</tags>
-		<packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/advanced-renamer.portable</packageSourceUrl>
-		<docsUrl>http://www.advancedrenamer.com/user_guide/gettingstarted</docsUrl>
-		<provides>advanced-renamer</provides>
-	</metadata>
-	<files>
-		<file src="tools\**" target="tools" />
-	</files>
+    <summary>Advanced Renamer is a free program for renaming multiple files and folders at once. By configuring renaming methods the names can be manipulated in various ways.</summary>
+    <releaseNotes>http://www.advancedrenamer.com/versionlog</releaseNotes>
+    <copyright />
+    <tags>advanced-renamer</tags>
+    <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/advanced-renamer.portable</packageSourceUrl>
+    <docsUrl>http://www.advancedrenamer.com/user_guide/gettingstarted</docsUrl>
+    <provides>advanced-renamer</provides>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>

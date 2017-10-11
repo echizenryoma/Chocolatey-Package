@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop';
+﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'golang'
 $Url32 = 'https://storage.googleapis.com/golang/go1.9.1.windows-386.zip'
@@ -15,7 +15,7 @@ $GOBIN = Join-Path $GOROOT 'bin'
 
 if (Test-Path $GOROOT) {
     Get-ChildItem -Path $GOROOT -exclude 'opt' |
-    Remove-Item -Recurse -Force | Out-Null
+        Remove-Item -Recurse -Force | Out-Null
 }
 
 $PackageArgs = @{

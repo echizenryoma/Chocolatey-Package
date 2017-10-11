@@ -1,26 +1,27 @@
 <?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
-	<metadata>
-		<id>subtitleedit.portable</id>
-		<version>3.5.4</version>
-		<title>Subtitle Edit (Portable)</title>
-		<authors>Nikolaj Lynge Olsson</authors>
-		<owners>echizenryoma</owners>
-		<licenseUrl>https://github.com/SubtitleEdit/subtitleedit/blob/master/LICENSE.txt</licenseUrl>
-		<projectUrl>http://www.nikse.dk/SubtitleEdit/</projectUrl>
-		<iconUrl>https://cdn.rawgit.com/Thilas/chocolatey-packages/ba3e29c8383df66f2ffe8f1d38d06f71906a9027/icons/subtitleedit.png</iconUrl>
-		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>With SE you can easily adjust a subtitle if it is out of sync with the video in several different ways. You can also use SE for making new subtitles from scratch (do use the time-line/waveform/spectrogram) or translating subtitles.</description>
-		<summary>Subtitle Edit is a free (open source) editor for video subtitles - a subtitle editor :)</summary>
-		<releaseNotes>https://github.com/SubtitleEdit/subtitleedit/releases</releaseNotes>
-		<copyright>Copyright © Nikse</copyright>
-		<tags>subtitleedit subtitle editor video OCR sync merge split convert</tags>
-		<projectSourceUrl>https://github.com/SubtitleEdit/subtitleedit</projectSourceUrl>
-		<packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/subtitleedit</packageSourceUrl>
-		<mailingListUrl>https://gitter.im/SubtitleEdit/subtitleedit</mailingListUrl>
-		<bugTrackerUrl>https://github.com/SubtitleEdit/subtitleedit/issues</bugTrackerUrl>
-	</metadata>
-	<files>
-    	<file src="tools\**" target="tools" />
-  	</files>
+<package 
+  xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>subtitleedit.portable</id>
+    <version>3.5.4</version>
+    <title>Subtitle Edit (Portable)</title>
+    <authors>Nikolaj Lynge Olsson</authors>
+    <owners>echizenryoma</owners>
+    <licenseUrl>https://github.com/SubtitleEdit/subtitleedit/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>http://www.nikse.dk/SubtitleEdit/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/Thilas/chocolatey-packages/ba3e29c8383df66f2ffe8f1d38d06f71906a9027/icons/subtitleedit.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>With SE you can easily adjust a subtitle if it is out of sync with the video in several different ways. You can also use SE for making new subtitles from scratch (do use the time-line/waveform/spectrogram) or translating subtitles.</description>
+    <summary>Subtitle Edit is a free (open source) editor for video subtitles - a subtitle editor :)</summary>
+    <releaseNotes>https://github.com/SubtitleEdit/subtitleedit/releases</releaseNotes>
+    <copyright>Copyright © Nikse</copyright>
+    <tags>subtitleedit subtitle editor video OCR sync merge split convert</tags>
+    <projectSourceUrl>https://github.com/SubtitleEdit/subtitleedit</projectSourceUrl>
+    <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/subtitleedit</packageSourceUrl>
+    <mailingListUrl>https://gitter.im/SubtitleEdit/subtitleedit</mailingListUrl>
+    <bugTrackerUrl>https://github.com/SubtitleEdit/subtitleedit/issues</bugTrackerUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>

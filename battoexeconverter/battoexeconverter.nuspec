@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package 
+	xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
 	<metadata>
 		<id>battoexeconverter</id>
 		<version>2.4.8.0</version>
@@ -27,6 +28,6 @@
 		<packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/battoexeconverter</packageSourceUrl>
 	</metadata>
 	<files>
-    	<file src="tools\**" target="tools" />
-  	</files>
+		<file src="tools\**" target="tools" />
+	</files>
 </package>

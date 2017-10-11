@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package 
+	xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
 	<metadata>
 		<id>mkvtoolnix.portable</id>
 		<version>16.0.0</version>
@@ -21,6 +22,6 @@ With these tools one can get information about (mkvinfo) Matroska files, extract
 		<docsUrl>https://mkvtoolnix.download/docs.html</docsUrl>
 	</metadata>
 	<files>
-    	<file src="tools\**" target="tools" />
-  	</files>
+		<file src="tools\**" target="tools" />
+	</files>
 </package>
