@@ -6,8 +6,8 @@
     <id>hwinfo.portable</id>
     <title>HWiNFO (Portable)</title>
     <version>5.58.3255</version>
-    <authors>Echizen Ryoma</authors>
-    <owners>Link Satonaka</owners>
+    <authors>Martin Malík</authors>
+    <owners>Echizen Ryoma</owners>
     <summary>Comprehensive Hardware Analysis, Monitoring and Reporting for Windows and DOS</summary>
     <description>In-depth Hardware Information and real time monitoring</description>
     <projectUrl>http://www.hwinfo.com/</projectUrl>
