@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'vscode.portable'
-$Url = 'https://vscode.cdn.azure.cn/stable/1e9d36539b0ae51ac09b9d4673ebea4e447e5353/VSCode-win32-ia32-1.17.1.zip'
-$Url64 = 'https://vscode.cdn.azure.cn/stable/1e9d36539b0ae51ac09b9d4673ebea4e447e5353/VSCode-win32-x64-1.17.1.zip'
+$Url = 'https://vscode.cdn.azure.cn/stable/b813d12980308015bcd2b3a2f6efa5c810c33ba5/VSCode-win32-ia32-1.17.2.zip'
+$Url64 = 'https://vscode.cdn.azure.cn/stable/b813d12980308015bcd2b3a2f6efa5c810c33ba5/VSCode-win32-x64-1.17.2.zip'
 $InstallationPath = Join-Path $(Get-ToolsLocation) 'vscode'
 
 $PackageArgs = @{
