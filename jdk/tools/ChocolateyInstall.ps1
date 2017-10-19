@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'jdk'
-$Url64 = 'http://edelivery.oracle.com/otn-pub/java/jdk/9+181/jdk-9_windows-x64_bin.exe'
-$Checksum64 = 'd4885a5fbd2dce383c579fe4a1569b6d8b5db1574af602e37cadcac781115297'
+$Url64 = 'http://edelivery.oracle.com/otn-pub/java/jdk/9.0.1+11/jdk-9.0.1_windows-x64_bin.exe'
+$Checksum64 = '4df5f74fe04c708977e23bdae8842297bce10d550e4a1cbedde9a33af56f4dab'
 $ChecksumType64 = 'SHA256'
 $JavaVersion = '9'
 
