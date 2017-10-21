@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop';
+﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'mobaxterm'
 $Url = 'https://download.mobatek.net/10420170816103227/MobaXterm_Portable_v10.4.zip'
@@ -11,4 +11,4 @@ $PackageArgs = @{
 }
 Install-ChocolateyZipPackage @PackageArgs
 $BinFileName = (Get-ChildItem -Path $InstallationPath -Filter "*.exe" -File | Select-Object -Last 1).FullName
-Install-ChocolateyShortcut -ShortcutFilePath "$Env:SystemDrive\Users\Public\Desktop\Moba XTerm.lnk" -TargetPath $BinFileName
+Install-ChocolateyShortcut -ShortcutFilePath "$Env:SystemDrive\Users\Public\Desktop\MobaXterm.lnk" -TargetPath $BinFileName
