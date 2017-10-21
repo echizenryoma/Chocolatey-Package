@@ -21,7 +21,7 @@ function global:au_GetLatest {
     $json64 = $html -split "=" | Select-Object -Last 1 | ConvertFrom-Json
 
     $url64 = $json64.filepath
-    $version = ($url64 -split "/" -match "\d+\+\d+" | Select-Object -First 1) -replace "\+", ".0."
+    $version = ($url64 -split "/|\+" -match "\d+(\.\d+)+" | Select-Object -First 1).Trim()
     $java_version = ($version -split "\." | Select-Object -First 1)
 	
     return @{
