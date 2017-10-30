@@ -20,10 +20,10 @@ if (Test-Path $GOROOT) {
 
 $PackageArgs = @{
     PackageName    = $PackageName
-    url            = $Url32
+    Url            = $Url32
     Checksum       = $Checksum32
     ChecksumType   = $ChecksumType32
-    url64          = $Url64
+    Url64          = $Url64
     Checksum64     = $Checksum64
     ChecksumType64 = $ChecksumType64
     UnzipLocation  = $InstallationPath
