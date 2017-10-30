@@ -1,6 +1,4 @@
-﻿$ErrorActionPreference = 'Stop'
-
-$PackageName = 'virtualbox'
+﻿$PackageName = 'virtualbox'
 $Url32 = 'http://download.virtualbox.org/virtualbox/5.2.0/VirtualBox-5.2.0-118431-Win.exe'
 $Checksum32 = '9d6716fe24d352b91fe682044668fac90c92ecabbe56821631069f88024f48cd'
 $ChecksumType32 = 'SHA256'
@@ -37,7 +35,7 @@ if (!$InstallLocation) { Write-Warning "Can't find $packageName install location
 if (!$PackageParameters.NoExtensionPack) {
     Write-Host "Installing extension pack"
 
-    $ExtraFile = $(Join-Path $(Get-PackageCacheLocation) [IO.Path]::GetFileName($UrlExtra))
+    $ExtraFile = Join-Path $(Get-PackageCacheLocation) $([IO.Path]::GetFileName($UrlExtra))
     $ExtraPackageArgs = @{
         PackageName    = 'virtualbox-extensionpack'
         Url            = $UrlExtra
@@ -46,15 +44,15 @@ if (!$PackageParameters.NoExtensionPack) {
         Url64          = $UrlExtra
         Checksum64     = $ChecksumExtra
         ChecksumType64 = $ChecksumTypeExtra
-        FileFullPath   = $(Join-Path $(Get-PackageCacheLocation) [IO.Path]::GetFileName($UrlExtra))
+        FileFullPath   = $ExtraFile
     }
-    Get-ChocolateyWebFile $ExtraPackageArgs
+    Get-ChocolateyWebFile @ExtraPackageArgs
     if (!(Test-Path $ExtraFile)) {
         Write-Warning "Can't download latest extension pack" 
     }
     else {
         Set-Alias vboxmanage $InstallLocation\VBoxManage.exe
-        "y" | vboxmanage extpack install --replace $ExtraFile
+        "y" | vboxmanage extpack install --replace $ExtraFile 2>&1
         if ($LastExitCode -ne 0) {
             Write-Warning "Extension pack installation failed with exit code $LastExitCode" 
         }
