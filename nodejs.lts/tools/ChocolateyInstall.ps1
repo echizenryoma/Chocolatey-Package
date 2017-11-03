@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop';
+﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'nodejs'
 $Url32 = 'https://npm.taobao.org/mirrors/node/v8.9.0/node-v8.9.0-win-x86.7z'
@@ -23,7 +23,7 @@ Install-ChocolateyZipPackage @PackageArgs
 
 $UnzipPath = (Get-ChildItem $ToolsPath -Directory | Where-Object Name -Like "node-v*-win-x*" | Select-Object -First 1).FullName
 $NodejsPath = Join-Path $ToolsPath "nodejs"
-xcopy $UnzipPath $NodejsPath /s /y /q
+cmd /c xcopy $UnzipPath $NodejsPath /s /y /q
 
 Install-ChocolateyPath -PathToInstall $NodejsPath -PathType 'Machine'
-Remove-Item -Path $UnzipPath -Force -Recurse
+cmd /c rmdir "$UnzipPath" /s /q

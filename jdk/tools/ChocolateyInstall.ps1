@@ -23,3 +23,5 @@ Install-ChocolateyPackage @PackageArgs
 
 $JAVA_HOME = Join-Path $env:ProgramFiles "Java\jdk-$JavaVersion"
 Install-ChocolateyEnvironmentVariable -VariableName 'JAVA_HOME' -VariableValue $JAVA_HOME -VariableType 'Machine'
+
+Install-ChocolateyPath -PathToInstall $(Join-Path $JAVA_HOME 'bin') -PathType 'Machine'
