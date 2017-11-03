@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package 
-	xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
 	<metadata>
 		<id>golang</id>
-		<version>1.9.1</version>
+		<version>1.9.2</version>
 		<packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/golang</packageSourceUrl>
 		<owners>echizenryoma</owners>
 		<title>Go programming language</title>
