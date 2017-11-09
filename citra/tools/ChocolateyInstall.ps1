@@ -10,4 +10,3 @@ $PackageArgs = @{
     UnzipLocation = $ToolsPath
 }
 Install-ChocolateyZipPackage @PackageArgs
-Get-ChildItem $ToolsPath -File -Filter "*.exe" -Exclude "*citra*.exe" -Recurse | ForEach-Object { New-Item "$($_.FullName).ignore" -Type File -Force | Out-Null }
