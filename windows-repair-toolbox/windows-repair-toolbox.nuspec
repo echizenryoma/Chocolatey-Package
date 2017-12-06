@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>windows-repair-toolbox</id>
+    <version>2.0.0.6</version>
+    <title>Windows Repair Toolbox</title>
+    <authors>Windows_Repair_Toolbox</authors>
+    <owners>echizenryoma</owners>
+    <iconUrl>https://windows-repair-toolbox.com/wp-content/uploads/2016/10/windows_repair_toolbox60x60.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Windows Repair Toolbox (freeware) is a software created to help you repair a Windows system, by making the process faster, easier and uniform.
+
+##Features:
+– Download and run “on-the-fly” the best free portable software when it comes to diagnose and solve several kinds of Windows problems. The tools are categorized by their function, and the program will automatically download the correct version for the Windows edition in which you’re working. When you finish, simply uninstall the tool, and all downloaded software is also removed. Or you can choose the portable version of Windows Repair Toolbox, and just run it from a pen drive.
+
+– Ability to select several tools to run successively in unattended mode, in order to perform malware removal, system cleaning and repair, and disk defragmentation. A email letting you know that the automatic repair is complete, and containing the logs, can be sent to you.
+
+– Displays relevant information about the computer to be repaired: CPU temperature, name and % time; amount of RAM installed on the system and % of use; Disk model, capacity, rotation, SATA version, basic health check; amount of free space left in the system partition; Windows edition and install date; System boot time; and more.
+
+– Allows you to add your own favorite tools to the program;
+
+– Allows you change the program icon and title bar text; 
+
+– Allows you to perform quality assurance tests after the repair is complete;
+
+– Allows you to save notes about the repair process;
+
+– Provides 1-click access to some useful Windows tools;</description>
+    <summary>(Almost) everything you need to repair Windows problems in one small handy tool.</summary>
+    <tags>microsoft visualstudiocode vscode editor ide javascript typescript foss cross-platform</tags>
+    <projectSourceUrl>https://windows-repair-toolbox.com/</projectSourceUrl>
+    <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/windows-repair-toolbox</packageSourceUrl>
+    <bugTrackerUrl>https://windows-repair-toolbox.com/</bugTrackerUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
