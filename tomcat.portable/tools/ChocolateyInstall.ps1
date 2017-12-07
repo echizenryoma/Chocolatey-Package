@@ -14,6 +14,10 @@ $PackageArgs = @{
 }
 Install-ChocolateyZipPackage @PackageArgs
 
+if (-Not (Test-Path $ToolsPath)) {
+    New-Item -ItemType Directory -Force -Path $ToolsPath
+}
+
 $UnzipPath = (Get-ChildItem $InstallationPath -Directory | Where-Object Name -Like "apache-tomcat-*" | Select-Object -First 1).FullName
 cmd /c xcopy $UnzipPath $ToolsPath /s /y /q
 cmd /c rmdir "$UnzipPath" /s /q

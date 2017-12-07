@@ -7,7 +7,8 @@ $ChecksumType32 = 'sha256'
 $Url64 = 'https://npm.taobao.org/mirrors/node/v8.9.2/node-v8.9.2-win-x64.7z'
 $Checksum64 = '4046a954c21aa58a209b4c21f981dfa9f15621cc77abc09a6b232b28e28b2c0d'
 $ChecksumType64 = 'sha256'
-$ToolsPath = $(Get-ToolsLocation)
+$InstallationPath = Get-ToolsLocation
+$ToolsPath = Join-Path $(Get-ToolsLocation) $PackageName
 
 $PackageArgs = @{
     PackageName    = $PackageName
@@ -21,9 +22,11 @@ $PackageArgs = @{
 }
 Install-ChocolateyZipPackage @PackageArgs
 
+if (-Not (Test-Path $ToolsPath)) {
+    New-Item -ItemType Directory -Force -Path $ToolsPath
+}
 $UnzipPath = (Get-ChildItem $ToolsPath -Directory | Where-Object Name -Like "node-v*-win-x*" | Select-Object -First 1).FullName
-$NodejsPath = Join-Path $ToolsPath "nodejs"
 cmd /c xcopy $UnzipPath $NodejsPath /s /y /q
+cmd /c rmdir "$UnzipPath" /s /q
 
 Install-ChocolateyPath -PathToInstall $NodejsPath -PathType 'Machine'
-cmd /c rmdir "$UnzipPath" /s /q
