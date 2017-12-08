@@ -19,6 +19,6 @@ $PackageArgs = @{
     ChecksumType64 = $ChecksumType64
     UnzipLocation  = $ToolsPath
 }
-
 Install-ChocolateyZipPackage @PackageArgs
+
 Invoke-WebRequest 'https://www.voidtools.com/es.exe' -OutFile $(Join-Path $ToolsPath "es.exe")

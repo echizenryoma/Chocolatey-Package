@@ -14,7 +14,7 @@ function global:au_GetLatest {
 	$version = $page.Content -Split " " -Match "^\d+(\.\d+){2}$" | Select-Object -First 1
 
 	return @{
-		Version = "${version}${subversion}";
+		Version = $version
 	}
 }
 

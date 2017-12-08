@@ -15,9 +15,9 @@ function global:au_GetLatest {
     $version = ($page.Content -split " |<|>" -match "^\d+(\.\d+){1,}$" | Select-Object -First 1).Trim()
 	
     return @{
-        Version        = $version;
-        ChecksumType32 = 'md5';
-        Checksum32     = $md5sum;
+        Version        = $version
+        ChecksumType32 = 'md5'
+        Checksum32     = $md5sum
     }
 }
 

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package 
+	xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
 	<metadata>
 		<id>everything.portable</id>
 		<version>1.4.1877</version>
@@ -37,6 +37,6 @@ You type in a search filter to limit what files and folders are displayed.
 		<packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/everything.portable</packageSourceUrl>
 	</metadata>
 	<files>
-    	<file src="tools\**" target="tools" />
-  	</files>
+		<file src="tools\**" target="tools" />
+	</files>
 </package>

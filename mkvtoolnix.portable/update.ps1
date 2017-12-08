@@ -22,12 +22,12 @@ function global:au_GetLatest {
     
 	return @{
         Version        = $version.Trim();
-        URL32          = "${base}/${version}/" + ($obj | Where-Object file -Like "*32*7z" | Select-Object -First 1 -ExpandProperty file);
-        URL64          = "${base}/${version}/" + ($obj | Where-Object file -Like "*64*7z" | Select-Object -First 1 -ExpandProperty file);
-        ChecksumType32 = 'sha1';
-        Checksum32     = $obj | Where-Object file -Like "*32*7z" | Select-Object -First 1 -ExpandProperty sha1sum;
-        ChecksumType64 = 'sha1';
-        Checksum64     = $obj | Where-Object file -Like "*64*7z" | Select-Object -First 1 -ExpandProperty sha1sum;
+        URL32          = "${base}/${version}/" + ($obj | Where-Object file -Like "*32*7z" | Select-Object -First 1 -ExpandProperty file)
+        URL64          = "${base}/${version}/" + ($obj | Where-Object file -Like "*64*7z" | Select-Object -First 1 -ExpandProperty file)
+        ChecksumType32 = 'SHA1'
+        Checksum32     = $obj | Where-Object file -Like "*32*7z" | Select-Object -First 1 -ExpandProperty sha1sum
+        ChecksumType64 = 'SHA1'
+        Checksum64     = $obj | Where-Object file -Like "*64*7z" | Select-Object -First 1 -ExpandProperty sha1sum
     }
 }
 

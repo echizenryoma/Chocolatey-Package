@@ -13,10 +13,11 @@ function global:au_GetLatest {
     $url = $request.Headers.Location
     $version = $url -Split "/" | Select-Object -Last 1
     $version = $version.Replace("v", "").Trim()
+    $url32 = "https://github.com/stascorp/rdpwrap/releases/download/v${version}/RDPWrap-v${version}.zip"
 	
     return @{
-        Version = $version;
-        URL32   = "https://github.com/stascorp/rdpwrap/releases/download/v${version}/RDPWrap-v${version}.zip";
+        Version = $version
+        URL32   = "https://github.com/stascorp/rdpwrap/releases/download/v${version}/RDPWrap-v${version}.zip"
     }
 }
 

@@ -19,5 +19,4 @@ $PackageArgs = @{
     ChecksumType64 = $ChecksumType64
     UnzipLocation  = $ToolsPath
 }
-
 Install-ChocolateyZipPackage @PackageArgs

@@ -9,5 +9,4 @@ $PackageArgs = @{
     Url           = $Url
     UnzipLocation = $ToolsPath
 }
-
 Install-ChocolateyZipPackage @PackageArgs

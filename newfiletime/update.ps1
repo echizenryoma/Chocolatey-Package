@@ -17,7 +17,7 @@ function global:au_GetLatest {
     $version = $matches[0].Substring($matches[0].LastIndexOf(" ") + 1).Trim()
 	
     return @{
-        Version = $version;
+        Version = $version
     }
 }
 

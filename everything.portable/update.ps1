@@ -20,15 +20,18 @@ function global:au_GetLatest {
     $choco_version = $version.Replace('b', '') -Replace '\.([^.]+)$', '$1'
     $page = Invoke-WebRequest -UseBasicParsing -Uri "https://www.voidtools.com/Everything-${version}.md5"
     $md5 = $page.Content -Split "\n" | ConvertFrom-String -PropertyNames md5sum, file
+
+    $url32 = "https://www.voidtools.com/Everything-${version}.x86.zip"
+    $url64 = "https://www.voidtools.com/Everything-${version}.x64.zip"
 	
     return @{
-        Version        = $choco_version;
-        URL32          = "https://www.voidtools.com/Everything-${version}.x86.zip";
-        URL64          = "https://www.voidtools.com/Everything-${version}.x64.zip";
-        Checksum32     = $md5 | Where-Object file -Like "*x86.zip" | Select-Object -First 1 -ExpandProperty md5sum;
-        ChecksumType32 = 'md5';
-        Checksum64     = $md5 | Where-Object file -Like "*x64.zip" | Select-Object -First 1 -ExpandProperty md5sum;
-        ChecksumType64 = 'md5';
+        Version        = $choco_version
+        URL32          = $url32
+        URL64          = $url64
+        Checksum32     = $md5 | Where-Object file -Like "*x86.zip" | Select-Object -First 1 -ExpandProperty md5sum
+        ChecksumType32 = 'MD5'
+        Checksum64     = $md5 | Where-Object file -Like "*x64.zip" | Select-Object -First 1 -ExpandProperty md5sum
+        ChecksumType64 = 'MD5'
     }
 }
 

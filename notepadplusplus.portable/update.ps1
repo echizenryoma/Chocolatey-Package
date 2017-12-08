@@ -29,7 +29,7 @@ function global:au_GetLatest {
     return @{
         Version        = $version
         URL32          = "$base/npp.$version.bin.7z"
-        ChecksumType32 = 'sha1'
+        ChecksumType32 = 'SHA1'
         Checksum32     = $sha1sum
         URL_EXTRA      = "$base/npp.$version.Installer.exe"
     }

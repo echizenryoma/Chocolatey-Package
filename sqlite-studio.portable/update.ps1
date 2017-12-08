@@ -15,8 +15,8 @@ function global:au_GetLatest {
     $url = "https://sqlitestudio.pl/files/sqlitestudio3/complete/win32/$zip"
 
     return @{
-        Version = $version;
-        URL32   = $url;
+        Version = $version
+        URL32   = $url
     }
 }
 

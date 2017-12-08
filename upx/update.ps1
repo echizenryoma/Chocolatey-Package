@@ -15,8 +15,8 @@ function global:au_GetLatest {
     $url = "https://github.com/upx/upx/releases/download/v${version}/upx$($version.Replace(".", ''))w.zip"
     
     return @{
-        Version = $version;
-        URL32   = $url;
+        Version = $version
+        URL32   = $url
     }
 }
 
