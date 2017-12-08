@@ -25,8 +25,8 @@ Install-ChocolateyZipPackage @PackageArgs
 if (-Not (Test-Path $ToolsPath)) {
     New-Item -ItemType Directory -Force -Path $ToolsPath
 }
-$UnzipPath = (Get-ChildItem $ToolsPath -Directory | Where-Object Name -Like "node-v*-win-x*" | Select-Object -First 1).FullName
-cmd /c xcopy $UnzipPath $NodejsPath /s /y /q
+$UnzipPath = (Get-ChildItem $InstallationPath -Directory | Where-Object Name -Like "node-v*-win-x*" | Select-Object -First 1).FullName
+cmd /c xcopy $UnzipPath $ToolsPath /s /y /q
 cmd /c rmdir "$UnzipPath" /s /q
 
-Install-ChocolateyPath -PathToInstall $NodejsPath -PathType 'Machine'
+Install-ChocolateyPath -PathToInstall $ToolsPath -PathType 'Machine'
