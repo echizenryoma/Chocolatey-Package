@@ -22,18 +22,7 @@ Combines utility of 3 distinct tools:
 * Unix tools on windows = msysgit
 
 This package uncompresses to 250 MB and includes Unix commands via bundled msysgit.
-See [cmdermini](https://chocolatey.org/packages/cmdermini) (7 MB) for basic console without bundled msysgit.
-
-#### Install location
-
-This package installs into the `cmder` subdirectory of the path defined in the environment variable:
-
-* &lt;chocolatey-0.9.10: `$env:ChocolateyBinRoot`
-* &gt;=chocolatey-0.9.10: `$env:ChocolateyToolsLocation`
-
-To determine installed chocolatey version: `choco -v`
-
-Note that when upgrading to &gt;=0.9.10, if `$env:ChocolateyBinRoot` exists, the value will be preserved and variable updated to new name. If neither variable exists, the default location is used: `$env:SystemDrive\tools`</description>
+See [cmdermini](https://chocolatey.org/packages/cmdermini) (7 MB) for basic console without bundled msysgit.</description>
 		<summary>Portable console emulator</summary>
 		<releaseNotes>#### Program
 * [Changelog](https://github.com/cmderdev/cmder/blob/master/CHANGELOG.md)

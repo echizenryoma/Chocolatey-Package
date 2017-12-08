@@ -12,7 +12,7 @@ function global:au_GetLatest {
     $version = ($page.Content -split " |<|>" -match "^\d+(\.\d+)+$" | Select-Object -First 1).Trim()
        
     return @{
-        Version = $version;
+        Version = $version
     }
 }
 
