@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>k-litecodecpack.mega</id>
+    <title>K-Lite Codec Pack Mega</title>
+    <version>13.7.0</version>
+    <authors>Codec Guide</authors>
+    <owners>echizenryoma</owners>
+    <summary>The K-Lite Codec Pack is a collection of DirectShow filters, VFW/ACM codecs, and tools. Codecs and DirectShow filters are needed for encoding and decoding audio and video formats. The K-Lite Codec Pack is designed as a user-friendly solution for playing all your audio and movie files. With the K-Lite Codec Pack you should be able to play all the popular audio and video formats and even several less common formats.</summary>
+    <description>
+      <![CDATA[# About the K-Lite Codec Pack
+
+The K-Lite Codec Pack is a collection of DirectShow filters, VFW/ACM codecs, and tools. Codecs and DirectShow filters are needed for encoding and decoding audio and video formats. The K-Lite Codec Pack is designed as a user-friendly solution for playing all your audio and movie files. With the K-Lite Codec Pack you should be able to play all the popular audio and video formats and even several less common formats.
+
+**General strong points:**
+
+* It is very user-friendly and easy to use.
+
+* It is updated frequently. So it is always up-to-date with the newest and best components.
+
+* The pack provides an excellent out-of-the-box experience for novice users, while at the same time offering many options for expert users to tweak things.
+
+* All included components have been carefully selected by codec experts.
+* The pack offers a high level of flexibility. You can for example configure your preferred decoders and splitters for many formats.
+
+* Works great in combination with Windows Media Player and Media Center. Both also with other popular DirectShow players such as Media Player Classic, ZoomPlayer, KMPlayer, PotPlayer, GOM Player, and many others.
+
+* Uninstallation removes everything that was installed by the pack. Including all registry keys. All changes are properly undone and reverted to the state prior to the installation of the pack.
+
+* It contains everything you need to play all your movies and music.
+
+* This pack has a huge user base. This means that problems are found and resolved quickly.
+
+**Unique features compared to other codec packs:**
+
+* The pack works on all versions of Windows from XP up to Windows 10\. The intelligent installer automatically adapts itself based on your version of Windows. It also adapts itself based on what other codecs are already installed on your computer.
+
+* Contains both 32-bit and 64-bit codecs.
+* The installer is able to detect broken codecs and DirectShow filters on your system, and helps you to fix those problems. This unique functionality has helped thousands of people solve problems they were unable to fix themselves or with other packs.
+
+* The installation is fully customizable. You can choose which components you want to install.
+
+* It is extremely easy to make a fully customized unattended installation with the integrated wizard.
+
+* The pack has many options, which allows you to tweak it to your own specific needs and preferences.
+
+* It helps clean up other codecs installed on your computer. The installer is able to detect and remove over 100 different codec and filter packs. This helps you get rid of old junk, prevents conflicts, and leaves you with just the essential and best codecs.
+
+* It does not contain any codecs or filters that are known to be bad, buggy or unstable. In fact, the installer is able to detect and disable several known troublemakers that may already be present on your computer. This solves problems and improves system stability.
+
+* There are different variants of the pack. From small to large. You can pick the one that fits your needs.
+
+* The pack implements special blacklists for some of its included DirectShow filters. These blacklists are used to avoid compatibility issues with certain applications and games. Helpdesks and other support staff often recommend the K-Lite Codec Pack because of its abilities to fix problems and its features to ensure optimal compatibility.
+
+**Advantages of the pack compared to installing codecs manually:**
+
+* The best available codecs are already selected for you by codec experts. There is no need to figure out what you need.
+
+* Installation is simpler, quicker, and more organized.
+* It is much easier to keep all your codecs up-to-date. There no need to keep track of updates to individual components.
+
+* Components are automatically configured to work together in perfect harmony. Something that is not easily achieved if you would install everything manually. Certainly not if you use a mix of different splitters and decoders.
+
+* Better default settings.
+* More configuration options during installation. This is particularly useful for unattended installs.
+
+* The pack provides extended video thumbnail generation functionality for Windows Explorer. All popular video file formats are supported.
+
+* Adds support for showing file properties such as duration and width/height in Windows Explorer for FLV and MKV video files.
+
+* The pack automatically configures Windows Media Player and Media Center to recognize all common audio and video file formats, so that such files show up in your media library. Normally this would require all kinds of manual Registry tweaks.
+
+* The pack includes very useful tools for managing and configuring the installed codecs.
+
+**Advantages of the codec pack compared to using a standalone copy of MPC-HC:**
+
+* The pack supports playback of a few more audio and video formats.
+* You get better video quality when you use MPC-HC in combination with madVR. This is an advanced video renderer that is included in the codec pack.
+* You get more frequent updates of MPC-HC. The pack includes stable development builds of MPC-HC and LAV Filters. This means you will get access to the latest improvements and fixes much sooner.
+* The pack provides additional functionality that is not directly related to playback. For example video thumbnail generation in Windows Explorer, and display of MKV file properties in Windows Explorer.
+* Codecs are available to other applications as well (if you want). It is also possible to install the codecs just for MPC-HC.
+
+**Advantages of the codec pack compared to using VLC Player:**
+
+* You get better video quality when you use MPC-HC in combination with madVR (an advanced video renderer).
+* The pack provides additional functionality that is not directly related to playback. For example video thumbnail generation in Windows Explorer, and display of MKV file properties in Windows Explorer.
+* The pack provides more hardware acceleration options.
+* Better support for MKV files.
+* Better performance for rendering SSA/ASS subtitles.
+* MPC-HC loads much faster than VLC.
+* MPC-HC provides a better user interface (in our opinion).
+* Codecs are also available to other applications.
+    ]]>
+    </description>
+    <projectUrl>http://www.codecguide.com/</projectUrl>
+    <tags>k-litecodecpack mega codec video media player</tags>
+    <copyright>Codec Guide</copyright>
+    <licenseUrl>http://www.codecguide.com/termsofuse.htm</licenseUrl>
+    <releaseNotes>http://www.codecguide.com/features_mega.htm</releaseNotes>
+    <iconUrl>http://www.codecguide.com/mpc_logo.png</iconUrl>
+    <docsUrl>http://codecguide.com/faq.htm</docsUrl>
+    <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/k-litecodecpackmega</packageSourceUrl>
+    <bugTrackerUrl>http://codecs.forumotion.net/f3-support</bugTrackerUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
