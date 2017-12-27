@@ -1,9 +1,7 @@
 ﻿$PackageName = 'python2'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 
-if (Test-Path $InstallationPath) {
-    Remove-Item $InstallationPath -Recurse -Force
-}
+Remove-Item $InstallationPath -Recurse -Force -ErrorAction Ignore
 
 $EnvPath = [Environment]::GetEnvironmentVariable('Path', [EnvironmentVariableTarget]::Machine) -split ';' -notmatch "$PackageName"
 [Environment]::SetEnvironmentVariable('Path', $EnvPath -join ';', [EnvironmentVariableTarget]::Machine)
