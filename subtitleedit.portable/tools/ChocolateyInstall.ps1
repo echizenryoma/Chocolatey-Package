@@ -13,6 +13,6 @@ $PackageArgs = @{
     ChecksumType  = $ChecksumType
     UnzipLocation = $ToolsPath
 }
-
 Install-ChocolateyZipPackage @PackageArgs
-Get-ChildItem $ToolsPath -Include "*.exe" -Exclude "SubtitleEdit.exe" -Recurse  | ForEach-Object { New-Item "$($_.FullName).ignore" -Type file -Force | Out-Null }
+
+Get-ChildItem $ToolsPath -Include "*.exe" -Exclude "SubtitleEdit.exe" -Recurse | ForEach-Object { New-Item "$($_.FullName).ignore" -Type file -Force | Out-Null }

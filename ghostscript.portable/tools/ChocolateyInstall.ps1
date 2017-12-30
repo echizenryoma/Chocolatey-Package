@@ -20,5 +20,5 @@ $PackageArgs = @{
     UnzipLocation  = $ToolsPath
 }
 Install-ChocolateyZipPackage @PackageArgs
-Remove-Item -Path $(Join-Path $ToolsPath "uninstgs.exe.nsis") -Force -ea 0
-Remove-Item -Path $(Join-Path $ToolsPath '$PLUGINSDIR') -Recurse -Force -ea 0
+Remove-Item -Path $(Join-Path $ToolsPath "uninstgs.exe.nsis") -Force -ErrorAction Ignore
+Remove-Item -Path $(Join-Path $ToolsPath '$PLUGINSDIR') -Recurse -Force -ErrorAction Ignore

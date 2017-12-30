@@ -19,17 +19,19 @@ $UrlExtra = 'https://notepad-plus-plus.org/repository/7.x/7.5.3/npp.7.5.3.Instal
 $FileName = [IO.Path]::GetFileName($UrlExtra)
 $InstallerPath = Join-Path $InstallationPath $FileName
 $PackageArgs = @{
-    Url      = $UrlExtra
-    FileName = $InstallerPath
+    PackageName  = $PackageName
+    Url          = $UrlExtra
+    FileFullPath = $InstallerPath
 }
-Get-WebFile @PackageArgs
-$content = 7z.exe l "$InstallerPath" "NppShell_*.dll"
+Get-ChocolateyWebFile @PackageArgs
+$content = Start-ChocolateyProcessAsAdmin -ExeToRun 'cmd' -Statements "/c 7z l `""$InstallerPath"`" `"NppShell_*.dll`""
 $NppShellFileName = $content -split "\n| " -match "NppShell" | Select-Object -First 1
 if (!(Test-Path $(Join-Path $InstallationPath $NppShellFileName))) {
-    7z.exe e "$installer" -y -aos "$NppShellFileName" -o"$InstallationPath"
+    Start-ChocolateyProcessAsAdmin -ExeToRun 'cmd' -Statements "/c 7z e `"$InstallerPath`" -y -aos `"$NppShellFileName`" -o`"$InstallationPath`""
 }
-regsvr32.exe /s "$(Join-Path $InstallationPath $NppShellFileName)"
-Remove-Item -Path $InstallerPath -Force
+$NppShell = Join-Path $InstallationPath $NppShellFileName
+Start-ChocolateyProcessAsAdmin -ExeToRun 'cmd' -Statements "/c regsvr32 /s `"$NppShell`""
+Remove-Item -Path $InstallerPath -Force -ErrorAction Ignore
 
 Install-BinFile -Name 'notepad++' -Path $(Join-Path $InstallationPath "notepad++.exe")
 Install-ChocolateyShortcut -ShortcutFilePath "$Env:SystemDrive\Users\Public\Desktop\Notepad++.lnk" -TargetPath $(Join-Path $InstallationPath "notepad++.exe") 

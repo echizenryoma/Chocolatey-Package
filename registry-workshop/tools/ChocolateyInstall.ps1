@@ -11,6 +11,6 @@ $PackageArgs = @{
 }
 
 Install-ChocolateyZipPackage @PackageArgs
-Remove-Item -Force -Path "$ToolsPath\`$PLUGINSDIR" -Recurse
-Remove-Item -Force -Path "$ToolsPath\Uninstall.exe"
+Remove-Item -Path $(Join-Path $ToolsPath '$PLUGINSDIR') -Force -Recurse -ErrorAction Ignore
+Remove-Item -Path $(Join-Path $ToolsPath 'Uninstall.exe') -Force -ErrorAction Ignore
 Get-ChildItem $ToolsPath -Include "keygen.exe" -Recurse | ForEach-Object { New-Item "$($_.FullName).ignore" -Type File -Force | Out-Null }

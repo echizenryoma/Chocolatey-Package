@@ -8,6 +8,7 @@ $Url64 = 'https://www.voidtools.com/Everything-1.4.1.877.x64.zip'
 $Checksum64 = 'bd63a317ba10623b3fc3406e7d448b63'
 $ChecksumType64 = 'md5'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
+$UrlExtra = 'https://www.voidtools.com/es.exe'
 
 $PackageArgs = @{
     PackageName    = $PackageName
@@ -21,4 +22,9 @@ $PackageArgs = @{
 }
 Install-ChocolateyZipPackage @PackageArgs
 
-Invoke-WebRequest 'https://www.voidtools.com/es.exe' -OutFile $(Join-Path $ToolsPath "es.exe")
+$PackageArgs = @{
+    PackageName  = $PackageName
+    Url          = $UrlExtra
+    FileFullPath = Join-Path $ToolsPath $([IO.Path]::GetFileName($UrlExtra))
+}
+Get-ChocolateyWebFile @PackageArgs

@@ -2,12 +2,12 @@
 
 $PackageName = 'cmder'
 $Url = 'https://github.com/cmderdev/cmder/releases/download/v1.3.4/cmder_mini.zip'
-$ToolsPath = Join-Path $(Get-ToolsLocation) $PackageName
+$InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 
 $PackageArgs = @{
     PackageName   = $PackageName
     Url           = $Url
-    UnzipLocation = $ToolsPath
+    UnzipLocation = $InstallationPath
 }
 Install-ChocolateyZipPackage @PackageArgs
-Install-ChocolateyPath $ToolsPath 'Machine'
+Install-ChocolateyPath $InstallationPath 'Machine'

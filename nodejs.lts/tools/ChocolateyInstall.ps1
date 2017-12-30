@@ -7,8 +7,8 @@ $ChecksumType32 = 'SHA256'
 $Url64 = 'https://npm.taobao.org/mirrors/node/v8.9.3/node-v8.9.3-win-x64.7z'
 $Checksum64 = 'd67bea0d8e27e66b55bdc32de600a11611e73b3a2322401a487513e56304559c'
 $ChecksumType64 = 'SHA256'
-$InstallationPath = Get-ToolsLocation
-$ToolsPath = Join-Path $(Get-ToolsLocation) $PackageName
+$InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
+$UnzipLocation = Get-ToolsLocation
 
 $PackageArgs = @{
     PackageName    = $PackageName
@@ -18,15 +18,13 @@ $PackageArgs = @{
     Url64          = $Url64
     Checksum64     = $Checksum64
     ChecksumType64 = $ChecksumType64
-    UnzipLocation  = $InstallationPath
+    UnzipLocation  = $UnzipLocation
 }
 Install-ChocolateyZipPackage @PackageArgs
 
-if (-Not (Test-Path $ToolsPath)) {
-    New-Item -ItemType Directory -Force -Path $ToolsPath
-}
-$UnzipPath = (Get-ChildItem $InstallationPath -Directory | Where-Object Name -Like "node-v*-win-x*" | Select-Object -First 1).FullName
-cmd /c xcopy $UnzipPath $ToolsPath /s /y /q
-cmd /c rmdir "$UnzipPath" /s /q
+New-Item -ItemType Directory -Force -Path $InstallationPath -ErrorAction Ignore | Out-Null
+$UnzipPath = (Get-ChildItem $UnzipLocation -Directory | Where-Object Name -Like "node-v*-win-x*" | Select-Object -First 1).FullName
+Start-ChocolateyProcessAsAdmin -ExeToRun 'cmd' -Statements "/c xcopy `"$UnzipPath`" `"$InstallationPath`" /s /y /q"
+Start-ChocolateyProcessAsAdmin -ExeToRun 'cmd' -Statements "/c rmdir `"$UnzipPath`" /s /q"
 
-Install-ChocolateyPath -PathToInstall $ToolsPath -PathType 'Machine'
+Install-ChocolateyPath -PathToInstall $InstallationPath -PathType 'Machine'
