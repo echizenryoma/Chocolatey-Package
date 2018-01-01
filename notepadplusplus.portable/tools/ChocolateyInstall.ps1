@@ -24,13 +24,13 @@ $PackageArgs = @{
     FileFullPath = $InstallerPath
 }
 Get-ChocolateyWebFile @PackageArgs
-$content = 7z l `"$InstallerPath`" "NppShell_*.dll"
-$NppShellFileName = $content -split "\n|\s" -match "NppShell" | Select-Object -First 1
+$NppShellInformation = 7z l "`"$InstallerPath`"" "NppShell_*.dll"
+$NppShellFileName = $NppShellInformation -split "\n|\s" -match "NppShell" | Select-Object -First 1
 if (!(Test-Path $(Join-Path $InstallationPath $NppShellFileName))) {
-    Start-ChocolateyProcessAsAdmin -ExeToRun 'cmd' -Statements "/c 7z e `"$InstallerPath`" -y -aos `"$NppShellFileName`" -o`"$InstallationPath`""
+    $null = 7z e "`"$InstallerPath`"" -y -aos "`"$NppShellFileName`"" -o"`"$InstallationPath`""
 }
 $NppShell = Join-Path $InstallationPath $NppShellFileName
-Start-ChocolateyProcessAsAdmin -ExeToRun 'cmd' -Statements "/c regsvr32 /s `"$NppShell`""
+Start-ChocolateyProcessAsAdmin -ExeToRun 'regsvr32' -Statements "/s `"$NppShell`""
 Remove-Item -Path $InstallerPath -Force -ErrorAction Ignore
 
 Install-BinFile -Name 'notepad++' -Path $(Join-Path $InstallationPath "notepad++.exe")

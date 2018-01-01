@@ -20,5 +20,5 @@ Install-ChocolateyPackage @PackageArgs
 $PythonBin = $(Join-Path $InstallationPath 'python.exe')
 $Python3Bin = $(Join-Path $InstallationPath 'python3.exe')
 if (-Not (Test-Path $Python3Bin)) {
-    Start-ChocolateyProcessAsAdmin -ExeToRun 'cmd' -Statements "/c mklink /h `"$Python3Bin`" `"$PythonBin`""
+    Start-ChocolateyProcessAsAdmin -ExeToRun 'mklink' -Statements "/h `"$Python3Bin`" `"$PythonBin`""
 }

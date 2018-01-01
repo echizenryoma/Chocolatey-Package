@@ -15,14 +15,14 @@ $PackageArgs = @{
 }
 Get-ChocolateyWebFile @PackageArgs
 
-$InstallArgs = '/c msiexec /a "{0}" /qn TargetDir="{1}"' -f $FilePath, $InstallationPath
-Start-ChocolateyProcessAsAdmin -ExeToRun 'cmd' -Statements $InstallArgs
+$InstallArgs = '/a "{0}" /qn TargetDir="{1}"' -f $FilePath, $InstallationPath
+Start-ChocolateyProcessAsAdmin -ExeToRun 'msiexec' -Statements $InstallArgs
 Remove-Item -Path $FilePath -Force -ErrorAction Ignore
 
 $PythonBin = $(Join-Path $InstallationPath 'python.exe')
 $Python2Bin = $(Join-Path $InstallationPath 'python2.exe')
 if (-Not (Test-Path $Python2Bin)) {
-    Start-ChocolateyProcessAsAdmin -ExeToRun 'cmd' -Statements "/c mklink /h `"$Python2Bin`" `"$PythonBin`""
+    Start-ChocolateyProcessAsAdmin -ExeToRun 'mklink' -Statements "/h `"$Python2Bin`" `"$PythonBin`""
 }
 
 Install-ChocolateyPath $InstallationPath 'Machine'
