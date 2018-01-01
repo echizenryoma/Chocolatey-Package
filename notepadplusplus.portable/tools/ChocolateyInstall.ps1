@@ -24,7 +24,7 @@ $PackageArgs = @{
     FileFullPath = $InstallerPath
 }
 Get-ChocolateyWebFile @PackageArgs
-$content = 7z l `""$InstallerPath"`" `"NppShell_*.dll`"
+$content = 7z l "`""$InstallerPath"`"" "`"NppShell_*.dll`""
 $NppShellFileName = $content -split "\n| " -match "NppShell" | Select-Object -First 1
 if (!(Test-Path $(Join-Path $InstallationPath $NppShellFileName))) {
     Start-ChocolateyProcessAsAdmin -ExeToRun 'cmd' -Statements "/c 7z e `"$InstallerPath`" -y -aos `"$NppShellFileName`" -o`"$InstallationPath`""
