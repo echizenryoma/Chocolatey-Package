@@ -12,4 +12,4 @@ $PackageArgs = @{
     UnzipLocation = $ToolsPath
 }
 Install-ChocolateyZipPackage @PackageArgs
-Get-ChildItem $ToolsPath -File -Include "setup.exe" -Recurse | ForEach-Object { New-Item "$($_.FullName).ignore" -Type File -Force | Out-Null }
+Get-ChildItem $ToolsPath -File -Include "setup.exe" -Recurse | ForEach-Object { $null = New-Item "$($_.FullName).ignore" -Type File -Force }

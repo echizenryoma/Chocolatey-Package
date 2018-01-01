@@ -15,4 +15,5 @@ $PackageArgs = @{
     Options       = @{Headers = @{"referer" = "https://windows-repair-toolbox.com/?smd_process_download=1&download_id=200"}}
 }
 Install-ChocolateyZipPackage @PackageArgs
+
 Install-BinFile -Name 'Windows_Repair_Toolbox' -Path $(Join-Path $InstallationPath "Windows_Repair_Toolbox.exe")
