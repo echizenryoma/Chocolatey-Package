@@ -25,6 +25,6 @@ Install-ChocolateyZipPackage @PackageArgs
 New-Item -ItemType Directory -Force -Path $InstallationPath -ErrorAction Ignore | Out-Null
 $UnzipPath = (Get-ChildItem $UnzipLocation -Directory | Where-Object Name -Like "node-v*-win-x*" | Select-Object -First 1).FullName
 Start-ChocolateyProcessAsAdmin -ExeToRun 'xcopy' -Statements "`"$UnzipPath`" `"$InstallationPath`" /s /y /q"
-Start-ChocolateyProcessAsAdmin -ExeToRun 'rmdir' -Statements "`"$UnzipPath`" /s /q"
+Start-ChocolateyProcessAsAdmin -ExeToRun 'cmd' -Statements "/c rmdir `"$UnzipPath`" /s /q"
 
 Install-ChocolateyPath -PathToInstall $InstallationPath -PathType 'Machine'
