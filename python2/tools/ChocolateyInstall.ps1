@@ -22,7 +22,7 @@ Remove-Item -Path $FilePath -Force -ErrorAction Ignore
 $PythonBin = $(Join-Path $InstallationPath 'python.exe')
 $Python2Bin = $(Join-Path $InstallationPath 'python2.exe')
 if (-Not (Test-Path $Python2Bin)) {
-    Start-ChocolateyProcessAsAdmin -ExeToRun 'mklink' -Statements "/h `"$Python2Bin`" `"$PythonBin`""
+	New-Item -Path $Python2Bin -ItemType HardLink -Value $PythonBin
 }
 
 Install-ChocolateyPath $InstallationPath 'Machine'
