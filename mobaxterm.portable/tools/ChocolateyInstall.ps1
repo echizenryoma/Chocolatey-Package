@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'mobaxterm'
-$Url = 'https://download.mobatek.net/10420170816103227/MobaXterm_Portable_v10.4.zip'
+$Url = 'https://download.mobatek.net/10520180106182002/MobaXterm_Portable_v10.5.zip'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 
 $PackageArgs = @{
