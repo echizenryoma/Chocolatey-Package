@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>postman</id>
+    <title>Postman for Windows</title>
+    <version>5.5.0</version>
+    <authors>Postdot Technologies, Inc.</authors>
+    <owners>echizenryoma</owners>
+    <summary>Postman for Windows</summary>
+    <description>Postman helps you be more efficient while working with APIs. Using Postman, you can construct complex HTTP requests quickly, organize them in collections and share them with your co-workers.</description>
+    <projectUrl>https://www.getpostman.com/</projectUrl>
+    <iconUrl>https://www.getpostman.com/img/v2/logo.svg</iconUrl>
+    <tags>postman</tags>
+    <copyright>Postdot Technologies, Inc.</copyright>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
