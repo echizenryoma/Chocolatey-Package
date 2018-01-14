@@ -10,8 +10,7 @@ $GOPATH = Join-Path $GOROOT 'opt'
 $GOBIN = Join-Path $GOROOT 'bin'
 
 if (Test-Path $GOROOT) {
-    Get-ChildItem -Path $GOROOT -exclude 'opt' |
-        Remove-Item -Recurse -Force | Out-Null
+    $null = Get-ChildItem -Path $GOROOT -exclude 'opt' |  Remove-Item -Recurse -Force
 }
 
 $PackageArgs = @{

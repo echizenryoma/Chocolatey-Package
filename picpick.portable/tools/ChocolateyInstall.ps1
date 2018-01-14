@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$PackageName = 'picpick.portable'
+$PackageName = 'picpick'
 $Url32 = 'http://ngwin.com/download/latest/picpick_portable.zip'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
@@ -11,4 +11,4 @@ $PackageArgs = @{
 }
 Install-ChocolateyZipPackage @PackageArgs
 
-Get-ChildItem $ToolsPath -Include "*.exe" -Exclude "picpick.exe" -Recurse | ForEach-Object { New-Item "$($_.FullName).ignore" -Type file -Force | Out-Null }
+Get-ChildItem $ToolsPath -Include "*.exe" -Exclude "picpick.exe" -Recurse | ForEach-Object { $null = New-Item "$($_.FullName).ignore" -Type file -Force }

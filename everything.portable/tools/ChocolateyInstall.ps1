@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$PackageName = 'everything.portable'
+$PackageName = 'everything'
 $Url32 = 'https://www.voidtools.com/Everything-1.4.1.877.x86.zip'
 $Checksum32 = '522a8c98336fd038f0b7643b17a88317'
 $ChecksumType32 = 'md5'

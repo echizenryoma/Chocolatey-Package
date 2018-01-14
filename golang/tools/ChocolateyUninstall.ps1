@@ -1,5 +1,5 @@
 ﻿$InstallationPath = Join-Path $(Get-ToolsLocation) 'go'
-Remove-Item $InstallationPath -Recurse -Force
+Remove-Item $InstallationPath -Recurse -Force -ErrorAction Ignore
 
 Uninstall-ChocolateyEnvironmentVariable -VariableName 'GOROOT' -VariableType 'Machine'
 Uninstall-ChocolateyEnvironmentVariable -VariableName 'GOPATH' -VariableType 'Machine'

@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$PackageName = 'ghostscript.portable'
+$PackageName = 'ghostscript'
 $Url32 = 'https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs922/gs922w32.exe'
 $Checksum32 = 'c01b36529c618f9218c39c84bf7168fc2e466a78406f273609f736a5f0cd965a'
 $ChecksumType32 = 'SHA256'

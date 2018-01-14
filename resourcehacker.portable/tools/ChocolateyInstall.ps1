@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$PackageName = 'sqlitestudio.portable'
+$PackageName = 'sqlitestudio'
 $Url = 'http://www.angusj.com/resourcehacker/resource_hacker.zip'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 

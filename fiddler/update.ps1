@@ -18,7 +18,7 @@ function global:au_GetLatest {
     Invoke-WebRequest -UseBasicParsing -Uri $url -OutFile $file
     $version = [System.Diagnostics.FileVersionInfo]::GetVersionInfo($file).FileVersion
     $hash = Get-FileHash $file
-    Remove-Item $file -Force -ea 0
+    Remove-Item $file -Force -ErrorAction Ignore
 
     @{
         Version        = $version

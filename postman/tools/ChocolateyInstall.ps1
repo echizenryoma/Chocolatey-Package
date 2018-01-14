@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$PackageName = "postman"
+$PackageName = 'postman'
 $Url32 = 'https://dl.pstmn.io/download/latest/win32'
 $Url64 = 'https://dl.pstmn.io/download/latest/win64'
 
