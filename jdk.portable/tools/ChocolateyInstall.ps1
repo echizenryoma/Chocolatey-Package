@@ -33,7 +33,7 @@ Install-ChocolateyZipPackage @PackageArgs
 
 Remove-Item -Path $UnzipPath -Recurse -Force -ErrorAction Ignore
 
-$UnpackFiles = Get-ChildItem -Path $InstallationPath -Filter "*.pack" -Recurse
+$UnpackFiles = Get-ChildItem -Path $InstallationPath -File -Filter "*.pack" -Recurse
 ForEach ($UnpackFile in $UnpackFiles) {
     $src = $UnpackFile.FullName
     $dst = Join-Path $UnpackFile.Directory.FullName $("{0}.{1}" -f $UnpackFile.BaseName, "jar")
