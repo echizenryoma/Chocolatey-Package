@@ -5,7 +5,7 @@ $Url64 = 'http://edelivery.oracle.com/otn-pub/java/jdk/9.0.4+11/c2514751926b4512
 $Checksum64 = '56c67197a8f2f7723ffb0324191151075cdec0f0891861e36f3fadda28d556c3'
 $ChecksumType64 = 'SHA256'
 $Version = '9.0.4'
-$InstallationPath = Join-Path $(Get-ToolsLocation) "jdk_$Version"
+$InstallationPath = Join-Path $(Get-ToolsLocation) "jdk-$Version"
 $UnzipPath = $(Join-Path $InstallationPath "tmp")
 
 $PackageArgs = @{
@@ -23,37 +23,15 @@ $PackageArgs = @{
 }
 Install-ChocolateyZipPackage @PackageArgs
 
-$JdkFilesPath = Get-ChildItem -Path $UnzipPath -File -Recurse | Sort-Object Length -Descending | Select-Object -First 3
-$JdkToolsPath = $JdkFilesPath[0].FullName
-$JdkSrcPath = $JdkFilesPath[2].FullName
-
+$JdkToolsPath = (Get-ChildItem -Path $UnzipPath -File -Recurse | Sort-Object Length -Descending | Select-Object -First 1).FullName
 $PackageArgs = @{
     PackageName   = $PackageName
-    Url32         = $JdkToolsPath
     Url64         = $JdkToolsPath
-    UnzipLocation = $InstallationPath
-}
-Install-ChocolateyZipPackage @PackageArgs
-
-$PackageArgs = @{
-    PackageName   = $PackageName
-    Url32         = $JdkSrcPath
-    Url64         = $JdkSrcPath
     UnzipLocation = $InstallationPath
 }
 Install-ChocolateyZipPackage @PackageArgs
 
 Remove-Item -Path $UnzipPath -Recurse -Force -ErrorAction Ignore
-
-$JdkToolsPath = (Get-ChildItem -Path $InstallationPath -File -Recurse | Sort-Object Length -Descending | Select-Object -First 1).FullName
-$PackageArgs = @{
-    PackageName   = $PackageName
-    Url32         = $JdkToolsPath
-    Url64         = $JdkToolsPath
-    UnzipLocation = $InstallationPath
-}
-Install-ChocolateyZipPackage @PackageArgs
-Remove-Item -Path $JdkToolsPath -Force -ErrorAction Ignore
 
 $UnpackFiles = Get-ChildItem -Path $InstallationPath -Filter "*.pack" -Recurse
 ForEach ($UnpackFile in $UnpackFiles) {
