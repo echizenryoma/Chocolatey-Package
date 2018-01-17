@@ -6,7 +6,7 @@ function global:au_SearchReplace {
             "(^[$]Url64\s*=\s*)('.*')"          = "`$1'$($Latest.URL64)'"
             "(^[$]Checksum64\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum64)'"
             "(^[$]ChecksumType64\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType64)'"
-            "(^[$]JavaVersion\s*=\s*)('.*')"    = "`$1'$($Latest.JavaVersion)'"
+            "(^[$]Version\s*=\s*)('.*')"        = "`$1'$($Latest.Version)'"
         }
     }
 }
@@ -28,7 +28,6 @@ function global:au_GetLatest {
         URL64          = $json64.filepath -replace "download.oracle.com", "edelivery.oracle.com"
         Checksum64     = $json64.SHA256
         ChecksumType64 = "SHA256"
-        JavaVersion    = $version
     }
 }
 

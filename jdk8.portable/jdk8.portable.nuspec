@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>jdk8.portable</id>
+    <version>8.0.162</version>
+    <title>Java SE Development Kit</title>
+    <authors>Sun Microsystems/Oracle Corporation</authors>
+    <owners>echizenryoma</owners>
+    <licenseUrl>http://www.oracle.com/technetwork/java/javase/terms/license/index.html</licenseUrl>
+    <projectUrl>http://www.oracle.com/technetwork/java/javase/downloads/index.html</projectUrl>
+    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/java.svg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Java Platform, Standard Edition (Java SE) lets you develop and deploy Java applications on desktops and servers, as well as in today's demanding embedded environments. Java offers the rich user interface, performance, versatility, portability, and security that today's applications require.</description>
+    <summary>The Java Development Kit (JDK)</summary>
+    <releaseNotes>http://www.oracle.com/technetwork/java/javase/documentation/8u-relnotes-2225394.html</releaseNotes>
+    <tags>java jdk</tags>
+    <packageSourceUrl>ttps://github.com/echizenryoma/Chocolatey-Packages/tree/master/jdk8.portable</packageSourceUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
