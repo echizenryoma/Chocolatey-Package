@@ -22,14 +22,13 @@ function global:au_GetLatest {
 
     $url64 = $json64.filepath
     $version = ($url64 -split "/|\+" -match "\d+(\.\d+)+" | Select-Object -First 1).Trim()
-    $java_version = ($version -split "\." | Select-Object -First 1)
 	
     return @{
         Version        = $version
         URL64          = $json64.filepath -replace "download.oracle.com", "edelivery.oracle.com"
         Checksum64     = $json64.SHA256
         ChecksumType64 = "SHA256"
-        JavaVersion    = $java_version
+        JavaVersion    = $version
     }
 }
 
