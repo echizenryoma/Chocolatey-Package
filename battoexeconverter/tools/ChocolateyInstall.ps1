@@ -2,7 +2,7 @@
 
 $PackageName = 'battoexeconverter'
 $Url = 'http://www.f2ko.de/downloads/Bat_To_Exe_Converter.zip'
-$Checksum = '192b7f12a1e297cdf280de7ebc262697'
+$Checksum = '6933e19ac793e223029e72720ca5ad03'
 $ChecksumType = 'md5'
 $ToolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
