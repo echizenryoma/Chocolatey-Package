@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'xshell'
-$Url = ''
+$Url = 'https://cdn.netsarang.net/3ad36b20/Xshell-6.0.0073r_beta.exe'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 
