@@ -3,7 +3,6 @@
 function global:au_SearchReplace {
     @{
         'tools\chocolateyInstall.ps1' = @{
-            "(^[$]url\s*=\s*)('.*')" = "`$1'$($Latest.URL32)'"
         }
     }
 }
@@ -15,7 +14,6 @@ function global:au_GetLatest {
 
     return @{
         Version = $version
-        URL32   = $url
     }
 }
 
