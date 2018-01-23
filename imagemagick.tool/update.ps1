@@ -16,7 +16,7 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
     $page = Invoke-WebRequest -UseBasicParsing -Uri 'https://www.imagemagick.org/download/binaries/digest.rdf'
     $file32 = ([xml]$page.Content).RDF.Content | Where-Object about -Match "portable.*x86" | Select-Object -Last 1
-    $file64 = ([xml]$page.Content).RDF.Content | Where-Object about -Match "portable.*x86" | Select-Object -Last 1
+    $file64 = ([xml]$page.Content).RDF.Content | Where-Object about -Match "portable.*x64" | Select-Object -Last 1
 
     $null = ($file32 | Where-Object about -Match "x86"| Select-Object -First 1 -ExpandProperty about) -match "\d+(\.\d+)+\-\d+"
     $version = $Matches[0].Replace('-', '.')
