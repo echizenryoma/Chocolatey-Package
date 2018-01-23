@@ -2,7 +2,7 @@
 
 $PackageName = 'windows-repair-toolbox'
 $Url = 'https://windows-repair-toolbox.com/files/Windows_Repair_Toolbox.zip'
-$Checksum = '440FDA83815C3B53CD7EE82179B75CF343AF9B9F8CB74FA4D4039116BF5334D6'
+$Checksum = '7A9E489FB5ED9CA25CD5191A0C3E3904130E9E791B38C9A54A9D00BA07CCE066'
 $ChecksumType = 'SHA256'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 
