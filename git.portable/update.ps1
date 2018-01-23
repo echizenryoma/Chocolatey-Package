@@ -10,12 +10,11 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $request = Invoke-WebRequest -UseBasicParsing -Uri "https://github.com/git-for-windows/git/releases/latest" -MaximumRedirection 0 -ErrorAction Ignore
-    $version = [IO.Path]::GetFileName($request.Headers.Location) -replace ("v|windows\.", '')
-
     $page = Invoke-WebRequest -UseBasicParsing -Uri "https://github.com/git-for-windows/git/releases/latest" 
     $url32 = "https://github.com" + ($page.links | Where-Object href -match "PortableGit-.+-32-bit.7z.exe" | Select-Object -First 1 -ExpandProperty href)
     $url64 = "https://github.com" + ($page.links | Where-Object href -match "PortableGit-.+-64-bit.7z.exe" | Select-Object -First 1 -ExpandProperty href)
+
+    $version = [IO.Path]::GetFileName($url32) -split "-" -match "\d+(\.\d+)+"
 
     return @{
         Version = $version
