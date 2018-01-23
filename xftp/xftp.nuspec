@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>xftp</id>
+    <version>6.0.0073</version>
+    <title>Xftp</title>
+    <authors>NetSarang Computer, Inc.</authors>
+    <owners>echizenryoma</owners>
+    <projectUrl>https://www.netsarang.com/products/xftp_overview.html</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/echizenryoma/Chocolatey-Package/master/xftp/xftp.png</iconUrl>
+    <description>Xftp is a flexible and lightweight SFTP/FTP client for users who need to transfer files securely over a network. It offers powerful features such as direct edit, multiple panes, folder synchronization, FXP support, server-to-server transfer and 3rd party editor integration. Xftp will save you time and effort when working with remote files.</description>
+    <summary>Xftp is a flexible and lightweight SFTP/FTP client for users who need to transfer files securely over a network. </summary>
+    <copyright>NetSarang Computer, Inc.</copyright>
+    <tags>xftp admin</tags>
+    <docsUrl>https://www.netsarang.com/knowledgebase/xftp/list</docsUrl>
+    <bugTrackerUrl>http://www.netsarang.com/forum/xftp/list</bugTrackerUrl>
+    <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/xftp</packageSourceUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
