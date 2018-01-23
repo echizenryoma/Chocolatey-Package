@@ -6,7 +6,7 @@
             [xml]$XmlDocument = Get-Content -Path $nuspec
             $version = $XmlDocument.package.metadata.version
             $nupkg = Join-Path $dir "$($dir.Name).$version.nupkg"
-            if (-Not (Test-Path $nupkg)) {
+            if (-not (Test-Path $nupkg) -or ((Get-ChildItem $nupkg).LastWriteTimeUtc -lt (Get-ChildItem $nupkg).LastWriteTimeUtc)) {
                 $null = choco pack "$(Join-Path $dir "$($dir.Name).nuspec")" --out "$dir"
             }
         }
