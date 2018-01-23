@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+<package 
+  xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>golang</id>
     <version>1.9.3</version>
@@ -8,7 +9,7 @@
     <title>Go programming language</title>
     <authors>Robert Griesemer, Rob Pike, Ken Thompson</authors>
     <projectUrl>https://golang.org</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/golang/go/raw/master/doc/gopher/favicon.svg</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/golang/go/master/doc/gopher/favicon.svg</iconUrl>
     <licenseUrl>https://golang.org/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://golang.org/change</projectSourceUrl>
