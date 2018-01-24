@@ -17,4 +17,4 @@ Install-ChocolateyZipPackage @PackageArgs
 $null = New-Item -ItemType Directory -Force -Path $InstallationPath -ErrorAction Ignore
 $UnzipPath = (Get-ChildItem $UnzipLocation -Directory | Where-Object Name -Like "apache-tomcat-*" | Select-Object -First 1).FullName
 Start-ChocolateyProcessAsAdmin -ExeToRun 'xcopy' -Statements "`"$UnzipPath`" `"$InstallationPath`" /s /y /q"
-Start-ChocolateyProcessAsAdmin -ExeToRun 'rmdir' -Statements "`"$UnzipPath`" /s /q"
+Start-ChocolateyProcessAsAdmin -ExeToRun 'cmd' -Statements "/c rmdir `"$UnzipPath`" /s /q"
