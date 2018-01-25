@@ -1,9 +1,8 @@
 <?xml version="1.0"?>
-<package 
-  xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>ultraiso</id>
-    <version>9.7.0.3476</version>
+    <version>9.7.1.3519</version>
     <title>UltraISO</title>
     <authors>EZB Systems, Inc.</authors>
     <owners>echizenryoma</owners>
