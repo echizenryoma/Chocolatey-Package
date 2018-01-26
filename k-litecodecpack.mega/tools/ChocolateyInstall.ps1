@@ -6,8 +6,8 @@ $Checksum32 = 'caf68286d2fb66e7f2b857a2f98fdd0a2083abe822eb1ecb9675cfeeee065f53'
 $ChecksumType32 = 'SHA256'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
-$SetupIniPath = Join-Path $ToolsPath 'setup.ini'
-$SilentArgs = "/verysilent /norestart /LoadInf=`"$SetupIniPath`""
+$SetupInfPath = Join-Path $ToolsPath 'setup.inf'
+$SilentArgs = "/verysilent /norestart /LoadInf=`"$SetupInfPath`""
 
 $PackageArgs = @{
     PackageName  = $PackageName

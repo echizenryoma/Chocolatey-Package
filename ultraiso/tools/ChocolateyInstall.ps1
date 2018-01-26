@@ -1,16 +1,18 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'ultraiso'
-$Url = 'http://dw.ezbsystems.com/uiso9_cn.exe'
+$Url = 'http://reg.ezbsys.com/private/3939p575/uiso97pes.exe'
+$ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
+
+$SetupInfPath = Join-Path $ToolsPath 'setup.inf'
+$SilentArgs = "/verysilent /norestart /LoadInf=`"$SetupInfPath`""
 
 $PackageArgs = @{
     PackageName = $PackageName
     Url         = $Url
-    SilentArgs  = '/SILENT /TASKS="desktopicon,fileassoc"'
+    SilentArgs  = $SilentArgs
 }
 Install-ChocolateyPackage @PackageArgs
 
-$RegisterRoot = "HKCU:\SOFTWARE\EasyBoot Systems\UltraISO\5.0"
-New-Item -Path $RegisterRoot -Force -ErrorAction Ignore
-Set-ItemProperty -Path $RegisterRoot -Name "UserName" -Value "王涛" -Force
-Set-ItemProperty -Path $RegisterRoot -Name "Registration" -Value "69414b170e136f766a32471009176109" -Force
+$InstallationPath = (Get-InstallRegistryKey "ultraiso*" | Select-Object -First 1).InstallLocation
+Copy-Item -Path $(Join-Path $ToolsPath "uikey.ini") -Destination $InstallationPath
