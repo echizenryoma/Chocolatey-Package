@@ -6,7 +6,7 @@
             [xml]$XmlDocument = Get-Content -Path $nuspec
             $version = $XmlDocument.package.metadata.version
             $nupkg = Join-Path $dir "$($dir.Name).$version.nupkg"
-            if (-not (Test-Path $nupkg) -or ((Get-ChildItem $nupkg).LastWriteTimeUtc -lt (Get-ChildItem $nupkg).LastWriteTimeUtc)) {
+            if (-not (Test-Path $nupkg)) {
                 $null = choco pack "$(Join-Path $dir "$($dir.Name).nuspec")" --out "$dir"
             }
         }
@@ -14,5 +14,6 @@
 }
 
 Push-Location $PSScriptRoot
+#Remove-Item * -Include *.nupkg -Force
 git pull
 Choco-Pack
