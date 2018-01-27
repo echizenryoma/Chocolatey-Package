@@ -13,7 +13,7 @@ Result=1
 szDir=[InstallationPath]
 Result=1
 [{1CB5B711-ABF2-40A8-86C6-F324EF5E9649}-SdSelectFolder-0]
-szFolder=Xftp 6
+szFolder=Xftp
 Result=1
 [{1CB5B711-ABF2-40A8-86C6-F324EF5E9649}-SdFinish-0]
 Result=1
