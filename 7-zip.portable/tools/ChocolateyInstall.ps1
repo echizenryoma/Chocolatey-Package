@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = '7-zip'
-$Url32 = 'http://www.7-zip.org/a/7z1800.exe'
-$Url64 = 'http://www.7-zip.org/a/7z1800-x64.exe'
-$UrlExtra = 'http://www.7-zip.org/a/7z1800-extra.7z'
+$Url32 = 'http://www.7-zip.org/a/7z1801.exe'
+$Url64 = 'http://www.7-zip.org/a/7z1801-x64.exe'
+$UrlExtra = 'http://www.7-zip.org/a/7z1801-extra.7z'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 
 $PackageArgs = @{
