@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<package 
+  xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>sandboxie</id>
     <title>Sandboxie (Install)</title>
@@ -8,7 +9,6 @@
     <owners>echizenryoma</owners>
     <summary>Executes processes in a protected, isolated space, otherwise known as a "sandbox"</summary>
     <description>
-      <![CDATA[
 A process sandbox helps to manage and limit access permissions a process has to your data.  Use it to safely test new software for usability, safely study behavior of known spyware and malware, or browse the web from a sandboxed browser to completely shield your computer and network from Internet Bad Things.
 
 ### Features
@@ -30,7 +30,7 @@ A process sandbox helps to manage and limit access permissions a process has to 
 * [Known program conflicts](http://www.sandboxie.com/index.php?KnownConflicts)
 
 ### Community
-* [Forum](http://forums.sandboxie.com/phpBB3/)]]>
+* [Forum](http://forums.sandboxie.com/phpBB3/)
     </description>
     <tags>security virtualization forensics shareware nagscreen admin</tags>
     <packageSourceUrl>https://github.com/dtgm/chocolatey-packages/tree/master/automatic/sandboxie/</packageSourceUrl>
@@ -44,9 +44,7 @@ A process sandbox helps to manage and limit access permissions a process has to 
 * [Release log](http://www.sandboxie.com/index.php?AllVersions)
 * [Changelog](http://www.sandboxie.com/index.php?VersionChanges)
 * [Beta release notes](http://forums.sandboxie.com/phpBB3/viewforum.php?f%3D43)
-
-#### Package
-* Automatically built and uploaded by [dtgm](https://chocolatey.org/profiles/dtgm)</releaseNotes>
+    </releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

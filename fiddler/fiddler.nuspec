@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<package 
+  xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>fiddler</id>
     <title>Fiddler</title>
@@ -24,7 +25,8 @@ Fiddler is freeware and can debug traffic from virtually any application, includ
 
 ## Notes
 
-- This will always install the latest version of Fiddler 4, regardless of the version specified in the package.    </description>
+- This will always install the latest version of Fiddler 4, regardless of the version specified in the package.
+    </description>
     <projectUrl>http://www.telerik.com/fiddler</projectUrl>
     <tags>fiddler freeware fiddler4 web debugging cross-platform proxy admin</tags>
     <copyright></copyright>

@@ -11,7 +11,8 @@
     <projectUrl>https://sqlitestudio.pl/</projectUrl>
     <iconUrl>https://sqlitestudio.pl/img/logo.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>SQLiteStudio is a SQLite database manager with the following features:
+    <description>
+SQLiteStudio is a SQLite database manager with the following features:
 * Portable - no need to install or uninstall. Just download, unpack and run.
 * Intuitive interface,
 * Powerful, yet light and fast,

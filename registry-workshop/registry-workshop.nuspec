@@ -6,10 +6,11 @@
     <version>5.0.1</version>
     <title>Registry Workshop</title>
     <authors>torchsoft</authors>
-    <owners>echizenrup,a</owners>
+    <owners>echizenryoma</owners>
     <projectUrl>http://www.torchsoft.com/en/rw_information.html</projectUrl>
     <iconUrl>https://cdn.rawgit.com/echizenryoma/Chocolatey-Package/master/registry-workshop/registry-workshop.png</iconUrl>
-    <description>Registry Workshop is an advanced registry editor. It is a perfect replacement for RegEdit and RegEdt32 which shipped with Windows.
+    <description>
+Registry Workshop is an advanced registry editor. It is a perfect replacement for RegEdit and RegEdt32 which shipped with Windows.
 
 In addition to all the standard features, Registry Workshop adds a variety of powerful features that allow you to work faster and more efficiently with registry related tasks.
 
@@ -36,8 +37,10 @@ You can read a review of Registry Workshop on PC Magazine's website at http://ww
 * Jump to the same key in HKLM or HKCU by context menu.
 * Allow to open multiple local registry windows.
 * Allow to open secure registry keys when running under the administrator privilege.
-* Edit binary data in BYTE, WORD or DWORD format.</description>
-    <summary>Application Server. Windows 32 and 64 bit. Default install location: `C:\Program Files\Apache Software Foundation\tomcat\apache-tomcat-8.0.33`.</summary>
+* Edit binary data in BYTE, WORD or DWORD format.
+
+    </description>
+    <summary>Registry Workshop is an advanced registry editor.</summary>
     <releaseNotes>http://www.torchsoft.com/node/12</releaseNotes>
     <tags>reg registry workshop edit</tags>
     <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/registry-workshop</packageSourceUrl>

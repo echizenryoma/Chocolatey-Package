@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package 
+  xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>windows-repair-toolbox</id>
     <version>2.0.0.9</version>
@@ -8,7 +9,8 @@
     <owners>echizenryoma</owners>
     <iconUrl>https://windows-repair-toolbox.com/wp-content/uploads/2016/10/windows_repair_toolbox60x60.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Windows Repair Toolbox (freeware) is a software created to help you repair a Windows system, by making the process faster, easier and uniform.
+    <description>
+Windows Repair Toolbox (freeware) is a software created to help you repair a Windows system, by making the process faster, easier and uniform.
 
 ##Features:
 – Download and run “on-the-fly” the best free portable software when it comes to diagnose and solve several kinds of Windows problems. The tools are categorized by their function, and the program will automatically download the correct version for the Windows edition in which you’re working. When you finish, simply uninstall the tool, and all downloaded software is also removed. Or you can choose the portable version of Windows Repair Toolbox, and just run it from a pen drive.
@@ -25,9 +27,11 @@
 
 – Allows you to save notes about the repair process;
 
-– Provides 1-click access to some useful Windows tools;</description>
+– Provides 1-click access to some useful Windows tools;
+
+    </description>
     <summary>(Almost) everything you need to repair Windows problems in one small handy tool.</summary>
-    <tags>microsoft visualstudiocode vscode editor ide javascript typescript foss cross-platform</tags>
+    <tags>windows_repair_toolbox</tags>
     <projectSourceUrl>https://windows-repair-toolbox.com/</projectSourceUrl>
     <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/windows-repair-toolbox</packageSourceUrl>
     <bugTrackerUrl>https://windows-repair-toolbox.com/</bugTrackerUrl>

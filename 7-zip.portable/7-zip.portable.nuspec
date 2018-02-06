@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<package 
+  xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>7-zip.portable</id>
     <title>7-Zip (Portable, CommandLine)</title>
@@ -7,7 +8,8 @@
     <authors>Igor Pavlov</authors>
     <owners>echizenryoma</owners>
     <summary>7-Zip is a file archiver with a high compression ratio.</summary>
-    <description>7-Zip is a file archiver with a high compression ratio.
+    <description>
+7-Zip is a file archiver with a high compression ratio.
 
 ## Features
 - High compression ratio in [7z format](http://www.7-zip.org/7z.html) with **LZMA** and **LZMA2** compression
@@ -16,7 +18,8 @@
 - Strong AES-256 encryption in 7z and ZIP formats
 - Self-extracting capability for 7z format
 - Powerful command line version
-- Localizations for 87 languages    </description>
+- Localizations for 87 languages
+    </description>
     <projectUrl>http://www.7-zip.org/</projectUrl>
     <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/7zip.portable</packageSourceUrl>
     <tags>7zip zip archiver foss</tags>

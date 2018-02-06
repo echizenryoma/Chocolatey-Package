@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package 
+  xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>pkhex</id>
     <version>18.01.28</version>
@@ -8,7 +9,8 @@
     <owners>echizenryoma</owners>
     <projectUrl>https://projectpokemon.org/forums/forums/forum/83-pkhex/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/echizenryoma/Chocolatey-Package/master/pkhex/pkhex.ico</iconUrl>
-    <description>Pokémon core series save editor, programmed in C#.
+    <description>
+Pokémon core series save editor, programmed in C#.
 
 Supports the following files:
 
@@ -21,7 +23,9 @@ Data is displayed in a view which can be edited and saved. The interface can be 
 
 Pokémon Showdown sets and QR codes can be imported/exported to assist in sharing.
 
-Nintendo 3DS savedata containers use an AES MAC that cannot be emulated without the 3DS's keys, thus a resigning service is required (svdt, save_manager, or SaveDataFiler).</description>
+Nintendo 3DS savedata containers use an AES MAC that cannot be emulated without the 3DS's keys, thus a resigning service is required (svdt, save_manager, or SaveDataFiler).
+
+    </description>
     <summary>Pokémon core series save editor</summary>
     <tags>pokemon edit</tags>
     <projectSourceUrl>https://github.com/kwsch/PKHeX</projectSourceUrl>

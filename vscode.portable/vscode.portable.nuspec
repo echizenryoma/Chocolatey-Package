@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package 
+  xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>vscode.portable</id>
     <version>1.19.3</version>
@@ -9,8 +10,8 @@
     <licenseUrl>https://code.visualstudio.com/License</licenseUrl>
     <projectUrl>https://code.visualstudio.com</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/db78e656a60aca25d4faddbe60721094609b846f/icons/visualstudiocode.png</iconUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Build and debug modern web and cloud applications. Code is free and available on your favorite platform - Linux, Mac OSX, and Windows.
+    <description>
+Build and debug modern web and cloud applications. Code is free and available on your favorite platform - Linux, Mac OSX, and Windows.
 
 ## Features
 
@@ -20,7 +21,9 @@
 * **Extensible and customizable:** Want even more features? Install extensions to add new languages, themes, debuggers, and to connect to additional services. Extensions run in separate processes, ensuring they won't slow down your editor.
 
 ## Notes
-The package uses default install options except that it adds context menu entries and Visual Studio Code isn't started after installation.</description>
+The package uses default install options except that it adds context menu entries and Visual Studio Code isn't started after installation.
+
+    </description>
     <summary>Visual Studio Code</summary>
     <releaseNotes>https://code.visualstudio.com/Updates</releaseNotes>
     <tags>microsoft visualstudiocode vscode editor ide javascript typescript foss cross-platform</tags>

@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package 
+  xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>fastcopy.portable</id>
     <version>3.41</version>
@@ -10,7 +11,8 @@
     <projectUrl>http://ipmsg.org/tools/fastcopy.html.en</projectUrl>
     <iconUrl>https://cdn.rawgit.com/echizenryoma/Chocolatey-Package/master/fastcopy.portable/fastcopy.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>FastCopy is the Fastest Copy/Delete Software on Windows. 
+    <description>
+FastCopy is the Fastest Copy/Delete Software on Windows. 
 
 It supports UNICODE and over MAX_PATH (260 byte) file pathnames. 
 
@@ -29,12 +31,7 @@ You can modify this software, because all source code has been opened to the pub
 
 Command line [manual](http://ipmsg.org/tools/fastcopy.html.en#cmdline)</description>
     <summary>Fastest Copy/Delete Software</summary>
-    <releaseNotes>#### Program
-* [Changelog](http://ipmsg.org/tools/fastcopy.html.en#history)
-* 3.0 or later, FastCopy's settings file has been renamed from FastCopy.ini to FastCopy2.ini.
-
-#### Package
-* Automatically built and uploaded by [dtgm](https://chocolatey.org/profiles/dtgm)</releaseNotes>
+    <releaseNotes>http://ipmsg.org/tools/fastcopy.html.en#history</releaseNotes>
     <copyright>© 2004 Hiroaki Shirouzu</copyright>
     <language>en-US</language>
     <tags>fast copy explorer gui cli</tags>

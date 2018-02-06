@@ -7,6 +7,8 @@ function global:au_SearchReplace {
             "(^[$]Checksum\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum32)'"
             "(^[$]ChecksumType\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
             "(^[$]UrlExtra\s*=\s*)('.*')"     = "`${1}'$($Latest.URL_EXTRA)'"
+            "(^[$]ChecksumExtra\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum32)'"
+            "(^[$]ChecksumTypeExtra\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
         }
     }
 }
@@ -21,17 +23,21 @@ function global:au_GetLatest {
     
     $base = "https://notepad-plus-plus.org/repository/$($version.Substring(0, $version.IndexOf("."))).x/$version"
     
-    $page = Invoke-WebRequest -UseBasicParsing -Uri "$base\npp.$version.sha1.md5.digest.txt"
-    $page = $page.Content -Split '\n'
-    $obj = $page -like "*.bin.7z" | Select-Object -First 1 | ConvertFrom-String -PropertyNames sha1sum, filename
-    $sha1sum = $obj.sha1sum
+    $page = Invoke-WebRequest -UseBasicParsing -Uri "${base}\npp.${version}.sha1.md5.digest.txt"
+    $checksum32 = ($page.Content -Split '\n' -like "*.bin.7z" | Select-Object -First 1 | ConvertFrom-String -PropertyNames sha1sum, filename).sha1sum
+    $checksum_extra = ($page.Content -Split '\n' -like "*.Installer.exe" | Select-Object -First 1 | ConvertFrom-String -PropertyNames sha1sum, filename).sha1sum
+
+    $url = "${base}/npp.${version}.bin.7z"
+    $url_extra = "${base}/npp.${version}.Installer.exe"
 
     return @{
-        Version        = $version
-        URL32          = "$base/npp.$version.bin.7z"
-        ChecksumType32 = 'SHA1'
-        Checksum32     = $sha1sum
-        URL_EXTRA      = "$base/npp.$version.Installer.exe"
+        Version           = $version
+        URL32             = $url
+        ChecksumType32    = 'SHA1'
+        Checksum32        = $checksum32
+        URL_EXTRA         = $url_extra
+        ChecksumTypeExtra = 'SHA1'
+        ChecksumExtra     = $checksum_extra
     }
 }
 

@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package 
+	xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
 	<metadata>
 		<id>battoexeconverter</id>
 		<version>3.0.8.0</version>
@@ -10,7 +11,8 @@
 		<projectUrl>http://www.f2ko.de/en/b2e.php</projectUrl>
 		<mailingListUrl>http://www.f2ko.de/en/imprint.php</mailingListUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>**Features**:
+		<description>
+**Features**:
 * Extended commands
 * Visible and invisible applications
 * Executables with administrator priviliges

@@ -16,11 +16,15 @@ $PackageArgs = @{
 Install-ChocolateyZipPackage @PackageArgs
 
 $UrlExtra = 'https://notepad-plus-plus.org/repository/7.x/7.5.4/npp.7.5.4.Installer.exe'
+$ChecksumExtra = '9633920a02980be62273093c4364bd07b8bb64a2'
+$ChecksumTypeExtra = 'SHA1'
 $FileName = [IO.Path]::GetFileName($UrlExtra)
 $InstallerPath = Join-Path $InstallationPath $FileName
 $PackageArgs = @{
     PackageName  = $PackageName
     Url          = $UrlExtra
+    Checksum     = $ChecksumExtra
+    ChecksumType = $ChecksumTypeExtra
     FileFullPath = $InstallerPath
 }
 Get-ChocolateyWebFile @PackageArgs
@@ -33,5 +37,7 @@ $NppShell = Join-Path $InstallationPath $NppShellFileName
 Start-ChocolateyProcessAsAdmin -ExeToRun 'regsvr32' -Statements "/s `"$NppShell`""
 Remove-Item -Path $InstallerPath -Force -ErrorAction Ignore
 
-Install-BinFile -Name 'notepad++' -Path $(Join-Path $InstallationPath "notepad++.exe")
-Install-ChocolateyShortcut -ShortcutFilePath "$Env:SystemDrive\Users\Public\Desktop\Notepad++.lnk" -TargetPath $(Join-Path $InstallationPath "notepad++.exe") 
+$BinFileName = Join-Path $InstallationPath "notepad++.exe"
+Install-BinFile -Name 'notepad++' -Path $BinFileName
+$LinkPath = Join-Path $([Environment]::GetFolderPath("CommonDesktopDirectory")) "Nodepad++.lnk"
+Install-ChocolateyShortcut -ShortcutFilePath $LinkPath -TargetPath $BinFileName

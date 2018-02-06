@@ -25,7 +25,7 @@ function global:au_GetLatest {
     $url64 = "https://www.imagemagick.org/download/binaries/" + $file64.about
 
     $checksum32 = $file32.sha256
-    $checksum64 = $file64s.sha256
+    $checksum64 = $file64.sha256
 
     return @{ 
         URL32          = $url32
