@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'git'
-$Url32 = 'https://github.com/git-for-windows/git/releases/download/v2.16.1.windows.2/PortableGit-2.16.1.2-32-bit.7z.exe'
-$Url64 = 'https://github.com/git-for-windows/git/releases/download/v2.16.1.windows.2/PortableGit-2.16.1.2-64-bit.7z.exe'
+$Url32 = 'https://github.com/git-for-windows/git/releases/download/v2.16.1.windows.3/PortableGit-2.16.1.3-32-bit.7z.exe'
+$Url64 = 'https://github.com/git-for-windows/git/releases/download/v2.16.1.windows.3/PortableGit-2.16.1.3-64-bit.7z.exe'
 $ToolsPath = Join-Path $(Get-ToolsLocation) $packageName
 
 $packageArgs = @{
