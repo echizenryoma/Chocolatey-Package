@@ -16,13 +16,13 @@ function global:au_GetLatest {
     $version = $url -Split "/" | Select-Object -Last 1
     $url = "https://github.com/SubtitleEdit/subtitleedit/releases/download/$version/SE$($version.Replace(".", '')).zip"
     $page = Invoke-WebRequest -UseBasicParsing -Uri "https://github.com/SubtitleEdit/subtitleedit/releases/tag/$version"
-    $sha1sum = $page.Content -split "<|>|\n" -match "^[0-9a-f]{40}$" | Select-Object -First 1 -Skip 1
+    $checksum = $page.Content -split "<|>|\n" -match "^[0-9a-f]{64}$" | Select-Object -First 1 -Skip 1
 	
     return @{
         Version        = $version
         URL32          = $url
-        Checksum32     = $sha1sum
-        ChecksumType32 = 'sha1'
+        Checksum32     = $checksum
+        ChecksumType32 = 'SHA256'
     }
 }
 
