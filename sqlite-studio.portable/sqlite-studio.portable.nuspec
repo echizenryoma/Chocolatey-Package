@@ -12,6 +12,7 @@
     <iconUrl>https://sqlitestudio.pl/img/logo.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
+      <![CDATA[
 SQLiteStudio is a SQLite database manager with the following features:
 * Portable - no need to install or uninstall. Just download, unpack and run.
 * Intuitive interface,
@@ -24,8 +25,8 @@ SQLiteStudio is a SQLite database manager with the following features:
 * Unicode support,
 * Skinnable (interface can look native for Windows 9x/XP, KDE, GTK, Mac OS X, or draw widgets to fit for other environments, WindowMaker, etc),
 * Configurable colors, fonts and shortcuts.
-* Open source and free - Released under GPLv3 license.
-		</description>
+* Open source and free - Released under GPLv3 license.]]>
+    </description>
     <summary>SQLiteStudio is a SQLite database manager.</summary>
     <releaseNotes>https://sqlitestudio.pl/index.rvt?act=changelog</releaseNotes>
     <tags>sqlitestudio sqlite studio manager database</tags>

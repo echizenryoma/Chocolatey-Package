@@ -12,6 +12,7 @@
     <iconUrl>https://cdn.rawgit.com/echizenryoma/Chocolatey-Package/master/fastcopy.portable/fastcopy.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
+      <![CDATA[
 FastCopy is the Fastest Copy/Delete Software on Windows. 
 
 It supports UNICODE and over MAX_PATH (260 byte) file pathnames. 
@@ -29,7 +30,8 @@ It runs fast and does not hog resources, because MFC is not used. (Designed usin
 
 You can modify this software, because all source code has been opened to the public in the BSD license.
 
-Command line [manual](http://ipmsg.org/tools/fastcopy.html.en#cmdline)</description>
+Command line [manual](http://ipmsg.org/tools/fastcopy.html.en#cmdline)]]>
+    </description>
     <summary>Fastest Copy/Delete Software</summary>
     <releaseNotes>http://ipmsg.org/tools/fastcopy.html.en#history</releaseNotes>
     <copyright>© 2004 Hiroaki Shirouzu</copyright>

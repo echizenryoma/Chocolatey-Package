@@ -12,6 +12,7 @@
     <iconUrl>https://cdn.rawgit.com/echizenryoma/Chocolatey-Package/master/advanced-renamer.portable/advanced-renamer.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
+      <![CDATA[
 Advanced Renamer is a free program for renaming multiple files and folders at once. By configuring renaming methods the names can be manipulated in various ways.
 
 It is easy to set up an advanced batch job using multiple methods on a large amount of files. The 14 different methods enables you to change the names, attributes, and timestamps of files in one go. The files can also be copied or moved to new locations based on information in the files.
@@ -33,8 +34,8 @@ MP3 and other music files often have messed up names and contain weird character
 Ever wanted to add the codec or the resolution of a video to the filename? With the video tags you can add various information about video and audio content to the names.
 
 ##TV shows##
-Add episode title or airdate to video files containing TV Shows after importing show information from the tvmaze.com website.
-		</description>
+Add episode title or airdate to video files containing TV Shows after importing show information from the tvmaze.com website.]]>
+    </description>
     <summary>Advanced Renamer is a free program for renaming multiple files and folders at once. By configuring renaming methods the names can be manipulated in various ways.</summary>
     <releaseNotes>http://www.advancedrenamer.com/versionlog</releaseNotes>
     <copyright />

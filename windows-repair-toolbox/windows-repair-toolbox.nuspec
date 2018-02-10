@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package 
+  xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>windows-repair-toolbox</id>
     <version>2.0.1.0</version>
@@ -9,6 +10,7 @@
     <iconUrl>https://windows-repair-toolbox.com/wp-content/uploads/2016/10/windows_repair_toolbox60x60.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
+      <![CDATA[
 Windows Repair Toolbox (freeware) is a software created to help you repair a Windows system, by making the process faster, easier and uniform.
 
 ##Features:
@@ -27,7 +29,7 @@ Windows Repair Toolbox (freeware) is a software created to help you repair a Win
 – Allows you to save notes about the repair process;
 
 – Provides 1-click access to some useful Windows tools;
-
+]]>
     </description>
     <summary>(Almost) everything you need to repair Windows problems in one small handy tool.</summary>
     <tags>windows_repair_toolbox</tags>

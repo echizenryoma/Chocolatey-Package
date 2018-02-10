@@ -12,6 +12,7 @@
 		<mailingListUrl>http://www.f2ko.de/en/imprint.php</mailingListUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>
+			<![CDATA[
 **Features**:
 * Extended commands
 * Visible and invisible applications
@@ -22,7 +23,7 @@
 * Portable
 * Encryption
 * Multilanguage support
-* Free for commercial and non-commercial use
+* Free for commercial and non-commercial use]]>
 		</description>
 		<summary>Bat To Exe Converter can convert BAT (.bat) script files to the EXE (.exe) format.</summary>
 		<tags>battoexeconverter bat exe converter</tags>
