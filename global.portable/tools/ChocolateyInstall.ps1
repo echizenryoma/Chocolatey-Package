@@ -10,3 +10,9 @@ $PackageArgs = @{
     UnzipLocation  = $ToolsPath
 }
 Install-ChocolateyZipPackage @PackageArgs
+
+$GTAGSCONF = Join-Path $ToolsPath 'share\gtags\gtags.conf'
+$GTAGSLABEL = 'pygments'
+
+Install-ChocolateyEnvironmentVariable -VariableName 'GTAGSCONF' -VariableValue $GTAGSCONF -VariableType 'Machine'
+Install-ChocolateyEnvironmentVariable -VariableName 'GTAGSLABEL' -VariableValue $GTAGSLABEL -VariableType 'Machine'

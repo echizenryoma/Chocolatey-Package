@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$PackageName = 'global'
+$PackageName = 'ctags'
 $Url32 = 'http://prdownloads.sourceforge.net/ctags/ctags58.zip'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
