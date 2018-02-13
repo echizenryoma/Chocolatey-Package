@@ -14,10 +14,19 @@ $SilentArgs = "/verysilent /norestart /LoadInf=`"$SetupInfPath`""
 $PackageArgs = @{
     PackageName = $PackageName
     Url         = $Url32
-    Url64       = $Url64
+    Url64       = $Url32
     SilentArgs  = $SilentArgs
 }
 Install-ChocolateyPackage @PackageArgs
+
+if ((Get-OSArchitectureWidth 64) -and $Env:ChocolateyForceX86 -ne 'true') {
+    $PackageArgs = @{
+        PackageName = $PackageName
+        Url64       = $Url64
+        SilentArgs  = $SilentArgs
+    }
+    Install-ChocolateyPackage @PackageArgs
+}
 
 $BinPath = Join-Path $InstallationPath 'bin\i386-win32'
 Install-ChocolateyPath -PathToInstall $BinPath -PathType 'Machine'

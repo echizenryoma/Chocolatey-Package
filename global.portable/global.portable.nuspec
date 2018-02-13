@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>global.portable</id>
+    <version>6.5.6</version>
+    <title>GNU GLOBAL</title>
+    <authors>The GNU Project</authors>
+    <owners>wsw</owners>
+    <licenseUrl>https://www.gnu.org/software/global/license.html</licenseUrl>
+    <projectUrl>http://www.gnu.org/software/global/</projectUrl>
+    <iconUrl>https://www.gnu.org/software/global/globe.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+      <![CDATA[
+GNU GLOBAL is a source code tagging system that works the same way across diverse environments, such as Emacs editor, Vi editor, Less viewer, Bash shell, various web browsers, etc.
+
+[DOS and Windows 32 version](http://global.adoxa.vze.com/) are distributed by Jason Hood.
+    ]]>
+    </description>
+    <summary>GNU GLOBAL source code tagging system</summary>
+    <copyright>Copyright © 1985–1987, 1993 Free Software Foundation, Inc.</copyright>
+    <tags>global gtags tagging</tags>
+    <projectUrl>http://adoxa.altervista.org/global/</projectUrl>
+    <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/global.portable</packageSourceUrl>
+  </metadata>
+</package>
