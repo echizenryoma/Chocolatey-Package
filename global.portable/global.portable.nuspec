@@ -20,7 +20,6 @@ GNU GLOBAL is a source code tagging system that works the same way across divers
     <summary>GNU GLOBAL source code tagging system</summary>
     <copyright>Copyright © 1985–1987, 1993 Free Software Foundation, Inc.</copyright>
     <tags>global gtags tagging</tags>
-    <projectUrl>http://adoxa.altervista.org/global/</projectUrl>
     <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/global.portable</packageSourceUrl>
   </metadata>
 </package>
