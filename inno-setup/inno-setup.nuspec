@@ -42,7 +42,7 @@ However if you wish to show your appreciation and support its development you ca
     </description>
     <projectUrl>http://www.jrsoftware.org/isinfo.php</projectUrl>
     <tags>innosetup admin installer setup exe foss</tags>
-    <copyright>©1997 Jordan Russell</copyright>
+    <copyright>© 1997 Jordan Russell</copyright>
     <licenseUrl>http://www.jrsoftware.org/files/is/license.txt</licenseUrl>
     <iconUrl>http://www.jrsoftware.org/favicon.ico</iconUrl>
     <releaseNotes>http://www.jrsoftware.org/files/is5-whatsnew.htm</releaseNotes>
@@ -50,7 +50,7 @@ However if you wish to show your appreciation and support its development you ca
     <mailingListUrl>http://www.jrsoftware.org/ismail.php</mailingListUrl>
     <bugTrackerUrl>https://github.com/jrsoftware/issrc/issues</bugTrackerUrl>
     <projectSourceUrl>https://github.com/jrsoftware/issrc</projectSourceUrl>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/innosetup</packageSourceUrl>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/inno-setup</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

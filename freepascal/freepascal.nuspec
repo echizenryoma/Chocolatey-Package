@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>freepascal</id>
+    <title>Free Pascal</title>
+    <version>3.0.4</version>
+    <authors>Free Pascal team</authors>
+    <owners>echizenryoma</owners>
+    <summary>Free Pascal is a 32, 64 and 16 bit professional Pascal compiler.</summary>
+    <description>Free Pascal is a 32, 64 and 16 bit professional Pascal compiler. It can target many processor architectures: Intel x86 (including 8086), AMD64/x86-64, PowerPC, PowerPC64, SPARC, ARM, AArch64, MIPS and the JVM. Supported operating systems include Linux, FreeBSD, Haiku, Mac OS X/iOS/iPhoneSimulator/Darwin, DOS (16 and 32 bit), Win32, Win64, WinCE, OS/2, MorphOS, Nintendo GBA, Nintendo DS, Nintendo Wii, Android, AIX and AROS. Additionally, support for the Motorola 68k architecture is available in the development versions.</description>
+    <projectUrl>http://www.jrsoftware.org/isinfo.php</projectUrl>
+    <tags>freepascal pascal</tags>
+    <copyright>© 1993 Free Pascal team</copyright>
+    <licenseUrl>http://wiki.lazarus.freepascal.org/licensing</licenseUrl>
+    <iconUrl>https://www.freepascal.org/pic/logo.gif</iconUrl>
+    <releaseNotes>https://www.freepascal.org/news.var</releaseNotes>
+    <docsUrl>https://www.freepascal.org/docs.var</docsUrl>
+    <mailingListUrl>https://www.freepascal.org/maillist.var</mailingListUrl>
+    <bugTrackerUrl>https://bugs.freepascal.org</bugTrackerUrl>
+    <projectSourceUrl>https://www.freepascal.org/down/source/sources.var</projectSourceUrl>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/freepascal</packageSourceUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
