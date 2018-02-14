@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'inno-setup'
-$Url32 = 'http://www.jrsoftware.org/download.php/ispack-unicode.exe'
+$Url32 = 'http://www.jrsoftware.org/download.php/is-unicode.exe'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 
