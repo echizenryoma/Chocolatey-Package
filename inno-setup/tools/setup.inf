@@ -1,6 +1,6 @@
 [Setup]
-Lang=english
+Lang=default
 Dir=%InstallationPath%
 Group=Inno Setup 5
-NoIcons=0
+NoIcons=1
 Tasks=

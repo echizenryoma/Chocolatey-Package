@@ -11,7 +11,7 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
     $page = Invoke-WebRequest -UseBasicParsing -Uri 'http://www.jrsoftware.org/'
     $version = ($page.Links -match "\d+(\.\d+)+" | Select-Object -First 1).outerHTML -split '\s|<|>' -match '\d+(\.\d+)+' | Select-Object -First 1
-    $url32 = 'http://www.jrsoftware.org/download.php/is.exe'
+    $url32 = 'http://www.jrsoftware.org/download.php/ispack-unicode.exe'
     
     return @{
         URL32   = $url32
