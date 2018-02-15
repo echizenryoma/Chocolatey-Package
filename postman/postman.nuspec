@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package 
-  xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>postman</id>
     <title>Postman for Windows</title>
-    <version>5.5.2</version>
+    <version>5.5.3</version>
     <authors>Postdot Technologies, Inc.</authors>
     <owners>echizenryoma</owners>
     <summary>Postman for Windows</summary>
