@@ -16,7 +16,7 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
     $page = Invoke-WebRequest -UseBasicParsing -Uri "http://www.softwareok.com/?Download=NewFileTime"
     $version = $page -Match "(?<=<title>)([\S\s]*?)(?=</title>)"
-    $version = $matches[0].Substring($matches[0].LastIndexOf(" ") + 1).Trim()
+    $version = $matches[0] -split "\s" -match "\d+(\.\d+)+"
 
     $sha256sum = ($page.Links | Where-Object href -Match "[0-9a-fA-f]{64,}").href -split "/" -match "[0-9a-fA-f]{64,}"
     $checksum32 = $sha256sum[0]
