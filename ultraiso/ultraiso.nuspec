@@ -40,6 +40,7 @@ UltraISO 采用双窗口统一用户界面，只需使用快捷按钮和鼠标�
     <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/ultraiso</packageSourceUrl>
     <projectUrl>http://www.ezbsystems.com/ultraiso/</projectUrl>
     <bugTrackerUrl>http://www.ezbsystems.com/ultraiso/support.htm</bugTrackerUrl>
+    <language>zh-CN</language>
     <docsUrl>http://www.ezbsystems.com/ultraiso/faq.htm</docsUrl>
     <mailingListUrl>http://www.ezbsystems.com/cgi-bin/ikonboard.cgi?</mailingListUrl>
     <licenseUrl>http://www.software112.com/products/ultraiso-premium+eula.html</licenseUrl>
