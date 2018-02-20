@@ -20,3 +20,5 @@ $PackageArgs = @{
     UnzipLocation  = $ToolsPath
 }
 Install-ChocolateyZipPackage @packageArgs
+
+New-Item -Path $ToolsPath -Name 'ffmpeg.exe.ignore' -ItemType File -Force
