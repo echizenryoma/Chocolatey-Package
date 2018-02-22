@@ -43,6 +43,7 @@
     <releaseNotes>https://github.com/x64dbg/x64dbg/releases</releaseNotes>
     <copyright>GNUv3</copyright>
     <tags>x64dbg dbg debug debugger</tags>
+    <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/x64dbg.portable</packageSourceUrl>
     <projectSourceUrl>https://github.com/x64dbg/x64dbg</projectSourceUrl>
     <mailingListUrl>https://gitter.im/x64dbg/x64dbg</mailingListUrl>
     <bugTrackerUrl>https://github.com/x64dbg/x64dbg/issues</bugTrackerUrl>
