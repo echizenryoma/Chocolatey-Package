@@ -8,7 +8,7 @@
     <owners>echizenryoma</owners>
     <licenseUrl>https://www.advancedrenamer.com/user_guide/license</licenseUrl>
     <projectUrl>http://www.advancedrenamer.com/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/echizenryoma/Chocolatey-Package/master/advanced-renamer.portable/advanced-renamer.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/echizenryoma/Chocolatey-Package/master/advanced-renamer.portable/advanced-renamer.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
       <![CDATA[

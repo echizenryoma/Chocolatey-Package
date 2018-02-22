@@ -8,7 +8,7 @@
     <owners>Samuel Vasko</owners>
     <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
     <projectUrl>http://cmder.net/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/cmderdev/cmder/master/icons/icon_256.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/cmderdev/cmder/master/icons/icon_256.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
       <![CDATA[

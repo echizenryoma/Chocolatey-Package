@@ -6,7 +6,7 @@
     <title>Bat To Exe Converter</title>
     <authors>Fatih Kodak</authors>
     <owners>echizenryoma</owners>
-    <iconUrl>https://cdn.rawgit.com/echizenryoma/Chocolatey-Package/master/battoexeconverter/battoexeconverter.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/echizenryoma/Chocolatey-Package/master/battoexeconverter/battoexeconverter.png</iconUrl>
     <projectUrl>http://www.f2ko.de/en/b2e.php</projectUrl>
     <mailingListUrl>http://www.f2ko.de/en/imprint.php</mailingListUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

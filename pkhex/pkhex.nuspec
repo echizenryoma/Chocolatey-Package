@@ -8,7 +8,7 @@
     <authors>Baphotics</authors>
     <owners>echizenryoma</owners>
     <projectUrl>https://projectpokemon.org/forums/forums/forum/83-pkhex/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/echizenryoma/Chocolatey-Package/master/pkhex/pkhex.ico</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/echizenryoma/Chocolatey-Package/master/pkhex/pkhex.ico</iconUrl>
     <description>
 Pokémon core series save editor, programmed in C#.
 

@@ -9,7 +9,7 @@
     <owners>echizenryoma</owners>
     <licenseUrl>http://www.voidtools.com/License.txt</licenseUrl>
     <projectUrl>http://www.voidtools.com</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/cf277846cf6b5436461ebd5f21b00efd67ee9910/icons/everything.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/chocolatey/chocolatey-coreteampackages/master/icons/everything.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
       <![CDATA[

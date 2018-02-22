@@ -33,7 +33,7 @@ Fiddler is freeware and can debug traffic from virtually any application, includ
     <copyright></copyright>
     <licenseUrl>http://www.telerik.com/purchase/license-agreement/fiddler</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e7940eeec0005981b565d98660c6cb9be1865881/icons/fiddler.svg</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/chocolatey/chocolatey-coreteampackages/master/icons/fiddler.svg</iconUrl>
     <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Packages/tree/master/fiddler4</packageSourceUrl>
   </metadata>
   <files>

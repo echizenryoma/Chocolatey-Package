@@ -7,7 +7,7 @@
     <version>1.6.2</version>
     <authors>Stas'M</authors>
     <owners>echizenryoma</owners>
-    <iconUrl>https://cdn.rawgit.com/echizenryoma/Chocolatey-Package/master/rdpwrapper/rdpwrapper.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/echizenryoma/Chocolatey-Package/master/rdpwrapper/rdpwrapper.png</iconUrl>
     <summary>RDP Wrapper Library</summary>
     <description>
 The goal of this project is to enable Remote Desktop Host support and concurrent RDP sessions on reduced functionality systems for home usage.

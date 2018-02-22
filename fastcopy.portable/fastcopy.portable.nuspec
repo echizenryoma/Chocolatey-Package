@@ -9,7 +9,7 @@
     <owners>echizenryoma</owners>
     <licenseUrl>http://ipmsg.org/tools/fastcopy.html.en#license</licenseUrl>
     <projectUrl>http://ipmsg.org/tools/fastcopy.html.en</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/echizenryoma/Chocolatey-Package/master/fastcopy.portable/fastcopy.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/echizenryoma/Chocolatey-Package/master/fastcopy.portable/fastcopy.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
       <![CDATA[
