@@ -8,6 +8,10 @@ function global:au_SearchReplace {
     }
 }
 
+function global:au_AfterUpdate ($Package)  {
+    $global:Options.Push = $true
+}
+
 function global:au_GetLatest {
     $page = Invoke-WebRequest -UseBasicParsing -Uri "https://github.com/x64dbg/x64dbg/releases/latest"
     $url = "https://github.com" + ($page.Links.href -match "snapshot_.*\.zip")
