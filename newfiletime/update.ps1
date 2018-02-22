@@ -13,6 +13,10 @@ function global:au_SearchReplace {
     }
 }
 
+function global:au_AfterUpdate ($Package)  {
+    $global:Options.Push = $true
+}
+
 function global:au_GetLatest {
     $page = Invoke-WebRequest -UseBasicParsing -Uri "http://www.softwareok.com/?Download=NewFileTime"
     $version = $page -Match "(?<=<title>)([\S\s]*?)(?=</title>)"

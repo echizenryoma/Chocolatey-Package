@@ -9,6 +9,10 @@ function global:au_SearchReplace {
     }
 }
 
+function global:au_AfterUpdate ($Package)  {
+    $global:Options.Push = $true
+}
+
 function global:au_GetLatest {
     $page = Invoke-WebRequest -UseBasicParsing -Uri "http://www.f2ko.de/en/b2e.php"
     $md5sum = ($page.Content -split " |<|>" -match "^[a-fA-F0-9]{32,}$" | Select-Object -First 1).Trim()

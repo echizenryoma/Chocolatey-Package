@@ -7,6 +7,10 @@ function global:au_SearchReplace {
     }
 }
 
+function global:au_AfterUpdate ($Package)  {
+    $global:Options.Push = $true
+}
+
 function global:au_GetLatest {
     $request = Invoke-WebRequest -Uri "https://vscode-update.azurewebsites.net/latest/win32-archive/stable" -MaximumRedirection 0 -ErrorAction Ignore
     $url = $request.Headers.Location
