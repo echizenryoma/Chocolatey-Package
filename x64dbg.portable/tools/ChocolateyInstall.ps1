@@ -5,9 +5,9 @@ $Url = 'https://github.com/x64dbg/x64dbg/releases/download/snapshot/snapshot_201
 $ToolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
-    PackageName   = $packageName
-    Url           = $url
-    Url64         = $url
-    UnzipLocation = $toolsPath
+    PackageName   = $PackageName
+    Url           = $Url
+    Url64         = $Url
+    UnzipLocation = $ToolsPath
 }
 Install-ChocolateyZipPackage @packageArgs
