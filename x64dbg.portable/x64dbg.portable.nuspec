@@ -49,4 +49,7 @@
     <mailingListUrl>https://gitter.im/x64dbg/x64dbg</mailingListUrl>
     <bugTrackerUrl>https://github.com/x64dbg/x64dbg/issues</bugTrackerUrl>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
