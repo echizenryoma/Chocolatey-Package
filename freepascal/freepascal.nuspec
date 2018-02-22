@@ -18,7 +18,7 @@
     <mailingListUrl>https://www.freepascal.org/maillist.var</mailingListUrl>
     <bugTrackerUrl>https://bugs.freepascal.org</bugTrackerUrl>
     <projectSourceUrl>https://www.freepascal.org/down/source/sources.var</projectSourceUrl>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/freepascal</packageSourceUrl>
+    <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Packages/tree/master/freepascal</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
