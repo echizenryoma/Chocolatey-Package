@@ -14,7 +14,7 @@ $PackageArgs = @{
 }
 Install-ChocolateyZipPackage @PackageArgs
 
-$packageArgs = @{
+$PackageArgs = @{
     PackageName   = $PackageName
     Url           = $UrlExtra
     Url64         = $UrlExtra

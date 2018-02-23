@@ -18,4 +18,11 @@ $PackageArgs = @{
 }
 Install-ChocolateyPackage @PackageArgs
 
+$PackageArgs = @{
+    PackageName   = $PackageName
+    Url           = $UrlExtra
+    UnzipLocation = $InstallationPath
+}
+Install-ChocolateyZipPackage @packageArgs
+
 Install-ChocolateyPath -PathToInstall $InstallationPath -PathType 'Machine'
