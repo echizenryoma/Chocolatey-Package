@@ -2,6 +2,7 @@
 
 $PackageName = 'inno-setup'
 $Url32 = 'http://www.jrsoftware.org/download.php/is-unicode.exe'
+$UrlExtra = 'http://www.jrsoftware.org/download.php/ip015.zip'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 
