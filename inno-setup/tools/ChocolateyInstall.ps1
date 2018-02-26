@@ -25,4 +25,4 @@ $PackageArgs = @{
 }
 Install-ChocolateyZipPackage @packageArgs
 
-Install-ChocolateyPath -PathToInstall $InstallationPath -PathType 'Machine'
+Install-BinFile -Path $(Join-Path $InstallationPath 'ISCC.exe') -Name 'ISCC'
