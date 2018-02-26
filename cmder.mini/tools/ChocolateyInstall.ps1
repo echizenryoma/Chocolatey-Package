@@ -10,4 +10,5 @@ $PackageArgs = @{
     UnzipLocation = $InstallationPath
 }
 Install-ChocolateyZipPackage @PackageArgs
-Install-ChocolateyPath $InstallationPath 'Machine'
+
+Install-BinFile -Path $(Join-Path $InstallationPath 'Cmder.exe') -Name 'Cmder'
