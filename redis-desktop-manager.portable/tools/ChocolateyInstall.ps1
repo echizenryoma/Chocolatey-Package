@@ -17,4 +17,4 @@ Remove-Item -Path $(Join-Path $InstallationPath 'Uninstall.exe') -Force -ErrorAc
 $BinFileName = Join-Path $InstallationPath "rdm.exe"
 Install-BinFile -Name 'rdm' -Path $BinFileName
 $LinkPath = Join-Path $([Environment]::GetFolderPath("CommonDesktopDirectory")) "Redis Desktop Manager.lnk"
-Install-ChocolateyShortcut -ShortcutFilePath $LinkPath -TargetPath $BinFileName
+Install-ChocolateyShortcut -ShortcutFilePath $LinkPath -TargetPath $BinFileName -WorkingDirectory $InstallationPath
