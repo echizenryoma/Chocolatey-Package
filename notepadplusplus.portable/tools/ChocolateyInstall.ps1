@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'notepadplusplus'
-$Url = 'https://notepad-plus-plus.org/repository/7.x/7.5.4/npp.7.5.4.bin.7z'
-$Checksum = '9633920a02980be62273093c4364bd07b8bb64a2'
+$Url = 'https://notepad-plus-plus.org/repository/7.x/7.5.5/npp.7.5.5.bin.7z'
+$Checksum = 'e914695e5f271ea1068f052dc711fd83a6bff06c'
 $ChecksumType = 'SHA1'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 
@@ -15,8 +15,8 @@ $PackageArgs = @{
 }
 Install-ChocolateyZipPackage @PackageArgs
 
-$UrlExtra = 'https://notepad-plus-plus.org/repository/7.x/7.5.4/npp.7.5.4.Installer.exe'
-$ChecksumExtra = '9633920a02980be62273093c4364bd07b8bb64a2'
+$UrlExtra = 'https://notepad-plus-plus.org/repository/7.x/7.5.5/npp.7.5.5.Installer.exe'
+$ChecksumExtra = 'e914695e5f271ea1068f052dc711fd83a6bff06c'
 $ChecksumTypeExtra = 'SHA1'
 $FileName = [IO.Path]::GetFileName($UrlExtra)
 $InstallerPath = Join-Path $InstallationPath $FileName
