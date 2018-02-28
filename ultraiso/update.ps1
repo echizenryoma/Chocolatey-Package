@@ -10,7 +10,7 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $page = Invoke-WebRequest -UseBasicParsing -Uri "https://www.ezbsystems.com/ultraiso/download.htm"
-    $version = [version](($page.Content -split "<|>" -match "\d+(\.\d+){2,3}" | Get-Unique | Select-Object -First 1).Trim())
+    $version = [version]($page.Content -split "<|>" -match "\d+(\.\d+){2,3}" | Select-Object -Unique -First 1)
     $url = "http://reg.ezbsys.com/private/3939p575/uiso$($version.Major)$($version.Minor)pes.exe"
 
     return @{

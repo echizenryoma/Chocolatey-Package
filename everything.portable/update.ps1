@@ -13,29 +13,30 @@ function global:au_SearchReplace {
     }
 }
 
-function global:au_AfterUpdate ($Package)  {
+function global:au_AfterUpdate ($Package) {
     $global:Options.Push = $true
 }
 
 function global:au_GetLatest {
     $page = Invoke-WebRequest -UseBasicParsing -Uri 'https://www.voidtools.com/Changes.txt'
-    $version = $page.Content -Split "`n" | Select-String ': Version .+' | Select-Object -First 1
-    $version = $version -Split ' ' | Select-Object -Last 1
-    $choco_version = $version.Replace('b', '') -Replace '\.([^.]+)$', '$1'
-    $page = Invoke-WebRequest -UseBasicParsing -Uri "https://www.voidtools.com/Everything-${version}.md5"
-    $md5 = $page.Content -Split "\n" | ConvertFrom-String -PropertyNames md5sum, file
-
+    $version = ($page.Content -split "\n" -match 'Version\s+\d(\.\d+)+' | Select-Object -First 1) -split "\s" -match "\d(\.\d+)+" | Select-Object -First 1
+    $page = Invoke-WebRequest -UseBasicParsing -Uri "https://www.voidtools.com/Everything-${version}.sha256"
+    $sha256table = $page.Content -split "\n" | ConvertFrom-String -PropertyNames sha256sum, file
+    
+    $checksum_type = 'sha256'
     $url32 = "https://www.voidtools.com/Everything-${version}.x86.zip"
-    $url64 = "https://www.voidtools.com/Everything-${version}.x64.zip"
+    $url64 = "https://www.voidtools.com/Everything-${version}.x64.zip"    
+    $checksum32 = $sha256table | Where-Object file -Match "x86.zip" | Select-Object -First 1 -ExpandProperty sha256sum
+    $checksum64 = $sha256table | Where-Object file -Match "x64.zip" | Select-Object -First 1 -ExpandProperty sha256sum
 	
     return @{
-        Version        = $choco_version
+        Version        = $version
         URL32          = $url32
         URL64          = $url64
-        Checksum32     = $md5 | Where-Object file -Like "*x86.zip" | Select-Object -First 1 -ExpandProperty md5sum
-        ChecksumType32 = 'MD5'
-        Checksum64     = $md5 | Where-Object file -Like "*x64.zip" | Select-Object -First 1 -ExpandProperty md5sum
-        ChecksumType64 = 'MD5'
+        Checksum32     = $checksum32
+        ChecksumType32 = $checksum_type
+        Checksum64     = $checksum64
+        ChecksumType64 = $checksum_type
     }
 }
 

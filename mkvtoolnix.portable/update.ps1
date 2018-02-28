@@ -13,25 +13,30 @@ function global:au_SearchReplace {
     }
 }
 
-function global:au_AfterUpdate ($Package)  {
+function global:au_AfterUpdate ($Package) {
     $global:Options.Push = $true
 }
 
 function global:au_GetLatest {
     $base = 'https://mkvtoolnix.download/windows/releases'
     $page = Invoke-WebRequest -UseBasicParsing -Uri "$base/.dirindex.php?sort=date&order=desc"
-    $version = $page.Links | Where-Object title -Match '\d+(\.\d+){0,2}$' | Select-Object -Property title | Select-Object -First 1 -ExpandProperty title
+    $version = $page.Links.title -match '\d+(\.\d+){0,2}$' | Select-Object -First 1
     $page = Invoke-WebRequest -UseBasicParsing -Uri "$base/$version/sha1sums.txt"
-    $obj = $page.Content -Split '\n' | ConvertFrom-String -PropertyNames sha1sum, file
-    
-	return @{
-        Version        = $version.Trim();
-        URL32          = "${base}/${version}/" + ($obj | Where-Object file -Like "*32*7z" | Select-Object -First 1 -ExpandProperty file)
-        URL64          = "${base}/${version}/" + ($obj | Where-Object file -Like "*64*7z" | Select-Object -First 1 -ExpandProperty file)
-        ChecksumType32 = 'SHA1'
-        Checksum32     = $obj | Where-Object file -Like "*32*7z" | Select-Object -First 1 -ExpandProperty sha1sum
-        ChecksumType64 = 'SHA1'
-        Checksum64     = $obj | Where-Object file -Like "*64*7z" | Select-Object -First 1 -ExpandProperty sha1sum
+    $sha1table = $page.Content -Split '\n' | ConvertFrom-String -PropertyNames sha1sum, file
+    $checksum_type = 'sha1'
+    $url32 = "${base}/${version}/" + ($sha1table.file -like "*32*7z" | Select-Object -First 1)
+    $url64 = "${base}/${version}/" + ($sha1table.file -like "*64*7z" | Select-Object -First 1)
+    $checksum32 = $sha1table | Where-Object file -Like "*32*7z" | Select-Object -First 1 -ExpandProperty sha1sum
+    $checksum64 = $sha1table | Where-Object file -Like "*32*7z" | Select-Object -First 1 -ExpandProperty sha1sum
+
+    return @{
+        Version        = $version
+        URL32          = $url32
+        URL64          = $url64
+        ChecksumType32 = $checksum_type
+        Checksum32     = $checksum32
+        ChecksumType64 = $checksum_type
+        Checksum64     = $checksum64
     }
 }
 

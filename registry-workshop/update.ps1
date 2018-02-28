@@ -11,7 +11,7 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
 	$page = Invoke-WebRequest -UseBasicParsing -Uri "http://www.torchsoft.com/node/12"
-	$version = $page.Content -Split " " -Match "^\d+(\.\d+){2}$" | Select-Object -First 1
+	$version = $page.Content -split "\s" -match "^\d+(\.\d+){2}$" | Select-Object -First 1
 
 	return @{
 		Version = $version

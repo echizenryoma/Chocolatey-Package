@@ -11,7 +11,7 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $page = Invoke-WebRequest -Uri 'http://www.python.org/downloads/'
-    $url = $page.Links | Where-Object href -match 'python-(2.+)\.msi$' | Select-Object -First 1 -ExpandProperty href
+    $url = $page.Links.href -match 'python-(2.+)\.msi$' | Select-Object -First 1
     $version = $Matches[1]
 
     return @{

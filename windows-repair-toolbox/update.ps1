@@ -15,8 +15,7 @@ function global:au_AfterUpdate ($Package)  {
 }
 
 function global:au_GetLatest {
-    $url = "https://windows-repair-toolbox.com/"
-    $page = Invoke-WebRequest -UseBasicParsing -Uri $url
+    $page = Invoke-WebRequest -UseBasicParsing -Uri "https://windows-repair-toolbox.com/"
     $version = ($page.Content -split "<|>|\(|\)|\n" -match "Program\s+version" | Select-Object -First 1).Trim() -split "\s" -match "\d+(\.\d+)+" | Select-Object -First 1
     $sha256sum = ($page.Content -split "<|>|\n" -match "SHA256\s+\(zip\)" | Select-Object -First 1).Trim() -split "\s" -match "^([0-9a-fA-F])+" | Select-Object -First 1
 

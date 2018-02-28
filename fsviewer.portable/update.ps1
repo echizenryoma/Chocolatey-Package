@@ -10,9 +10,8 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $page = Invoke-WebRequest -UseBasicParsing -Uri "http://www.faststone.org/FSViewerDownload.htm"
-    $version = ($page.Content -split "\n|<|>|&" -match "FastStone\s+Image\s+Viewer\s+\d+(\.\d+)+").Trim() -split "\s" -match "^\d+(\.\d+)+$"
-    
-    $url = $page.Links | Where-Object href -Match "FSViewer\d+.zip" | Select-Object -First 1 -ExpandProperty href
+    $version = ($page.Content -split "\n|<|>|&" -match "FastStone\s+Image\s+Viewer\s+\d+(\.\d+)+").Trim() -split "\s" -match "^\d+(\.\d+)+$"    
+    $url = $page.Links.href -match "FSViewer\d+.zip" | Select-Object -First 1
 
     return @{
         Version = $version

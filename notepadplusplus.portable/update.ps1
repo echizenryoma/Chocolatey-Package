@@ -30,13 +30,15 @@ function global:au_GetLatest {
     $url = "${base}/npp.${version}.bin.7z"
     $url_extra = "${base}/npp.${version}.Installer.exe"
 
+    $checksum_type = 'sha1'
+
     return @{
         Version           = $version
         URL32             = $url
-        ChecksumType32    = 'SHA1'
+        ChecksumType32    = $checksum_type
         Checksum32        = $checksum32
         URL_Extra         = $url_extra
-        ChecksumTypeExtra = 'SHA1'
+        ChecksumTypeExtra = $checksum_type
         ChecksumExtra     = $checksum_extra
     }
 }

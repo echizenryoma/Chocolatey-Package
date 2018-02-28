@@ -2,11 +2,11 @@
 
 $PackageName = 'everything'
 $Url32 = 'https://www.voidtools.com/Everything-1.4.1.895.x86.zip'
-$Checksum32 = '1450f8759bf734d98bb6c4037ec26cf6'
-$ChecksumType32 = 'MD5'
+$Checksum32 = '8d3d85888ccd01612993f89a9d79df11edb2f06de78972fa71656f74920ce342'
+$ChecksumType32 = 'sha256'
 $Url64 = 'https://www.voidtools.com/Everything-1.4.1.895.x64.zip'
-$Checksum64 = 'fcfa06ca46f68c9ab87791f4d0d436f7'
-$ChecksumType64 = 'MD5'
+$Checksum64 = 'e7c0e506b9c308f3d1857288855eeda6d8ec3504b3a7f01474c5dcea495ab9d9'
+$ChecksumType64 = 'sha256'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $UrlExtra = 'https://www.voidtools.com/es.exe'
 

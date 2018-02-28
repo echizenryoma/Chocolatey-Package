@@ -1,9 +1,8 @@
 <?xml version="1.0"?>
-<package 
-  xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>everything.portable</id>
-    <version>1.4.1895</version>
+    <version>1.4.1.895</version>
     <title>Everything (Portable)</title>
     <authors>David Carpenter</authors>
     <owners>echizenryoma</owners>

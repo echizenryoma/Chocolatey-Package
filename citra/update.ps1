@@ -10,7 +10,7 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $page = Invoke-WebRequest -UseBasicParsing -Uri "https://github.com/citra-emu/citra-canary/releases/latest"
-    $url = "https://github.com" + ($page.Links -match "windows-mingw.*7z" | Select-Object -First 1 -ExpandProperty href)
+    $url = "https://github.com" + ($page.Links.href -match "windows-mingw.*7z" | Select-Object -First 1)
     $version = ($url -split "/|-" -match "^\d+$") -join "."
 	
     return @{

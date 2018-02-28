@@ -20,22 +20,25 @@ function global:au_AfterUpdate ($Package)  {
 
 function global:au_GetLatest {
     $page = Invoke-WebRequest -UseBasicParsing -Uri "http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html"
+
     $html = $page.Content -split "\n|;" -match "windows-x64\.exe"
     $json64 = $html -split "=" | Select-Object -Last 1 | ConvertFrom-Json
     $java_version = ($json64.filepath -split "/|-" -match "\d+u\d+" | Select-Object -First 1).Trim()
-    $version = $java_version -replace "u", ".0."
+    $version = $java_version -replace "u", ".0."    
     
     $html = $page.Content -split "\n|;" -match "windows-i.*\.exe"
     $json32 = $html -split "=" | Select-Object -Last 1 | ConvertFrom-Json
-	
+
+    $checksum_type = 'sha256'
+    
     return @{
         Version        = $version
         URL32          = $json32.filepath -replace "download.oracle.com", "edelivery.oracle.com"
         Checksum32     = $json32.SHA256
-        ChecksumType32 = "SHA256"
+        ChecksumType32 = $checksum_type
         URL64          = $json64.filepath -replace "download.oracle.com", "edelivery.oracle.com"
         Checksum64     = $json64.SHA256
-        ChecksumType64 = "SHA256"
+        ChecksumType64 = $checksum_type
         JavaVersion    = $java_version
     }
 }

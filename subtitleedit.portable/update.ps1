@@ -15,18 +15,17 @@ function global:au_AfterUpdate ($Package)  {
 }
 
 function global:au_GetLatest {
-    $request = Invoke-WebRequest -UseBasicParsing -Uri "https://github.com/SubtitleEdit/subtitleedit/releases/latest" -MaximumRedirection 0 -ErrorAction Ignore
-    $url = $request.Headers.Location
-    $version = $url -Split "/" | Select-Object -Last 1
+    $page = Invoke-WebRequest -UseBasicParsing -Uri "https://github.com/SubtitleEdit/subtitleedit/releases/latest"
+    $version = ($page.Links.href -match "releases/tag/\d+(\.\d+)+$" | Select-Object -Unique -First 1) -split "/" -match "\d+(\.\d+)+" | Select-Object -First 1
     $url = "https://github.com/SubtitleEdit/subtitleedit/releases/download/$version/SE$($version.Replace(".", '')).zip"
-    $page = Invoke-WebRequest -UseBasicParsing -Uri "https://github.com/SubtitleEdit/subtitleedit/releases/tag/$version"
+    $checksum_type = 'sha256'
     $checksum = $page.Content -split "<|>|\n" -match "^[0-9a-f]{64}$" | Select-Object -First 1 -Skip 1
 	
     return @{
         Version        = $version
         URL32          = $url
         Checksum32     = $checksum
-        ChecksumType32 = 'SHA256'
+        ChecksumType32 = $checksum_type
     }
 }
 

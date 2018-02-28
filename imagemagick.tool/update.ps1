@@ -14,27 +14,31 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $page = Invoke-WebRequest -UseBasicParsing -Uri 'https://www.imagemagick.org/download/binaries/digest.rdf'
+    $base = "https://www.imagemagick.org/download/binaries"
+
+    $page = Invoke-WebRequest -UseBasicParsing -Uri "${base}/digest.rdf"
     $file32 = ([xml]$page.Content).RDF.Content | Where-Object about -Match "portable.*x86" | Select-Object -Last 1
     $file64 = ([xml]$page.Content).RDF.Content | Where-Object about -Match "portable.*x64" | Select-Object -Last 1
 
-    $null = ($file32 | Where-Object about -Match "x86"| Select-Object -First 1 -ExpandProperty about) -match "\d+(\.\d+)+\-\d+"
+    $null = $file32.about -match "\d+(\.\d+)+\-\d+"
     $version = $Matches[0].Replace('-', '.')
 
-    $url32 = "https://www.imagemagick.org/download/binaries/" + $file32.about
-    $url64 = "https://www.imagemagick.org/download/binaries/" + $file64.about
+    $checksum_type = 'sha256'
+
+    $url32 = "${base}/$($file32.about)"
+    $url64 = "${base}/$($file64.about)"
 
     $checksum32 = $file32.sha256
     $checksum64 = $file64.sha256
 
     return @{ 
+        Version        = $version
         URL32          = $url32
         Checksum32     = $checksum32
-        ChecksumType32 = 'sha256'
+        ChecksumType32 = $checksum_type
         URL64          = $url64
         Checksum64     = $checksum64
-        ChecksumType64 = 'sha256'
-        Version        = $version 
+        ChecksumType64 = $checksum_type
     }
 }
 

@@ -11,7 +11,7 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $page = Invoke-WebRequest -UseBasicParsing -Uri "https://ipmsg.org/tools/fastcopy.html.en"
-    $version = ($page.Content -split "\n|<|>" -match "FastCopy\s+v\d+(\.\d+)+\s+download").Trim() -split "\s|v" -match "^\d+(\.\d+)+$"
+    $version = ($page.Content -split "\n|<|>" -match "FastCopy\s+v\d+(\.\d+)+\s+download") -split "\s|v" -match "^\d+(\.\d+)+$"
     $url32 = "https://ipmsg.org/archive/FastCopy$($version.Replace(".", '')).zip"
     $url64 = "https://ipmsg.org/archive/FastCopy$($version.Replace(".", ''))_x64.zip"
 		

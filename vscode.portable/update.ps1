@@ -14,7 +14,7 @@ function global:au_AfterUpdate ($Package)  {
 function global:au_GetLatest {
     $request = Invoke-WebRequest -Uri "https://vscode-update.azurewebsites.net/latest/win32-archive/stable" -MaximumRedirection 0 -ErrorAction Ignore
     $url = $request.Headers.Location
-    $version = $url.Substring($url.LastIndexOf("-") + 1).Replace(".zip", "").Trim()
+    $version = $([IO.Path]::GetFileNameWithoutExtension($url)) -split "-" -match "\d+(\.\d+)+" | Select-Object -First 1
 
     return @{
         Version = $version

@@ -11,8 +11,8 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $page = Invoke-WebRequest -Uri 'https://www.python.org/downloads'
-    $url = $page.links | Where-Object href -match '.exe' | Select-Object -First 1 -ExpandProperty href
-    $version = $url -split '-|.exe' | Select-Object -Last 1 -Skip 1
+    $url = $page.Links.href -match '.exe' | Select-Object -First 1
+    $version = [IO.Path]::GetFileNameWithoutExtension($url) -split '-' -match "\d+(\.\d+)+" | Select-Object -First 1
 
     return @{
         Version = $version 

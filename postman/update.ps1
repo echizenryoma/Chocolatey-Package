@@ -9,7 +9,7 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $page = Invoke-WebRequest -UseBasicParsing -Uri "https://dl.pstmn.io/RELEASES?platform=win64"    
-    $version = (($page.Content |ConvertFrom-Json).releases | Select-Object -Last 1).name
+    $version = (($page.Content | ConvertFrom-Json).releases | Select-Object -Last 1).name
 
     return @{
         Version = $version

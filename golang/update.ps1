@@ -12,7 +12,6 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
     $page = Invoke-WebRequest -UseBasicParsing -Uri 'https://golang.org'
     $version = ($page.Content -split '\n|<|>' -match 'Build\s+version\s+go\d+(\.\d)+').Trim(".") -split '\s|go' -match '\d+(\.\d)+'
-
     $url32 = "https://storage.googleapis.com/golang/go${version}.windows-386.zip"
     $url64 = "https://storage.googleapis.com/golang/go${version}.windows-amd64.zip"
     

@@ -17,7 +17,7 @@ function global:au_GetLatest {
 	
     return @{
         Version = $version
-        URL32   = "https://github.com/stascorp/rdpwrap/releases/download/v${version}/RDPWrap-v${version}.zip"
+        URL32   = $url32
     }
 }
 

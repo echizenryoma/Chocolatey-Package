@@ -13,10 +13,11 @@ function global:au_AfterUpdate ($Package)  {
 }
 
 function global:au_GetLatest {
-    $page = Invoke-WebRequest -UseBasicParsing -Uri "https://sqlitestudio.pl/files/sqlitestudio3/complete/win32/?C=N;O=D"
-    $zip = $page.Links | Where-Object href -Match "sqlitestudio-\d+(\.\d+){0,2}.zip" | Select-Object -First 1 -ExpandProperty href
-    $version = $zip.Substring($zip.LastIndexOf("-") + 1).Replace(".zip", "").Trim()
-    $url = "https://sqlitestudio.pl/files/sqlitestudio3/complete/win32/$zip"
+    $base = "https://sqlitestudio.pl/files/sqlitestudio3/complete/win32"
+
+    $page = Invoke-WebRequest -UseBasicParsing -Uri "${base}/?C=N;O=D"
+    $url = $base + ($page.Links.href -Match "sqlitestudio-\d+(\.\d+)+.zip" | Select-Object -First 1)
+    $version = $([IO.Path]::GetFileNameWithoutExtension($url)) -split "-" -match "\d+(\.\d+)+" | Select-Object -First 1
 
     return @{
         Version = $version

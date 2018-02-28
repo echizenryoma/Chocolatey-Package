@@ -27,7 +27,7 @@ function global:au_GetLatest {
         Version        = $version
         URL64          = $json64.filepath -replace "download.oracle.com", "edelivery.oracle.com"
         Checksum64     = $json64.SHA256
-        ChecksumType64 = "SHA256"
+        ChecksumType64 = 'sha256'
     }
 }
 

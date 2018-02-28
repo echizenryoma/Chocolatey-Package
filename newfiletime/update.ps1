@@ -13,7 +13,7 @@ function global:au_SearchReplace {
     }
 }
 
-function global:au_AfterUpdate ($Package)  {
+function global:au_AfterUpdate ($Package) {
     $global:Options.Push = $true
 }
 
@@ -22,7 +22,9 @@ function global:au_GetLatest {
     $version = $page -Match "(?<=<title>)([\S\s]*?)(?=</title>)"
     $version = $matches[0] -split "\s" -match "\d+(\.\d+)+"
 
-    $sha256sum = ($page.Links | Where-Object href -Match "[0-9a-fA-f]{64,}").href -split "/" -match "[0-9a-fA-f]{64,}"
+    $checksum_type = 'sha256'
+
+    $sha256sum = ($page.Links.href -match "[0-9a-fA-f]{64,}" | Select-Object -First 1) -split "/" -match "[0-9a-fA-f]{64,}"
     $checksum32 = $sha256sum[0]
     $checksum64 = $sha256sum[4]
     $checksum_extra = $sha256sum[2]
@@ -30,11 +32,11 @@ function global:au_GetLatest {
     return @{
         Version           = $version
         Checksum32        = $checksum32
-        ChecksumType32    = 'SHA256'
+        ChecksumType32    = $checksum_type
         Checksum64        = $checksum64
-        ChecksumType64    = 'SHA256'
+        ChecksumType64    = $checksum_type
         ChecksumExtra     = $checksum_extra
-        ChecksumTypeExtra = 'SHA256'
+        ChecksumTypeExtra = $checksum_type
     }
 }
 

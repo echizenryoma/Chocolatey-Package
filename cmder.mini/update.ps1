@@ -9,10 +9,10 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $request = Invoke-WebRequest -UseBasicParsing -Uri "https://github.com/cmderdev/cmder/releases/latest" -MaximumRedirection 0 -ErrorAction Ignore
-    $version = ($request.Headers.Location -split "/" -match "^v\d+(\.\d+)+").Replace("v", '').Trim()
-    $url32 = "https://github.com/cmderdev/cmder/releases/download/v${version}/cmder_mini.zip"
-	
+    $page = Invoke-WebRequest -UseBasicParsing -Uri "https://github.com/cmderdev/cmder/releases/latest"
+    $url32 = 'https://github.com' + ($page.Links.href -match "cmder_mini" | Select-Object -First 1)
+    $version = $url32 -split "/|v" -match "\d+(\.\d+)+" | Select-Object -First 1
+
     return @{
         Version = $version
         URL32   = $url32
