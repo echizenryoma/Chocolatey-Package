@@ -13,6 +13,10 @@ function global:au_SearchReplace {
     }
 }
 
+function global:au_AfterUpdate ($Package)  {
+    $global:Options.Push = $true
+}
+
 function global:au_GetLatest {
     $base = 'https://mkvtoolnix.download/windows/releases'
     $page = Invoke-WebRequest -UseBasicParsing -Uri "$base/.dirindex.php?sort=date&order=desc"

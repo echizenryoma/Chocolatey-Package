@@ -13,6 +13,10 @@ function global:au_SearchReplace {
     }
 }
 
+function global:au_AfterUpdate ($Package)  {
+    $global:Options.Push = $true
+}
+
 function global:au_GetLatest {
     $page = Invoke-WebRequest -UseBasicParsing -Uri 'https://www.voidtools.com/Changes.txt'
     $version = $page.Content -Split "`n" | Select-String ': Version .+' | Select-Object -First 1

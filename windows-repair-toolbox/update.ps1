@@ -10,6 +10,10 @@ function global:au_SearchReplace {
     }
 }
 
+function global:au_AfterUpdate ($Package)  {
+    $global:Options.Push = $true
+}
+
 function global:au_GetLatest {
     $url = "https://windows-repair-toolbox.com/"
     $page = Invoke-WebRequest -UseBasicParsing -Uri $url
