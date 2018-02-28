@@ -16,7 +16,7 @@ $PackageArgs = @{
 Install-ChocolateyZipPackage @PackageArgs
 
 $UrlExtra = 'https://notepad-plus-plus.org/repository/7.x/7.5.5/npp.7.5.5.Installer.exe'
-$ChecksumExtra = 'e914695e5f271ea1068f052dc711fd83a6bff06c'
+$ChecksumExtra = 'c92f9a2efc02eb3c4460b6aaccf9b9b7c8718ab8'
 $ChecksumTypeExtra = 'SHA1'
 $FileName = [IO.Path]::GetFileName($UrlExtra)
 $InstallerPath = Join-Path $InstallationPath $FileName

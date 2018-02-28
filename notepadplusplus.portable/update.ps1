@@ -6,9 +6,9 @@ function global:au_SearchReplace {
             "(^[$]Url\s*=\s*)('.*')"          = "`$1'$($Latest.URL32)'"
             "(^[$]Checksum\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum32)'"
             "(^[$]ChecksumType\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
-            "(^[$]UrlExtra\s*=\s*)('.*')"     = "`${1}'$($Latest.URL_EXTRA)'"
-            "(^[$]ChecksumExtra\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum32)'"
-            "(^[$]ChecksumTypeExtra\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
+            "(^[$]UrlExtra\s*=\s*)('.*')"     = "`${1}'$($Latest.URL_Extra)'"
+            "(^[$]ChecksumExtra\s*=\s*)('.*')"     = "`$1'$($Latest.ChecksumExtra)'"
+            "(^[$]ChecksumTypeExtra\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumTypeExtra)'"
         }
     }
 }
@@ -35,7 +35,7 @@ function global:au_GetLatest {
         URL32             = $url
         ChecksumType32    = 'SHA1'
         Checksum32        = $checksum32
-        URL_EXTRA         = $url_extra
+        URL_Extra         = $url_extra
         ChecksumTypeExtra = 'SHA1'
         ChecksumExtra     = $checksum_extra
     }
