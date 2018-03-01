@@ -11,13 +11,14 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $page = Invoke-WebRequest -Uri 'http://www.python.org/downloads/'
-    $url = $page.Links.href -match 'python-(2.+)\.msi$' | Select-Object -First 1
-    $version = $Matches[1]
+    $url32 = $page.Links.href -match 'python-(2.+)\.msi$' | Select-Object -First 1
+    $url64 = $url32.Replace('.msi', '.amd64.msi')
+    $version = $([IO.Path]::GetFileNameWithoutExtension($url32)) -split "-" -match "\d+(\.\d+)+" | Select-Object -First 1
 
     return @{
         Version = $version
-        URL32   = $url
-        URL64   = $url.Replace('.msi', '.amd64.msi')
+        URL32   = $url32
+        URL64   = $url64
     }
 }
 

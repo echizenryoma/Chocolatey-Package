@@ -11,13 +11,14 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $page = Invoke-WebRequest -Uri 'https://www.python.org/downloads'
-    $url = $page.Links.href -match '.exe' | Select-Object -First 1
-    $version = [IO.Path]::GetFileNameWithoutExtension($url) -split '-' -match "\d+(\.\d+)+" | Select-Object -First 1
+    $url32 = $page.Links.href -match '.exe' | Select-Object -First 1
+    $url64 = $url32.Replace('.exe', '-amd64.exe')
+    $version = [IO.Path]::GetFileNameWithoutExtension($url32) -split '-' -match "\d+(\.\d+)+" | Select-Object -First 1
 
     return @{
         Version = $version 
-        URL32   = $url
-        URL64   = $url -replace '.exe', '-amd64.exe'
+        URL32   = $url32
+        URL64   = $url64
     }
 }
 
