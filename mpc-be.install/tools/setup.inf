@@ -1,8 +1,0 @@
-[Setup]
-Lang=sc
-Dir=C:\Program Files\MPC-BE
-Group=MPC-BE
-NoIcons=0
-SetupType=custom
-Components=main,mpciconlib,mpcresources,mpcberegvid,mpcberegaud,mpcberegpl,mpcbeshellext
-Tasks=desktopicon,desktopicon\common
