@@ -11,6 +11,7 @@ $PackageArgs = @{
 }
 Install-ChocolateyZipPackage @PackageArgs
 
-$BinFile = (Get-ChildItem -Path $InstallationPath -Filter "*.exe" -File | Select-Object -Last 1).FullName
-$LinkPath = Join-Path $([Environment]::GetFolderPath("CommonDesktopDirectory")) "MobaXterm.lnk"
-Install-ChocolateyShortcut -ShortcutFilePath $LinkPath -TargetPath $BinFile
+$BinPath = (Get-ChildItem -Path $InstallationPath -Filter "*.exe" -File | Select-Object -Last 1).FullName
+Install-BinFile -Name Code -Path $BinPath
+$LinkPath = Join-Path $([Environment]::GetFolderPath("CommonDesktopDirectory")) "Visual Studio Code.lnk"
+Install-ChocolateyShortcut -ShortcutFilePath $LinkPath -TargetPath $BinFileName -WorkingDirectory $InstallationPath

@@ -40,4 +40,4 @@ Remove-Item -Path $InstallerPath -Force -ErrorAction Ignore
 $BinFileName = Join-Path $InstallationPath "notepad++.exe"
 Install-BinFile -Name 'notepad++' -Path $BinFileName
 $LinkPath = Join-Path $([Environment]::GetFolderPath("CommonDesktopDirectory")) "Notepad++.lnk"
-Install-ChocolateyShortcut -ShortcutFilePath $LinkPath -TargetPath $BinFileName
+Install-ChocolateyShortcut -ShortcutFilePath $LinkPath -TargetPath $BinFileName -WorkingDirectory $InstallationPath

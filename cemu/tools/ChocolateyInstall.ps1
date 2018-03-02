@@ -14,5 +14,5 @@ Install-ChocolateyZipPackage @PackageArgs
 
 $null = New-Item -ItemType Directory -Force -Path $InstallationPath -ErrorAction Ignore
 $UnzipPath = Join-Path $UnzipLocation $([IO.Path]::GetFileNameWithoutExtension($Url64))
-$null = Copy-Item -Path $(Join-Path $UnzipPath '*') -Destination $InstallationPath -Recurse -Force
+Copy-Item -Path $(Join-Path $UnzipPath '*') -Destination $InstallationPath -Recurse -Force
 Remove-Item -Path $UnzipPath -Recurse -Force -ErrorAction Ignore
