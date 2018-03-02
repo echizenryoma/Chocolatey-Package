@@ -9,9 +9,10 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $page = Invoke-WebRequest -UseBasicParsing -Uri "https://sourceforge.net/projects/nsis/files/"
+    $base = "https://sourceforge.net/projects/innounp/files/innounp"
+    $page = Invoke-WebRequest -UseBasicParsing -Uri $base
     $version = ($page.Links.title -match "\d+(\.\d+)+") -split "/|\:|\s|-" -match "\d+(\.\d+)+" | Select-Object -Unique -First 1
-    $url = "https://sourceforge.net/projects/nsis/files/NSIS%20$(([version]$version).Major)/${version}/nsis-${version}.zip"
+    $url = "$base/innounp%20${version}/innounp${version}.rar"
 	
     return @{
         Version = $version
