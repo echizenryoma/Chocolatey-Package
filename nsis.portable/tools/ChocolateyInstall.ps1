@@ -14,7 +14,7 @@ Install-ChocolateyZipPackage @PackageArgs
 
 $null = New-Item -ItemType Directory -Force -Path $InstallationPath -ErrorAction Ignore
 $UnzipPath = (Get-ChildItem $UnzipLocation -Directory | Where-Object Name -EQ "$([IO.Path]::GetFileNameWithoutExtension($Url))" | Select-Object -First 1).FullName
-Start-ChocolateyProcessAsAdmin -ExeToRun 'xcopy' -Statements "`"$UnzipPath`" `"$InstallationPath`" /s /y /q"
+$null = Copy-Item -Path $(Join-Path $UnzipPath '*') -Destination $InstallationPath -Recurse -Force
 Remove-Item -Path $UnzipPath -Recurse -Force -ErrorAction Ignore
 
 Install-BinFile -Path $(Join-Path $InstallationPath 'makensis.exe') -Name 'makensis'
