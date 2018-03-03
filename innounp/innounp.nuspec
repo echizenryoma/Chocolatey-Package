@@ -20,6 +20,9 @@ Inno Setup is a popular program for making software installations. Unfortunately
     <copyright>QuickeneR,Ariman</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>commandline InnoSetup extract</tags>
+    <dependencies>
+      <dependency id="inno-setup" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
