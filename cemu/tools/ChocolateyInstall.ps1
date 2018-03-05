@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'cemu'
-$Url64 = 'http://cemu.info/releases/cemu_1.11.4.zip'
+$Url64 = 'http://cemu.info/releases/cemu_1.11.5.zip'
 $UnzipLocation = Get-ToolsLocation
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 
