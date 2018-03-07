@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'redis-desktop-manager'
-$Url = 'https://github.com/uglide/RedisDesktopManager/releases/download/0.9.0-4/redis-desktop-manager-0.9.0.751.exe'
+$Url = 'https://github.com/uglide/RedisDesktopManager/releases/download/0.9.0-5/redis-desktop-manager-0.9.0.760.exe'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 
 $PackageArgs = @{
