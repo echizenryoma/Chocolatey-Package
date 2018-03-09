@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>tomcat.portable</id>
-    <version>8.5.28</version>
+    <version>9.0.6</version>
     <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/tomcat.portable</packageSourceUrl>
     <owners>echizenryoma</owners>
     <title>Apache Tomcat</title>
@@ -12,7 +12,7 @@
     <licenseUrl>http://tomcat.apache.org/legal.html</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>http://tomcat.apache.org/svn.html</projectSourceUrl>
-    <docsUrl>http://tomcat.apache.org/tomcat-8.5-doc/index.html</docsUrl>
+    <docsUrl>http://tomcat.apache.org/tomcat-9.0-doc/index.html</docsUrl>
     <mailingListUrl>http://tomcat.apache.org/lists.html</mailingListUrl>
     <bugTrackerUrl>http://tomcat.apache.org/bugreport.html</bugTrackerUrl>
     <tags>application server apache jsf jsp tomcat</tags>
