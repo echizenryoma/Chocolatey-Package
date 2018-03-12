@@ -2,9 +2,7 @@
 
 param([string[]] $Name, [string] $ForcedPackages, [string] $Root = $PSScriptRoot)
 
-if (Test-Path $PSScriptRoot/update_vars.ps1) {
-    . $PSScriptRoot/update_vars.ps1
-}
+if (Test-Path $PSScriptRoot/update_vars.ps1) { . $PSScriptRoot/update_vars.ps1 }
 
 $Options = [ordered]@{
     Timeout       = 60
@@ -29,19 +27,21 @@ $Options = [ordered]@{
         Force    = $true
     }
 
-    BeforeEach    = {
-        param($PackageName, $Options)
-        $p = $Options.ForcedPackages | Where-Object { $_ -match "^${PackageName}(?:\:(.+))*$" }
-        if (!$p) {
-            return
-        }
+    ForcedPackages = $ForcedPackages -split ' '
 
-        $global:au_Force = $true
-        $global:au_Version = ($p -split ':')[1]
+    BeforeEach    = {
+        param($PackageName, $Options )
+
+        $pattern = "^${PackageName}(?:\\(?<stream>[^:]+))?(?:\:(?<version>.+))?$"
+        $p = $Options.ForcedPackages | ? { $_ -match $pattern }
+        if (!$p) { return }
+
+        $global:au_Force         = $true
+        $global:au_IncludeStream = $Matches['stream']
+        $global:au_Version       = $Matches['version']
     }
 }
 
-if ($ForcedPackages) { 
-    Write-Host "FORCED PACKAGES: $ForcedPackages" 
-}
-$global:info = Update-AUPackages -Name $Name -Options $Options
+if ($ForcedPackages) { Write-Host "FORCED PACKAGES: $ForcedPackages" }
+$global:au_Root = $Root                                    #Path to the AU packages
+$global:info = updateall -Name $Name -Options $Options

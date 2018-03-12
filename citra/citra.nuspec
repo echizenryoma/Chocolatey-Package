@@ -2,7 +2,11 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>citra</id>
+<<<<<<< HEAD
     <version>412.20180311</version>
+=======
+    <version>408.20180310</version>
+>>>>>>> e940aeda812aeaec38f44b78fc1316dfb46bc0cb
     <title>Citra Emulator</title>
     <authors>Citra Emulator</authors>
     <owners>echizenryoma</owners>
