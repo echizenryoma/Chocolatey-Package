@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'sandboxie'
-$Url32 = 'https://www.sandboxie.com/attic/SandboxieInstall-522.exe'
-$Checksum32 = 'f3dfb2f5629d3e1d8e8a77abacf5d428c9a7495b'
+$Url32 = 'https://www.sandboxie.com/attic/SandboxieInstall-524.exe'
+$Checksum32 = 'a3376224dc5c5aa991d5f6c7855b5ce968939f33'
 $ChecksumType32 = 'SHA1'
 
 $PackageArgs = @{
