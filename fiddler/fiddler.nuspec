@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package 
-  xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>fiddler</id>
     <title>Fiddler</title>
     <owners>echizenryoma</owners>
-    <version>5.0.20173.50948</version>
+    <version>5.0.20181.13826</version>
     <authors>Telerik</authors>
     <summary>Fiddler Web Debugging Proxy</summary>
     <description>

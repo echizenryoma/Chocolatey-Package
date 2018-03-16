@@ -11,4 +11,7 @@ $PackageArgs = @{
 }
 Install-ChocolateyZipPackage @PackageArgs
 
-Install-BinFile -Path $(Join-Path $InstallationPath 'Cmder.exe') -Name 'Cmder'
+$BinPath = Join-Path $InstallationPath "Cmder.exe"
+Install-BinFile -Name "Cmder" -Path $BinPath
+$LinkPath = Join-Path $([Environment]::GetFolderPath("CommonDesktopDirectory")) "Cmder.lnk"
+Install-ChocolateyShortcut -ShortcutFilePath $LinkPath -TargetPath $BinPath -WorkingDirectory $InstallationPath
