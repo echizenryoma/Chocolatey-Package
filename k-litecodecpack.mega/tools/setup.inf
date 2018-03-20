@@ -28,7 +28,7 @@ hwa_vc1=1
 hwa_mpeg2=1
 hwa_lav=1
 hwa_lav_hwaccel=3
-hwa_mpc_only=1
+hwa_mpc_only=0
 [Languages]
 lang_set_preferred=1
 lang_primary=chi
