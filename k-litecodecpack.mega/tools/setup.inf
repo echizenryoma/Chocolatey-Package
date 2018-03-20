@@ -3,7 +3,7 @@ Group=K-Lite Codec Pack
 NoIcons=0
 SetupType=custom
 Components=player\mpchc\x64, video\mpeg2, video\h264\lav, video\hevc\lav, video\mpeg4\lav, video\vc1\lav, audio\ac3dts\lav, audio\truehd\lav, audio\aac\lav, audio\flac\lav, audio\mpeg\lav, video\wmv\microsoft, audio\wma\microsoft, video\other\prefer_lav, audio\other\prefer_lav, sourcefilter\avi\microsoft, sourcefilter\mpegps\default, sourcefilter\wmv\microsoft, sourcefilter\matroska\lav, sourcefilter\mp4\lav, sourcefilter\mpegts\lav, sourcefilter\lav, sourcefilter\dcbass\shoutcast, sourcefilter\dcbass\optimfrog, sourcefilter\dcbass\tracker, subtitles\vsfilter, videovfw\x264, videovfw\ffdshow, videovfw\xvid, videovfw\lagarith, videovfw\huffyuv, audioacm\mp3lame, audioacm\ac3acm, tools\codectweaktool, tools\mediainfo, tools\vobsubstrip, tools\graphstudio, tools\haalimuxer, tools\fourcc, shell\icaros_thumbnail, shell\icaros_property, misc\brokencodecs, misc\brokenfilters
-Tasks=reset_settings\fresh, mpc_desktop, config_shortcuts, systray_lavsplitter, systray_lav, systray_ffdshow, wmp_reg_formats, mediainfo_contextmenu, adjust_preferred_decoders, force_file_associations, update\d90
+Tasks=reset_settings\fresh, mpc_desktop, config_shortcuts, systray_lavsplitter, systray_lav, systray_ffdshow, wmp_reg_formats, mediainfo_contextmenu, adjust_preferred_decoders, force_file_associations
 [Data]
 uim_version=10
 [Settings]
@@ -28,7 +28,7 @@ hwa_vc1=1
 hwa_mpeg2=1
 hwa_lav=1
 hwa_lav_hwaccel=3
-hwa_mpc_only=0
+hwa_mpc_only=1
 [Languages]
 lang_set_preferred=1
 lang_primary=chi
