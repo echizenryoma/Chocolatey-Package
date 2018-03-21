@@ -21,7 +21,10 @@ function global:au_GetLatest {
     $json64 = $html -split "=" | Select-Object -Last 1 | ConvertFrom-Json
 
     $url64 = $json64.filepath
-    $version = ($url64 -split "/|\+" -match "\d+(\.\d+)+" | Select-Object -First 1).Trim()
+    $version = [IO.Path]::GetFileNameWithoutExtension($url64) -split "-|_" -match "^\d+(\.\d+)*" | Select-Object -First 1
+    if ($version -notcontains "."){
+        $version = $version + ".0.0"
+    }
 	
     return @{
         Version        = $version

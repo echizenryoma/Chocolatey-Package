@@ -1,9 +1,8 @@
 <?xml version="1.0"?>
-<package 
-  xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>jdk.portable</id>
-    <version>9.0.4</version>
+    <version>10.0.0</version>
     <title>Java SE Development Kit</title>
     <authors>Sun Microsystems/Oracle Corporation</authors>
     <owners>echizenryoma</owners>
