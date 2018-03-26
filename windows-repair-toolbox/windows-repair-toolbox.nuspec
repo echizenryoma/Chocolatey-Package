@@ -1,9 +1,8 @@
 <?xml version="1.0"?>
-<package 
-  xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>windows-repair-toolbox</id>
-    <version>2.0.1.0</version>
+    <version>3.0.0.0</version>
     <title>Windows Repair Toolbox</title>
     <authors>Windows_Repair_Toolbox</authors>
     <owners>echizenryoma</owners>
