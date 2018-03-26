@@ -1,12 +1,12 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'ghostscript'
-$Url32 = 'https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs922/gs922w32.exe'
-$Checksum32 = 'c01b36529c618f9218c39c84bf7168fc2e466a78406f273609f736a5f0cd965a'
-$ChecksumType32 = 'SHA256'
-$Url64 = 'https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs922/gs922w64.exe'
-$Checksum64 = '796cd308d3134d021356c0db1831c089db73d03aac07d28cbe77958163c79d57'
-$ChecksumType64 = 'SHA256'
+$Url32 = 'https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs923/gs923w32.exe'
+$Checksum32 = '6cf1d13e72c1fcd1fbdc5114d7dfba996580301047ddcc2edc9559cf7602b7a0878a856795c728df864de86426fdc051bc7992d6666d2a991f676c8b523a1c17'
+$ChecksumType32 = 'sha512'
+$Url64 = 'https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs923/gs923w64.exe'
+$Checksum64 = '2af6e6115a4719de3ef2cc8bd3e68fd51b4297879bcf2c09326506ff1097c4f1bc781c9d21f95d17abf13d034bb22b356c46de4b91ac4c94074ff8f52c010360'
+$ChecksumType64 = 'sha512'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 $PackageArgs = @{

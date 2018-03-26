@@ -28,10 +28,10 @@ function global:au_GetLatest {
     $url32 = "https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs$($version.Replace(".", ''))/gs$($version.Replace(".", ''))w32.exe"
     $url64 = "https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs$($version.Replace(".", ''))/gs$($version.Replace(".", ''))w64.exe"
 
-    $page = Invoke-WebRequest -UseBasicParsing -Uri "https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs$($version.Replace(".", ''))/SHA256SUMS"
+    $page = Invoke-WebRequest -UseBasicParsing -Uri "https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs$($version.Replace(".", ''))/SHA512SUMS"
     $sha256table = [System.Text.Encoding]::UTF8.GetString($page.Content) -split "\n" | ConvertFrom-String -PropertyNames sha256sum, file
     
-    $checksum_type = 'sha256'
+    $checksum_type = 'sha512'
     $checksum32 = $sha256table | Where-Object file -Match "gs$($version.Replace(".", ''))w32.exe" | Select-Object -First 1 -ExpandProperty sha256sum
     $checksum64 = $sha256table | Where-Object file -Match "gs$($version.Replace(".", ''))w64.exe" | Select-Object -First 1 -ExpandProperty sha256sum
   
