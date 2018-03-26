@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>inno-setup</id>
-    <title>Inno Setup</title>
+    <id>inno-setup.portable</id>
+    <title>Inno Setup (Portable)</title>
     <version>5.5.9</version>
     <authors>Jordan Russell</authors>
     <owners>echizenryoma</owners>
@@ -41,7 +41,7 @@ However if you wish to show your appreciation and support its development you ca
   ]]>
     </description>
     <projectUrl>http://www.jrsoftware.org/isinfo.php</projectUrl>
-    <tags>innosetup admin installer setup exe foss</tags>
+    <tags>innosetup installer setup exe foss</tags>
     <copyright>© 1997 Jordan Russell</copyright>
     <licenseUrl>http://www.jrsoftware.org/files/is/license.txt</licenseUrl>
     <iconUrl>http://www.jrsoftware.org/favicon.ico</iconUrl>
