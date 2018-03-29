@@ -1,9 +1,8 @@
 <?xml version="1.0"?>
-<package 
-  xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>resourcehacker.portable</id>
-    <version>4.5.30</version>
+    <version>4.6.32</version>
     <title>Resource Hacker (Portable)</title>
     <authors>Angus Johnson</authors>
     <owners>echizenryoma</owners>
