@@ -3,6 +3,8 @@
 function global:au_SearchReplace {
     @{
         'tools\ChocolateyInstall.ps1' = @{
+            "(^[$]Checksum\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum)'"
+            "(^[$]ChecksumType\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType)'"
         }
     }
 }
@@ -20,4 +22,4 @@ function global:au_GetLatest {
     }
 }
 
-Update-Package -NoCheckUrl -NoCheckChocoVersion -ChecksumFor none
+Update-Package -NoCheckUrl -NoCheckChocoVersion -ChecksumFor 32
