@@ -16,9 +16,9 @@ function global:au_GetLatest {
     $url64 = "https://storage.googleapis.com/golang/go${version}.windows-amd64.zip"
     
     return @{
+        Version = $version
         URL32   = $url32
         URL64   = $url64
-        Version = $version
     }
 }
 
