@@ -1,13 +1,13 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'jdk8'
-$Url32 = 'http://edelivery.oracle.com/otn-pub/java/jdk/8u162-b12/0da788060d494f5095bf8624735fa2f1/jdk-8u162-windows-i586.exe'
-$Checksum32 = '4a705bd74171eb003a1485d1b2d7a3fb735452f252d39a7beee5117f08614c1f'
-$ChecksumType32 = 'SHA256'
-$Url64 = 'http://edelivery.oracle.com/otn-pub/java/jdk/8u162-b12/0da788060d494f5095bf8624735fa2f1/jdk-8u162-windows-x64.exe'
-$Checksum64 = 'f05aa9904c373b2e0aad7a5ce1006aa3aff096842f256d66c6cfc268d9c48026'
-$ChecksumType64 = 'SHA256'
-$JavaVersion = '8u162'
+$Url32 = 'http://edelivery.oracle.com/otn-pub/java/jdk/8u172-b11/a58eab1ec242421181065cdc37240b08/jdk-8u172-windows-i586.exe'
+$Checksum32 = '63c66282303df19060b476b583f8bc21a88afcf63f669d56c4e966751ec9181c'
+$ChecksumType32 = 'sha256'
+$Url64 = 'http://edelivery.oracle.com/otn-pub/java/jdk/8u172-b11/a58eab1ec242421181065cdc37240b08/jdk-8u172-windows-x64.exe'
+$Checksum64 = '0b330b00576420a38f5c76cd07899b46551c075fa9e4df6028b14828e538e30d'
+$ChecksumType64 = 'sha256'
+$JavaVersion = '8u172'
 $InstallationPath = Join-Path $(Get-ToolsLocation) "jdk_$JavaVersion"
 $UnzipPath = $(Join-Path $InstallationPath "tmp")
 
