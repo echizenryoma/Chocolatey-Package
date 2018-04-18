@@ -1,10 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'jdk'
-$Url64 = 'http://edelivery.oracle.com/otn-pub/java/jdk/10+46/76eac37278c24557a3c4199677f19b62/jdk-10_windows-x64_bin.exe'
-$Checksum64 = 'd3cb9ddf29c71e49f3976f93ef4d817a6765385f41e8db9ea947e64ba657f1c2'
+$Url64 = 'http://edelivery.oracle.com/otn-pub/java/jdk/10.0.1+10/fb4372174a714e6b8c52526dc134031e/jdk-10.0.1_windows-x64_bin.exe'
+$Checksum64 = '9917df90549c8ebc0430dfe92478091ecff05e1a10edc708657e83a987727695'
 $ChecksumType64 = 'sha256'
-$Version = '10.0.0'
+$Version = '10.0.1'
 $InstallationPath = Join-Path $(Get-ToolsLocation) "jdk-$Version"
 $UnzipPath = $(Join-Path $InstallationPath "tmp")
 

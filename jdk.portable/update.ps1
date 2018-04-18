@@ -22,7 +22,7 @@ function global:au_GetLatest {
 
     $url64 = $json64.filepath
     $version = [IO.Path]::GetFileNameWithoutExtension($url64) -split "-|_" -match "^\d+(\.\d+)*" | Select-Object -First 1
-    if ($version -notcontains "."){
+    if ($version -notmatch "\."){
         $version = $version + ".0.0"
     }
 	
