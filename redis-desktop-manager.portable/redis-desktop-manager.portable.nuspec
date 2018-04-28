@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>redis-desktop-manager.portable</id>
-    <version>0.9.2.806</version>
+    <version>0.9.3.817</version>
     <title>Redis Desktop Manager (Portable)</title>
     <authors>Igor Malinovskiy</authors>
     <owners>echizenryoma</owners>
