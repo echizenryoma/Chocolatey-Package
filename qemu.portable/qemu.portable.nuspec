@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>qemu.portable</id>
-    <version>2018.04.24</version>
+    <version>2018.04.30</version>
     <title>QEMU (Portable)</title>
     <authors>QEMU Developers</authors>
     <owners>echizenryoma</owners>
