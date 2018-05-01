@@ -22,4 +22,4 @@ $PackageArgs = @{
 }
 Install-ChocolateyZipPackage @packageArgs
 
-Install-BinFile -File $(Join-Path $InstallationPath "7z.exe") -Name "7z"
+Install-BinFile -Path $(Join-Path $InstallationPath "7z.exe") -Name "7z"
