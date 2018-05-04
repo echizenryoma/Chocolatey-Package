@@ -5,6 +5,9 @@ $Url32 = 'https://vscode-update.azurewebsites.net/latest/win32-archive/stable'
 $Url64 = 'https://vscode-update.azurewebsites.net/latest/win32-x64-archive/stable'
 $InstallationPath = Join-Path $(Get-ToolsLocation) 'vscode'
 
+Remove-Item $InstallationPath -Recurse -Force -ErrorAction Ignore
+New-Item -ItemType Directory -Path $InstallationPath -Force -ErrorAction Ignore
+
 $PackageArgs = @{
     PackageName   = $PackageName
     Url           = $Url32
