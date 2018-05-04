@@ -4,6 +4,8 @@ $PackageName = 'fsview'
 $Url32 = 'http://www.faststonesoft.net/DN/FSViewer65.zip'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
+Get-ChildItem -Directory $ToolsPath | Remove-Item -Recurse -Force -ErrorAction Ignore
+
 $PackageArgs = @{
     PackageName   = $PackageName
     Url           = $Url32
