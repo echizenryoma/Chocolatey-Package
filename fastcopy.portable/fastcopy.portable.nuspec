@@ -1,9 +1,8 @@
 <?xml version="1.0"?>
-<package 
-  xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>fastcopy.portable</id>
-    <version>3.41</version>
+    <version>3.50</version>
     <title>FastCopy (Portable)</title>
     <authors>Hiroaki Shirouzu</authors>
     <owners>echizenryoma</owners>
