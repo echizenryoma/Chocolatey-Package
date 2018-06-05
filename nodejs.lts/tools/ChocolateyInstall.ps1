@@ -2,10 +2,10 @@
 
 $PackageName = 'nodejs'
 $Url32 = 'https://npm.taobao.org/mirrors/node/v8.11.2/node-v8.11.2-win-x86.7z'
-$Checksum32 = ''
+$Checksum32 = '03f1bf7a206b8d24f921606ddafd865b5d60bd54e7998fc5d1744cef2e12c443'
 $ChecksumType32 = 'sha256'
 $Url64 = 'https://npm.taobao.org/mirrors/node/v8.11.2/node-v8.11.2-win-x64.7z'
-$Checksum64 = ''
+$Checksum64 = '8bbd03b041f8326aba5ab754e4619eb3322907ddbfd77b93ddbcdaa435533ce0'
 $ChecksumType64 = 'sha256'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $UnzipLocation = Get-ToolsLocation

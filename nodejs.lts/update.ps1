@@ -3,12 +3,12 @@
 function global:au_SearchReplace {
     @{
         ".\tools\ChocolateyInstall.ps1" = @{
-            "(^[$]url32\s*=\s*)('.*')"          = "`$1'$($Latest.URL32)'"
-            "(^[$]checksum32\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum32)'"
-            "(^[$]checksumType32\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
-            "(^[$]url64\s*=\s*)('.*')"          = "`$1'$($Latest.URL64)'"
-            "(^[$]checksum64\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum64)'"
-            "(^[$]checksumType64\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType64)'"
+            "(^[$]Url32\s*=\s*)('.*')"          = "`$1'$($Latest.URL32)'"
+            "(^[$]Checksum32\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum32)'"
+            "(^[$]ChecksumType32\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
+            "(^[$]Url64\s*=\s*)('.*')"          = "`$1'$($Latest.URL64)'"
+            "(^[$]Checksum64\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum64)'"
+            "(^[$]ChecksumType64\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType64)'"
         }
     }
 }
@@ -22,10 +22,10 @@ function global:au_GetLatest {
     $url64 = "https://npm.taobao.org/mirrors/node/v${version}/node-v${version}-win-x64.7z"
 
     $page = Invoke-WebRequest -UseBasicParsing -Uri "https://npm.taobao.org/mirrors/node/v${version}/SHASUMS256.txt"
-    $sha256table = $page.Content -split "\n" | ConvertFrom-String -PropertyNames sha256, file
+    $obj = $page.Content -split "\n" | ConvertFrom-String -PropertyNames sha256, file
     $checksum_type = 'sha256'
-    $checksum32 = $shasums | Where-Object file -Match "win-x86.7z$" | Select-Object -First 1 -ExpandProperty sha256
-    $checksum64 = $shasums | Where-Object file -Match "win-x64.7z$" | Select-Object -First 1 -ExpandProperty sha256
+    $checksum32 = $obj | Where-Object file -Match "win-x86.7z$" | Select-Object -First 1 -ExpandProperty sha256
+    $checksum64 = $obj | Where-Object file -Match "win-x64.7z$" | Select-Object -First 1 -ExpandProperty sha256
 
     return @{
         Version        = $version
