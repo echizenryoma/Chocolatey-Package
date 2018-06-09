@@ -3,7 +3,7 @@
   <metadata>
     <id>inno-setup.portable</id>
     <title>Inno Setup (Portable)</title>
-    <version>5.5.9</version>
+    <version>5.6.0</version>
     <authors>Jordan Russell</authors>
     <owners>echizenryoma</owners>
     <summary>Inno Setup is a free installer for Windows programs. First introduced in 1997, Inno Setup today rivals and even surpasses many commercial installers in feature set and stability.</summary>

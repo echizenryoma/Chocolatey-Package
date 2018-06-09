@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'inno-setup'
-$Url32 = 'https://github.com/jrsoftware/ispack/archive/is-5_5_9.zip'
+$Url32 = 'https://github.com/jrsoftware/ispack/archive/is-5_6_0.zip'
 $UrlExtra = 'http://www.jrsoftware.org/download.php/ip015.zip'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $UnzipLocation = Get-ToolsLocation
