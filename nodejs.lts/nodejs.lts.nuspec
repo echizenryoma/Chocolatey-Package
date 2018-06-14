@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>nodejs.lts</id>
-    <version>8.11.2</version>
+    <version>8.11.3</version>
     <packageSourceUrl>https://github.com/jtcmedia/chocolatey-packages/tree/master/nodejs-lts</packageSourceUrl>
     <owners>echizenryoma</owners>
     <title>Node.js LTS (Portable)</title>
