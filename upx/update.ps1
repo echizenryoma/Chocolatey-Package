@@ -9,8 +9,8 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $page = Invoke-WebRequest -Uri "https://github.com/upx/upx/tags"
-    $version = ($page.Links | Where-Object innerText -Match "^v\d+(\.\d+){1,2}" | Select-Object -First 1 -Expand innerText).Replace("v", "").Trim()
+    $page = Invoke-WebRequest -UseBasicParsing -Uri "https://github.com/upx/upx/tags"
+    $version = ($page.Links.href -match "releases/tag/v\d+(\.\d+)+$" | Select-Object -Unique -First 1) -split "/|v" -match "\d+(\.\d+)+" | Select-Object -First 1
     $url = "https://github.com/upx/upx/releases/download/v${version}/upx$($version.Replace(".", ''))w.zip"
     
     return @{
