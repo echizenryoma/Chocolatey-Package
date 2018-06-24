@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'picpick'
-$Url32 = 'http://ngwin.com/download/latest/picpick_portable.zip'
+$Url32 = 'https://picpick.app/download/latest/picpick_portable.zip'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 $PackageArgs = @{
