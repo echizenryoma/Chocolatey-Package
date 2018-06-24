@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<package 
-  xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>picpick.portable</id>
     <title>PicPick (Portable)</title>
-    <version>4.2.8</version>
+    <version>7.0.0</version>
     <authors>NTeWORKS</authors>
     <owners>Echizen Ryoma</owners>
     <summary>NTeWORKS PicPick screen capture tool.</summary>
