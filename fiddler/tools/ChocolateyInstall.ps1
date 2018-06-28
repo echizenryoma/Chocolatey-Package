@@ -2,7 +2,7 @@
 
 $PackageName = 'fiddler'
 $Url = 'https://telerik-fiddler.s3.amazonaws.com/fiddler/FiddlerSetup.exe'
-$Checksum = '09CF05F9F805AA2114CC9373A10EF882611BD513E2C461CDBA49F35BDCAE1CFD'
+$Checksum = 'DD9C48E2C37124477320DDEF083DD0FAFCB1B59E0ADE9E881D85FC80EBB82351'
 $ChecksumType = 'SHA256'
 
 $packageArgs = @{
