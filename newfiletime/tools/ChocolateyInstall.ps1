@@ -2,7 +2,7 @@
 
 $PackageName = 'newfiletime'
 $Url32 = 'https://www.softwareok.com/Download/NewFileTime.zip'
-$Checksum32 = 'ab89e447eca547c04d7fb56d3a19e56836b06739084242638fb6fcdc9289e8ce'
+$Checksum32 = 'e2c23f71788baf65e25ac8cdb43de34f45929709713721620a77c1cc4d9aecf7'
 $ChecksumType32 = 'sha256'
 $Url64 = 'https://www.softwareok.com/Download/NewFileTime_x64.zip'
 $Checksum64 = ''
