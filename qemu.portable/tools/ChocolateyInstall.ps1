@@ -1,11 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'qemu'
-$Url32 = 'https://qemu.weilnetz.de/w32/qemu-w32-setup-20180519.exe'
-$Checksum32 = '245524d26499e9c1ba96854aaad0f654d81799d270c63f6781e65d11dfcbf6f4787fe53c899c2a6ba1af8330faa1cc8bf48a06f59b277fe240ad21ec49a523db'
+$Url32 = 'https://qemu.weilnetz.de/w32/qemu-w32-setup-20180711.exe'
+$Checksum32 = 'ae4ea0afffdc8ff3f1f2c08c5cdd21cf439afd289ed7de3b3e9c2e52aaec87982f5fa4362cc5e6988ef9f9b53ba6e68979dfd56dbe088eea7feb9d777166bdc7'
 $ChecksumType32 = 'sha512'
-$Url64 = 'https://qemu.weilnetz.de/w64/qemu-w64-setup-20180519.exe'
-$Checksum64 = '2010c76a4993c1394e4b6146d4e867dabb0732aa2195d67bf282151fdbcfd5f518d2b49e8ed78640e48b8ec933df92314b02aaa604f7e32e80577fb12cac50fa'
+$Url64 = 'https://qemu.weilnetz.de/w64/qemu-w64-setup-20180711.exe'
+$Checksum64 = '2c9734cdf3e06a91d4a7fc511829c2aa81f4b43786e6c5303c42b5a8a8e7b5f736de359ff2ee143ddd1fe446a30be705a3d696043eac9cc31e3c116b5ac34be9'
 $ChecksumType64 = 'sha512'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 
