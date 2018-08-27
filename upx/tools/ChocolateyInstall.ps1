@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'upx'
-$Url = 'https://github.com/upx/upx/releases/download/v3.94/upx394w.zip'
+$Url = 'https://github.com/upx/upx/releases/download/v3.95/upx395w.zip'
 $ToolsPath = $(Split-Path -Parent $MyInvocation.MyCommand.Definition)
 
 $PackageArgs = @{
