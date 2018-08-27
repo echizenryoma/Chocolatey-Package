@@ -1,12 +1,14 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'upx'
-$Url = 'https://github.com/upx/upx/releases/download/v3.95/upx395w.zip'
+$Url32 = 'https://github.com/upx/upx/releases/download/v3.95/upx-3.95-win32.zip'
+$Url64 = 'https://github.com/upx/upx/releases/download/v3.95/upx-3.95-win64.zip'
 $ToolsPath = $(Split-Path -Parent $MyInvocation.MyCommand.Definition)
 
 $PackageArgs = @{
     PackageName   = $PackageName
-    Url           = $url
+    Url32         = $Url32
+    Url64         = $Url64
     Checksum      = $Checksum
     ChecksumType  = $ChecksumType
     UnzipLocation = $ToolsPath
