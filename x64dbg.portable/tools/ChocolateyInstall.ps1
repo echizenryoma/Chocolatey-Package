@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'x64dbg'
-$Url = 'https://github.com/x64dbg/x64dbg/releases/download/snapshot/snapshot_2018-08-28_18-41.zip'
+$Url = 'https://github.com/x64dbg/x64dbg/releases/download/snapshot/snapshot_2018-09-02_01-03.zip'
 $ToolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
