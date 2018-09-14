@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>brotli</id>
+    <version>1.0.4</version>
+    <title>Brotli</title>
+    <authors>Google</authors>
+    <owners>echizenryoma</owners>
+    <projectUrl>https://github.com/google/brotli</projectUrl>
+    <iconUrl>https://brotli.org/brotli.svg</iconUrl>
+    <description>Brotli is a generic-purpose lossless compression algorithm that compresses data using a combination of a modern variant of the LZ77 algorithm, Huffman coding and 2nd order context modeling, with a compression ratio comparable to the best currently available general-purpose compression methods. It is similar in speed with deflate but offers more dense compression.</description>
+    <summary>Brotli is a generic-purpose lossless compression algorithm that compresses data using a combination of a modern variant of the LZ77 algorithm, Huffman coding and 2nd order context modeling, with a compression ratio comparable to the best currently available general-purpose compression methods. It is similar in speed with deflate but offers more dense compression.</summary>
+    <releaseNotes>https://github.com/google/brotli/releases</releaseNotes>
+    <tags>brotli compression</tags>
+    <projectSourceUrl>https://github.com/google/brotli</projectSourceUrl>
+    <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/brotli</packageSourceUrl>
+    <bugTrackerUrl>https://github.com/google/brotli/issues</bugTrackerUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
