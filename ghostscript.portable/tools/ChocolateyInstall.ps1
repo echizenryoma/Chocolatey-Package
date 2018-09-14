@@ -1,11 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'ghostscript'
-$Url32 = 'https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs924/gs924w32.exe'
-$Checksum32 = '0cb21d584b1022c45313d7891ce1a977dc84ec0e67563c957d77c0badc6c960395fd33b521077e6ea2dae01a48f64928fb2e0bc47fff73e7db2e978b5e078139'
+$Url32 = 'https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs925/gs925w32.exe'
+$Checksum32 = '7726973b32c982abcb7aad1512fa35b2e14a811bd4cba56a4a49b63dbf695e28492ddcfde88a110cbc309c05d454e63d3721514a33e15ab5d46275007a04d1c1'
 $ChecksumType32 = 'sha512'
-$Url64 = 'https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs924/gs924w64.exe'
-$Checksum64 = '3e37e1c90f8c059e4c877509e416282b4d7e819d071eae0b982aeb77ac5c22a58f2be21ca9fabe5cd481e6c77156b62f09b89b7456e66dc02bf9f1037efd2da5'
+$Url64 = 'https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs925/gs925w64.exe'
+$Checksum64 = '8f8cc87459c4bfee34a078862fad8a674e84385c223deeac07142085f8d3669ae3b101466d254b44b31ed2d9b3d7c0fdacbeb4fa0ba4e0cabdac4d10de02f065'
 $ChecksumType64 = 'sha512'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
