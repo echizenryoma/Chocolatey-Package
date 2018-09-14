@@ -16,9 +16,9 @@ function global:au_GetLatest {
 
     $url = $base + ($page.Links.href -match "brotli.*win_i686\.zip" | Select-Object -First 1)
     $url64 = $base + ($page.Links.href -match "brotli.*win_x86_64\.zip" | Select-Object -First 1)
-
+    
     if (($url -eq $base) -and ($url64 -eq $base)) {
-        $version = $Latest.NuspecVersion
+        $version = "0.0.0"
     }
 	
     return @{
