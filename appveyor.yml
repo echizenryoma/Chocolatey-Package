@@ -10,10 +10,11 @@ platform:
 install:
   - cmd: choco install -y au
 
+before_build:
+  - cmd: git config --global user.email "echizenryoma.zhang@gmail.com"
+  - cmd: git config --global user.name "Echizen Ryoma"
+
 build_script:
   - ps: ./update_all.ps1
-
-after_build:
-  - cmd: git pull
 
 test: off
