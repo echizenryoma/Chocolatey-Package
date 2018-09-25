@@ -1,0 +1,19 @@
+image: Visual Studio 2017
+
+environment:
+  GITHUB_API_KEY:
+    secure: NTvryk9CbdACILTud+CLgoEp8HkGQlEvpT6oVtips708y7I/jkx6Nhd2TAMiXo9C
+
+platform:
+  - x64
+
+install:
+  - cmd: choco install -y au
+
+build_script:
+  - ps: ./update_all.ps1
+
+after_build:
+  - cmd: git pull
+
+test: off
