@@ -3,6 +3,8 @@ image: Visual Studio 2017
 environment:
   GITHUB_API_KEY:
     secure: NTvryk9CbdACILTud+CLgoEp8HkGQlEvpT6oVtips708y7I/jkx6Nhd2TAMiXo9C
+  CHOCOLATEY_API_KEY:
+    secure: VujZ8TkRdsZebfcyAoi1pgaXKTz49rwsxEl10uLIPcwIxXL1xRjUFvmAt8E19DpL
 
 notifications:
   - provider: Email
@@ -19,6 +21,7 @@ install:
 before_build:
   - cmd: git config --global user.email "echizenryoma.zhang@gmail.com"
   - cmd: git config --global user.name "Echizen Ryoma"
+  - cmd: choco apikey --key %CHOCOLATEY_API_KEY% --source https://push.chocolatey.org/
 
 build_script:
   - ps: ./update_all.ps1
