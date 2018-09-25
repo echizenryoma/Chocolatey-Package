@@ -4,6 +4,12 @@ environment:
   GITHUB_API_KEY:
     secure: NTvryk9CbdACILTud+CLgoEp8HkGQlEvpT6oVtips708y7I/jkx6Nhd2TAMiXo9C
 
+notifications:
+  - provider: Email
+    on_build_success: false
+    on_build_failure: true
+    on_build_status_changed: false
+
 platform:
   - x64
 
