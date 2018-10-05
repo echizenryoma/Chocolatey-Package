@@ -14,7 +14,7 @@
     <tags>font math xits sitx admin</tags>
     <licenseUrl>https://scripts.sil.org/OFL</licenseUrl>
     <iconUrl>https://www.stixfonts.org/favicon.ico</iconUrl>
-    <releaseNotes>https://github.com/alif-type/xits/releases</releaseNotes>
+    <releaseNotes>https://ctan.org/ctan-ann/pkg/xits</releaseNotes>
     <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/otf-xits</packageSourceUrl>
   </metadata>
   <files>
