@@ -3,7 +3,7 @@
   <metadata>
     <id>otf-xits</id>
     <title>XITS</title>
-    <version>1.200</version>
+    <version>1.200.20181002</version>
     <authors>alif-type</authors>
     <owners>echizenryoma</owners>
     <summary>OpenType implementation of STIX fonts with math support</summary>

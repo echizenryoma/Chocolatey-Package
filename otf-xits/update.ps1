@@ -9,9 +9,9 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $page = Invoke-WebRequest -UseBasicParsing -Uri "https://github.com/alif-type/xits/releases/latest"
-    $version = ($page.Links.href -match "releases/tag/v\d+(\.\d+)+$" | Select-Object -Unique -First 1) -split "/|v" -match "\d+(\.\d+)+" | Select-Object -First 1
-    $url32 = "https://github.com/alif-type/xits/releases/download/v${version}/XITS-${version}.zip"
+    $page = Invoke-WebRequest -UseBasicParsing -Uri "https://ctan.org/pkg/xits"
+    $version = ($page.Content -split "<|>|`n" -match "^\d+(\.\d+)+" | Select-Object -First 1).Trim().Replace("\s", ".").Replace("\-", "")
+    $url32 = $page.Links -match "Down&shy;load" 
     
     return @{
         Version = $version

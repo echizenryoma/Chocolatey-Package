@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'otf-xits'
-$Url32 = 'https://github.com/alif-type/xits/releases/download/v1.200/XITS-1.200.zip'
+$Url32 = '@{outerHTML=<a href="http://mirrors.ctan.org/fonts/xits.zip">Down&shy;load</a>; tagName=A; href=http://mirrors.ctan.org/fonts/xits.zip}'
 $ToolsPath = $(Split-Path -Parent $MyInvocation.MyCommand.Definition)
 
 Get-ChildItem -Directory $ToolsPath | Remove-Item -Recurse -Force -ErrorAction Ignore
