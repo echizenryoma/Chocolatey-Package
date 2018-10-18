@@ -6,7 +6,6 @@ function global:au_SearchReplace {
             "(^[$]Url64\s*=\s*)('.*')"          = "`$1'$($Latest.URL64)'"
             "(^[$]Checksum64\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum64)'"
             "(^[$]ChecksumType64\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType64)'"
-            "(^[$]Version\s*=\s*)('.*')"        = "`$1'$($Latest.Version)'"
         }
     }
 }
