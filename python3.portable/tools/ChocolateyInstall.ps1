@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'python3'
-$Url32 = 'https://www.python.org/ftp/python/3.7.0/python-3.7.0.exe'
-$Url64 = 'https://www.python.org/ftp/python/3.7.0/python-3.7.0-amd64.exe'
+$Url32 = 'https://www.python.org/ftp/python/3.7.1/python-3.7.1.exe'
+$Url64 = 'https://www.python.org/ftp/python/3.7.1/python-3.7.1-amd64.exe'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 
 # This file should be identical for all python3* packages
