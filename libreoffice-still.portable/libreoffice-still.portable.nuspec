@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>libreoffice-still.portable</id>
+    <title>LibreOffice Still (Portable)</title>
+    <version>6.0.7</version>
+    <authors>LibreOffice developers</authors>
+    <owners>Echizen Ryoma</owners>
+    <summary>LibreOffice is the free power-packed Open Source personal productivity suite for Windows, Macintosh and Linux, that gives you six feature-rich applications for all your document production and data processing needs.</summary>
+    <description><![CDATA[
+LibreOffice is the free power-packed Open Source personal productivity suite for Windows, Macintosh and Linux, that gives you six feature-rich applications for all your document production and data processing needs.
+
+## Notes
+
+- This package installs the latest stable version of LibreOffice (Fresh) with the most recent features. For more conservative users it is recommended to install [libreoffice-fresh](/packages/libreoffice-fresh) instead.
+- Older versions of this package are likely broken because the LibreOffice team removes the download links for older versions after each update.
+]]></description>
+    <projectUrl>https://www.libreoffice.org/</projectUrl>
+    <tags>libreoffice office cross-platform foss admin</tags>
+    <copyright></copyright>
+    <licenseUrl>https://www.libreoffice.org/download/license/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://avatars1.githubusercontent.com/u/5824056</iconUrl>
+    <releaseNotes>https://www.libreoffice.org/download/release-notes</releaseNotes>
+    <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/libreoffice-still.portable</packageSourceUrl>
+    <projectSourceUrl>https://www.libreoffice.org/about-us/source-code</projectSourceUrl>
+    <docsUrl>https://www.libreoffice.org/get-help/documentation</docsUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
