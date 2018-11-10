@@ -7,7 +7,6 @@ $ToolsPath = Split-Path $MyInvocation.MyCommand.Definition
 $packageArgs = @{
     PackageName   = $PackageName
     Url           = $Url
-    Url64         = $Url
     UnzipLocation = $ToolsPath
 }
 Install-ChocolateyZipPackage @packageArgs

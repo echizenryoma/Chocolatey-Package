@@ -13,8 +13,9 @@ function global:au_AfterUpdate ($Package)  {
 }
 
 function global:au_GetLatest {
-    $page = Invoke-WebRequest -UseBasicParsing -Uri "https://github.com/x64dbg/x64dbg/releases/latest"
-    $url = "https://github.com" + ($page.Links.href -match "snapshot_.*\.zip")
+    $page = Invoke-WebRequest -UseBasicParsing -Uri "https://api.github.com/repos/x64dbg/x64dbg/releases/latest"
+    $json = $page.Content | ConvertFrom-Json
+    $url = $json.assets.browser_download_url
     $version = ($url -split "\.|_" -match "\d+(-\d+)+$" -Replace "-", "" | Select-Object -First 2) -join "."
 	
     return @{
