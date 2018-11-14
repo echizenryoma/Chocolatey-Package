@@ -42,7 +42,7 @@ Based on the powerful editing component Scintilla, Notepad++ is written in C++ a
     <mailingListUrl>https://notepad-plus-plus.org/community/</mailingListUrl>
     <bugTrackerUrl>https://github.com/notepad-plus-plus/notepad-plus-plus/issues</bugTrackerUrl>
     <dependencies>
-      <dependency id="7zip" />
+      <dependency id="7-zip" />
     </dependencies>
   </metadata>
   <files>
