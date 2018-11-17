@@ -24,7 +24,7 @@ function global:au_GetLatest {
 
     $checksum_type = 'sha256'
 
-    $sha256sum = ($page.Links.href -match "[0-9a-fA-f]{64,}" | Select-Object -First 1) -split "/" -match "[0-9a-fA-f]{64,}"
+    $sha256sum = ($page.Links.href -match "[0-9a-fA-f]{64,}") -split "/" -match "[0-9a-fA-f]{64,}"
     $checksum32 = $sha256sum[0]
     $checksum64 = $sha256sum[4]
     $checksum_extra = $sha256sum[2]

@@ -1,41 +1,31 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'notepadplusplus'
-$Url = 'https://notepad-plus-plus.org/repository/7.x/7.6/npp.7.6.bin.7z'
-$Checksum = ''
-$ChecksumType = 'sha1'
+$Url32 = 'https://notepad-plus-plus.org/repository/7.x/7.6/npp.7.6.bin.7z'
+$Checksum32 = '927e8f57a353e0a70ed7f4c2def43c4731e461ee'
+$ChecksumType32 = 'sha1'
+$Url64 = 'https://notepad-plus-plus.org/repository/7.x/7.6/npp.7.6.bin.x64.7z'
+$Checksum64 = '48f37603aeabf8b6708ae1186565f8e256ba93f3'
+$ChecksumType64 = 'sha1'
+$ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 
 $PackageArgs = @{
-    PackageName   = $PackageName
-    Url           = $Url
-    Checksum      = $Checksum
-    ChecksumType  = $ChecksumType
-    UnzipLocation = $InstallationPath
+    PackageName    = $PackageName
+    Url32          = $Url32
+    Checksum32     = $Checksum32
+    ChecksumType32 = $ChecksumType32
+    Url64          = $Url64
+    Checksum64     = $Checksum64
+    ChecksumType64 = $ChecksumType64
+    UnzipLocation  = $InstallationPath
 }
 Install-ChocolateyZipPackage @PackageArgs
 
-$UrlExtra = 'https://notepad-plus-plus.org/repository/7.x/7.6/npp.7.6.Installer.exe'
-$ChecksumExtra = ''
-$ChecksumTypeExtra = 'sha1'
-$FileName = [IO.Path]::GetFileName($UrlExtra)
-$InstallerPath = Join-Path $InstallationPath $FileName
-$PackageArgs = @{
-    PackageName  = $PackageName
-    Url          = $UrlExtra
-    Checksum     = $ChecksumExtra
-    ChecksumType = $ChecksumTypeExtra
-    FileFullPath = $InstallerPath
-}
-Get-ChocolateyWebFile @PackageArgs
-$NppShellInformation = 7z l "`"$InstallerPath`"" "NppShell_*.dll"
-$NppShellFileName = $NppShellInformation -split "\n|\s" -match "NppShell" | Select-Object -First 1
-if (!(Test-Path $(Join-Path $InstallationPath $NppShellFileName))) {
-    $null = 7z e "`"$InstallerPath`"" -y -aos "`"$NppShellFileName`"" -o"`"$InstallationPath`""
-}
-$NppShell = Join-Path $InstallationPath $NppShellFileName
+$NppShell = (Get-ChildItem -Path $ToolsPath -Filter "NppShell_*.dll" | Select-Object -First 1).FullName
+Copy-Item -Path $NppShell -Destination $InstallationPath -Force
+$NppShell = (Get-ChildItem -Path $InstallationPath -Filter "NppShell_*.dll" | Select-Object -First 1).FullName
 Start-ChocolateyProcessAsAdmin -ExeToRun 'regsvr32' -Statements "/s `"$NppShell`""
-Remove-Item -Path $InstallerPath -Force -ErrorAction Ignore
 
 $BinFileName = Join-Path $InstallationPath "notepad++.exe"
 Install-BinFile -Name 'notepad++' -Path $BinFileName
