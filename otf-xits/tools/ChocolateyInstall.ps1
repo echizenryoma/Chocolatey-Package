@@ -8,8 +8,7 @@ Get-ChildItem -Directory $ToolsPath | Remove-Item -Recurse -Force -ErrorAction I
 
 $PackageArgs = @{
     PackageName   = $PackageName
-    Url32         = $Url32
-    Url64         = $Url32
+    Url           = $Url32
     UnzipLocation = $ToolsPath
 }
 Install-ChocolateyZipPackage @PackageArgs

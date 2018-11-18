@@ -8,7 +8,7 @@ $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 
 $PackageArgs = @{
     PackageName   = $PackageName
-    Url32         = $Url32
+    Url           = $Url32
     Url64         = $Url64
     UnzipLocation = $InstallationPath
 }

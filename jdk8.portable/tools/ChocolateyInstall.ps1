@@ -13,9 +13,9 @@ $UnzipPath = $(Join-Path $InstallationPath "tmp")
 
 $PackageArgs = @{
     PackageName    = $PackageName
-    Url32          = $Url32
-    Checksum32     = $Checksum32
-    ChecksumType32 = $ChecksumType32
+    Url            = $Url32
+    Checksum       = $Checksum32
+    ChecksumType   = $ChecksumType32
     Url64          = $Url64
     Checksum64     = $Checksum64
     ChecksumType64 = $ChecksumType64
@@ -35,7 +35,7 @@ $JdkSrcPath = $JdkFilesPath[2].FullName
 
 $PackageArgs = @{
     PackageName   = $PackageName
-    Url32         = $JdkToolsPath
+    Url           = $JdkToolsPath
     Url64         = $JdkToolsPath
     UnzipLocation = $InstallationPath
 }
@@ -43,7 +43,7 @@ Install-ChocolateyZipPackage @PackageArgs
 
 $PackageArgs = @{
     PackageName   = $PackageName
-    Url32         = $JdkSrcPath
+    Url           = $JdkSrcPath
     Url64         = $JdkSrcPath
     UnzipLocation = $InstallationPath
 }
@@ -54,7 +54,7 @@ Remove-Item -Path $UnzipPath -Recurse -Force -ErrorAction Ignore
 $JdkToolsPath = (Get-ChildItem -Path $InstallationPath -File -Recurse | Sort-Object Length -Descending | Select-Object -First 1).FullName
 $PackageArgs = @{
     PackageName   = $PackageName
-    Url32         = $JdkToolsPath
+    Url           = $JdkToolsPath
     Url64         = $JdkToolsPath
     UnzipLocation = $InstallationPath
 }

@@ -9,7 +9,7 @@ $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $FilePath = Join-Path $ToolsPath $([IO.Path]::GetFileName($Url32))
 $PackageArgs = @{
     PackageName  = $PackageName
-    Url32        = $Url32
+    Url          = $Url32
     Url64        = $Url64
     FileFullPath = $FilePath
 }
