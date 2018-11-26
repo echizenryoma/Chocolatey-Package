@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>sqlectron</id>
+    <version>1.30.0</version>
+    <title>SQLECTRON</title>
+    <authors>Mark Nunes</authors>
+    <owners>echizenryoma</owners>
+    <licenseUrl>https://raw.githubusercontent.com/sqlectron/sqlectron-gui/master/LICENSE</licenseUrl>
+    <projectUrl>https://sqlectron.github.io/</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/sqlectron/sqlectron-gui/master/build/app.png</iconUrl>
+    <projectSourceUrl>https://github.com/sqlectron/sqlectron-gui</projectSourceUrl>
+    <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/sqlectron</packageSourceUrl>
+    <bugTrackerUrl>https://github.com/sqlectron/sqlectron-gui/issues</bugTrackerUrl>
+    <releaseNotes>https://github.com/sqlectron/sqlectron-gui/releases</releaseNotes>
+    <description>
+      <![CDATA[
+A simple and lightweight SQL client with cross database and platform support.
+
+* [Databases](https://github.com/sqlectron/sqlectron-core#current-supported-databases) - List of current supported databases.
+* [Download](https://github.com/sqlectron/sqlectron-gui/releases) - Installers, binaries and source.
+* [Configuration](docs/app/configuration-file.md) - List of saved servers and custom configurations.
+* [App Docs](docs/app) - Helper docs about the app.
+* [Terminal](https://github.com/sqlectron/sqlectron-term) - A terminal-based interface of Sqlectron.
+* [Contribute](CONTRIBUTING.md) - Details on how you can contribute to Sqlectron. ]]>
+    </description>
+    <summary>A simple and lightweight SQL client with cross database and platform support.</summary>
+    <tags>sqlectron database cross</tags>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
