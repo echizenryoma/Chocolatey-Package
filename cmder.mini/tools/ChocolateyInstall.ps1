@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'cmder'
-$Url = 'https://github.com/cmderdev/cmder/releases/download/v1.3.8/cmder_mini.zip'
+$Url = 'https://github.com/cmderdev/cmder/releases/download/v1.3.9/cmder_mini.zip'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 
 $PackageArgs = @{
