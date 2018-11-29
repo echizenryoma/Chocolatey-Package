@@ -21,7 +21,7 @@ Inno Setup is a popular program for making software installations. Unfortunately
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>commandline InnoSetup extract</tags>
     <dependencies>
-      <dependency id="inno-setup" />
+      <dependency id="inno-setup.portable" />
     </dependencies>
   </metadata>
   <files>
