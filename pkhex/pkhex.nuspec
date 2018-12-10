@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>pkhex</id>
-    <version>18.09.11</version>
+    <version>18.12.02</version>
     <title>PKHeX</title>
     <authors>Baphotics</authors>
     <owners>echizenryoma</owners>
