@@ -14,9 +14,9 @@ New-Item -ItemType Directory -Path $InstallationPath -Force -ErrorAction Ignore
 
 $PackageArgs = @{
     PackageName    = $PackageName
-    Url32          = $Url32
-    ChecksumType32 = $ChecksumType32
-    Checksum32     = $Checksum32
+    Url            = $Url32
+    ChecksumType   = $ChecksumType32
+    Checksum       = $Checksum32
     Url64          = $Url64
     ChecksumType64 = $ChecksumType64
     Checksum64     = $Checksum64

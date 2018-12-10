@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>citra</id>
+    <version>1041.20181109</version>
+    <title>Citra Emulator</title>
+    <authors>Citra Emulator Project</authors>
+    <owners>Echizen Ryoma</owners>
+    <projectUrl>https://citra-emu.org/</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/citra-emu/citra/master/dist/icons/citra.png</iconUrl>
+    <releaseNotes>https://github.com/citra-emu/citra-canary/releases</releaseNotes>
+    <projectSourceUrl>https://github.com/citra-emu/citra</projectSourceUrl>
+    <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/citra</packageSourceUrl>
+    <docsUrl>https://github.com/citra-emu/citra/wiki</docsUrl>
+    <bugTrackerUrl>https://github.com/citra-emu/citra/issues</bugTrackerUrl>
+    <description>Citra is an experimental open-source Nintendo 3DS emulator/debugger written in C++. It is written with portability in mind, with builds actively maintained for Windows, Linux and macOS. Citra only emulates a subset of 3DS hardware and therefore is generally only useful for running/debugging homebrew applications. At this time, Citra is even able to boot several commercial games! Most of these do not run to a playable state, but we are working every day to advance the project forward.</description>
+    <summary>Citra is an experimental open-source Nintendo 3DS emulator/debugger written in C++.</summary>
+    <tags>citra 3ds emulator</tags>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

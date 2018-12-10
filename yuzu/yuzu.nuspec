@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>yuzu</id>
+    <version>1.1</version>
+    <title>Nintendo Switch Emulator</title>
+    <authors>yuzu emulator team</authors>
+    <owners>Echizen Ryoma</owners>
+    <projectUrl>https://yuzu-emu.org/</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/yuzu-emu/yuzu/master/dist/yuzu.svg</iconUrl>
+    <releaseNotes>https://github.com/yuzu-emu/yuzu-canary/releases</releaseNotes>
+    <projectSourceUrl>https://github.com/yuzu-emu/yuzu</projectSourceUrl>
+    <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/yuzu</packageSourceUrl>
+    <docsUrl>https://github.com/yuzu-emu/yuzu/wiki</docsUrl>
+    <bugTrackerUrl>https://github.com/yuzu-emu/yuzu/issues</bugTrackerUrl>
+    <description>yuzu is an experimental open-source emulator for the Nintendo Switch from the creators of Citra.
+
+It is written in C++ with portability in mind, with builds actively maintained for Windows and Linux.</description>
+    <summary>yuzu is an experimental open-source emulator for the Nintendo Switch from the creators of Citra.</summary>
+    <tags>yuzu ns switch emulator</tags>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
