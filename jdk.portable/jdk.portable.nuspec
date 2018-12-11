@@ -5,7 +5,7 @@
     <version>11.0.1</version>
     <title>Java SE Development Kit</title>
     <authors>Sun Microsystems/Oracle Corporation</authors>
-    <owners>echizenryoma</owners>
+    <owners>Echizen Ryoma</owners>
     <licenseUrl>http://www.oracle.com/technetwork/java/javase/terms/license/index.html</licenseUrl>
     <projectUrl>http://www.oracle.com/technetwork/java/javase/downloads/index.html</projectUrl>
     <iconUrl>http://raw.githubusercontent.com/chocolatey/chocolatey-coreteampackages/master/icons/java.svg</iconUrl>

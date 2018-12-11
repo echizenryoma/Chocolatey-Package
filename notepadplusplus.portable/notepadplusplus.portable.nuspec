@@ -5,7 +5,7 @@
     <version>7.6</version>
     <title>Notepad++ (Portable)</title>
     <authors>Don Ho</authors>
-    <owners>echizenryoma</owners>
+    <owners>Echizen Ryoma</owners>
     <licenseUrl>https://github.com/notepad-plus-plus/notepad-plus-plus/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://notepad-plus-plus.org/</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/chocolatey/chocolatey-coreteampackages/master/icons/notepadplusplus.png</iconUrl>

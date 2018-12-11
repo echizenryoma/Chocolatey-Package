@@ -4,7 +4,7 @@
     <id>golang</id>
     <version>1.11.2</version>
     <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/golang</packageSourceUrl>
-    <owners>echizenryoma</owners>
+    <owners>Echizen Ryoma</owners>
     <title>Go programming language</title>
     <authors>Robert Griesemer, Rob Pike, Ken Thompson</authors>
     <projectUrl>https://golang.org</projectUrl>

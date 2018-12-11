@@ -5,7 +5,7 @@
     <version>5.1.6</version>
     <title>Resource Hacker (Portable)</title>
     <authors>Angus Johnson</authors>
-    <owners>echizenryoma</owners>
+    <owners>Echizen Ryoma</owners>
     <projectUrl>http://www.angusj.com/resourcehacker</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/echizenryoma/Chocolatey-Package/master/resourcehacker.portable/resourcehacker.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

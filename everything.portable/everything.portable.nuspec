@@ -5,7 +5,7 @@
     <version>1.4.1.895</version>
     <title>Everything (Portable)</title>
     <authors>David Carpenter</authors>
-    <owners>echizenryoma</owners>
+    <owners>Echizen Ryoma</owners>
     <licenseUrl>http://www.voidtools.com/License.txt</licenseUrl>
     <projectUrl>http://www.voidtools.com</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/chocolatey/chocolatey-coreteampackages/master/icons/everything.png</iconUrl>

@@ -4,7 +4,7 @@
     <id>python3.portable</id>
     <version>3.7.1</version>
     <title>Python 3 (Portable)</title>
-    <owners>echizenryoma</owners>
+    <owners>Echizen Ryoma</owners>
     <authors>Python Software Foundation</authors>
     <projectUrl>http://www.python.org/</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/chocolatey/chocolatey-coreteampackages/master/icons/python.svg</iconUrl>

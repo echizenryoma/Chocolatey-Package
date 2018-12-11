@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package 
-  xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>rdpwrapper</id>
     <title>RDP Wrapper</title>
     <version>1.6.2</version>
     <authors>Stas'M</authors>
-    <owners>echizenryoma</owners>
+    <owners>Echizen Ryoma</owners>
     <iconUrl>https://raw.githubusercontent.com/echizenryoma/Chocolatey-Package/master/rdpwrapper/rdpwrapper.png</iconUrl>
     <summary>RDP Wrapper Library</summary>
     <description>

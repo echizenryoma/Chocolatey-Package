@@ -5,7 +5,7 @@
     <version>3.61</version>
     <title>FastCopy (Portable)</title>
     <authors>Hiroaki Shirouzu</authors>
-    <owners>echizenryoma</owners>
+    <owners>Echizen Ryoma</owners>
     <licenseUrl>http://ipmsg.org/tools/fastcopy.html.en#license</licenseUrl>
     <projectUrl>http://ipmsg.org/tools/fastcopy.html.en</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/echizenryoma/Chocolatey-Package/master/fastcopy.portable/fastcopy.png</iconUrl>

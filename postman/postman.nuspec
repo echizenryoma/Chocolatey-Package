@@ -5,7 +5,7 @@
     <title>Postman for Windows</title>
     <version>6.6.0</version>
     <authors>Postdot Technologies, Inc.</authors>
-    <owners>echizenryoma</owners>
+    <owners>Echizen Ryoma</owners>
     <summary>Postman for Windows</summary>
     <description>Postman helps you be more efficient while working with APIs. Using Postman, you can construct complex HTTP requests quickly, organize them in collections and share them with your co-workers.</description>
     <projectUrl>https://www.getpostman.com/</projectUrl>

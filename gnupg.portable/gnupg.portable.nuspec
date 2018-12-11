@@ -4,7 +4,7 @@
     <id>gnupg.portable</id>
     <version>2.2.11.20181106</version>
     <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Packages/tree/master/gnupg.portable</packageSourceUrl>
-    <owners>echizenryoma</owners>
+    <owners>Echizen Ryoma</owners>
     <title>GnuPG modern (Portable)</title>
     <authors>Werner Koch,The GnuPG Project</authors>
     <projectUrl>https://www.gnupg.org/</projectUrl>
@@ -41,7 +41,7 @@ However, even when used on the command line it provides all functionality needed
     Integrated support for HKP keyservers (wwwkeys.pgp.net).
     Clears signed patch files which can still be processed by patch.
     and many more things….
-        </description>
+    </description>
     <releaseNotes>
 * [Release Announcements](https://www.gnupg.org/index.html)
     </releaseNotes>

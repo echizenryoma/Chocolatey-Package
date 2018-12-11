@@ -5,7 +5,7 @@
     <version>1.15.0</version>
     <title>Cemu</title>
     <authors>Cemu</authors>
-    <owners>echizenryoma</owners>
+    <owners>Echizen Ryoma</owners>
     <projectUrl>http://cemu.info/</projectUrl>
     <iconUrl>http://cemu.info/favicon.ico</iconUrl>
     <description>Cemu - Wii U Emulator. Highly experimental software to emulate Wii U applications on PC. WiiU runs the "Café OS", and Cemu emulates the system. It creates the possibilty to run Wii U data formats on a PC, e.g. dumped games.</description>

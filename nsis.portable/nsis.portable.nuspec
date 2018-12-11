@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package 
-  xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>nsis.portable</id>
     <title>Nullsoft Scriptable Install System (Portable)</title>
     <version>3.03</version>
     <authors>NSIS Team</authors>
-    <owners>echizenryoma</owners>
+    <owners>Echizen Ryoma</owners>
     <summary>Windows installer development tool</summary>
     <description>
       <![CDATA[

@@ -5,7 +5,7 @@
     <version>3.0.10.0</version>
     <title>Bat To Exe Converter</title>
     <authors>Fatih Kodak</authors>
-    <owners>echizenryoma</owners>
+    <owners>Echizen Ryoma</owners>
     <iconUrl>https://raw.githubusercontent.com/echizenryoma/Chocolatey-Package/master/battoexeconverter/battoexeconverter.png</iconUrl>
     <projectUrl>http://www.f2ko.de/en/b2e.php</projectUrl>
     <mailingListUrl>http://www.f2ko.de/en/imprint.php</mailingListUrl>

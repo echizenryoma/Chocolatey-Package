@@ -5,7 +5,7 @@
     <version>29.0.0</version>
     <title>MKVToolNix (Portable)</title>
     <authors>Moritz Bunkus</authors>
-    <owners>echizenryoma</owners>
+    <owners>Echizen Ryoma</owners>
     <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
     <projectUrl>https://www.bunkus.org/videotools/mkvtoolnix/</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/chocolatey/chocolatey-coreteampackages/master/icons/mkvtoolnix.png</iconUrl>

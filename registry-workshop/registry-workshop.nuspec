@@ -1,12 +1,11 @@
 <?xml version="1.0"?>
-<package 
-  xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>registry-workshop</id>
     <version>5.0.1</version>
     <title>Registry Workshop</title>
     <authors>torchsoft</authors>
-    <owners>echizenryoma</owners>
+    <owners>Echizen Ryoma</owners>
     <projectUrl>http://www.torchsoft.com/en/rw_information.html</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/echizenryoma/Chocolatey-Package/master/registry-workshop/registry-workshop.png</iconUrl>
     <description>

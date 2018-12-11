@@ -4,7 +4,7 @@
     <id>python2.portable</id>
     <version>2.7.15</version>
     <title>Python 2 (Portable)</title>
-    <owners>echizenryoma</owners>
+    <owners>Echizen Ryoma</owners>
     <authors>Python Software Foundation</authors>
     <projectUrl>http://www.python.org/</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/chocolatey/chocolatey-coreteampackages/master/icons/python.svg</iconUrl>

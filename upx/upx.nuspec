@@ -5,7 +5,7 @@
     <version>3.95</version>
     <title>Ultimate Packer for eXecutables</title>
     <authors>Markus Oberhumer, Laszlo Molnar, John Reiser</authors>
-    <owners>echizenryoma</owners>
+    <owners>Echizen Ryoma</owners>
     <licenseUrl>http://upx.sourceforge.net/upx-license.html</licenseUrl>
     <projectUrl>http://upx.sourceforge.net/</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/dtgm/chocolatey-packages/32d928752122e81aec9337a87fe2953b503d58e1/icons/upx.png</iconUrl>

@@ -4,7 +4,7 @@
     <id>ffmpeg</id>
     <version>4.1</version>
     <title>FFmpeg</title>
-    <owners>echizenryoma</owners>
+    <owners>Echizen Ryoma</owners>
     <authors>FFmpeg Contributors</authors>
     <licenseUrl>http://www.ffmpeg.org/legal.html</licenseUrl>
     <projectUrl>http://www.ffmpeg.org/</projectUrl>

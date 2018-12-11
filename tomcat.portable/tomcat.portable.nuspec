@@ -4,7 +4,7 @@
     <id>tomcat.portable</id>
     <version>9.0.13</version>
     <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/tomcat.portable</packageSourceUrl>
-    <owners>echizenryoma</owners>
+    <owners>Echizen Ryoma</owners>
     <title>Apache Tomcat</title>
     <authors>Apache Software Foundation</authors>
     <projectUrl>http://tomcat.apache.org</projectUrl>
