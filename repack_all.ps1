@@ -14,6 +14,6 @@
 }
 
 Push-Location $PSScriptRoot
-#Remove-Item * -Include *.nupkg -Force
+#Remove-Item * -Include *.nupkg -Recurse -Force
 git pull
 Choco-Pack
