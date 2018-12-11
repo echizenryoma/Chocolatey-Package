@@ -10,9 +10,9 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $base = "https://github.com"
-    $page = Invoke-WebRequest -UseBasicParsing -Uri "${base}/citra-emu/citra-canary/releases/latest"
-    $url = $base + ($page.Links.href -match "windows-mingw.*7z" | Select-Object -First 1)
-    $version = ($url -split "/|-" -match "^\d+$") -join "."
+    $page = Invoke-WebRequest -UseBasicParsing -Uri "${base}/mayswind/AriaNg/releases/latest"
+    $url = $base + ($page.Links.href -match "\d+(\.\d+).zip" | Select-Object -First 1)
+    $version = (($page.Links.href -match "releases/tag/v?\d+(\.\d+)+$" | Select-Object -Unique -First 1) -split "/" -match "\d+(\.\d+)+" | Select-Object -First 1).Replace("v", "")
 	
     return @{
         Version = $version
