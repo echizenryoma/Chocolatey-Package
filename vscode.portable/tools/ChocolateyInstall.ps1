@@ -9,7 +9,7 @@ $ChecksumType64 = 'sha256'
 $Checksum64 = '5081d8d41a0786587b6a8c28f59bca163b09d5fa5dc42bb9d9681d6199bdf4f1'
 $InstallationPath = Join-Path $(Get-ToolsLocation) 'vscode'
 
-Get-ChildItem -Path $InstallationPath -Exclude data | Remove-Item -Recurse -Force -ErrorAction Ignore
+Get-ChildItem -Path $InstallationPath -Exclude data -ErrorAction Ignore | Remove-Item -Recurse -Force -ErrorAction Ignore
 New-Item -ItemType Directory -Path $InstallationPath -Force -ErrorAction Ignore
 
 $PackageArgs = @{
