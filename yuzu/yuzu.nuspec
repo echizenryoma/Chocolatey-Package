@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>yuzu</id>
-    <version>1726.20181216</version>
+    <version>1733.20181218</version>
     <title>Nintendo Switch Emulator</title>
     <authors>yuzu emulator team</authors>
     <owners>Echizen Ryoma</owners>
