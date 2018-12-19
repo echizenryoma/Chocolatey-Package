@@ -21,7 +21,7 @@ function global:au_GetLatest {
     $page = Invoke-WebRequest -UseBasicParsing -Uri 'https://www.voidtools.com/Changes.txt'
     $version = ($page.Content -split "\n" -match 'Version\s+\d(\.\d+)+' | Select-Object -First 1) -split "\s" -match "\d(\.\d+)+" | Select-Object -First 1
     $page = Invoke-WebRequest -UseBasicParsing -Uri "https://www.voidtools.com/Everything-${version}.sha256"
-    $sha256table = $page.Content -split "\n" | ConvertFrom-String -PropertyNames sha256sum, file
+    $sha256table = [System.Text.Encoding]::UTF8.GetString($page.Content) -split "\n" | ConvertFrom-String -PropertyNames sha256sum, file
     
     $checksum_type = 'sha256'
     $url32 = "https://www.voidtools.com/Everything-${version}.x86.zip"
