@@ -4,7 +4,7 @@ environment:
   GITHUB_API_KEY:
     secure: NTvryk9CbdACILTud+CLgoEp8HkGQlEvpT6oVtips708y7I/jkx6Nhd2TAMiXo9C
   CHOCOLATEY_API_KEY:
-    secure: VujZ8TkRdsZebfcyAoi1pgaXKTz49rwsxEl10uLIPcwIxXL1xRjUFvmAt8E19DpL
+    secure: Z3c7jSGKySZ+1ZLrE3RGIDMDbYTse6akIsiEksAbn+zfemu/2fSKjHa+YprFE9ME
 
 notifications:
   - provider: Email
