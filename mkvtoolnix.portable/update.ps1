@@ -18,9 +18,11 @@ function global:au_AfterUpdate ($Package) {
 }
 
 function global:au_GetLatest {
-    $base = 'https://mkvtoolnix.download/windows/releases'
-    $page = Invoke-WebRequest -UseBasicParsing -Uri "$base/.dirindex.php?sort=date&order=desc"
-    $version = $page.Links.title -match '\d+(\.\d+){0,2}$' | Select-Object -First 1
+    $page = Invoke-WebRequest -UseBasicParsing -Uri "https://mkvtoolnix.download/latest-release.xml"
+    $xmlObj = [xml]($page.Content)
+    $version = $xmlObj.'mkvtoolnix-releases'.'latest-source'.version
+
+    $base = 'https://mkvtoolnix.download/windows/releases'    
     $page = Invoke-WebRequest -UseBasicParsing -Uri "$base/$version/sha1sums.txt"
     $sha1table = $page.Content -Split '\n' | ConvertFrom-String -PropertyNames sha1sum, file
     $checksum_type = 'sha1'
