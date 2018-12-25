@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>python3.portable</id>
-    <version>3.7.1</version>
+    <version>3.7.2</version>
     <title>Python 3 (Portable)</title>
     <owners>Echizen Ryoma</owners>
     <authors>Python Software Foundation</authors>
