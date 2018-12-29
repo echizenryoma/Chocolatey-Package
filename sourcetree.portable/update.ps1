@@ -27,4 +27,4 @@ function global:au_GetLatest {
     }
 }
 
-Update-Package -NoCheckUrl -NoCheckChocoVersion -ChecksumFor none
+Update-Package -NoCheckChocoVersion -ChecksumFor none
