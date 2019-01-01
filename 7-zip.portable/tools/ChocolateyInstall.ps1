@@ -21,10 +21,10 @@ $PackageArgs = @{
 }
 Install-ChocolateyZipPackage @PackageArgs
 
-$BinFileName = Join-Path $InstallationPath "7z.exe"
-Install-BinFile -Path $BinPath -Name $([IO.Path]::GetFileName($BinFileName))
+$BinPath = Join-Path $InstallationPath "7z.exe"
+Install-BinFile -Path $BinPath -Name $([IO.Path]::GetFileName($BinPath))
 
 $SystemStartMenuPath = [IO.Path]::Combine($([Environment]::GetFolderPath('CommonApplicationData')), "Microsoft", "Windows", "Start Menu", "Programs")
-$BinFileName = Join-Path $InstallationPath "7zFM.exe"
+$BinPath = Join-Path $InstallationPath "7zFM.exe"
 $LinkPath = Join-Path $SystemStartMenuPath "7-Zip File Manager.lnk"
-Install-ChocolateyShortcut -ShortcutFilePath $LinkPath -TargetPath $BinFileName -WorkingDirectory $InstallationPath
+Install-ChocolateyShortcut -ShortcutFilePath $LinkPath -TargetPath $BinPath -WorkingDirectory $InstallationPath
