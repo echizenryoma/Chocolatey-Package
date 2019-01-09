@@ -3,10 +3,10 @@
 $PackageName = 'vscode'
 $Url32 = 'https://vscode-update.azurewebsites.net/latest/win32-archive/stable'
 $ChecksumType32 = 'sha256'
-$Checksum32 = '12cb41dc9b187b0f43a87dd83b22125b6dd9c92df49cd3c7eec45f12f3925e80'
+$Checksum32 = 'd61bd3e122a8d0872acd346e5fd0fa98a87c0876c34966b31ca2a3004c29d1dc'
 $Url64 = 'https://vscode-update.azurewebsites.net/latest/win32-x64-archive/stable'
 $ChecksumType64 = 'sha256'
-$Checksum64 = 'a5650ace744c51c1ab90c1f03e8bbd6f15f11efbec5391bb256814b351fcc814'
+$Checksum64 = '64db94c15b3b998e0c3a3186af4adf5a812d591b510cc1a72187ce3741a82e04'
 $InstallationPath = Join-Path $(Get-ToolsLocation) 'vscode'
 
 Get-ChildItem -Path $InstallationPath -Exclude data -ErrorAction Ignore | Remove-Item -Recurse -Force -ErrorAction Ignore
