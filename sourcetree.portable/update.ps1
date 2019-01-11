@@ -16,7 +16,7 @@ function global:au_GetLatest {
     $release_url = "https://www.sourcetreeapp.com/enterprise"
     $page = Invoke-WebRequest -UseBasicParsing -Uri $release_url
 
-    $url = $page.Links.href -match "SourcetreeEnterpriseSetup_(.*).msi" | Select-Object -Unique -Last 1
+    $url = $page.Links.href -match "SourcetreeEnterpriseSetup_(.*).msi" | Select-Object -Unique | Select-Object -Last 1
     $version = $url -split "_|\.msi" -match "\d+(\.\d+)+" | Select-Object -First 1
     $release_notes = "https://www.sourcetreeapp.com/update/windows/ga/ReleaseNotes_${version}.html"
 
