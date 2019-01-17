@@ -2,7 +2,7 @@
 
 $PackageName = 'hxd'
 $Url32 = 'https://mh-nexus.de/downloads/HxDSetup.zip'
-$Checksum32 = 'c72ba64ede219eb80bcf44040ef6514b79a19d81'
+$Checksum32 = '7df6eeac31db0992bbbcda9e5a140861d971e82d'
 $ChecksumType32 = 'SHA1'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
