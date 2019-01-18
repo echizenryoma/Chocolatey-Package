@@ -1,10 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'imagemagick.tool'
-$Url32 = 'https://www.imagemagick.org/download/binaries/ImageMagick-7.0.8-23-portable-Q16-x86.zip'
-$Url64 = 'https://www.imagemagick.org/download/binaries/ImageMagick-7.0.8-23-portable-Q16-x64.zip'
-$Checksum32 = 'bae34a67f2bff0e22c5c62541e26764c850d9b75986be8c51bb6f7a3490fe79c'
-$Checksum64 = '3bfa19cca03a6a9189e3a2a3faa59af98bf6259a8313feff07223f7195904c58'
+$Url32 = 'https://www.imagemagick.org/download/binaries/ImageMagick-7.0.8-24-portable-Q16-x86.zip'
+$Url64 = 'https://www.imagemagick.org/download/binaries/ImageMagick-7.0.8-24-portable-Q16-x64.zip'
+$Checksum32 = 'de62a2747e6c8685aa8f41fc5271a4c0bf645991f4b3236a4a67ac48c49e11e5'
+$Checksum64 = 'b0c63924fa2c448b1e4b5a3e3dcaa97d4a975969b4fe3577e628b358db87f953'
 $ChecksumType32 = 'sha256'
 $ChecksumType64 = 'sha256'
 $ToolsPath = Split-Path $MyInvocation.MyCommand.Definition
