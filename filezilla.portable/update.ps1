@@ -15,14 +15,14 @@ function global:au_GetLatest {
     $url = 'https://filezilla-project.org/download.php?show_all=1'
     $page = Invoke-WebRequest -UseBasicParsing -Uri $url
     
-    $version = $url32 -split '_' -match '^\d+\.[\d\.]+$' | Select-Object -First 1
-
     $checksum_type = 'sha512'
     $url = $page.Links.href -match "${checksum_type}" | Select-Object -First 1
     $page = Invoke-WebRequest -UseBasicParsing -Uri $url
     $table = [System.Text.Encoding]::UTF8.GetString($page.Content) -split "\n" | ConvertFrom-String -PropertyNames checksum, file
     $checksum32 = $table | Where-Object file -Match "win32\.zip" | Select-Object -First 1 -ExpandProperty checksum
     $checksum64 = $table | Where-Object file -Match "win64\.zip" | Select-Object -First 1 -ExpandProperty checksum
+
+    $version = ($table.file -match "win32\.zip" | Select-Object -First 1) -split '_' -match '^\d+\.[\d\.]+$' | Select-Object -First 1
 
     @{
         Version        = $version
