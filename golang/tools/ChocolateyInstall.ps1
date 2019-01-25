@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'go'
-$Url32 = 'https://storage.googleapis.com/golang/go1.11.4.windows-386.zip'
-$Url64 = 'https://storage.googleapis.com/golang/go1.11.4.windows-amd64.zip'
+$Url32 = 'https://storage.googleapis.com/golang/go1.11.5.windows-386.zip'
+$Url64 = 'https://storage.googleapis.com/golang/go1.11.5.windows-amd64.zip'
 $InstallationPath = Get-ToolsLocation
 
 $GOROOT = Join-Path $InstallationPath $PackageName
