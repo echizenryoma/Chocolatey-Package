@@ -2,7 +2,7 @@
 
 function global:au_SearchReplace {
     [version]$version = $Latest.Version | Select-Object -First 1
-    $docsUrl = "http://www.ghostscript.com/doc/$($version)/Readme.htm"
+    $docsUrl = "https://www.ghostscript.com/doc/$($version)/Readme.htm"
     $releaseNotesUrl = "https://ghostscript.com/doc/$($version)/History$($version.Major).htm"
     
     @{
@@ -22,18 +22,21 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $page = Invoke-WebRequest -UseBasicParsing -Uri "https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/latest"
+    $sld = "https://github.com"
+    $base = "${sld}/ArtifexSoftware/ghostpdl-downloads/releases"
+    $page = Invoke-WebRequest -UseBasicParsing -Uri "${base}/latest"
     $version = ($page.Links | Where-Object outerHTML -match "Ghostscript/GhostPDL" | Select-Object -First 1) -split "\s|<|>|/" -match "\d+(\.\d+)+"
-    
-    $url32 = "https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs$($version.Replace(".", ''))/gs$($version.Replace(".", ''))w32.exe"
-    $url64 = "https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs$($version.Replace(".", ''))/gs$($version.Replace(".", ''))w64.exe"
 
-    $page = Invoke-WebRequest -UseBasicParsing -Uri "https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs$($version.Replace(".", ''))/SHA512SUMS"
-    $sha256table = [System.Text.Encoding]::UTF8.GetString($page.Content) -split "\n" | ConvertFrom-String -PropertyNames sha256sum, file
-    
+    $url32 = $sld + ($page.Links.href -match "w.*32.*exe" | Select-Object -First 1)
+    $url64 = $sld + ($page.Links.href -match "w.*64.*exe" | Select-Object -First 1)
+
     $checksum_type = 'sha512'
-    $checksum32 = $sha256table | Where-Object file -Match "gs$($version.Replace(".", ''))w32.exe" | Select-Object -First 1 -ExpandProperty sha256sum
-    $checksum64 = $sha256table | Where-Object file -Match "gs$($version.Replace(".", ''))w64.exe" | Select-Object -First 1 -ExpandProperty sha256sum
+    $url = $sld + ($page.Links.href -match $checksum_type | Select-Object -First 1)
+    $page = Invoke-WebRequest -UseBasicParsing -Uri $url
+    $sha256table = [System.Text.Encoding]::UTF8.GetString($page.Content) -split "\n" | ConvertFrom-String -PropertyNames sha256sum, file
+        
+    $checksum32 = $sha256table | Where-Object file -Match "w.*32.*exe" | Select-Object -First 1 -ExpandProperty sha256sum
+    $checksum64 = $sha256table | Where-Object file -Match "w.*64.*exe" | Select-Object -First 1 -ExpandProperty sha256sum
   
     return @{
         Version        = $version
