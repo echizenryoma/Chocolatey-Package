@@ -22,9 +22,9 @@ steps:
   displayName: 'Get dependencies'
 
 - powershell: |
+    $Env:GIST_ID = "$(GIST_ID)"
+    $Env:GITHUB_API_KEY = "$(GITHUB_API_KEY)"
     .\update_all.ps1
   displayName: 'Update Packages'
   workingDirectory: $(Build.SourcesDirectory)
-  env:
-    GITHUB_API_SEC_KEY: $(GITHUB_API_KEY)
-    GITHUB_GIST_ID: $(GIST_ID)
+  
