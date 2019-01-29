@@ -25,3 +25,5 @@ steps:
     .\update_all.ps1
   displayName: 'Update Packages'
   workingDirectory: $(Build.SourcesDirectory)
+  env:
+    GITHUB_API_SEC_KEY: $(GITHUB_API_KEY)
