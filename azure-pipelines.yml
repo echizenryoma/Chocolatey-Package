@@ -27,3 +27,4 @@ steps:
   workingDirectory: $(Build.SourcesDirectory)
   env:
     GITHUB_API_SEC_KEY: $(GITHUB_API_KEY)
+    GITHUB_GIST_ID: $(GIST_ID)

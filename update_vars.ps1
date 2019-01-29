@@ -3,9 +3,9 @@
 
 $Env:au_Push = 'false'
 
-$Env:gist_id = '$(GIST_ID)'
+$Env:gist_id = "${Env:GITHUB_GIST_ID}"
 $Env:github_user_repo = 'echizenryoma/Chocolatey-Package'
-$Env:github_api_key = "$(GITHUB_API_SEC_KEY)"
+$Env:github_api_key = "${Env:GITHUB_API_SEC_KEY}"
 
 $Env:report_path = Join-Path $PSScriptRoot "Update-AUPackages.md"
 $Env:history_path = Join-Path $PSScriptRoot "Update-History.md"
