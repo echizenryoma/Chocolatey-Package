@@ -19,9 +19,7 @@ steps:
     choco apikey --key "$(CHOCOLATEY_API_KEY)" --source 'https://push.chocolatey.org/'
 
     choco install -y au
-  displayName: 'Get dependencies'
-
-- powershell: |
+    
     $Env:GIST_ID = "$(GIST_ID)"
     $Env:GITHUB_API_KEY = "$(GITHUB_API_KEY)"
     .\update_all.ps1
