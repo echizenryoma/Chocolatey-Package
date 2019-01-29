@@ -11,7 +11,7 @@ steps:
 
     git config --global user.email "echizenryoma.zhang@gmail.com"
     git config --global user.name "Echizen Ryoma"
-    choco apikey --key ${CHOCOLATEY_API_KEY} --source https://push.chocolatey.org/
+    choco apikey --key $(CHOCOLATEY_API_KEY) --source https://push.chocolatey.org/
 
     choco install -y au
   displayName: 'Get dependencies'
