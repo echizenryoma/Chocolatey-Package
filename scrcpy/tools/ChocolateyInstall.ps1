@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$PackageName = 'ghostscript'
+$PackageName = 'scrcpy'
 $Url32 = 'https://github.com/Genymobile/scrcpy/releases/download/v1.6/scrcpy-win32-v1.6.zip'
 $Checksum32 = '4ca0c5924ab2ebf19b70f6598b2e546f65ba469a72ded2d1b213df3380fb46b1'
 $ChecksumType32 = 'sha256'
