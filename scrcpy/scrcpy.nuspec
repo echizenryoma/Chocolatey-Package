@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>scrcpy</id>
+    <version>1.6</version>
+    <title>Subtitle Edit (Portable)</title>
+    <authors>Genymobile</authors>
+    <owners>Echizen Ryoma</owners>
+    <licenseUrl>https://github.com/Genymobile/scrcpy/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/Genymobile/scrcpy</projectUrl>
+    <description>This application provides display and control of Android devices connected on USB (or over TCP/IP). It does not require any root access.</description>
+    <summary>This application provides display and control of Android devices connected on USB (or over TCP/IP).</summary>
+    <releaseNotes>https://github.com/Genymobile/scrcpy/releases</releaseNotes>
+    <copyright>Copyright © Genymobile</copyright>
+    <tags>subtitleedit subtitle editor video OCR sync merge split convert</tags>
+    <projectSourceUrl>https://github.com/Genymobile/scrcpy</projectSourceUrl>
+    <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/scrcpy</packageSourceUrl>
+    <mailingListUrl>https://gitter.im/Genymobile/scrcpy</mailingListUrl>
+    <bugTrackerUrl>https://github.com/Genymobile/scrcpy/issues</bugTrackerUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

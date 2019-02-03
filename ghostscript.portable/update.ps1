@@ -33,10 +33,9 @@ function global:au_GetLatest {
     $checksum_type = 'sha512'
     $url = $sld + ($page.Links.href -match $checksum_type | Select-Object -First 1)
     $page = Invoke-WebRequest -UseBasicParsing -Uri $url
-    $sha256table = [System.Text.Encoding]::UTF8.GetString($page.Content) -split "\n" | ConvertFrom-String -PropertyNames sha256sum, file
-        
-    $checksum32 = $sha256table | Where-Object file -Match "w.*32.*exe" | Select-Object -First 1 -ExpandProperty sha256sum
-    $checksum64 = $sha256table | Where-Object file -Match "w.*64.*exe" | Select-Object -First 1 -ExpandProperty sha256sum
+    $table = [System.Text.Encoding]::UTF8.GetString($page.Content) -split "\n" | ConvertFrom-String -PropertyNames checksum, file
+    $checksum32 = $table | Where-Object file -Match "w.*32.*exe" | Select-Object -First 1 -ExpandProperty checksum
+    $checksum64 = $table | Where-Object file -Match "w.*64.*exe" | Select-Object -First 1 -ExpandProperty checksum
   
     return @{
         Version        = $version
