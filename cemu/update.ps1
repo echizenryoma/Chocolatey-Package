@@ -11,7 +11,7 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
     $page = Invoke-WebRequest -UseBasicParsing -Uri "http://cemu.info"
     $url64 = $page.Links | Where-Object name -eq "download" | Select-Object -First 1 -ExpandProperty href
-    $version = ($url64 -split "_|\.zip" -match "\d+(\.\d+)+")[0]
+    $version = (($page.Links | Where-Object name -eq "download" | Select-Object -First 1 -ExpandProperty outerHTML) -split "\s|_|\(|\)|," -match "v\d+(\.\d+)+" | Select-Object -First 1) -replace "v", ''
     $rev = ([byte][char]$version[$version.Length - 1]) - [byte][char]'a' + 1
     $version = $version -replace "[a-z]", ".$rev"
 	
