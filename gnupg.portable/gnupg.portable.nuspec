@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>gnupg.portable</id>
-    <version>2.2.12.20181214</version>
+    <version>2.2.13.20190212</version>
     <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Packages/tree/master/gnupg.portable</packageSourceUrl>
     <owners>Echizen Ryoma</owners>
     <title>GnuPG modern (Portable)</title>
