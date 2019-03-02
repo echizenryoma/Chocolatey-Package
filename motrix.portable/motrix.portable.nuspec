@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>motrix.portable</id>
+    <version>1.1.3</version>
+    <title>Motrix (Portable)</title>
+    <authors>Motrix</authors>
+    <owners>Echizen Ryoma</owners>
+    <licenseUrl>https://github.com/agalwood/Motrix/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://motrix.app</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/agalwood/Motrix/master/static/512x512.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Motrix is a full-featured download manager that support downloading HTTP, FTP, BitTorrent, Magnet, Baidu Net Disk etc. It has a clean and simple interface and is easy to use. I hope you will like it. </description>
+    <summary>Motrix is a full-featured download manager.</summary>
+    <releaseNotes>https://github.com/agalwood/Motrix/releases</releaseNotes>
+    <copyright>Copyright © Motrix</copyright>
+    <tags>motrix download torrent magnet</tags>
+    <projectSourceUrl>https://github.com/agalwood/Motrix</projectSourceUrl>
+    <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/motrix.portable</packageSourceUrl>
+    <bugTrackerUrl>https://github.com/agalwood/Motrix/issues</bugTrackerUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
