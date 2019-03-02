@@ -11,8 +11,8 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $page = Invoke-WebRequest -UseBasicParsing -Uri 'https://www.python.org/downloads/windows/'
-    $url32 = $page.Links.href -match 'python-(2.+)\.msi$' | Select-Object -First 1
-    $url64 = $url32.Replace('.msi', '.amd64.msi')
+    $url32 = $page.Links.href -match "python-2(\.\d+)+\.msi$" | Select-Object -First 1
+    $url64 = $page.Links.href -match "python-2(\.\d+).*64\.msi$" | Select-Object -First 1
     $version = $([IO.Path]::GetFileNameWithoutExtension($url32)) -split "-" -match "\d+(\.\d+)+" | Select-Object -First 1
 
     return @{
