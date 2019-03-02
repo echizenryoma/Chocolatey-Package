@@ -10,14 +10,19 @@ function global:au_SearchReplace {
     }
 }
 
-function global:au_AfterUpdate ($Package)  {
+function global:au_AfterUpdate ($Package) {
     $global:Options.Push = $true
 }
 
 function global:au_GetLatest {
-    $page = Invoke-WebRequest -UseBasicParsing -Uri "https://github.com/SubtitleEdit/subtitleedit/releases/latest"
-    $version = ($page.Links.href -match "releases/tag/\d+(\.\d+)+$" | Select-Object -Unique -First 1) -split "/" -match "\d+(\.\d+)+" | Select-Object -First 1
-    $url = "https://github.com/SubtitleEdit/subtitleedit/releases/download/$version/SE$($version.Replace(".", '')).zip"
+    $domain = "https://github.com"
+    $base = "${domain}/SubtitleEdit/subtitleedit"
+
+    $url = "${base}/releases/latest"
+    $page = Invoke-WebRequest -UseBasicParsing -Uri $url
+    $version = ($page.Links.href -match "releases/tag/(v?)\d+(\.\d+)+$" | Select-Object -Unique -First 1) -split "/|v" -match "\d+(\.\d+)+" | Select-Object -First 1
+
+    $url = $domain + ($page.Links.href -match "SE\d+\.zip$" | Select-Object -First 1)
     $checksum_type = 'sha256'
     $checksum = $page.Content -split "<|>|\n" -match "^[0-9a-f]{64}$" | Select-Object -First 1 -Skip 1
 	
