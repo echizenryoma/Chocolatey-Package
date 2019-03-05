@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'python2'
-$Url32 = 'https://www.python.org/ftp/python/2.7.15/python-2.7.15.msi'
-$Url64 = 'https://www.python.org/ftp/python/2.7.15/python-2.7.15.amd64.msi'
+$Url32 = 'https://www.python.org/ftp/python/2.7.16/python-2.7.16.msi'
+$Url64 = 'https://www.python.org/ftp/python/2.7.16/python-2.7.16.amd64.msi'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 
