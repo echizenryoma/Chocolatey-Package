@@ -1,11 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'nodejs'
-$Url32 = 'https://npm.taobao.org/mirrors/node/v10.15.2/node-v10.15.2-win-x86.7z'
-$Checksum32 = 'd03762a0649ab87d1fdd5c137a3d9bfe7a770227e78600aa8790b0f66dc534bd'
+$Url32 = 'https://npm.taobao.org/mirrors/node/v10.15.3/node-v10.15.3-win-x86.7z'
+$Checksum32 = '597a372964252daaba4cb8dcac57305f79cffeeca579625f0cd6ab85d29ccdda'
 $ChecksumType32 = 'sha256'
-$Url64 = 'https://npm.taobao.org/mirrors/node/v10.15.2/node-v10.15.2-win-x64.7z'
-$Checksum64 = '9872ed9b430858087e2ca843c6c5443a1227bb6dca59c044afb80acf800fd432'
+$Url64 = 'https://npm.taobao.org/mirrors/node/v10.15.3/node-v10.15.3-win-x64.7z'
+$Checksum64 = '9df98cac063229aca443c040fd342a96667891bb8eda821d10aa4d49347d7add'
 $ChecksumType64 = 'sha256'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $UnzipLocation = Get-ToolsLocation
