@@ -45,12 +45,12 @@ function global:au_GetLatest {
     $base = "https://notepad-plus-plus.org/repository/$($version.Substring(0, $version.IndexOf("."))).x/$version"
     
     $page = Invoke-WebRequest -UseBasicParsing -Uri "${base}/npp.${version}.sha1.md5.digest.txt"
-    $checksum32 = ($page.Content -Split "`n" -match "\.bin\.7z" | Select-Object -First 1 | ConvertFrom-String -PropertyNames sha1sum, filename).sha1sum
-    $checksum64 = ($page.Content -Split "`n" -match "\.bin\.x64\.7z" | Select-Object -First 1 | ConvertFrom-String -PropertyNames sha1sum, filename).sha1sum
-
+    $checksum32 = ($page.Content -Split "`n" -match "\.bin\.7z" | ConvertFrom-String -PropertyNames checksum, filename).checksum -match "[0-9a-fA-F]{64}"
+    $checksum64 = ($page.Content -Split "`n" -match "\.bin\.x64\.7z" | ConvertFrom-String -PropertyNames checksum, filename).checksum -match "[0-9a-fA-F]{64}"
+     
     $url32 = "${base}/npp.${version}.bin.7z"
     $url64 = "${base}/npp.${version}.bin.x64.7z"
-    $checksum_type = 'sha1'
+    $checksum_type = 'sha256'
 
     return @{
         Version        = $version
