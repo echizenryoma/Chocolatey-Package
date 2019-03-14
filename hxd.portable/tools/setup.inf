@@ -1,6 +1,0 @@
-[Setup]
-Lang=enu
-Dir=[InstallationPath]
-Group=HxD Hex Editor
-NoIcons=1
-Tasks=createdefaultconfig
