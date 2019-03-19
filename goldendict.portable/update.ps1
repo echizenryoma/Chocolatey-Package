@@ -11,8 +11,8 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $page = Invoke-WebRequest -UseBasicParsing -Uri 'https://github.com/goldendict/goldendict/wiki/Early-Access-Builds-for-Windows'
-    $url32 = ($page.Links -match "Qt\s+\d(\.\d)+\-based\s+build\s+\(7z\)" | Select-Object -First 1).href
-    $url64 = ($page.Links -match "Qt\s+\d(\.\d)+\-based\s+64\-bit\s+build\s+\(7z\)" | Select-Object -First 1).href
+    $url32 = ($page.Links -match "Qt\s+\d+(\.\d+)+\-based\s+build\s+\(7z\)" | Select-Object -First 1).href
+    $url64 = ($page.Links -match "Qt\s+\d+(\.\d+)+\-based\s+64\-bit\s+build\s+\(7z\)" | Select-Object -First 1).href
     $version = ($url32 -split "/|_" -match "GoldenDict-\d+(\.\d+)+" | Select-Object -First 1).Replace("-RC", ".") -split "-" -match "^\d+" -join ""
     
     return @{
