@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'fsview'
-$Url32 = 'http://www.faststonesoft.net/DN/FSViewer69.zip'
+$Url32 = 'http://www.faststonesoft.net/DN/FSViewer70.zip'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 Get-ChildItem -Directory $ToolsPath | Remove-Item -Recurse -Force -ErrorAction Ignore
