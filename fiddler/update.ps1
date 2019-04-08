@@ -12,19 +12,16 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $url = 'https://telerik-fiddler.s3.amazonaws.com/fiddler/FiddlerSetup.exe'
-    $file = Join-Path $PSScriptRoot $([IO.Path]::GetFileName($url))
-
+    $global:Latest.URL32 = $url
+    
     Write-Host "Downloading full setup file to find the version"
-    Invoke-WebRequest -UseBasicParsing -Uri $url -OutFile $file
-    $version = [System.Diagnostics.FileVersionInfo]::GetVersionInfo($file).FileVersion
-    $hash = Get-FileHash $file
-    Remove-Item $file -Force -ErrorAction Ignore
+    Get-RemoteFiles -Purge -NoSuffix
+    
+    $file_path = [IO.Path]::Combine($PSScriptRoot, 'tools', "$([IO.Path]::GetFileName($url))")
+    $version = [version]([System.Diagnostics.FileVersionInfo]::GetVersionInfo($file_path).FileVersion)
 
-    @{
-        Version        = $version
-        URL32          = $url
-        Checksum32     = $hash.Hash
-        ChecksumType32 = $hash.Algorithm
+    return @{
+        Version = $version
     }
 }
 

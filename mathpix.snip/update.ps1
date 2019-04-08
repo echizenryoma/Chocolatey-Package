@@ -12,19 +12,16 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $url = 'https://mathpix.com/win_app/mathpix_snipping_tool_setup.exe'
-    $file = Join-Path $PSScriptRoot $([IO.Path]::GetFileName($url))
-
+    $global:Latest.URL32 = $url
+    
     Write-Host "Downloading full setup file to find the version"
-    Invoke-WebRequest -UseBasicParsing -Uri $url -OutFile $file
-    $version = [version]([System.Diagnostics.FileVersionInfo]::GetVersionInfo($file).FileVersion -replace '0', '')
-    $hash = Get-FileHash $file
-    Remove-Item $file -Force -ErrorAction Ignore
+    Get-RemoteFiles -Purge -NoSuffix
+
+    $file_path = [IO.Path]::Combine($PSScriptRoot, 'tools', "$([IO.Path]::GetFileName($url))")
+    $version = [version]([System.Diagnostics.FileVersionInfo]::GetVersionInfo($file_path).FileVersion)
 
     return @{
-        Version        = $version
-        URL32          = $url
-        Checksum32     = $hash.Hash
-        ChecksumType32 = $hash.Algorithm
+        Version = $version
     }
 }
 
