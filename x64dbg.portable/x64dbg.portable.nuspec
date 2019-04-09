@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>x64dbg.portable</id>
-    <version>20190406.1331</version>
+    <version>20190409.1601</version>
     <title>x64dbg (Portable)</title>
     <authors>x64dbg</authors>
     <owners>Echizen Ryoma</owners>
