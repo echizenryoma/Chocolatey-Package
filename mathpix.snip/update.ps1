@@ -20,6 +20,8 @@ function global:au_GetLatest {
     $file_path = [IO.Path]::Combine($PSScriptRoot, 'tools', "$([IO.Path]::GetFileName($url))")
     $version = [version]([System.Diagnostics.FileVersionInfo]::GetVersionInfo($file_path).FileVersion)
 
+    Remove-Item -Path $file_path -Force
+
     return @{
         Version = $version
     }
