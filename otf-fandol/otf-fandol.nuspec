@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>otf-fandol</id>
+    <title>fandol</title>
+    <version>0.3</version>
+    <authors>Fandol</authors>
+    <owners>Echizen Ryoma</owners>
+    <summary>These are the Fandol fonts for Chinese typesetting.</summary>
+    <description><![CDATA[
+These are the Fandol fonts for Chinese typesetting.
+Current version of Fandol fonts contains four
+styles: Song, Hei, Kai, Fang.
+All the fonts are OpenType.
+
+These fonts are developed by Fandol team.
+The member of Fandol team: Clerk Ma & Jie Su. ]]>
+    </description>
+    <tags>font fandol admin</tags>
+    <licenseUrl>https://ctan.org/license/gpl</licenseUrl>
+    <releaseNotes>https://ctan.org/ctan-ann/pkg/fandol</releaseNotes>
+    <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/otf-fandol</packageSourceUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
