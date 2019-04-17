@@ -1,13 +1,13 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'jdk8'
-$Url32 = 'https://edelivery.oracle.com/otn-pub/java/jdk/8u202-b08/1961070e4c9b4e26a04e7f5a083f551e/jdk-8u202-windows-i586.exe'
-$Checksum32 = '88d6f861cc57866bfe85889798f18e0a0771ec0283ed81f3288049eb98d7c285'
+$Url32 = 'https://edelivery.oracle.com/otn/java/jdk/8u212-b10/59066701cf1a433da9770636fbc4c9aa/jdk-8u212-windows-i586.exe'
+$Checksum32 = '2ea45edb83303d87cabef2e872abb8a7c80da578e4e7a468bd27d9e3b8595b1b'
 $ChecksumType32 = 'sha256'
-$Url64 = 'https://edelivery.oracle.com/otn-pub/java/jdk/8u202-b08/1961070e4c9b4e26a04e7f5a083f551e/jdk-8u202-windows-x64.exe'
-$Checksum64 = 'b3bcdd6007e30c7b9d459b5bef766ac49f1e0b1cc92b11b19af3cf0439c3bc9f'
+$Url64 = 'https://edelivery.oracle.com/otn/java/jdk/8u212-b10/59066701cf1a433da9770636fbc4c9aa/jdk-8u212-windows-x64.exe'
+$Checksum64 = '330a6396fcc97c57a951170bb9ac5a00b75974da8f002cb7e62fdf09d15018c5'
 $ChecksumType64 = 'sha256'
-$JavaVersion = '8u202'
+$JavaVersion = '8u212'
 $InstallationPath = Join-Path $(Get-ToolsLocation) "jdk_$JavaVersion"
 $UnzipPath = $(Join-Path $InstallationPath "tmp")
 
