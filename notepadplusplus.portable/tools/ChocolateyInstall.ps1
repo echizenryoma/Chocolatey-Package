@@ -10,6 +10,12 @@ $ChecksumType64 = 'sha256'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 
+$ConfigFile = Join-Path $InstallationPath "config.xml"
+$OriginConfigFile = Join-Path $InstallationPath "config.xml.orgin"
+if (Test-Path -Path $ConfigFile) {
+    Copy-Item -Path $ConfigFile -Destination $OriginConfigFile -Force
+}
+
 $PackageArgs = @{
     PackageName    = $PackageName
     Url32          = $Url32
@@ -21,6 +27,10 @@ $PackageArgs = @{
     UnzipLocation  = $InstallationPath
 }
 Install-ChocolateyZipPackage @PackageArgs
+
+if (Test-Path -Path $OriginConfigFile) {
+    Copy-Item -Path $OriginConfigFile -Destination $ConfigFile -Force
+}
 
 $NppShell = (Get-ChildItem -Path $ToolsPath -Filter "NppShell_*.dll" | Select-Object -First 1).FullName
 Copy-Item -Path $NppShell -Destination $InstallationPath -Force
