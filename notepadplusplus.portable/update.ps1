@@ -44,7 +44,7 @@ function global:au_GetLatest {
     
     $base = "https://notepad-plus-plus.org/repository/$($version.Substring(0, $version.IndexOf("."))).x/$version"
     
-    $page = Invoke-WebRequest -UseBasicParsing -Uri "${base}/npp.${version}.sha1.md5.digest.txt"
+    $page = Invoke-WebRequest -UseBasicParsing -Uri "${base}/npp.${version}.checksums.sha256"
     $checksum32 = ($page.Content -Split "`n" -match "\.bin\.7z" | ConvertFrom-String -PropertyNames checksum, filename).checksum -match "[0-9a-fA-F]{64}"
     $checksum64 = ($page.Content -Split "`n" -match "\.bin\.x64\.7z" | ConvertFrom-String -PropertyNames checksum, filename).checksum -match "[0-9a-fA-F]{64}"
      
