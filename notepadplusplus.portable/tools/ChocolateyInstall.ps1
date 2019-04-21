@@ -1,11 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'notepadplusplus'
-$Url32 = 'https://notepad-plus-plus.org/repository/7.x/7.6.4/npp.7.6.4.bin.7z'
-$Checksum32 = '9adecf5504d3c0b00f5b05d1e035b272b6e05b59040a152dc2b71eb23b36c705'
+$Url32 = 'https://notepad-plus-plus.org/repository/7.x/7.6.6/npp.7.6.6.bin.7z'
+$Checksum32 = 'True'
 $ChecksumType32 = 'sha256'
-$Url64 = 'https://notepad-plus-plus.org/repository/7.x/7.6.4/npp.7.6.4.bin.x64.7z'
-$Checksum64 = '20cbedced0931091f790140f22e713f9486a48ef55a4bef3c7cdd074e31c8114'
+$Url64 = 'https://notepad-plus-plus.org/repository/7.x/7.6.6/npp.7.6.6.bin.x64.7z'
+$Checksum64 = 'True'
 $ChecksumType64 = 'sha256'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
