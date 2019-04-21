@@ -3,9 +3,9 @@
 function global:au_SearchReplace {
     @{
         'tools\ChocolateyInstall.ps1' = @{
-            "(^[$]Url32\s*=\s*)('.*')"            = "`$1'$($Latest.URL32)'"
-            "(^[$]Checksum32\s*=\s*)('.*')"       = "`$1'$($Latest.Checksum32)'"
-            "(^[$]ChecksumType32\s*=\s*)('.*')"   = "`$1'$($Latest.ChecksumType32)'"
+            "(^[$]Url32\s*=\s*)('.*')"          = "`$1'$($Latest.URL32)'"
+            "(^[$]Checksum32\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum32)'"
+            "(^[$]ChecksumType32\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
             "(^[$]Url64\s*=\s*)('.*')"          = "`$1'$($Latest.URL64)'"
             "(^[$]Checksum64\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum64)'"
             "(^[$]ChecksumType64\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType64)'"
@@ -44,13 +44,14 @@ function global:au_GetLatest {
     
     $base = "https://notepad-plus-plus.org/repository/$($version.Substring(0, $version.IndexOf("."))).x/$version"
     
-    $page = Invoke-WebRequest -UseBasicParsing -Uri "${base}/npp.${version}.checksums.sha256"
-    $checksum32 = ($page.Content -Split "`n" -match "\.bin\.7z" | ConvertFrom-String -PropertyNames checksum, filename).checksum -match "[0-9a-fA-F]{64}"
-    $checksum64 = ($page.Content -Split "`n" -match "\.bin\.x64\.7z" | ConvertFrom-String -PropertyNames checksum, filename).checksum -match "[0-9a-fA-F]{64}"
+    $checksum_type = 'sha256'
+    $page = Invoke-WebRequest -UseBasicParsing -Uri "${base}/npp.${version}.checksums.$checksum_type"
+    $table = $page.Content -Split "`n" | ConvertFrom-String -PropertyNames checksum, filename
+    $checksum32 = ($table | Where-Object filename -match "\.bin\.7z").checksum
+    $checksum64 = ($table | Where-Object filename -match "\.bin\.x64\.7z").checksum
      
     $url32 = "${base}/npp.${version}.bin.7z"
-    $url64 = "${base}/npp.${version}.bin.x64.7z"
-    $checksum_type = 'sha256'
+    $url64 = "${base}/npp.${version}.bin.x64.7z"    
 
     return @{
         Version        = $version
