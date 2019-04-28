@@ -22,7 +22,7 @@ $PackageArgs = @{
 Install-ChocolateyZipPackage @PackageArgs
 
 $BinPath = Join-Path $InstallationPath "7z.exe"
-Install-BinFile -Path $BinPath -Name $([IO.Path]::GetFileName($BinPath))
+Install-BinFile -Path $BinPath -Name $([IO.Path]::GetFileNameWithoutExtension($BinPath))
 
 $SystemStartMenuPath = [IO.Path]::Combine($([Environment]::GetFolderPath('CommonApplicationData')), "Microsoft", "Windows", "Start Menu", "Programs")
 $BinPath = Join-Path $InstallationPath "7zFM.exe"
