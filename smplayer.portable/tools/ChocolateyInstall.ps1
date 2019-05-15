@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'smplayer'
-$Url32 = 'https://sourceforge.net/projects/smplayer/files/SMPlayer/19.1.0/smplayer-portable-19.1.0.0.7z/download'
-$Url64 = 'https://sourceforge.net/projects/smplayer/files/SMPlayer/19.1.0/smplayer-portable-19.1.0.0-x64.7z/download'
+$Url32 = 'https://sourceforge.net/projects/smplayer/files/SMPlayer/19.5.0/smplayer-portable-19.5.0.0.7z/download'
+$Url64 = 'https://sourceforge.net/projects/smplayer/files/SMPlayer/19.5.0/smplayer-portable-19.5.0.0-x64.7z/download'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 Get-ChildItem -Directory $ToolsPath | Remove-Item -Recurse -Force -ErrorAction Ignore
