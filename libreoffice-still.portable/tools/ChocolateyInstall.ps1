@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'LibreOffice'
-$Url32 = 'https://mirrors.ustc.edu.cn/tdf/libreoffice/stable/6.2.3/win/x86/LibreOffice_6.2.3_Win_x86.msi'
-$Url64 = 'https://mirrors.ustc.edu.cn/tdf/libreoffice/stable/6.2.3/win/x86_64/LibreOffice_6.2.3_Win_x64.msi'
+$Url32 = 'https://mirrors.ustc.edu.cn/tdf/libreoffice/stable/6.2.4/win/x86/LibreOffice_6.2.4_Win_x86.msi'
+$Url64 = 'https://mirrors.ustc.edu.cn/tdf/libreoffice/stable/6.2.4/win/x86_64/LibreOffice_6.2.4_Win_x64.msi'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 
