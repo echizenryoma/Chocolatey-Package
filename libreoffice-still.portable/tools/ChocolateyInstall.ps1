@@ -6,7 +6,12 @@ $Url64 = 'https://mirrors.ustc.edu.cn/tdf/libreoffice/stable/6.2.4/win/x86_64/Li
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 
+Remove-Item -Path $InstallationPath -Recurse -Force -ErrorAction Ignore
+
 $FilePath = Join-Path $ToolsPath $([IO.Path]::GetFileName($Url32))
+if ((Get-ProcessorBits 64) -and (-not ($env:chocolateyForceX86))) {
+    $FilePath = Join-Path $ToolsPath $([IO.Path]::GetFileName($Url64))
+}
 $PackageArgs = @{
     PackageName  = $PackageName
     Url          = $Url32
