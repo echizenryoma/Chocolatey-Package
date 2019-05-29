@@ -9,12 +9,14 @@ function global:au_SearchReplace {
     }
 }
 
-function global:au_AfterUpdate ($Package)  {
+function global:au_AfterUpdate ($Package) {
     $global:Options.Push = $true
 }
 
 function global:au_GetLatest {
-    $page = Invoke-WebRequest -UseBasicParsing -Uri "http://www.f2ko.de/en/b2e.php"
+    $base = 'https://zn.amorgan.xyz/17SWVnHoujG92yYGSZvCzPgZEpGVfRF8wi/b2e'
+    $url = "${base}/en.js"
+    $page = Invoke-WebRequest -UseBasicParsing -Uri $url 
     $md5sum = ($page.Content -split " |<|>" -match "^[a-fA-F0-9]{32,}$" | Select-Object -First 1).Trim()
     $version = ($page.Content -split " |<|>" -match "^\d+(\.\d+){1,}$" | Select-Object -First 1).Trim()
 	
