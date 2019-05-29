@@ -4,7 +4,7 @@ $PackageName = 'tomcat'
 $Url32 = 'https://mirrors.ustc.edu.cn/apache/tomcat/tomcat-9/v9.0.20/bin/apache-tomcat-9.0.20-windows-x86.zip'
 $Url64 = 'https://mirrors.ustc.edu.cn/apache/tomcat/tomcat-9/v9.0.20/bin/apache-tomcat-9.0.20-windows-x64.zip'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
-$UnzipLocation = Get-ToolsLocation
+$UnzipLocation = Join-Path $InstallationPath 'tmp'
 
 $PackageArgs = @{
     PackageName   = $PackageName
@@ -14,7 +14,6 @@ $PackageArgs = @{
 }
 Install-ChocolateyZipPackage @PackageArgs
 
-$null = New-Item -ItemType Directory -Force -Path $InstallationPath -ErrorAction Ignore
-$UnzipPath = (Get-ChildItem $UnzipLocation -Directory | Where-Object Name -Like "apache-tomcat-*" | Select-Object -First 1).FullName
+$UnzipPath = (Get-ChildItem $UnzipLocation -Directory | Where-Object Name -Match "${PackageName}" | Select-Object -First 1).FullName
 $null = Copy-Item -Path $(Join-Path $UnzipPath '*') -Destination $InstallationPath -Recurse -Force
-Remove-Item -Path $UnzipPath -Recurse -Force -ErrorAction Ignore
+Remove-Item -Path $UnzipLocation -Recurse -Force -ErrorAction Ignore

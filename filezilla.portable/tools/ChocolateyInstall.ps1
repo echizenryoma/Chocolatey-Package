@@ -9,10 +9,11 @@ $Url64 = $page.Links.href -match "win64\.zip" | Select-Object -First 1
 $Checksum64 = 'ed9b5c24be068fc2ee1a173afd87698ce886d609b8f2f2eb2b47972c82c966529f99cd3a89ab0e8af2484ff1e9ad43882334c17fb82099bdaa74e296b67d9372'
 $ChecksumType64 = 'sha512'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
-$UnzipLocation = Get-ToolsLocation
 
 Remove-Item -Path $InstallationPath -Recurse -Force -ErrorAction Ignore
 
+$UnzipLocation = Join-Path $InstallationPath 'tmp'
+New-Item -ItemType Directory -Path $UnzipLocation -Force -ErrorAction Ignore | Out-Null
 $PackageArgs = @{
     PackageName    = $PackageName
     Url            = $Url32
@@ -25,8 +26,9 @@ $PackageArgs = @{
 }
 Install-ChocolateyZipPackage @PackageArgs
 
-$UnzipPath = (Get-ChildItem $UnzipLocation -Directory | Where-Object Name -Like "${PackageName}-*" | Select-Object -First 1).FullName
-Rename-Item -Path $UnzipPath -NewName $PackageName
+$UnzipPath = (Get-ChildItem $UnzipLocation -Directory | Where-Object Name -Match "${PackageName}" | Select-Object -First 1).FullName
+Copy-Item -Path $(Join-Path $UnzipPath '*') -Destination $InstallationPath -Recurse -Force
+Remove-Item -Path $UnzipLocation -Recurse -Force -ErrorAction Ignore
 
 $BinFileName = Join-Path $InstallationPath "${PackageName}.exe"
 Install-BinFile -Name "${PackageName}" -Path $BinFileName

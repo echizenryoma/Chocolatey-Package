@@ -14,3 +14,6 @@ $PackageArgs = @{
     UnzipLocation = $ToolsPath
 }
 Install-ChocolateyZipPackage @PackageArgs
+
+$UnzipLocation = (Get-ChildItem -Directory -Path $ToolsPath | Select-Object -Last 1).FullName
+Rename-Item -Path $UnzipLocation -NewName $PackageName -Force
