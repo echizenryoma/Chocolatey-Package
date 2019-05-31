@@ -32,6 +32,7 @@ See http://openjdk.java.net/ for more information about OpenJDK.
     <projectSourceUrl>https://github.com/AdoptOpenJDK/openjdk-jdk8u</projectSourceUrl>
     <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/openjdk8.adopt</packageSourceUrl>
     <bugTrackerUrl>https://github.com/AdoptOpenJDK/openjdk-jdk8u/issues</bugTrackerUrl>
+    <iconUrl>https://avatars3.githubusercontent.com/u/1673867</iconUrl>
     <licenseUrl>https://github.com/AdoptOpenJDK/openjdk-jdk8u/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://adoptopenjdk.net/</projectUrl>
   </metadata>
