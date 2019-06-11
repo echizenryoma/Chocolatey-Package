@@ -22,7 +22,7 @@ $UnzipPath = (Get-ChildItem $UnzipLocation -Directory | Where-Object Name -Match
 Copy-Item -Path $(Join-Path $UnzipPath '*') -Destination $InstallationPath -Recurse -Force
 Remove-Item -Path $UnzipLocation -Recurse -Force -ErrorAction Ignore
 
-$GOROOT = Join-Path $InstallationPath $PackageName
+$GOROOT = $InstallationPath
 $GOPATH = Join-Path $GOROOT 'opt'
 $GOBIN = Join-Path $GOROOT 'bin'
 Install-ChocolateyEnvironmentVariable -VariableName 'GOROOT' -VariableValue $GOROOT -VariableType 'Machine'
