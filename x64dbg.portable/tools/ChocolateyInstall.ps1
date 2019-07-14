@@ -6,9 +6,9 @@ $ToolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 . $(Join-Path $ToolsPath "StopProcess.ps1")
 
-$packageArgs = @{
+$PackageArgs = @{
     PackageName   = $PackageName
     Url           = $Url
     UnzipLocation = $ToolsPath
 }
-Install-ChocolateyZipPackage @packageArgs
+Install-ChocolateyZipPackage @PackageArgs
