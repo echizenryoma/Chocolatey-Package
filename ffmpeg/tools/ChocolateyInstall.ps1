@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'ffmpeg'
-$Url32 = 'https://ffmpeg.zeranoe.com/builds/win32/shared/ffmpeg-4.1.4-win32-shared.zip'
-$Url64 = 'https://ffmpeg.zeranoe.com/builds/win64/shared/ffmpeg-4.1.4-win64-shared.zip'
+$Url32 = 'https://ffmpeg.zeranoe.com/builds/win32/shared/ffmpeg-4.2-win32-shared.zip'
+$Url64 = 'https://ffmpeg.zeranoe.com/builds/win64/shared/ffmpeg-4.2-win64-shared.zip'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 Get-ChildItem -Directory $ToolsPath | Remove-Item -Recurse -Force -ErrorAction Ignore
