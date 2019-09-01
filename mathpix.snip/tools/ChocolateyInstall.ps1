@@ -6,6 +6,8 @@ $Checksum = '7B3EAC5CD29375949B7AFB8A2A2193DA8FC38B159817A53D6DA6E17ECDE7D0DE'
 $ChecksumType = 'sha256'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
+Remove-Item -Path $(Join-Path $ToolsPath 'app') -Recurse -Force -ErrorAction Ignore
+
 $FileName = [IO.Path]::GetFileName($Url)
 $BinPath = Join-Path $ToolsPath $FileName
 $PackageArgs = @{
