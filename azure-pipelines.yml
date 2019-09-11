@@ -1,28 +1,34 @@
 trigger:
-- master
+  - master
 
 pool:
-  vmImage: 'vs2017-win2016'
+  vmImage: "vs2017-win2016"
 
 variables:
-  GITHUB_NAME: 'Echizen Ryoma'
-  GITHUB_EMAIL: 'echizenryoma.zhang@gmail.com'
-  GIST_ID: '06bd306e9a1c0a26e8d81fe185ef77d0'
+  GITHUB_NAME: "Echizen Ryoma"
+  GITHUB_EMAIL: "echizenryoma.zhang@gmail.com"
+  GIST_ID: "06bd306e9a1c0a26e8d81fe185ef77d0"
 
 steps:
-- powershell: |
-    Write-Host '##vso[task.setvariable variable=CHOCOLATEY_API_KEY;issecret=true]secret'
-    Write-Host '##vso[task.setvariable variable=GITHUB_API_KEY;issecret=true]secret'
+  - powershell: |
+      Write-Host '##vso[task.setvariable variable=CHOCOLATEY_API_KEY;issecret=true]secret'
+      Write-Host '##vso[task.setvariable variable=GITHUB_API_KEY;issecret=true]secret'
 
-    git config --global user.name "$(GITHUB_NAME)"
-    git config --global user.email "$(GITHUB_EMAIL)"
-    choco apikey --key "$(CHOCOLATEY_API_KEY)" --source 'https://push.chocolatey.org/'
+      git config --global user.name "$(GITHUB_NAME)"
+      git config --global user.email "$(GITHUB_EMAIL)"
+      choco apikey --key "$(CHOCOLATEY_API_KEY)" --source 'https://push.chocolatey.org/'
 
-    choco install -y au
-    
-    $Env:GIST_ID = "$(GIST_ID)"
-    $Env:GITHUB_API_KEY = "$(GITHUB_API_KEY)"
-    .\update_all.ps1
-  displayName: 'Update Packages'
-  workingDirectory: $(Build.SourcesDirectory)
-  
+      choco install -y au
+
+      $Env:GIST_ID = "$(GIST_ID)"
+      $Env:GITHUB_API_KEY = "$(GITHUB_API_KEY)"
+      .\update_all.ps1
+    displayName: "Update Packages"
+    workingDirectory: $(Build.SourcesDirectory)
+
+schedules:
+  - cron: "0 0 * * *"
+    displayName: Daily midnight build
+    branches:
+      include:
+        - master
