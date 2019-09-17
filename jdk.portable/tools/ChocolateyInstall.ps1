@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'jdk'
-$Url64 = 'https://edelivery.oracle.com/otn-pub/java/jdk/12.0.2+10/e482c34c86bd4bf8b56c0b35558996b9/jdk-12.0.2_windows-x64_bin.zip'
-$Checksum64 = '306a1e44b1584b720bb99194d302a7652c28db608cfba5df38586985d835c6bd'
+$Url64 = 'https://edelivery.oracle.com/otn-pub/java/jdk/13+33/5b8a42f3905b406298b72d750b6919f6/jdk-13_windows-x64_bin.zip'
+$Checksum64 = '4d020346aebc645212016afa44ef40312dfbb1134c99820e757c2a3d703ec146'
 $ChecksumType64 = 'sha256'
 $FileName = (([IO.Path]::GetFileNameWithoutExtension($Url64)) -split "_")[0]
 $InstallationPath = Join-Path $(Get-ToolsLocation) $FileName
