@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'yuzu'
-$Url64 = 'https://github.com/yuzu-emu/yuzu-canary/releases/download/canary-2641/yuzu-windows-mingw-20190921-7ae7ceb.7z'
+$Url64 = 'https://github.com/yuzu-emu/yuzu-canary/releases/download/canary-2667/yuzu-windows-mingw-20190922-aae7847.7z'
 $ToolsPath = Join-Path $(Get-ToolsLocation) $PackageName
 
 $PackageArgs = @{
