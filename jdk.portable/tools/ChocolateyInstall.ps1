@@ -2,7 +2,7 @@
 
 $PackageName = 'jdk'
 $Url64 = 'https://edelivery.oracle.com/otn-pub/java/jdk/13+33/5b8a42f3905b406298b72d750b6919f6/jdk-13_windows-x64_bin.zip'
-$Checksum64 = '4d020346aebc645212016afa44ef40312dfbb1134c99820e757c2a3d703ec146'
+$Checksum64 = '372a7b94fe9066c2776adb52fef5daa8404a364ef21b2045f7ebdcb1b9b02bc3'
 $ChecksumType64 = 'sha256'
 $FileName = (([IO.Path]::GetFileNameWithoutExtension($Url64)) -split "_")[0]
 $InstallationPath = Join-Path $(Get-ToolsLocation) $FileName
