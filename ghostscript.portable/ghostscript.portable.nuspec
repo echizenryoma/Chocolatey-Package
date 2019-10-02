@@ -6,7 +6,7 @@
     <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Packages/tree/master/ghostscript.portable</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>Ghostscript (Install)</title>
-    <authors>Artifex</authors>
+    <authors>Echizen Ryoma</authors>
     <projectUrl>http://ghostscript.com/</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/chocolatey/chocolatey-coreteampackages/master/icons/ghostscript.svg</iconUrl>
     <copyright>Artifex Software, Inc</copyright>
