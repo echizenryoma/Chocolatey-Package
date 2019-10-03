@@ -25,8 +25,8 @@ function global:au_GetLatest {
     $release_url = $base + $request.Headers.Location
     $version = $release_url -split '\/(inkscape-)?' -match '\d+(\.\d+)+' | Select-Object -First 1
 
-    $page32 = Invoke-WebRequest -UseBasicParsing -Uri "$release_url/windows/32-bit/binary-7z/dl/"
-    $page64 = Invoke-WebRequest -UseBasicParsing -Uri "$release_url/windows/64-bit/binary-7z/dl/"
+    $page32 = Invoke-WebRequest -UseBasicParsing -Uri "$release_url/windows/32-bit/compressed-7z/dl/"
+    $page64 = Invoke-WebRequest -UseBasicParsing -Uri "$release_url/windows/64-bit/compressed-7z/dl/"
     $url32 = $base + ($page32.Links.href -match "\.7z$" | Select-Object -First 1)
     $url64 = $base + ($page64.Links.href -match "\.7z$" | Select-Object -First 1)
 
@@ -40,7 +40,7 @@ function global:au_GetLatest {
     $checksum32 = $table32 | Where-Object file -Match "x86" | Select-Object -First 1 -ExpandProperty checksum
     $checksum64 = $table64 | Where-Object file -Match "x64" | Select-Object -First 1 -ExpandProperty checksum
 
-    @{
+    return @{
         Version        = $version
         URL32          = $url32
         Checksum32     = $checksum32
