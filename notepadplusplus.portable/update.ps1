@@ -36,11 +36,8 @@ function global:au_BeforeUpdate() {
 
 function global:au_GetLatest {
     $url = "https://notepad-plus-plus.org/download/"
-    $request = Invoke-WebRequest -Uri $url -MaximumRedirection 0 -ErrorAction Ignore
-    
-    $url = $request.Headers.Location
-    $version = $url -Split "/" | Select-Object -Last 1
-    $version = $version.Replace("v", "").Replace(".html", "").Trim()
+    $page = Invoke-WebRequest -UseBasicParsing -Uri $url
+    $version = ($page.Links -match "Current\s+Version")[0].href -Split "v|/" -match "\d+(\.\d+)+" | Select-Object -Last 1
     
     $base = "https://notepad-plus-plus.org/repository/$($version.Substring(0, $version.IndexOf("."))).x/$version"
     
