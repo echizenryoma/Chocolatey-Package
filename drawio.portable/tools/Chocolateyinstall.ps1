@@ -5,7 +5,7 @@ $Url64 = 'https://github.com/jgraph/drawio-desktop/releases/download/v11.3.0/dra
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $UnzipLocation = Join-Path $InstallationPath 'tmp'
 
-New-Item -ItemType Directory -Path "$UnzipLocation" -Force -ErrorAction Ignore
+New-Item -ItemType Directory -Path $UnzipLocation -Force -ErrorAction Ignore
 
 $PackageArgs = @{
   PackageName   = $PackageName
