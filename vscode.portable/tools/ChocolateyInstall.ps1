@@ -25,7 +25,7 @@ $PackageArgs = @{
 }
 Install-ChocolateyZipPackage @PackageArgs
 
-$BinPath = Join-Path $InstallationPath "Code.exe"
+$BinPath = Join-Path $InstallationPath "bin\code.cmd"
 Install-BinFile -Name Code -Path $BinPath
 $LinkPath = Join-Path $([Environment]::GetFolderPath("CommonDesktopDirectory")) "Visual Studio Code.lnk"
 Install-ChocolateyShortcut -ShortcutFilePath $LinkPath -TargetPath $BinPath -WorkingDirectory $InstallationPath
