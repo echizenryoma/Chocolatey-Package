@@ -3,11 +3,12 @@
 function global:au_SearchReplace {
     @{
         'tools\ChocolateyInstall.ps1' = @{
+            "(^[$]Url32\s*=\s*)('.*')"          = "`$1'$($Latest.URL32)'"
             "(^[$]Checksum32\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum32)'"
             "(^[$]ChecksumType32\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
+            "(^[$]Url64\s*=\s*)('.*')"          = "`$1'$($Latest.URL64)'"
             "(^[$]Checksum64\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum64)'"
             "(^[$]ChecksumType64\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType64)'"
-            "(^[$]Version\s*=\s*)('.*')"        = "`$1'$($Latest.Version)'"
         }
     }
 }
@@ -27,11 +28,19 @@ function global:au_GetLatest {
         throw "Different versions for 32-Bit and 64-Bit detected."
     }
 
+    $version = $json64.productVersion
+
+    $url32 = "https://vscode-update.azurewebsites.net/${version}/win32-archive/stable"
+    $url64 = "https://vscode-update.azurewebsites.net/${version}/win32-x64-archive/stable"
+    $checksum_type = 'sha256'
+
     return @{
-        Version        = $json64.productVersion
-        ChecksumType32 = 'sha256'
+        Version        = $version
+        URL32          = $url32
+        ChecksumType32 = $checksum_type
         Checksum32     = $json32.sha256hash
-        ChecksumType64 = 'sha256'
+        URL64          = $url64
+        ChecksumType64 = $checksum_type
         Checksum64     = $json64.sha256hash
     }
 }
