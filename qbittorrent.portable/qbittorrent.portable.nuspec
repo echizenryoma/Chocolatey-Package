@@ -3,7 +3,7 @@
   <metadata>
     <id>qbittorrent.portable</id>
     <title>qBittorrent (Portable)</title>
-    <version>4.1.8</version>
+    <version>4.1.9</version>
     <authors>Christophe Dumez</authors>
     <owners>Echizen Ryoma</owners>
     <summary>qBittorrent is a free software cross-platform BitTorrent client GUI written with Qt4.</summary>
