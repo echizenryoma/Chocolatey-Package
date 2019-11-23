@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>tomcat.portable</id>
-    <version>9.0.27</version>
+    <version>9.0.29</version>
     <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/tomcat.portable</packageSourceUrl>
     <owners>Echizen Ryoma</owners>
     <title>Apache Tomcat</title>
