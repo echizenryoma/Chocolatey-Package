@@ -1,12 +1,12 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'vscode'
-$Url32 = 'https://vscode-update.azurewebsites.net/1.40.1/win32-archive/stable'
+$Url32 = 'https://vscode-update.azurewebsites.net/1.40.2/win32-archive/stable'
 $ChecksumType32 = 'sha256'
-$Checksum32 = '19476c36689f62a41e475c25b8cda440c4ea04d0a5b2db650a1bfb0811dd88f1'
-$Url64 = 'https://vscode-update.azurewebsites.net/1.40.1/win32-x64-archive/stable'
+$Checksum32 = '118431c3ef57e01a2872626092d04a16f8db63bbec5e82f98acd59bf5837edb8'
+$Url64 = 'https://vscode-update.azurewebsites.net/1.40.2/win32-x64-archive/stable'
 $ChecksumType64 = 'sha256'
-$Checksum64 = 'c54e5f1f897b0d7a1577fc526ce2abf05f200ad3b77c2c78b0c9d6b397423a3b'
+$Checksum64 = '1b2311c276cbee310e801b4d6a9e0cd501ee35e66c55db4d728d15a6a4ada033'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 
 Get-ChildItem -Path $InstallationPath -Exclude data -ErrorAction Ignore | Remove-Item -Recurse -Force -ErrorAction Ignore
