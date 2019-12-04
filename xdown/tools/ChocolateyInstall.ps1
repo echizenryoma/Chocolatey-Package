@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'XDown'
-$Url32 = 'https://dl.xdown.org/xdown-1.0.1.6.zip'
+$Url32 = 'https://dl.xdown.org/xdown-1.0.1.7.zip'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName.ToLower()
 $UnzipLocation = Join-Path $InstallationPath 'tmp'
 
