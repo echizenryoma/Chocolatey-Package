@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'gpg'
-$Url32 = 'https://www.gnupg.org/ftp/gcrypt/binary/gnupg-w32-2.2.18_20191125.exe'
+$Url32 = 'https://www.gnupg.org/ftp/gcrypt/binary/gnupg-w32-2.2.19_20191207.exe'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 
 $PackageArgs = @{
