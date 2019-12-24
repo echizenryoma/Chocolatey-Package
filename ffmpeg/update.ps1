@@ -14,11 +14,11 @@ function global:au_GetLatest {
 
     $page = Invoke-WebRequest -UseBasicParsing -Uri $base32
     $version = ($page.Links.href -match '\d+(\.\d+)+\-win32\-.*\.(zip|7z)$') -split '-' -match '\d+(\.\d+)+' | Select-Object -Last 1
-    $url32 = $base32 + ($page.Links.href -match "\-${version}\-")
+    $url32 = $base32 + ($page.Links.href -match "\-${version}\-" | Select-Object -Last 1)
 
     $base64 = $base32 -replace 'win32', 'win64'
     $page = Invoke-WebRequest -UseBasicParsing -Uri $base64
-    $url64 = $base64 + ($page.Links.href -match "\-${version}\-")
+    $url64 = $base64 + ($page.Links.href -match "\-${version}\-" | Select-Object -Last 1)
 
     return @{ 
         Version = $version
