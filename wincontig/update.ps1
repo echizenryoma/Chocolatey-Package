@@ -1,6 +1,10 @@
 ﻿Import-Module AU
 
 function global:au_SearchReplace {
+    @{
+        'tools\ChocolateyInstall.ps1' = @{
+        }
+    }
 }
 
 function global:au_GetLatest {
