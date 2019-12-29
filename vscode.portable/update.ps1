@@ -1,7 +1,5 @@
 ﻿Import-Module AU
 
-$ErrorActionPreference = 'Ignore'
-
 function global:au_SearchReplace {
     @{
         'tools\ChocolateyInstall.ps1' = @{
