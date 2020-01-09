@@ -1,4 +1,6 @@
-﻿Import-Module AU
+﻿$ErrorActionPreference = 'Ignore'
+
+Import-Module AU
 
 function global:au_SearchReplace {
     @{
