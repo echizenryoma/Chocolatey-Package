@@ -5,53 +5,54 @@ param([string[]] $Name, [string] $ForcedPackages, [string] $Root = $PSScriptRoot
 if (Test-Path $PSScriptRoot/update_vars.ps1) { . $PSScriptRoot/update_vars.ps1 }
 
 $Options = [ordered]@{
-    Timeout        = 15
-    UpdateTimeout  = 600
-    Threads        = 10
-    Push           = $Env:au_Push -eq 'true'
+    Timeout             = 15
+    UpdateTimeout       = 600
+    Threads             = 10
+    Push                = $Env:au_Push -eq 'true'
     
-    IgnoreOn      = @(                                      #Error message parts to set the package ignore status
-      'Could not create SSL/TLS secure channel'
-      'Could not establish trust relationship'
-      'The operation has timed out'
-      'Internal Server Error'
-      'Service Temporarily Unavailable'
+    IgnoreOn            = @(                                  # Error message parts to set the package ignore status
+        'Could not create SSL/TLS secure channel'
+        'Could not establish trust relationship'
+        'The operation has timed out'
+        'Internal Server Error'
+        'Service Temporarily Unavailable'
+        'Origin Time-out'
     )
     
-    RepeatOn      = @(                                      #Error message parts on which to repeat package updater
-      'Could not create SSL/TLS secure channel'             # https://github.com/chocolatey/chocolatey-coreteampackages/issues/718
-      'Could not establish trust relationship'              # -||-
-      'Unable to connect'
-      'The remote name could not be resolved'
-      'Choco pack failed with exit code 1'                  # https://github.com/chocolatey/chocolatey-coreteampackages/issues/721
-      'The operation has timed out'
-      'Internal Server Error'
-      'An exception occurred during a WebClient request'
-      'remote session failed with an unexpected state'
+    RepeatOn            = @(                                  # Error message parts on which to repeat package updater
+        'Could not create SSL/TLS secure channel'             # https://github.com/chocolatey/chocolatey-coreteampackages/issues/718
+        'Could not establish trust relationship'              # -||-
+        'Unable to connect'
+        'The remote name could not be resolved'
+        'Choco pack failed with exit code 1'                  # https://github.com/chocolatey/chocolatey-coreteampackages/issues/721
+        'The operation has timed out'
+        'Internal Server Error'
+        'An exception occurred during a WebClient request'
+        'remote session failed with an unexpected state'
     )
     
     NoCheckChocoVersion = $true
 	
-    History        = @{
+    History             = @{
         Lines           = 30
         Github_UserRepo = $Env:github_user_repo
         Path            = $Env:history_path
     }
 	
-    Gist           = @{
+    Gist                = @{
         Id     = $Env:gist_id
         ApiKey = $Env:github_api_key
         Path   = @($Env:history_path)
     }
 	
-    Git            = @{
+    Git                 = @{
         Password = $Env:github_api_key
         Force    = $true
     }
 
-    ForcedPackages = $ForcedPackages -split ' '
+    ForcedPackages      = $ForcedPackages -split ' '
 
-    BeforeEach     = {
+    BeforeEach          = {
         param($PackageName, $Options )
 
         $pattern = "^${PackageName}(?:\\(?<stream>[^:]+))?(?:\:(?<version>.+))?$"
@@ -65,8 +66,8 @@ $Options = [ordered]@{
 }
 
 if ($ForcedPackages) { Write-Host "FORCED PACKAGES: $ForcedPackages" }
-$global:au_Root         = $Root          #Path to the AU packages
-$global:au_GalleryUrl   = ''             #URL to package gallery, leave empty for Chocolatey Gallery
+$global:au_Root = $Root          #Path to the AU packages
+$global:au_GalleryUrl = ''       #URL to package gallery, leave empty for Chocolatey Gallery
 $global:info = updateall -Name $Name -Options $Options
 
 
