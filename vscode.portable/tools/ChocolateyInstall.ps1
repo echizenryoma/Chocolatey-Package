@@ -9,9 +9,11 @@ $Url64 = 'https://vscode-update.azurewebsites.net/' + $Version + '/win32-x64-arc
 $ChecksumType64 = 'sha256'
 $Checksum64 = '7ea542a5ba4f307123b6a3a21fc4eab103b28291a3d91b817f08d5102d270b3e'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
+$DataPath = Join-Path $InstallationPath 'data'
 
 Get-ChildItem -Path $InstallationPath -Exclude data -ErrorAction Ignore | Remove-Item -Recurse -Force -ErrorAction Ignore
 New-Item -ItemType Directory -Path $InstallationPath -Force -ErrorAction Ignore
+New-Item -ItemType Directory -Path $DataPath -Force -ErrorAction Ignore
 
 $PackageArgs = @{
     PackageName    = $PackageName
