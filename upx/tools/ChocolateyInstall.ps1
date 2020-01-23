@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'upx'
-$Url32 = 'https://github.com/upx/upx/releases/download/v3.95/upx-3.95-win32.zip'
-$Url64 = 'https://github.com/upx/upx/releases/download/v3.95/upx-3.95-win64.zip'
+$Url32 = 'https://github.com/upx/upx/releases/download/v3.96/upx-3.96-win32.zip'
+$Url64 = 'https://github.com/upx/upx/releases/download/v3.96/upx-3.96-win64.zip'
 $ToolsPath = $(Split-Path -Parent $MyInvocation.MyCommand.Definition)
 
 Get-ChildItem -Directory $ToolsPath | Remove-Item -Recurse -Force -ErrorAction Ignore
