@@ -19,9 +19,8 @@ $PackageArgs = @{
 }
 Get-ChocolateyWebFile @PackageArgs
 
-& innounp.exe -x -d"$ToolsPath" -y "$BinPath"
+& innoextract.exe -e "$BinPath" -d "$ToolsPath"
 
 Remove-Item -Path $BinPath -Force
-Rename-Item -Path $(Join-Path $ToolsPath '{app}') -NewName 'app' -Force
 
 Get-ChildItem $ToolsPath -File -Filter "*.exe" -Exclude "*mathpix*" -Recurse | ForEach-Object { $null = New-Item "$($_.FullName).ignore" -Type File -Force }
