@@ -4,7 +4,7 @@
   <metadata>
     <id>sourcetree.portable</id>
     <title>Sourcetree for Windows Enterprise (Portable)</title>
-    <version>3.2.6</version>
+    <version>3.3.8</version>
     <authors>Atlassian</authors>
     <owners>Echizen Ryoma</owners>
     <projectUrl>http://www.sourcetreeapp.com</projectUrl>
@@ -47,7 +47,7 @@ Sourcetree simplifies how you interact with your Git repositories so you can foc
   - Does not prompt to install global ignore files.
   - Update notifications are disabled.
 ]]>    </description>
-    <releaseNotes>https://www.sourcetreeapp.com/update/windows/ga/ReleaseNotes_3.2.6.html</releaseNotes>
+    <releaseNotes>https://www.sourcetreeapp.com/update/windows/ga/ReleaseNotes_3.3.8.html</releaseNotes>
     <tags>git mercurial client freeware cross-platform</tags>
   </metadata>
   <files>

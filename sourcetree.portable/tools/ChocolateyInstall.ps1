@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'sourcetree'
-$Url = 'https://product-downloads.atlassian.com/software/sourcetree/windows/ga/SourcetreeEnterpriseSetup_3.2.6.msi'
+$Url = 'https://product-downloads.atlassian.com/software/sourcetree/windows/ga/SourcetreeEnterpriseSetup_3.3.8.msi'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 Remove-Item -Path $InstallationPath -Recurse -Force -ErrorAction Ignore
