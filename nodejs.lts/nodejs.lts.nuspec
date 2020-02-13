@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>nodejs.lts</id>
-    <version>12.15.0</version>
+    <version>12.16.0</version>
     <packageSourceUrl>https://github.com/jtcmedia/chocolatey-packages/tree/master/nodejs-lts</packageSourceUrl>
     <owners>Echizen Ryoma</owners>
     <title>Node.js LTS (Portable)</title>
