@@ -8,9 +8,11 @@ $Url64 = 'https://vscode-update.azurewebsites.net/1.42.0/win32-x64-archive/stabl
 $ChecksumType64 = 'sha256'
 $Checksum64 = '29b9b746e4e623f54674b01dafa6984895c9ac356c7f7a406f4d29dbe422818d'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
+$DataPath = Join-Path $InstallationPath 'data'
 
 Get-ChildItem -Path $InstallationPath -Exclude data -ErrorAction Ignore | Remove-Item -Recurse -Force -ErrorAction Ignore
 New-Item -ItemType Directory -Path $InstallationPath -Force -ErrorAction Ignore
+New-Item -ItemType Directory -Path $DataPath -Force -ErrorAction Ignore
 
 $PackageArgs = @{
     PackageName    = $PackageName
