@@ -8,7 +8,7 @@
     <owners>Echizen Ryoma</owners>
     <licenseUrl>https://code.visualstudio.com/License</licenseUrl>
     <projectUrl>https://code.visualstudio.com</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/chocolatey/chocolatey-coreteampackages/master/icons/visualstudiocode.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/chocolatey/chocolatey-coreteampackages/master/icons/vscode.png</iconUrl>
     <description>
       <![CDATA[
 Build and debug modern web and cloud applications. Code is free and available on your favorite platform - Linux, Mac OSX, and Windows.
