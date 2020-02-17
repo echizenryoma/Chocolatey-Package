@@ -3,7 +3,7 @@
   <metadata>
     <id>nsis.portable</id>
     <title>Nullsoft Scriptable Install System (Portable)</title>
-    <version>3.04</version>
+    <version>3.05</version>
     <authors>NSIS Team</authors>
     <owners>Echizen Ryoma</owners>
     <summary>Windows installer development tool</summary>

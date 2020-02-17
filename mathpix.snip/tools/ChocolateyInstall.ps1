@@ -2,7 +2,7 @@
 
 $PackageName = 'mathpix.snip'
 $Url = 'https://mathpix.com/win_app/mathpix_snipping_tool_setup.exe'
-$Checksum = '7B3EAC5CD29375949B7AFB8A2A2193DA8FC38B159817A53D6DA6E17ECDE7D0DE'
+$Checksum = '613769739372B96E8424C3BF7C3CED5FF4B393C0DFC8136B5438DA83AAD50A54'
 $ChecksumType = 'sha256'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
@@ -19,9 +19,8 @@ $PackageArgs = @{
 }
 Get-ChocolateyWebFile @PackageArgs
 
-& innounp.exe -x -d"$ToolsPath" -y "$BinPath"
+& innoextract.exe -e "$BinPath" -d "$ToolsPath"
 
 Remove-Item -Path $BinPath -Force
-Rename-Item -Path $(Join-Path $ToolsPath '{app}') -NewName 'app' -Force
 
 Get-ChildItem $ToolsPath -File -Filter "*.exe" -Exclude "*mathpix*" -Recurse | ForEach-Object { $null = New-Item "$($_.FullName).ignore" -Type File -Force }

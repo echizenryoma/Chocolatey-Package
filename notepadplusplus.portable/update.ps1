@@ -39,7 +39,7 @@ function global:au_GetLatest {
     $page = Invoke-WebRequest -UseBasicParsing -Uri $url
     $version = ($page.Links -match "Current\s+Version")[0].href -Split "v|/" -match "\d+(\.\d+)+" | Select-Object -Last 1
     
-    $base = "https://notepad-plus-plus.org/repository/$($version.Substring(0, $version.IndexOf("."))).x/$version"
+    $base = "http://download.notepad-plus-plus.org/repository/$($version.Substring(0, $version.IndexOf("."))).x/$version"
     
     $checksum_type = 'sha256'
     $page = Invoke-WebRequest -UseBasicParsing -Uri "${base}/npp.${version}.checksums.$checksum_type"

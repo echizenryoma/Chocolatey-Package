@@ -24,7 +24,6 @@ function global:au_GetLatest {
     $checksum64 = $table.checksum
 
     $version = [version](($json.name -split "_")[0] -split "[a-z]|-" -match "\d" -join ".")
-    $version = @($version, $time.toString('yyyyMMdd')) -join "."
 	
     return @{
         Version        = $version
