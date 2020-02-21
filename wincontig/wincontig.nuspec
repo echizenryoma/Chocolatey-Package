@@ -3,7 +3,7 @@
   <metadata>
     <id>wincontig</id>
     <title>WinContig</title>
-    <version>2.4.0.0</version>
+    <version>2.4.0.1</version>
     <authors>Marco D'Amato</authors>
     <owners>Echizen Ryoma</owners>
     <summary>WinContig is an easy-to-use stand-alone defragmentation tool that doesn't create any installation directories or Registry entries on your computer.</summary>
