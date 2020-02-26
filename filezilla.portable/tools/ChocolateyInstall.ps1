@@ -3,10 +3,10 @@
 $PackageName = 'FileZilla'
 $Page = Invoke-WebRequest -UseBasicParsing -Uri 'https://filezilla-project.org/download.php?show_all=1'
 $Url32 = $page.Links.href -match "win32\.zip" | Select-Object -First 1
-$Checksum32 = '52551f0c4ae449d9de7c766418e07e4b3e4176cf9cc26ce5ad53abddca8b1c97037c2d95e01c29b058c829fa16b223284fb2d5dd241d8ab0859f7b33a3da86db'
+$Checksum32 = '2920dd9b244d9336d0c9a7db2a037832277b442036ac0e87b113b13c096341a605dcd8dd2e88c31e82c2dbf29a589487fa046cf00c65d832557cbd71fb89ca94'
 $ChecksumType32 = 'sha512'
 $Url64 = $page.Links.href -match "win64\.zip" | Select-Object -First 1
-$Checksum64 = 'b7f86fc30bfac02352ec5d92adf81b2541e33f6164dd46a076d9077663096edd8e1fd4b6a4647ee492f0b68c9ef9bde1fec10b5a85dc3e235aebbf30a8eefba4'
+$Checksum64 = '08e8d73992463998adb921c48ff8af9a18d8143e73c295114fcd4f22dc0daba9fd8768bb885ef919ac155192ac9418119ed87477e15e4219fed29673d2649b29'
 $ChecksumType64 = 'sha512'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 
