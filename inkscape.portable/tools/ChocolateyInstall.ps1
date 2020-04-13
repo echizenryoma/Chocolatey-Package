@@ -1,11 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'InkScape'
-$Url32 = 'https://inkscape.org/gallery/item/13320/inkscape-0.92.4-x86.7z'
-$Checksum32 = '53f83d74161cbf19d6b7fb71a4f1f521'
+$Url32 = 'https://inkscape.org/gallery/item/18063/inkscape-0.92.5-x86.7z'
+$Checksum32 = '039f85ca89c791f2a05a0e24c67c9fb3'
 $ChecksumType32 = 'md5'
-$Url64 = 'https://inkscape.org/gallery/item/13317/inkscape-0.92.4-x64.7z'
-$Checksum64 = '538ad141d9ff9a743890389f41c4be33'
+$Url64 = 'https://inkscape.org/gallery/item/18064/inkscape-0.92.5-x64.7z'
+$Checksum64 = '9b737dd5648ac7b3094828b8f3511283'
 $ChecksumType64 = 'md5'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $($PackageName.ToLower())
 $UnzipLocation = Join-Path $InstallationPath 'tmp'
