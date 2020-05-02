@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>mkvtoolnix.portable</id>
-    <version>45.0.0</version>
+    <version>46.0.0</version>
     <title>MKVToolNix (Portable)</title>
     <authors>Moritz Bunkus</authors>
     <owners>Echizen Ryoma</owners>
