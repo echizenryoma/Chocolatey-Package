@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'audacity'
-$Checksum = 'b697958c49de95818f7322bca7a043cee1580c3ecab91d62bfb649457edd285a'
+$Checksum = '23f388b22974eb9ee05672e52d34971000e9c5656551bfe9b348e16ac1c5e495'
 $ChecksumType = 'sha256'
 $ToolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
