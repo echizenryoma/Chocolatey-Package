@@ -22,7 +22,7 @@ function global:au_GetLatest {
     $page = Invoke-WebRequest -UseBasicParsing -Uri $url
     $version = ($page.Links.href -match "releases/tag/(v?)\d+(\.\d+)+$" | Select-Object -Unique -First 1) -split "/|v" -match "\d+(\.\d+)+" | Select-Object -First 1
 
-    $url = $domain + ($page.Links.href -match "SE\d+\.zip$" | Select-Object -First 1)
+    $url = $page.Links.href -match "SE\d+\.zip$" | Select-Object -First 1
     $checksum_type = 'sha256'
     $checksum = $page.Content -split "<|>|\n" -match "^[0-9a-f]{64}$" | Select-Object -First 1 -Skip 1
 	
