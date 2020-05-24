@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>openjdk</id>
+    <version>14.0.1</version>
+    <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/openjdk</packageSourceUrl>
+    <title>OpenJDK</title>
+    <authors>Oracle</authors>
+    <owners>JohanJanssen</owners>
+    <licenseUrl>http://openjdk.java.net/legal/</licenseUrl>
+    <projectUrl>http://openjdk.java.net/</projectUrl>
+    <docsUrl>http://openjdk.java.net/</docsUrl>
+    <mailingListUrl>http://mail.openjdk.java.net/mailman/listinfo</mailingListUrl>
+    <bugTrackerUrl>https://bugs.openjdk.java.net</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/openjdk/</projectSourceUrl>
+    <tags>openjdk java jvm</tags>
+    <summary>OpenJDK is an open source Java Development Kit provided by Oracle</summary>
+    <description>OpenJDK is an open source Java Development Kit provided by Oracle</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
