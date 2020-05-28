@@ -1,11 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'scrcpy'
-$Url32 = 'https://github.com/Genymobile/scrcpy/releases/download/v1.13/scrcpy-win32-v1.13.zip'
-$Checksum32 = '0fc5a702cc3aa5bf05108843a9cc443c63cb4754539b72f884defadca3d62da6'
+$Url32 = 'https://github.com/Genymobile/scrcpy/releases/download/v1.14/scrcpy-win32-v1.14.zip'
+$Checksum32 = '63fb1b48f0e30372fcf610745a4a3213adc8be3bb1f1c66d4666a8575c6fade4'
 $ChecksumType32 = 'sha256'
-$Url64 = 'https://github.com/Genymobile/scrcpy/releases/download/v1.13/scrcpy-win64-v1.13.zip'
-$Checksum64 = '806aafc00d4db01513193addaa24f47858893ba5efe75770bfef6ae1ea987d27'
+$Url64 = 'https://github.com/Genymobile/scrcpy/releases/download/v1.14/scrcpy-win64-v1.14.zip'
+$Checksum64 = '2be9139e46e29cf2f5f695848bb2b75a543b8f38be1133257dc5068252abc25f'
 $ChecksumType64 = 'sha256'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
