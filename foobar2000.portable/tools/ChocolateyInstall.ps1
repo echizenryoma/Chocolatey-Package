@@ -1,7 +1,17 @@
 ﻿$ErrorActionPreference = 'Stop'
 
+function GetUrl {
+    $base = "https://www.foobar2000.org"
+    $page = Invoke-WebRequest -UseBasicParsing -Uri "$base/download"
+
+    $url = $base + ($page.Links.href -match "\.exe$" | Select-Object -Unique -First 1)
+    $version = $url -split "v|_|\.exe" -match "\d+(\.\d+)+" | Select-Object -Unique -Last 1
+	
+    return $url.Replace("/getfile/", "/files/")
+}
+
 $PackageName = 'foobar2000'
-$Url = 'https://www.foobar2000.org/files/9f77c080fed5cd14b6711bd37ac5ccc3/foobar2000_v1.5.4.exe'
+$Url = GetUrl
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $UnzipLocation = Join-Path $InstallationPath 'tmp'
 
