@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'openjdk'
-$Url64 = 'https://download.java.net/java/GA/jdk14.0.1/664493ef4a6946b186ff29eb326336a2/7/GPL/openjdk-14.0.1_windows-x64_bin.zip'
+$Url64 = 'https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/11/GPL/openjdk-14.0.2_windows-x64_bin.zip'
 $InstallationPath = Get-ToolsLocation
 
 $JdkVersion = ($Url64 -split "/|_" -match "openjdk-\d+(\.\d+)+")[0] -replace "openjdk", "jdk"
