@@ -16,7 +16,7 @@ function global:au_GetLatest {
     $page = Invoke-WebRequest -UseBasicParsing -Uri $url
     $url64 = ($page.Links.href -match "windows.*zip$")[0]
     $version = ($url64 -split '/|_|-' -match '^\d+(\.\d+)+$')[0]
-	
+
     return @{
         Version = $version
         URL64   = $url64

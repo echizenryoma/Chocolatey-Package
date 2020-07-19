@@ -1,7 +1,22 @@
 ﻿$ErrorActionPreference = 'Stop'
 
+function global:au_GetLatest {
+    $base = 'https://jdk.java.net'
+    $page = Invoke-WebRequest -UseBasicParsing -Uri $base
+    $url = $base + ($page.Links -match "JDK\s+\d+")[0].href
+
+    $page = Invoke-WebRequest -UseBasicParsing -Uri $url
+    $url64 = ($page.Links.href -match "windows.*zip$")[0]
+    $version = ($url64 -split '/|_|-' -match '^\d+(\.\d+)+$')[0]
+
+    return @{
+        Version = $version
+        URL64   = $url64
+    }
+}
+
 $PackageName = 'openjdk'
-$Url64 = 'https://download.java.net/java/GA/jdk14.0.2/205943a0976c4ed48cb16f1043c5c647/11/GPL/openjdk-14.0.2_windows-x64_bin.zip'
+$Url64=$(global:au_GetLatest).URL64
 $InstallationPath = Get-ToolsLocation
 
 $JdkVersion = ($Url64 -split "/|_" -match "openjdk-\d+(\.\d+)+")[0] -replace "openjdk", "jdk"
