@@ -2,9 +2,6 @@
 
 function global:au_SearchReplace {
     @{
-        'tools\ChocolateyInstall.ps1' = @{
-            "(^[$]Url64\s*=\s*)('.*')" = "`$1'$($Latest.URL64)'"
-        }
     }
 }
 
