@@ -16,8 +16,8 @@ function global:au_GetLatest {
     $json = $page.Content | ConvertFrom-Json
 
     $time = [datetime]::Parse($json.published_at)
-    $url64 = ($json.assets | Where-Object { $_.name -NotMatch "jre" -and $_.name -Match "x64.*windows.*zip$" })[0].browser_download_url
-    $url = ($json.assets | Where-Object { $_.name -NotMatch "jre" -and $_.name -Match "64.*windows.*zip.*txt" })[0].browser_download_url
+    $url64 = ($json.assets | Where-Object { $_.name -NotMatch "jre" -and $_.name -NotMatch "debug" -and $_.name -Match "x64.*windows.*zip$" })[0].browser_download_url
+    $url = ($json.assets | Where-Object { $_.name -NotMatch "jre" -and $_.name -NotMatch "debug" -and $_.name -Match "64.*windows.*zip.*txt" })[0].browser_download_url
     $checksum_type64 = ($url -split "\." -match "sha\d+")[0]
     $page = Invoke-WebRequest -UseBasicParsing -Uri $url
     $table = [System.Text.Encoding]::UTF8.GetString($page.Content) -split "\n" | ConvertFrom-String -PropertyNames checksum, file
