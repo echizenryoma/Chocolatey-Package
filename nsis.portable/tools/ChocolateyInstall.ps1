@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'nsis'
-$Url = 'https://sourceforge.net/projects/nsis/files/NSIS%203/3.05/nsis-3.05.zip'
+$Url = 'https://sourceforge.net/projects/nsis/files/NSIS%203/3.06.1/nsis-3.06.1.zip'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $UnzipLocation = Join-Path $InstallationPath 'tmp'
 
