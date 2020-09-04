@@ -2,7 +2,7 @@
 
 $PackageName = 'mathpix.snip'
 $Url = 'https://mathpix.com/win_app/mathpix_snipping_tool_setup.exe'
-$Checksum = 'F87B29D65C00346D560B80A1EA467EB99753170323A55A3F08DE7E06DC86B10D'
+$Checksum = '0F1DE0EECA1C087D472BB00254D395A1D18FE9ED47AA22B63FB07B2E750E4855'
 $ChecksumType = 'sha256'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
