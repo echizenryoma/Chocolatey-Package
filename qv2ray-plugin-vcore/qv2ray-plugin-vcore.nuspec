@@ -5,7 +5,7 @@
     <version>4.28.1</version>
     <title>Qv2ray Plugin (VCore)</title>
     <authors>Project V Developers</authors>
-    <owners>Project V Developers</owners>
+    <owners>echizenryoma</owners>
     <projectUrl>https://github.com/v2fly/v2ray-core</projectUrl>
     <iconUrl>https://www.v2fly.org/v2ray.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
