@@ -1,5 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
+. $(Join-Path $ToolsPath "StopProcess.ps1")
+
 $PackageName = 'qv2ray'
 $Url32 = 'https://github.com/v2fly/v2ray-core/releases/download/v4.28.1/v2ray-windows-32.zip'
 $Url64 = 'https://github.com/v2fly/v2ray-core/releases/download/v4.28.1/v2ray-windows-64.zip'
@@ -9,8 +11,6 @@ $Qv2rayConfigPath = Join-Path $Qv2rayPath 'config'
 $UnzipLocation = Join-Path $Qv2rayConfigPath 'vcore'
 
 Write-Output $UnzipLocation
-
-. $(Join-Path $ToolsPath "StopProcess.ps1")
 
 New-Item -ItemType Directory -Path $UnzipLocation -Force -ErrorAction Ignore
 
