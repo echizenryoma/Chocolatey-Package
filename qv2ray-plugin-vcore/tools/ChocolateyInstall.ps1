@@ -1,11 +1,12 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-. $(Join-Path $ToolsPath "StopProcess.ps1")
-
 $PackageName = 'qv2ray'
 $Url32 = 'https://github.com/v2fly/v2ray-core/releases/download/v4.28.1/v2ray-windows-32.zip'
 $Url64 = 'https://github.com/v2fly/v2ray-core/releases/download/v4.28.1/v2ray-windows-64.zip'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
+
+. $(Join-Path $ToolsPath "StopProcess.ps1")
+
 $Qv2rayPath = Join-Path $(Get-ToolsLocation) $PackageName
 $Qv2rayConfigPath = Join-Path $Qv2rayPath 'config'
 $UnzipLocation = Join-Path $Qv2rayConfigPath 'vcore'
