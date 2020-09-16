@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'notepad3'
-$Url = 'https://github.com/rizonesoft/Notepad3/releases/download/RELEASE_5.20.722.1/Notepad3_5.20.722.1.zip'
+$Url = 'https://github.com/rizonesoft/Notepad3/releases/download/RC_5.20.915.1/Notepad3_5.20.915.1.zip'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 $PackageArgs = @{
