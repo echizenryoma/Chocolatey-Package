@@ -9,7 +9,7 @@ $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 $Qv2rayPath = Join-Path $(Get-ToolsLocation) $PackageName
 $Qv2rayConfigPath = Join-Path $Qv2rayPath 'config'
-$Qv2rayPluginPath = Join-Path $Qv2rayConfigPath 'plugin'
+$Qv2rayPluginPath = Join-Path $Qv2rayConfigPath 'plugins'
 $InstallationPath = Join-Path $Qv2rayPluginPath $([IO.Path]::GetFileName($Url32))
 
 if ((Get-OSArchitectureWidth 64) -and $Env:ChocolateyForceX86 -ne 'true') {
