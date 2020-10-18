@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>qv2ray-plugin-vcore</id>
-    <version>4.31.1</version>
+    <version>4.31.2</version>
     <title>Qv2ray Plugin (VCore)</title>
     <authors>Project V Developers</authors>
     <owners>echizenryoma</owners>
