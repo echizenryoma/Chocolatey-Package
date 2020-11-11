@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'openjdk8'
-$Url64 = 'https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u272-b10/OpenJDK8U-jdk_x64_windows_hotspot_8u272b10.zip'
-$Checksum64 = '7b9a4cb5764d3e57af38c223883a3824c2a6bc01cde55551dba4d147413300d9'
+$Url64 = 'https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/jdk8u275-b01/OpenJDK8U-jdk_x64_windows_hotspot_8u275b01.zip'
+$Checksum64 = 'cfce82307ef498a98155a44ca472873174094aa148ce33ca40b029a0d9bf8bee'
 $ChecksumType64 = 'sha256'
 $InstallationPath = Get-ToolsLocation
 
