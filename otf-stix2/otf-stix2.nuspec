@@ -3,7 +3,7 @@
   <metadata>
     <id>otf-stix2</id>
     <title>STIX 2</title>
-    <version>2.0.1.20190415</version>
+    <version>2.11.20210113</version>
     <authors>the STI Pub Companies</authors>
     <owners>Echizen Ryoma</owners>
     <summary>OpenType Unicode fonts for Scientific, Technical, and Mathematical texts</summary>
