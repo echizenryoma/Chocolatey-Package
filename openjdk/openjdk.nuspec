@@ -4,18 +4,21 @@
     <id>openjdk</id>
     <version>15.0.1</version>
     <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/openjdk</packageSourceUrl>
+    <owners>echizenryoma</owners>
     <title>OpenJDK</title>
-    <authors>Oracle</authors>
-    <owners>JohanJanssen</owners>
-    <licenseUrl>http://openjdk.java.net/legal/</licenseUrl>
-    <projectUrl>http://openjdk.java.net/</projectUrl>
-    <docsUrl>http://openjdk.java.net/</docsUrl>
-    <mailingListUrl>http://mail.openjdk.java.net/mailman/listinfo</mailingListUrl>
+    <authors>Oracle Corporation</authors>
+    <projectUrl>https://openjdk.java.net</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@9e121a25724d10365d699f0bf4d0d90bcb047019/icons/java.svg</iconUrl>
+    <licenseUrl>https://openjdk.java.net/legal/</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://hg.openjdk.java.net</projectSourceUrl>
+    <docsUrl>https://docs.oracle.com/en/java/javase/12/</docsUrl>
+    <mailingListUrl>https://mail.openjdk.java.net</mailingListUrl>
     <bugTrackerUrl>https://bugs.openjdk.java.net</bugTrackerUrl>
-    <projectSourceUrl>https://github.com/openjdk/</projectSourceUrl>
-    <tags>openjdk java jvm</tags>
-    <summary>OpenJDK is an open source Java Development Kit provided by Oracle</summary>
-    <description>OpenJDK is an open source Java Development Kit provided by Oracle</description>
+    <tags>OpenJDK Java JVM JDK JRE J2SE compiler SDK Oracle</tags>
+    <summary>OpenJDK is an open source Java Development Kit provided by Oracle Corporation.</summary>
+    <description>OpenJDK is a free and open-source implementation of the Java Platform, Standard Edition.</description>
+    <releaseNotes>https://www.oracle.com/technetwork/java/javase/12-relnote-issues-5211422.html</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
