@@ -3,7 +3,7 @@
   <metadata>
     <id>openjdk8.adopt</id>
     <title>Adopt OpenJDK 8</title>
-    <version>8.275.1</version>
+    <version>8.282.8</version>
     <authors>AdoptOpenJDK</authors>
     <owners>Echizen Ryoma</owners>
     <summary>AdoptOpenJDK provides prebuilt OpenJDK build binaries. This one uses Hotspot.</summary>
