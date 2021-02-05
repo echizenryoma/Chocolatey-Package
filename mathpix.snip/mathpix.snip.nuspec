@@ -4,7 +4,7 @@
     <id>mathpix.snip</id>
     <title>Mathpix Snip</title>
     <owners>Echizen Ryoma</owners>
-    <version>2.7.2</version>
+    <version>3.0.6</version>
     <authors>Mathpix</authors>
     <summary>Convert images to LaTeX</summary>
     <description>
