@@ -2,7 +2,7 @@
 
 $PackageName = 'resourcehacker.portable'
 $Url = 'http://www.angusj.com/resourcehacker/resource_hacker.zip'
-$Checksum = 'c5a0e7f4b8f1089418520562c13d45f8e6fcfff65537830fb166f218b095708c'
+$Checksum = 'd158bebc2993cf6bebf2c23a93572a68544c2ba5ae056538f70a58075c9392d6'
 $ChecksumType = 'sha256'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
