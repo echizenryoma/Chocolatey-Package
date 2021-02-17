@@ -1,11 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'postman'
-$Url32 = 'https://dl.pstmn.io/download/8.0.5/Postman-win32-8.0.5-full.nupkg'
-$Checksum32 = '5CB15B7C6F81B81E454753FFEA9AAA823A7A9341'
+$Url32 = 'https://dl.pstmn.io/download/8.0.6/Postman-win32-8.0.6-full.nupkg'
+$Checksum32 = 'F3B64AC85F8EAE72208DF292D4772205E1B32050'
 $ChecksumType32 = 'sha1'
-$Url64 = 'https://dl.pstmn.io/download/8.0.5/Postman-win64-8.0.5-full.nupkg'
-$Checksum64 = '76D0106A6C8D9797C6AC41A0CDFC350AB1272EF9'
+$Url64 = 'https://dl.pstmn.io/download/8.0.6/Postman-win64-8.0.6-full.nupkg'
+$Checksum64 = '4B41BD39EDFEAD5811A30D84BC37F6EE730999C5'
 $ChecksumType64 = 'sha1'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $UnzipLocation = Join-Path $InstallationPath 'tmp'
