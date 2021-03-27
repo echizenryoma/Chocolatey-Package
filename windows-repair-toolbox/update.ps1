@@ -10,10 +10,6 @@ function global:au_SearchReplace {
     }
 }
 
-function global:au_AfterUpdate ($Package)  {
-    $global:Options.Push = $true
-}
-
 function global:au_GetLatest {
     $page = Invoke-WebRequest -UseBasicParsing -Uri "https://windows-repair-toolbox.com/"
     $version = ($page.Content -split "<|>|\(|\)|\n" -match "Program\s+version" | Select-Object -First 1).Trim() -split "\s|;" -match "\d+(\.\d+)+" | Select-Object -First 1
