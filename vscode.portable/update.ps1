@@ -30,8 +30,8 @@ function global:au_GetLatest {
 
     $version = $json64.productVersion
 
-    $url32 = "https://vscode-update.azurewebsites.net/${version}/win32-archive/stable"
-    $url64 = "https://vscode-update.azurewebsites.net/${version}/win32-x64-archive/stable"
+    $url32 = "https://update.code.visualstudio.com/${version}/win32-archive/stable"
+    $url64 = "https://update.code.visualstudio.com/${version}/win32-x64-archive/stable"
     $checksum_type = 'sha256'
 
     return @{
