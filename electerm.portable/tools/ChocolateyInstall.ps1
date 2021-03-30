@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'electerm'
-$Url64 = 'https://github.com/electerm/electerm/releases/download/v1.12.7/electerm-1.12.7-win-x64.tar.gz'
+$Url64 = 'https://github.com/electerm/electerm/releases/download/v1.12.9/electerm-1.12.9-win-x64-loose.tar.gz'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $UnzipLocation = Join-Path $InstallationPath 'tmp'
