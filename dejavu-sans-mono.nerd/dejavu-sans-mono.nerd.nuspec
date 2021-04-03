@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>dejavu-sans-mono.nerd</id>
+    <title>DejaVu Sans Mono Nerd Font</title>
+    <version>2.1.0</version>
+    <authors>the STI Pub Companies</authors>
+    <owners>Echizen Ryoma</owners>
+    <summary>Nerd Fonts is a project that patches developer targeted fonts with a high number of glyphs (icons).</summary>
+    <description>
+      <![CDATA[
+      Nerd Fonts is a project that patches developer targeted fonts with a high number of glyphs (icons). 
+      
+      Specifically to add a high number of extra glyphs from popular 'iconic fonts' such as Font Awesome ➶, Devicons ➶, Octicons ➶, and others.
+      ]]>
+    </description>
+    <projectUrl>https://github.com/ryanoasis/nerd-fonts</projectUrl>
+    <projectSourceUrl>https://github.com/ryanoasis/nerd-fonts</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/ryanoasis/nerd-fonts/is­sues</bugTrackerUrl>
+    <tags>font dejavu mono nerd admin</tags>
+    <releaseNotes>https://github.com/ryanoasis/nerd-fonts/releases</releaseNotes>
+    <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/dejavu-sans-mono.nerd</packageSourceUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
