@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'terminus'
-$Url32 = 'https://github.com/Eugeny/terminus/releases/download/v1.0.135/terminus-1.0.135-portable.zip'
+$Url32 = 'https://github.com/Eugeny/terminus/releases/download/v1.0.136/terminus-1.0.136-portable.zip'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $DataPath = Join-Path $InstallationPath 'data'
 $UnzipLocation = Join-Path $InstallationPath 'tmp'
