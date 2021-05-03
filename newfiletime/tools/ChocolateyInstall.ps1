@@ -2,13 +2,13 @@
 
 $PackageName = 'newfiletime'
 $Url32 = 'https://www.softwareok.com/Download/NewFileTime.zip'
-$Checksum32 = '1c924672435923064db350a6b64439ee88d277690fac0858b45f5c09cdff1ddb'
+$Checksum32 = 'f26c78e4e96ff54eb3a70d55eb7221aabd95966275f3da467bc463faf1c44f2e'
 $ChecksumType32 = 'sha256'
 $Url64 = 'https://www.softwareok.com/Download/NewFileTime_x64.zip'
-$Checksum64 = '474fe91b357905cbd600c17cca94587e3825d97bdb5f6e9828b6f50a9d612791'
+$Checksum64 = 'f7d5899c2f94f2394e06c66a67c9a7e7d33e6bc67ccfc9acf00cee6d84868d4c'
 $ChecksumType64 = 'sha256'
 $UrlExtra = 'https://www.softwareok.com/Download/NewFileTime_Unicode.zip'
-$ChecksumExtra = 'c8503493c0d339f869fa4e62d8a2ae6b3c80844de75480e1900154e1db906c5f'
+$ChecksumExtra = '661016e89ba2a327f6743222583a46983df2def3ad81b7aa96307475146eee57'
 $ChecksumTypeExtra = 'sha256'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
