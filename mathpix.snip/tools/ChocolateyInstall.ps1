@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'mathpix.snip'
-$Url = 'https://mathpix.com/win_app/mathpix_snipping_tool_setup.exe'
-$Checksum = 'E42A44B102AB2305A01D28A364776C67E3B5C4BF0B72D26BADC2EB650560F3D1'
+$Url = 'https://download.mathpix.com/windows/mathpix_snipping_tool_setup.latest.exe'
+$Checksum = '5351586DF18D85C560AF114C5274D15268C5F94EB3A629F0389B714ACCD7E949'
 $ChecksumType = 'sha256'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 

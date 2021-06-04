@@ -11,7 +11,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $url = 'https://mathpix.com/win_app/mathpix_snipping_tool_setup.exe'
+    $url = 'https://download.mathpix.com/windows/mathpix_snipping_tool_setup.latest.exe'
     $global:Latest.URL32 = $url
     
     Write-Host "Downloading full setup file to find the version"
