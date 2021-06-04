@@ -14,7 +14,7 @@ $PackageArgs = @{
     PackageName   = $PackageName
     Url           = $Url32
     Url64         = $Url64
-    UnzipLocation = $UnzipPath
+    UnzipLocation = $UnzipLocation
 }
 Install-ChocolateyZipPackage @PackageArgs
 
