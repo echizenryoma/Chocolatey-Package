@@ -1,6 +1,6 @@
-﻿WorkFlow Choco-Pack {
+﻿Function Choco-Pack {
     $dirs = Get-ChildItem -Directory -Exclude ".git"
-    foreach -parallel ($dir in $dirs) {
+    foreach ($dir in $dirs) {
         $nuspec = Join-Path $dir "$($dir.Name).nuspec"
         if (Test-Path $nuspec) {
             [xml]$XmlDocument = Get-Content -Path $nuspec
