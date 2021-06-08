@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Ignore'
 
 $PackageName = 'VirtualBox.ExtensionPack'
 $Url = 'https://download.virtualbox.org/virtualbox/6.1.22/Oracle_VM_VirtualBox_Extension_Pack-6.1.22.vbox-extpack'
@@ -19,4 +19,4 @@ Get-ChocolateyWebFile @PackageArgs
 
 
 # Install the Extension Pack using VBoxManage
-Write-Output "y" | & "$VBoxManage" extpack install --replace "$VBoxExtensionPack"
+Write-Output "y" | & "$VBoxManage" extpack install --replace "$VBoxExtensionPack" 2>1
