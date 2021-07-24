@@ -2,13 +2,23 @@
 
 $PackageName = 'quiterss'
 $Url32 = 'https://quiterss.org/files/0.19.4_/QuiteRSS-0.19.4.zip'
-$ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
+$InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
+$UnzipLocation = Join-Path $InstallationPath 'tmp'
+
+if (Test-Path $InstallationPath) {
+    Get-ChildItem -Path $InstallationPath -exclude 'opt' | Remove-Item -Recurse -Force -ErrorAction Ignore
+}
 
 $PackageArgs = @{
     PackageName   = $PackageName
     Url           = $Url32
-    UnzipLocation = $ToolsPath
+    UnzipLocation = $UnzipLocation
 }
 Install-ChocolateyZipPackage @PackageArgs
 
-Get-ChildItem $ToolsPath -Include "*.exe" -Exclude "${PackageName}.exe" -Recurse | ForEach-Object { $null = New-Item "$($_.FullName).ignore" -Type file -Force }
+$UnzipPath = (Get-ChildItem $UnzipLocation -Directory | Where-Object Name -Match "${PackageName}" | Select-Object -First 1).FullName
+Copy-Item -Path $(Join-Path $UnzipPath '*') -Destination $InstallationPath -Recurse -Force
+Remove-Item -Path $UnzipLocation -Recurse -Force -ErrorAction Ignore
+
+$BinFile = Join-Path $UnzipPath "$PackageName.exe"
+Install-BinFile -name ${PackageName} -path ${BinFile} -useStart
