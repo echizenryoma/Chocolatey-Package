@@ -6,8 +6,8 @@ $ChecksumType = 'sha256'
 $ToolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 $url = 'https://www.fosshub.com/Audacity.html'
-$page = Invoke-WebRequest -Uri $url
-$obj = ($page.Scripts.outerText -match "settings") -split "=" -match "{" | ConvertFrom-Json
+$page = Invoke-WebRequest -Uri $url -UseBasicParsing
+$obj = ($page.Content -split '<|>' -match "settings") -split "=" -match "{" | ConvertFrom-Json
 $body = @{
     "projectId"  = $obj.projectId
     "releaseId"  = ($obj.pool.f.r | Select-Object -Unique -First 1)
