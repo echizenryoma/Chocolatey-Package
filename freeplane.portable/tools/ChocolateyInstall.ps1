@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'freeplane'
-$Url32 = 'https://sourceforge.net/projects/freeplane/files/freeplane%20stable/freeplane_bin-1.9.6.zip'
+$Url32 = 'https://sourceforge.net/projects/freeplane/files/freeplane%20stable/freeplane_bin-1.9.7.zip'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $UnzipLocation = Join-Path $InstallationPath 'tmp'
 
