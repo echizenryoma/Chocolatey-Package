@@ -1,11 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'nodejs'
-$Url32 = 'https://nodejs.org/dist/v14.17.4/node-v14.17.4-win-x86.7z'
-$Checksum32 = '67caaa209d2d938f763f1a9ab08b3e30c06b2f18bf5c5d90b1198d0ddbd35feb'
+$Url32 = 'https://nodejs.org/dist/v14.17.5/node-v14.17.5-win-x86.7z'
+$Checksum32 = '2f2933bfb42d407b064f83c6047f71b75c55389b4bebf82b7ff5a97f4635ce54'
 $ChecksumType32 = 'sha256'
-$Url64 = 'https://nodejs.org/dist/v14.17.4/node-v14.17.4-win-x64.7z'
-$Checksum64 = '0de71309336bc324bc5155867dc9d8d6337d83c1eed4777141ae83e967b3aca1'
+$Url64 = 'https://nodejs.org/dist/v14.17.5/node-v14.17.5-win-x64.7z'
+$Checksum64 = 'f6e651a76e0158e07ac12753c40739554455f42eec355a651242a28ed979e483'
 $ChecksumType64 = 'sha256'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $UnzipLocation = Join-Path $InstallationPath 'tmp'
