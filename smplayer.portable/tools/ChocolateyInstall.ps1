@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'SMPlayer'
-$Url32 = 'https://sourceforge.net/projects/smplayer/files/SMPlayer/21.1.0/smplayer-portable-21.1.0.0.7z/download'
-$Url64 = 'https://sourceforge.net/projects/smplayer/files/SMPlayer/21.1.0/smplayer-portable-21.1.0.0-x64.7z/download'
+$Url32 = 'https://sourceforge.net/projects/smplayer/files/SMPlayer/21.8.0/smplayer-portable-21.8.0.0-win32.7z/download'
+$Url64 = 'https://sourceforge.net/projects/smplayer/files/SMPlayer/21.8.0/smplayer-portable-21.8.0.0-x64.7z/download'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $UnzipLocation = Join-Path $InstallationPath 'tmp'
 
