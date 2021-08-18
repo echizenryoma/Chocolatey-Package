@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>qv2ray-plugin-trojan</id>
-    <version>2.0.0</version>
+    <version>3.0.0</version>
     <title>Qv2ray Plugin (Trojan)</title>
     <authors>Project V Developers</authors>
     <owners>echizenryoma</owners>
