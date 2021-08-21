@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>qv2ray-plugin-vcore</id>
+    <version>4.41.1</version>
+    <title>Qv2ray Plugin (VCore)</title>
+    <authors>Project V Developers</authors>
+    <owners>echizenryoma</owners>
+    <projectUrl>https://github.com/v2fly/v2ray-core</projectUrl>
+    <iconUrl>https://www.v2fly.org/v2ray.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>V2Ray, a platform for building proxies to bypass network restrictions.</description>
+    <summary />
+    <tags>v2ray shadowsocks</tags>
+    <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Packages/tree/master/qv2ray-plugin-vcore</packageSourceUrl>
+    <dependencies>
+      <dependency id="qv2ray" />
+    </dependencies>
+  </metadata>
+</package>
