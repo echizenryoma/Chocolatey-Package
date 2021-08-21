@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>qv2ray</id>
-    <version>2.6.3</version>
+    <version>2.7.0</version>
     <title>Qv2ray</title>
     <authors>Qv2ray Developers</authors>
     <owners>echizenryoma</owners>

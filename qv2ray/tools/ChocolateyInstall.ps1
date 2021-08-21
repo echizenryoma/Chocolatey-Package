@@ -1,8 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'qv2ray'
-$Url32 = 'https://github.com/Qv2ray/Qv2ray/releases/download/v2.6.3/Qv2ray.v2.6.3.Windows-x86.7z'
-$Url64 = 'https://github.com/Qv2ray/Qv2ray/releases/download/v2.6.3/Qv2ray.v2.6.3.Windows-x64.7z'
+$Url32 = 'https://github.com/Qv2ray/Qv2ray/releases/download/v2.7.0/Qv2ray-v2.7.0-Windows.7z'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $UnzipLocation = Join-Path $InstallationPath 'tmp'
@@ -14,7 +13,6 @@ New-Item -ItemType Directory -Path $UnzipLocation -Force -ErrorAction Ignore
 $PackageArgs = @{
     PackageName   = $PackageName
     Url           = $Url32
-    Url64         = $Url64
     UnzipLocation = $UnzipLocation
 }
 Install-ChocolateyZipPackage @PackageArgs
