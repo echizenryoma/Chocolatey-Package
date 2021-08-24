@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'subtitleedit'
-$Url = 'https://github.com/SubtitleEdit/subtitleedit/releases/download/3.6.1/SE361.zip'
-$Checksum = '3874f0e2b866c63e65c5a9665a0307721dd15c9d952ee887b7b02730ac271fde'
+$Url = 'https://github.com/SubtitleEdit/subtitleedit/releases/download/3.6.2/SE362.zip'
+$Checksum = 'a337fcc34f7df3a1a4912b088cd9d2b3903edfb5a03996c4e731d17861e2f4c1'
 $ChecksumType = 'sha256'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
