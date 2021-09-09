@@ -16,7 +16,7 @@
     <copyright>Copyright © Nikse</copyright>
     <tags>subtitleedit subtitle editor video OCR sync merge split convert</tags>
     <projectSourceUrl>https://github.com/SubtitleEdit/subtitleedit</projectSourceUrl>
-    <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/subtitleedit</packageSourceUrl>
+    <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/subtitleedit.portable</packageSourceUrl>
     <mailingListUrl>https://gitter.im/SubtitleEdit/subtitleedit</mailingListUrl>
     <bugTrackerUrl>https://github.com/SubtitleEdit/subtitleedit/issues</bugTrackerUrl>
   </metadata>

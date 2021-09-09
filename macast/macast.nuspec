@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>macast</id>
+    <version>0.5</version>
+    <title>Macast</title>
+    <authors>xfangfang</authors>
+    <owners>Echizen Ryoma</owners>
+    <licenseUrl>https://github.com/xfangfang/Macast/blob/master/LICENSE.txt</licenseUrl>
+    <iconUrl>https://raw.githubusercontent.com/xfangfang/Macast/main/assets/icon.ico</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A menu bar application using mpv as DLNA Media Renderer. You can push videos, pictures or musics from your mobile phone to your computer.</description>
+    <summary>A menu bar application using mpv as DLNA Media Renderer. You can push videos, pictures or musics from your mobile phone to your computer.</summary>
+    <releaseNotes>https://github.com/xfangfang/Macast/releases</releaseNotes>
+    <tags>DLNA mpv</tags>
+    <projectSourceUrl>https://github.com/xfangfang/Macast</projectSourceUrl>
+    <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/macast</packageSourceUrl>
+    <bugTrackerUrl>https://github.com/xfangfang/Macast/issues</bugTrackerUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
