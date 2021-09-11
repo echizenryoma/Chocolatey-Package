@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>golang</id>
+    <id>golang.portable</id>
     <version>1.17.1</version>
     <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/golang</packageSourceUrl>
     <owners>Echizen Ryoma</owners>
