@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'macast'
-$Url = 'https://github.com/xfangfang/Macast/releases/download/v0.61/Macast-Windows-v0.61.exe'
+$Url = 'https://github.com/xfangfang/Macast/releases/download/v0.64/Macast-Windows-v0.64.exe'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 . $(Join-Path $ToolsPath "StopProcess.ps1")
