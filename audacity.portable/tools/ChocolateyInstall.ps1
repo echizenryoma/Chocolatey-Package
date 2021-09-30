@@ -1,46 +1,53 @@
 ﻿$ErrorActionPreference = 'Stop'
 
+$base = 'https://api.fosshub.com'
+
+function GetLatestUrl ([string]$arch) {
+    $url = 'https://www.fosshub.com/Audacity.html'
+    $page = Invoke-WebRequest -Uri $url -UseBasicParsing
+    $obj = ($page.Content -split '<|>' -match "settings") -split "=" -match "{" | ConvertFrom-Json
+    $body = @{
+        "projectId"  = $obj.projectId
+        "releaseId"  = ($obj.pool.f.r | Select-Object -Unique -First 1)
+        "projectUri" = $obj.pool.u
+        "fileName"   = ($obj.pool.f.n -match "zip" -notmatch "manual" -match "${arch}bit")[0]
+        "source"     = $obj.pool.c
+    } | ConvertTo-Json -Compress
+
+    $url = "${base}/download/"
+    $page = Invoke-WebRequest -Method Post -Body $body -ContentType "application/json" -Uri $url
+    $obj = $page.Content | ConvertFrom-Json
+    return $obj.data.url
+}
+
 $PackageName = 'audacity'
 $Checksum = '2ca8f25bd389c3164935a65640a9654c88890c1b352081821fb605fa45c4b78c'
 $ChecksumType = 'sha256'
-$ToolsPath = Split-Path $MyInvocation.MyCommand.Definition
+$InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
+$UnzipLocation = Join-Path $InstallationPath 'tmp'
 
-$url = 'https://www.fosshub.com/Audacity.html'
-$page = Invoke-WebRequest -Uri $url -UseBasicParsing
-$obj = ($page.Content -split '<|>' -match "settings") -split "=" -match "{" | ConvertFrom-Json
-$body = @{
-    "projectId"  = $obj.projectId
-    "releaseId"  = ($obj.pool.f.r | Select-Object -Unique -First 1)
-    "projectUri" = $obj.pool.u
-    "fileName"   = ($obj.pool.f.n -match "zip" -notmatch "manual")[0]
-    "source"     = $obj.pool.c
-} | ConvertTo-Json -Compress
-
-$base = 'https://api.fosshub.com'
-$url = "${base}/download/"
-$page = Invoke-WebRequest -Method Options -Uri $url -SessionVariable session
-$page = Invoke-WebRequest -Method Post -Body $body -ContentType "application/json" -Uri $url -WebSession $session
-$obj = $page.Content | ConvertFrom-Json
-$Url = $obj.data.url
-
-$cookies = $session.Cookies.GetCookies($base)
-$cookie = ""
-foreach ($it in $cookies) {
-    $cookie = $cookie + ('{0}={1};' -f $it.Name, $it.Value)
-}
+$Url32 = GetLatestUrl("32")
+$Url64 = GetLatestUrl("64")
 
 $PackageArgs = @{
     PackageName   = $PackageName
-    Url           = $Url
+    Url32         = $Url32
+    Url64         = $Url64
     Checksum      = $Checksum
     ChecksumType  = $ChecksumType
-    UnzipLocation = $ToolsPath
+    UnzipLocation = $UnzipLocation
     Options       = @{
         Headers = @{
             UserAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36' 
-            Cookie    = $cookie
-            Referer   = $url
+            Referer   = 'https://www.fosshub.com/Audacity.html'
         }
     }
 }
 Install-ChocolateyZipPackage @PackageArgs
+
+$UnzipPath = (Get-ChildItem $UnzipLocation -Directory | Where-Object Name -Match "${PackageName}" | Select-Object -First 1).FullName
+Copy-Item -Path $(Join-Path $UnzipPath '*') -Destination $InstallationPath -Recurse -Force
+Remove-Item -Path $UnzipLocation -Recurse -Force -ErrorAction Ignore
+
+$BinFile = Get-Item $(Join-Path $InstallationPath "${PackageName}.exe")
+Install-BinFile -Path $BinFile -Name "${PackageName}"
