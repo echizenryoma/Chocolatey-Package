@@ -12,14 +12,13 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $base = 'https://www.7-zip.org/'
+    $page = Invoke-WebRequest -UseBasicParsing -Uri $base
+    $version = (($page.Links.outerHTML -match "7-Zip\s+\d+(\.\d+)+" -notmatch "(beta)|(alpha)")[0] -split "\s|<|>" -match "\d+(\.\d+)+")[0]
     
-    $page = Invoke-WebRequest -UseBasicParsing -Uri "$base/download.html"
-    $version = (($page.Links.href -match "7z\d+" | Select-Object -First 1) -split "7z|\." -match "\d+" | Select-Object -First 1).Insert(2, ".")
-    
-    $url32 = $base + ($page.Links.href -match "7z$($version -replace '\.','')\.exe$" | Select-Object -First 1)
-    $url64 = $base + ($page.Links.href -match "7z$($version -replace '\.','')(\-x64)\.exe$" | Select-Object -First 1)
-    $url_extra = $base + ($page.Links.href -match "7z$($version -replace '\.','')\-extra\.7z" | Select-Object -First 1)
-       
+    $url32 = $base + ($page.Links.href -match "7z$($version -replace '\.','')\.exe$")[0]
+    $url64 = $base + ($page.Links.href -match "7z$($version -replace '\.','')(\-x64)\.exe$")[0]
+    $url_extra = $base + ($page.Links.href -match "7z$($version -replace '\.','')\-extra\.7z")[0]
+
     return @{
         Version   = $version
         URL32     = $url32
