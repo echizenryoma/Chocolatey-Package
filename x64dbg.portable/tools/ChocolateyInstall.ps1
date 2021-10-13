@@ -12,3 +12,7 @@ $PackageArgs = @{
     UnzipLocation = $ToolsPath
 }
 Install-ChocolateyZipPackage @PackageArgs
+
+Get-ChildItem $ToolsPath -File -Filter "*.exe" -Exclude "x*dbg.exe" -Recurse | ForEach-Object {
+    $null = New-Item "$($_.FullName).ignore" -Type File -Force
+}
