@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>doublecmd.portable</id>
+    <version>1.0.0</version>
+    <title>Double Commander for Windows (Portable)</title>
+    <authors>Alexander Koblov, Przemyslaw Nagay</authors>
+    <owners>echizenryoma</owners>
+    <licenseUrl>https://sourceforge.net/p/doublecmd/code/HEAD/tree/trunk/doc/COPYING.txt?format=raw</licenseUrl>
+    <projectUrl>http://doublecmd.sourceforge.net/</projectUrl>
+    <iconUrl>https://doublecmd.sourceforge.io/site/images/logo.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description># Double Commander
+
+## Description
+
+Double Commander is a cross platform open source file manager with two panels side by side. It is inspired by Total Commander and features some new ideas.
+Double Commander can be run on several platforms and operating systems. It supports 32-bit and 64-bit processors. See Supported platforms for a complete list.
+See Double Commander in action in the Gallery.
+
+## Features
+
+* Install and uninstall via Chocolatey
+* Supports 32/64-bit version
+
+## Changelog
+
+### 2021-10-18 Build 1.0.0
+
+* version 1.0.0
+
+## Usage
+
+### Direct
+
+```cmd
+choco install doublecmd -y
+```
+
+### YAML (Foreman, puppetlabs/chocolatey module)
+
+```yaml
+doublecmd:
+  ensure: latest
+  provider: chocolatey
+```
+
+or
+
+```yaml
+doublecmd:
+  ensure: latest
+```</description>
+    <summary>Double Commander is a cross platform open source file manager with two panels side by side. It is inspired by Total Commander and features some new ideas.</summary>
+    <releaseNotes>https://sourceforge.net/p/doublecmd/news/</releaseNotes>
+    <copyright>Double Commander</copyright>
+    <tags>doublecmd double file manager commander portable</tags>
+    <projectSourceUrl>https://sourceforge.net/p/doublecmd/code/HEAD/tree/trunk/</projectSourceUrl>
+    <docsUrl>http://doublecmd.sourceforge.net/forum/</docsUrl>
+    <bugTrackerUrl>http://doublecmd.sourceforge.net/mantisbt/my_view_page.php</bugTrackerUrl>
+    <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/doublecmd.portable</packageSourceUrl>
+  </metadata>
+</package>
