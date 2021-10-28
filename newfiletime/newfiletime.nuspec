@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>newfiletime</id>
-    <version>5.55</version>
+    <version>5.66</version>
     <title>NewFileTime</title>
     <authors>Nenad Hrg</authors>
     <owners>Echizen Ryoma</owners>
