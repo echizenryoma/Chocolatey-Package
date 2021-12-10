@@ -2,11 +2,8 @@
 
 $PackageName = 'nmap'
 $Url32 = 'https://nmap.org/dist/nmap-7.92-win32.zip'
-$ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
-$InstallationPath = Join-Path $ToolsPath $PackageName
+$InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $UnzipLocation = Join-Path $InstallationPath 'tmp'
-
-Get-ChildItem -Path $ToolsPath -Directory | Remove-Item -Recurse -Force -ErrorAction Ignore
 
 $PackageArgs = @{
     PackageName   = $PackageName
@@ -19,4 +16,4 @@ $UnzipPath = (Get-ChildItem $UnzipLocation -Directory | Where-Object Name -Match
 Copy-Item -Path $(Join-Path $UnzipPath "*") -Destination $InstallationPath -Recurse -Force
 Remove-Item -Path $UnzipLocation -Recurse -Force -ErrorAction Ignore
 
-Get-ChildItem $ToolsPath -File -Include "VC_redist*" -Recurse | ForEach-Object { $null = New-Item "$($_.FullName).ignore" -Type File -Force }
+Install-ChocolateyPath -PathToInstall $InstallationPath -PathType 'Machine'
