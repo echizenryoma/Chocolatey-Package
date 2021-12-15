@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>dog</id>
+    <version>0.1.0</version>
+    <title>dog</title>
+    <authors>ogham</authors>
+    <owners>echizenryoma</owners>
+    <projectUrl>https://github.com/ogham/dog</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>dog is a command-line DNS client.</description>
+    <summary>dog is a command-line DNS client.</summary>
+    <tags>dog dns</tags>
+    <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Packages/tree/master/dog</packageSourceUrl>
+  </metadata>
+</package>
