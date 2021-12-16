@@ -1,11 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'everything'
-$Url32 = 'https://www.voidtools.com/Everything-1.4.1.1009.x86.zip'
-$Checksum32 = '3ada0479c4d55b185a33f7700d7ace8cd85cdceb8ddb610e062cfe04558275ca'
+$Url32 = 'https://www.voidtools.com/Everything-1.4.1.1014.x86.zip'
+$Checksum32 = '6e3fe70ac2f2dd78c08e810e74a7cc17983bc871abaf319c7a5acb296bcb8a1c'
 $ChecksumType32 = 'sha256'
-$Url64 = 'https://www.voidtools.com/Everything-1.4.1.1009.x64.zip'
-$Checksum64 = 'f61b601acba59d61fb0631a654e48a564db34e279b6f2cc45e20a42ce9d9c466'
+$Url64 = 'https://www.voidtools.com/Everything-1.4.1.1014.x64.zip'
+$Checksum64 = 'cca3236c113ec2312555f7d57137d2a6a7425e5bba10d58b682a4b0d891dd4ea'
 $ChecksumType64 = 'sha256'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $UrlExtra = 'https://www.voidtools.com/es.exe'
