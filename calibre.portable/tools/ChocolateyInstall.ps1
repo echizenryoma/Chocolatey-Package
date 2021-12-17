@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'Calibre'
-$Url = 'https://github.com/kovidgoyal/calibre/releases/download/v5.33.2/calibre-portable-installer-5.33.2.exe'
+$Url = 'https://github.com/kovidgoyal/calibre/releases/download/v5.34.0/calibre-portable-installer-5.34.0.exe'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $UnzipLocation = Join-Path $InstallationPath 'tmp'
 $SilentArgs = "${UnzipLocation}"
