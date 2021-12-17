@@ -2,11 +2,8 @@
 
 $PackageName = 'wix'
 $Url32 = 'https://github.com/wixtoolset/wix3/releases/download/wix3112rtm/wix311-binaries.zip'
-$InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
-
-if (Test-Path $InstallationPath) {
-  New-Item -Path $InstallationPath -Force
-}
+$ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
+$InstallationPath = $ToolsPath
 
 $PackageArgs = @{
   PackageName   = $PackageName
@@ -14,5 +11,3 @@ $PackageArgs = @{
   UnzipLocation = $InstallationPath
 }
 Install-ChocolateyZipPackage @PackageArgs
-
-Install-ChocolateyPath -PathToInstall $InstallationPath -PathType 'Machine'
