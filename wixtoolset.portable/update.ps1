@@ -9,10 +9,11 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $base = "https://github.com"
-  $page = Invoke-WebRequest -UseBasicParsing -Uri "$base/wixtoolset/wix3/releases/latest"
-  $version = ($page.Links.outerHTML -match "WiX\s+Toolset" -split "\s|v|<|>" -match "^\d+(\.\d+)+$")[0]
-  $url32 = 'https://github.com' + ($page.Links.href -match "-binaries.zip$")[0]
+  $page = Invoke-WebRequest -UseBasicParsing -Uri "https://api.github.com/repos/wixtoolset/wix3/releases/latest"
+  $json = $page.Content | ConvertFrom-Json
+
+  $version = $json.name -split " |v" -match "\d+(\.\d+)+"
+  $url32 = ($json.assets | Where-Object name -Match "-binaries.zip$")[0].browser_download_url
 
   return @{
     Version = $version
