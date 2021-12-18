@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package>
+  <metadata>
+    <id>npcap</id>
+    <title>Npcap</title>
+    <owners>echizenryoma</owners>
+    <version>1.60</version>
+    <authors>NetGroup, CACE Technologies</authors>
+    <licenseUrl>https://raw.githubusercontent.com/nmap/npcap/master/LICENSE</licenseUrl>
+    <projectUrl>https://nmap.org/npcap/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Npcap is the Nmap Project's packet capture (and sending) library for Microsoft Windows. It implements the open Pcap API using a custom Windows kernel driver alongside our Windows build of the excellent libpcap library. This allows Windows software to capture raw network traffic (including wireless networks, wired ethernet, localhost traffic, and many VPNs) using a simple, portable API. Npcap allows for sending raw packets as well. Mac and Linux systems already include the Pcap API, so Npcap allows popular software such as Nmap and Wireshark to run on all these platforms (and more) with a single codebase. Npcap began in 2013 as some improvements to the (now discontinued) WinPcap library, but has been largely rewritten since then with hundreds of releases improving Npcap's speed, portability, security, and efficiency.</description>
+    <releaseNotes>https://raw.githubusercontent.com/nmap/npcap/master/CHANGELOG.md</releaseNotes>
+    <tags>driver foss packet capture network admin</tags>
+    <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/npcap</packageSourceUrl>
+    <docsUrl>https://nmap.org/npcap/guide/</docsUrl>
+    <iconUrl>https://nmap.org/npcap/images/dan-npcap-whitebg-480x167.png</iconUrl>
+    <dependencies>
+      <dependency id="autohotkey.portable" version="1.1.26.01" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
