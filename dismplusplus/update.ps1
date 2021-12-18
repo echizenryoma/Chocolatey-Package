@@ -10,10 +10,11 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $page = Invoke-WebRequest -Uri 'https://www.chuyu.me/zh-Hans/' -UseBasicParsing
-	
-    $url = $page.links | Where-Object href -Match ".zip$" | Select-Object -First 1 -expand href
-    $version = ($url -split '/' -match "\d+(\.\d+)+$")[0] -replace "v", ""
+    $page = Invoke-WebRequest -UseBasicParsing -Uri "https://api.github.com/repos/Chuyu-Team/Dism-Multi-language/releases/latest"
+    $json = $page.Content | ConvertFrom-Json
+
+    $version = $json.tag_name -replace "v", ""
+    $url = ($json.assets | Where-Object name -Match "Dism\+\+")[0].browser_download_url
     
     return @{ 
         Version = $version
@@ -21,4 +22,4 @@ function global:au_GetLatest {
     }
 }
 
-Update-Package -NoCheckChocoVersion
+Update-Package -NoCheckChocoVersion -ChecksumFor none

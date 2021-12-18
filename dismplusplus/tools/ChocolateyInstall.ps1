@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'dism++'
-$Url = 'http://gh.api.99988866.xyz/github.com/Chuyu-Team/Dism-Multi-language/releases/download/v10.1.1002.1/Dism++10.1.1002.1.zip'
+$Url = 'https://github.com/Chuyu-Team/Dism-Multi-language/releases/download/v10.1.1002.1/Dism%2B%2B10.1.1002.1.zip'
 $Checksum = 'bd782ba834a77661db0b272c00afd5377404b23cb26783507ded145f4c72f9a6'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $UnzipLocation = $InstallationPath
