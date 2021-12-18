@@ -2,21 +2,15 @@
 
 function global:au_SearchReplace {
     @{
-        ".\tools\ChocolateyInstall.ps1" = @{
-            "(^[$]Url32\s*=\s*)('.*')"    = "`$1'$($Latest.URL32)'"
-        }
     }
 }
 
 function global:au_GetLatest {
-    $base = 'https://github.com'
-    $page = Invoke-WebRequest -UseBasicParsing -Uri "${base}/jrsoftware/ispack/releases"
-    $url32 = $base + ($page.Links.href -match "is-\d+(_\d+)+.*zip" | Select-Object -First 1)
-    $version = [IO.Path]::GetFileNameWithoutExtension($url32) -split "is-" -replace "-", "." -replace "_", "." -match "\d+(\.\d+)+" | Select-Object -First 1
+    $page = Invoke-WebRequest -UseBasicParsing -Uri "https://jrsoftware.org/isdl.php"
+    $version = (($page.Content -split '<|>' -match 'innosetup-\d+(\.\d+)+.exe') -split '-|.exe' -match '\d+(\.\d+)')[0]
 
     return @{
-        Version  = $version
-        URL32    = $url32
+        Version = $version
     }
 }
 
