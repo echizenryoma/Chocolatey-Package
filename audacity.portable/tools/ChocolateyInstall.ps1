@@ -21,7 +21,7 @@ function GetLatestUrl ([string]$arch) {
 }
 
 $PackageName = 'audacity'
-$Checksum = '6c7e08f3cf4d73ffbccb4da5d76956b19748789d5bf80ac35729f4869426ec6a'
+$Checksum = 'c2c2b4a2907f4a26139e49f11607d9cd1b4576d75f5aeb8ece419113981cbeb4'
 $ChecksumType = 'sha256'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $UnzipLocation = Join-Path $InstallationPath 'tmp'
