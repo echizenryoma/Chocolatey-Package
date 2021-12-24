@@ -15,7 +15,7 @@ function GetLatestUrl ([string]$arch) {
     } | ConvertTo-Json -Compress
 
     $url = "${base}/download/"
-    $page = Invoke-WebRequest -Method Post -Body $body -ContentType "application/json" -Uri $url
+    $page = Invoke-WebRequest -UseBasicParsing -Method Post -Body $body -ContentType "application/json" -Uri $url
     $obj = $page.Content | ConvertFrom-Json
     return $obj.data.url
 }
