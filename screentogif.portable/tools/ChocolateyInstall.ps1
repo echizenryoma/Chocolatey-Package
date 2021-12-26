@@ -1,14 +1,16 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'ScreenToGif'
-$Url = 'https://github.com/NickeManarin/ScreenToGif/releases/download/2.35.2/ScreenToGif.2.35.2.Portable.Arm64.zip'
+$Url32 = 'https://github.com/NickeManarin/ScreenToGif/releases/download/2.35.2/ScreenToGif.2.35.2.Portable.x86.zip'
+$Url64 = 'https://github.com/NickeManarin/ScreenToGif/releases/download/2.35.2/ScreenToGif.2.35.2.Portable.x64.zip'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 . $(Join-Path $ToolsPath "StopProcess.ps1")
 
 $PackageArgs = @{
     PackageName   = $PackageName
-    Url           = $Url
+    Url           = $Url32
+    Url64         = $Url64
     UnzipLocation = $ToolsPath
 }
 Install-ChocolateyZipPackage @PackageArgs
