@@ -31,10 +31,6 @@
     <tags>screen recording recorder gif editor foss media </tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://www.screentogif.com/img/logo.d2151712.png</iconUrl>
-    <dependencies>
-      <dependency id="ffmpeg" version="4.2.2" />
-      <dependency id="netfx-4.8" version="4.8.0.20190930" />
-    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
