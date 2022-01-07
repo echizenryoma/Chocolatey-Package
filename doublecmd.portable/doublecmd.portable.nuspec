@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>doublecmd.portable</id>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <title>Double Commander for Windows (Portable)</title>
     <authors>Alexander Koblov, Przemyslaw Nagay</authors>
     <owners>echizenryoma</owners>

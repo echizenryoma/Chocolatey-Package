@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'doublecmd'
-$Url32 = 'https://github.com/doublecmd/doublecmd/releases/download/v1.0.2/doublecmd-1.0.2.i386-win32.zip'
-$Url64 = 'https://github.com/doublecmd/doublecmd/releases/download/v1.0.2/doublecmd-1.0.2.x86_64-win64.zip'
+$Url32 = 'https://github.com/doublecmd/doublecmd/releases/download/v1.0.3/doublecmd-1.0.3.i386-win32.zip'
+$Url64 = 'https://github.com/doublecmd/doublecmd/releases/download/v1.0.3/doublecmd-1.0.3.x86_64-win64.zip'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $UnzipLocation = Join-Path $InstallationPath 'tmp'
 
