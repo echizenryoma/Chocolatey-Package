@@ -2,7 +2,7 @@
 
 $PackageName = 'mkvtoolnix'
 $Url32 = 'https://mkvtoolnix.download/windows/releases/64.0.0/mkvtoolnix-32-bit-64.0.0.7z'
-$Url64 = 'https://mkvtoolnix.download/windows/releases/64.0.0/mkvtoolnix-32-bit-64.0.0.7z'
+$Url64 = 'https://mkvtoolnix.download/windows/releases/64.0.0/mkvtoolnix-64-bit-64.0.0.7z'
 $Checksum32 = '29410765fce6930598fecf2ead79c6aba6fe087e'
 $ChecksumType32 = 'sha1'
 $Checksum64 = '29410765fce6930598fecf2ead79c6aba6fe087e'
