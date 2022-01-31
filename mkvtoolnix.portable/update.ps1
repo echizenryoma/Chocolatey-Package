@@ -28,8 +28,8 @@ function global:au_GetLatest {
     $checksum_type = 'sha1'
     $url32 = "${base}/${version}/" + ($sha1table.file -like "*32-bit*7z" | Select-Object -First 1)
     $url64 = "${base}/${version}/" + ($sha1table.file -like "*64-bit*7z" | Select-Object -First 1)
-    $checksum32 = $sha1table | Where-Object file -Like "*32*7z" | Select-Object -First 1 -ExpandProperty sha1sum
-    $checksum64 = $sha1table | Where-Object file -Like "*64*7z" | Select-Object -First 1 -ExpandProperty sha1sum
+    $checksum32 = $sha1table | Where-Object file -Like "*32-bit*7z" | Select-Object -First 1 -ExpandProperty sha1sum
+    $checksum64 = $sha1table | Where-Object file -Like "*64-bit*7z" | Select-Object -First 1 -ExpandProperty sha1sum
 
     return @{
         Version        = $version
