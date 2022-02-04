@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'ventoy'
-$Url32 = 'https://github.com/ventoy/Ventoy/releases/download/v1.0.64/ventoy-1.0.64-windows.zip'
+$Url32 = 'https://github.com/ventoy/Ventoy/releases/download/v1.0.65/ventoy-1.0.65-windows.zip'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $UnzipLocation = Join-Path $InstallationPath 'tmp'
 
