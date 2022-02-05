@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>maxima.portable</id>
+    <version>5.45.1</version>
+    <title>Maxima(Portable)</title>
+    <owners>echizenryoma</owners>
+    <authors>Macsyma group at Project MAC and volunteer contributors</authors>
+    <projectUrl>http://maxima.sourceforge.net/</projectUrl>
+    <licenseUrl>https://sourceforge.net/p/maxima/code/ci/master/tree/COPYING</licenseUrl>
+    <iconUrl><![CDATA[https://a.fsdn.com/allura/p/maxima/icon?1643569609?&w=135]]></iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description>
+      <![CDATA[
+Maxima, a Computer Algebra System
+
+Maxima is a system for the manipulation of symbolic and numerical expressions, including differentiation, integration, Taylor series, Laplace transforms, ordinary differential equations, systems of linear equations, polynomials, sets, lists, vectors, matrices and tensors. Maxima yields high precision numerical results by using exact fractions, arbitrary-precision integers and variable-precision floating-point numbers. Maxima can plot functions and data in two and three dimensions.
+
+The Maxima source code can be compiled on many systems, including Windows, Linux, and MacOS X. The source code for all systems and precompiled binaries for Windows and Linux are available at the SourceForge file manager.
+
+Maxima is a descendant of Macsyma, the legendary computer algebra system developed in the late 1960s at the Massachusetts Institute of Technology. It is the only system based on that effort still publicly available and with an active user community, thanks to its open source nature. Macsyma was revolutionary in its day, and many later systems, such as Maple and Mathematica, were inspired by it.
+
+]]>
+    </description>
+    <summary>Maxima is a computer algebra system based on a 1982 version of Macsyma</summary>
+    <tags>maxima wxmaxima cas algebra foss cross-platform mathematics</tags>
+    <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Packages/tree/master/maxima.portable</packageSourceUrl>
+    <mailingListUrl>http://maxima.sourceforge.net/maximalist.html</mailingListUrl>
+    <projectSourceUrl>https://sourceforge.net/p/maxima/code/ci/master/tree</projectSourceUrl>
+    <releaseNotes>https://sourceforge.net/p/maxima/code/ci/master/tree/changelogs/ChangeLog-5.45.1.md</releaseNotes>
+    <docsUrl>http://maxima.sourceforge.net/documentation.html</docsUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/maxima/_list/tickets</bugTrackerUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
