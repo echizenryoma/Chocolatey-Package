@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'ScreenToGif'
-$Url32 = 'https://github.com/NickeManarin/ScreenToGif/releases/download/2.35.4/ScreenToGif.2.35.4.Portable.x86.zip'
-$Url64 = 'https://github.com/NickeManarin/ScreenToGif/releases/download/2.35.4/ScreenToGif.2.35.4.Portable.x64.zip'
+$Url32 = 'https://github.com/NickeManarin/ScreenToGif/releases/download/2.36/ScreenToGif.2.36.Light.Portable.x86.zip'
+$Url64 = 'https://github.com/NickeManarin/ScreenToGif/releases/download/2.36/ScreenToGif.2.36.Light.Portable.x64.zip'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 . $(Join-Path $ToolsPath "StopProcess.ps1")
