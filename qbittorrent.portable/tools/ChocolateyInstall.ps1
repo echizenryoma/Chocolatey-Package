@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'qbittorrent'
-$Url32 = 'https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.4.0/qbittorrent_4.4.0_setup.exe/download'
-$Url64 = 'https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.4.0/qbittorrent_4.4.0_x64_setup.exe/download'
+$Url32 = 'https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.4.1/qbittorrent_4.4.1_setup.exe/download'
+$Url64 = 'https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.4.1/qbittorrent_4.4.1_x64_setup.exe/download'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 $PackageArgs = @{
