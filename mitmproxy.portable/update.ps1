@@ -6,7 +6,7 @@ function global:au_SearchReplace {
             "(^[$]Url\s*=\s*)('.*')" = "`$1'$($Latest.URL)'"
         }
         ".\mitmproxy.portable.nuspec"   = @{
-            "(\<releaseNotes\>).*?(\</releaseNotes\>)" = "`$1$stRlea.eeotes)`$2"
+            "(\<releaseNotes\>).*?(\</releaseNotes\>)" = "`$1'$($Latest.ReleaseNotes)'`$2"
         }
     }
 }
