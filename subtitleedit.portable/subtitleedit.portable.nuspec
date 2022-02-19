@@ -8,7 +8,7 @@
     <owners>Echizen Ryoma</owners>
     <licenseUrl>https://github.com/SubtitleEdit/subtitleedit/blob/master/LICENSE.txt</licenseUrl>
     <projectUrl>http://www.nikse.dk/SubtitleEdit/</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/SubtitleEdit/subtitleedit/master/src/Icons/SE.ico</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/SubtitleEdit/subtitleedit/master/src/ui/SE2.ico</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>With SE you can easily adjust a subtitle if it is out of sync with the video in several different ways. You can also use SE for making new subtitles from scratch (do use the time-line/waveform/spectrogram) or translating subtitles.</description>
     <summary>Subtitle Edit is a free (open source) editor for video subtitles - a subtitle editor :)</summary>
