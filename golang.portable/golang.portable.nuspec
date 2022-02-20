@@ -8,7 +8,7 @@
     <title>Go programming language</title>
     <authors>Robert Griesemer, Rob Pike, Ken Thompson</authors>
     <projectUrl>https://golang.org</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/golang/go/master/doc/gopher/favicon.svg</iconUrl>
+    <iconUrl>https://go.dev/blog/go-brand/Go-Logo/SVG/Go-Logo_Blue.svg</iconUrl>
     <licenseUrl>https://golang.org/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://golang.org/change</projectSourceUrl>
