@@ -3,9 +3,7 @@
 function global:au_SearchReplace {
     @{
         'tools\ChocolateyInstall.ps1' = @{
-            "(^[$]Url\s*=\s*)('.*')"          = "`$1'$($Latest.URL32)'"
-            "(^[$]Checksum\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum32)'"
-            "(^[$]ChecksumType\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
+            "(^[$]Url\s*=\s*)('.*')" = "`$1'$($Latest.URL)'"
         }
     }
 }
@@ -15,22 +13,15 @@ function global:au_AfterUpdate ($Package) {
 }
 
 function global:au_GetLatest {
-    $domain = "https://github.com"
-    $base = "${domain}/SubtitleEdit/subtitleedit"
+    $page = Invoke-WebRequest -UseBasicParsing -Uri "https://api.github.com/repos/SubtitleEdit/subtitleedit/releases/latest"
+    $json = $page.Content | ConvertFrom-Json
 
-    $url = "${base}/releases/latest"
-    $page = Invoke-WebRequest -UseBasicParsing -Uri $url
-    $version = ($page.Links.href -match "releases/tag/(v?)\d+(\.\d+)+$" | Select-Object -Unique -First 1) -split "/|v" -match "\d+(\.\d+)+" | Select-Object -First 1
-
-    $url = $page.Links.href -match "SE\d+\.zip$" | Select-Object -First 1
-    $checksum_type = 'sha256'
-    $checksum = $page.Content -split "<|>|\n" -match "^[0-9a-f]{64}$" | Select-Object -First 1 -Skip 1
-	
+    $version = $json.tag_name -replace "v", ""
+    $url = ($json.assets | Where-Object name -Match "\.zip")[0].browser_download_url
+    
     return @{
-        Version        = $version
-        URL32          = $url
-        Checksum32     = $checksum
-        ChecksumType32 = $checksum_type
+        Version = $version
+        URL     = $url
     }
 }
 
