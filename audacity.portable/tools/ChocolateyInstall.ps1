@@ -21,8 +21,10 @@ function GetLatestUrl ([string]$arch) {
 }
 
 $PackageName = 'audacity'
-$Checksum = 'c2c2b4a2907f4a26139e49f11607d9cd1b4576d75f5aeb8ece419113981cbeb4'
-$ChecksumType = 'sha256'
+$Checksum32 = 'c2c2b4a2907f4a26139e49f11607d9cd1b4576d75f5aeb8ece419113981cbeb4'
+$ChecksumType32 = 'sha256'
+$Checksum64 = 'df0c57f262c160d768f36d4a942ee893479bfdbc52676fb49dc49b129fb808a3'
+$ChecksumType64 = 'sha256'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $UnzipLocation = Join-Path $InstallationPath 'tmp'
 
@@ -30,13 +32,15 @@ $Url32 = GetLatestUrl("32")
 $Url64 = GetLatestUrl("64")
 
 $PackageArgs = @{
-    PackageName   = $PackageName
-    Url32         = $Url32
-    Url64         = $Url64
-    Checksum      = $Checksum
-    ChecksumType  = $ChecksumType
-    UnzipLocation = $UnzipLocation
-    Options       = @{
+    PackageName    = $PackageName
+    Url32          = $Url32
+    Url64          = $Url64
+    Checksum32     = $Checksum32
+    ChecksumType32 = $ChecksumType32
+    Checksum64     = $Checksum64
+    ChecksumType64 = $ChecksumType64
+    UnzipLocation  = $UnzipLocation
+    Options        = @{
         Headers = @{
             UserAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36' 
             Referer   = 'https://www.fosshub.com/Audacity.html'
