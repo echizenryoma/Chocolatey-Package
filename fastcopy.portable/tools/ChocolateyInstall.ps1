@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'fastcopy'
-$Url32 = 'https://fastcopy.jp/archive/FastCopy4.1.0_installer.exe'
+$Url32 = 'https://fastcopy.jp/archive/FastCopy4.1.1_installer.exe'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $SilentArgs = "/DIR=`"${ToolsPath}`" /EXTRACT"
 
