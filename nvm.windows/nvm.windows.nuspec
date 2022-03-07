@@ -11,7 +11,6 @@
     <summary>A node.js version management utility for Windows.</summary>
     <description>Manage multiple installations of node.js on a Windows computer.</description>
     <projectUrl>https://github.com/coreybutler/nvm-windows</projectUrl>
-    <packageSourceUrl>https://github.com/arieljannai/chocolatey-nvm-windows</packageSourceUrl>
     <tags>nvm node nodejs node.js version management windows portable</tags>
     <copyright></copyright>
     <licenseUrl>https://github.com/coreybutler/nvm-windows/blob/master/LICENSE</licenseUrl>
