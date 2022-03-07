@@ -16,7 +16,7 @@
     <copyright></copyright>
     <licenseUrl>https://github.com/coreybutler/nvm-windows/blob/master/LICENSE</licenseUrl>
     <iconUrl>http://devstickers.com/assets/img/cat/nodejs.png</iconUrl>
-    <bugTrackerUrl>https://github.comcoreybutler/nvm-windows/issues</bugTrackerUrl>
+    <bugTrackerUrl>https://github.com/coreybutler/nvm-windows/issues</bugTrackerUrl>
     <releaseNotes>https://github.com/coreybutler/nvm-windows/releases</releaseNotes> 
     <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/nvm.windows</packageSourceUrl>
   </metadata>
