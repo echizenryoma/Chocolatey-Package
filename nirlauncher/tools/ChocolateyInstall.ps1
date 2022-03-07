@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'NirSoft'
-$Url = 'https://download.nirsoft.net/nirsoft_package_enc_1.23.57.zip'
-$Checksum = '453076967dc5a02a5c89919d393ad72a592c59daa7a050fabdfc7bd705b0eb37'
+$Url = 'https://download.nirsoft.net/nirsoft_package_enc_1.23.58.zip'
+$Checksum = '7025d30d7451fd515646a0fec172f8e89f950744aa7c0487bcaa478147366a99'
 $ChecksumType = 'sha256'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $UnzipPassword = 'nirsoft9876$'
