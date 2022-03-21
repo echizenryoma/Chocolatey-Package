@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'ChocolateyGUI'
-$Url = 'https://github.com/chocolatey/ChocolateyGUI/releases/download/0.20.0/ChocolateyGUI.msi'
+$Url = 'https://github.com/chocolatey/ChocolateyGUI/releases/download/1.0.0/ChocolateyGUI.msi'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $TmpLocation = Join-Path $InstallationPath 'tmp'
