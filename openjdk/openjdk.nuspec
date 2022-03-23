@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>openjdk</id>
-    <version>17.0.2</version>
+    <version>18.0.0</version>
     <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/openjdk</packageSourceUrl>
     <owners>echizenryoma</owners>
     <title>OpenJDK</title>
