@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'drawio'
-$Url64 = 'https://github.com/jgraph/drawio-desktop/releases/download/v16.5.1/draw.io-16.5.1-windows-no-installer.exe'
+$Url64 = 'https://github.com/jgraph/drawio-desktop/releases/download/v17.2.1/draw.io-17.2.1-windows-no-installer.exe'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $UnzipLocation = Join-Path $InstallationPath 'tmp'
 
