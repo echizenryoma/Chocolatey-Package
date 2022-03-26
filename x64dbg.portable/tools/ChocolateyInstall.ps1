@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'x64dbg'
-$Url32 = 'https://sourceforge.net/projects/x64dbg/files/snapshots/snapshot_2022-03-24_10-50.zip'
+$Url32 = 'https://sourceforge.net/projects/x64dbg/files/snapshots/snapshot_2022-03-26_14-14.zip'
 $ToolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 . $(Join-Path $ToolsPath "StopProcess.ps1")
