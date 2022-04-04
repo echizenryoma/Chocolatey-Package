@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'dog'
-$Url32 = 'https://github.com/rbsec/sslscan/releases/download/2.0.11/sslscan-win-2.0.11.zip'
+$Url32 = 'https://github.com/rbsec/sslscan/releases/download/2.0.13/sslscan-win-2.0.13.zip'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 $PackageArgs = @{
