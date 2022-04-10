@@ -11,7 +11,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $url = 'https://api.github.com/repos/AdoptOpenJDK/openjdk8-binaries/releases/latest'
+    $url = 'https://api.github.com/repos/AdoptOpenJDK/openjdk11-binaries/releases/latest'
     $page = Invoke-WebRequest -UseBasicParsing -Uri $url
     $json = $page.Content | ConvertFrom-Json
 
@@ -22,7 +22,7 @@ function global:au_GetLatest {
     $table = [System.Text.Encoding]::UTF8.GetString($page.Content) -split "\n" | ConvertFrom-String -PropertyNames checksum, file
     $checksum64 = $table.checksum
 
-    $version = [version](($json.name -split "_")[0] -split "[a-z]|-" -match "\d" -join ".")
+    $version = [version](($json.name -split "_")[0] -split "[a-z]|-|\+" -match "\d+(\.\d+)+" -join ".")
 	
     return @{
         Version        = $version
