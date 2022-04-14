@@ -14,9 +14,8 @@ Install-ChocolateyZipPackage @PackageArgs
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $BinFile = Join-Path $InstallationPath "$PackageName.exe"
 Install-BinFile -Name $PackageName -Path $BinFile
+$LinkPath = Join-Path $([Environment]::GetFolderPath("CommonDesktopDirectory")) "DBeaver Community Edition.lnk"
+Install-ChocolateyShortcut -ShortcutFilePath $LinkPath -TargetPath $BinFile -WorkingDirectory $InstallationPath
 
 $BinFile = Join-Path $InstallationPath "$PackageName-cli.exe"
 Install-BinFile -Name "$PackageName-cli" -Path $BinFile
-
-$LinkPath = Join-Path $([Environment]::GetFolderPath("CommonDesktopDirectory")) "DBeaver Community Edition.lnk"
-Install-ChocolateyShortcut -ShortcutFilePath $LinkPath -TargetPath $BinFile -WorkingDirectory $InstallationPath
