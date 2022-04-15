@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'maxima'
-$Url32 = 'https://sourceforge.net/projects/maxima/files/Maxima-Windows/5.45.1-Windows/maxima-5.45.1s-win32.exe/download'
-$Url64 = 'https://sourceforge.net/projects/maxima/files/Maxima-Windows/5.45.1-Windows/maxima-5.45.1s-win64.exe/download'
+$Url32 = 'https://sourceforge.net/projects/maxima/files/Maxima-Windows/5.46.0-Windows/maxima-5.46.0-win32.exe/download'
+$Url64 = 'https://sourceforge.net/projects/maxima/files/Maxima-Windows/5.46.0-Windows/maxima-5.46.0-win64.exe/download'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $UnzipLocation = Join-Path $InstallationPath 'tmp'
 
