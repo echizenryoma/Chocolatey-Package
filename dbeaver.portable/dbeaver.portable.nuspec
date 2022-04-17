@@ -38,7 +38,7 @@
     <releaseNotes>https://github.com/serge-rider/dbeaver/releases/tag/22.0.2</releaseNotes>
     <tags>cross-platform database mysql oracle db2 sql-server postgresql sql dbeaver foss</tags>
     <projectSourceUrl>https://github.com/serge-rider/dbeaver</projectSourceUrl>
-    <packageSourceUrl>hhttps://github.com/echizenryoma/Chocolatey-Packages/tree/master/dbeaver.portable</packageSourceUrl>
+    <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Packages/tree/master/dbeaver.portable</packageSourceUrl>
     <docsUrl>http://dbeaver.jkiss.org/docs/</docsUrl>
     <mailingListUrl>http://dbeaver.jkiss.org/forum/index.php</mailingListUrl>
     <bugTrackerUrl>https://github.com/serge-rider/dbeaver/issues</bugTrackerUrl>

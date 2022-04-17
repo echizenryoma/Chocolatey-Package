@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>stellarium.portable</id>
+    <version>0.22.1</version>
+    <title>Stellarium</title>
+    <authors>Stellarium Developers</authors>
+    <owners>echizenryoma</owners>
+    <licenseUrl>https://bazaar.launchpad.net/~stellarium/stellarium/trunk/view/head:/COPYING</licenseUrl>
+    <projectUrl>https://www.stellarium.org/</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/Stellarium/stellarium/master/data/icons/512x512/stellarium.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description><![CDATA[Stellarium is a free open source planetarium for your computer. It shows a realistic sky in 3D, just like what you see with the naked eye, binoculars or a telescope. It is being used in planetarium projectors. Just set your coordinates and go.
+]]>
+    </description>
+    <summary>Stellarium is a free GPL software which renders realistic skies in real time with OpenGL. With Stellarium, you really see what you can see with your eyes, binoculars or a small telescope. Stellarium is also used in real planetariums.</summary>
+    <releaseNotes>[News](https://sourceforge.net/p/stellarium/news/)</releaseNotes>
+    <copyright>Copyright © Stellarium Developers</copyright>
+    <tags>stellarium admin planetarium sky stars constellations</tags>
+    <projectSourceUrl>https://bazaar.launchpad.net/~stellarium/stellarium/trunk/files</projectSourceUrl>
+    <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Packages/tree/master/stellarium.portable</packageSourceUrl>
+    <docsUrl>https://github.com/Stellarium/stellarium/wiki</docsUrl>
+    <mailingListUrl>https://sourceforge.net/p/stellarium/mailman/</mailingListUrl>
+    <bugTrackerUrl>https://bugs.launchpad.net/stellarium</bugTrackerUrl>
+    <dependencies>
+      <dependency id="innoextract" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
