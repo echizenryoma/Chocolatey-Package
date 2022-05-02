@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'kdenlive'
-$Url64 = 'https://download.kde.org/stable/kdenlive/21.12/windows/kdenlive-21.12.3_standalone.exe'
+$Url64 = 'https://download.kde.org/stable/kdenlive/22.04/windows/kdenlive-22.04.0-1_standalone.exe'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $TmpPath = Join-Path $InstallationPath "tmp"
 
