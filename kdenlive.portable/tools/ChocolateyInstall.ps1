@@ -14,7 +14,7 @@ Install-ChocolateyZipPackage @PackageArgs
 
 $AppPath = (Get-ChildItem -Path $TmpPath -Directory | Where-Object Name -Match "${PackageName}")[0].FullName
 Write-Output "Installing $AppPath"
-Get-ChildItem -Path $AppPath -Recurse | Move-Item -Destination $InstallationPath
+Copy-Item -Path "$AppPath/*" -Destination $InstallationPath -Force -Recurse
 
 Remove-Item -Path $TmpPath -Force -Recurse
 

@@ -18,7 +18,7 @@ Get-ChocolateyWebFile @PackageArgs
 & innoextract.exe -e "$BinPath" -d "$TmpPath"
 
 $AppPath = Join-Path $TmpPath 'app'
-Get-ChildItem -Path $AppPath -Recurse | Move-Item -Destination $InstallationPath
+Copy-Item -Path "$AppPath/*" -Destination $InstallationPath -Force -Recurse
 
 Remove-Item -Path $TmpPath -Force -Recurse
 
