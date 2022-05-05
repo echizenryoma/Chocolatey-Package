@@ -12,8 +12,11 @@ function global:au_GetLatest {
 
     $page = Invoke-WebRequest -UseBasicParsing -Uri $url
     $url64 = ($page.Links.href -match "windows.*zip$")[0]
-    $version = ($url64 -split '/|_' -match '^openjdk-\d+(\.\d+)*$')[0] -replace "openjdk-",""
-    $dot_count = 2 - ($version.ToCharArray() | Where-Object {$_ -eq '.'} | Measure-Object).Count
+    $version = ($url64 -split '/|_' -match '^openjdk-\d+(\.\d+)*$')[0] -replace "openjdk-", ""
+    $dot_count = 2 - ($version.ToCharArray() | Where-Object { $_ -eq '.' } | Measure-Object).Count
+    if ($dot_count -lt 0) {
+        $dot_count = 0
+    }
     $version = $version + (".0" * $dot_count)
 
     return @{
