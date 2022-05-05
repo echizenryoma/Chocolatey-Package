@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'LibreOffice'
-$Url64 = 'https://download.documentfoundation.org/libreoffice/portable/7.3.1/LibreOfficePortable_7.3.1_MultilingualAll.paf.exe'
+$Url64 = 'https://download.documentfoundation.org/libreoffice/portable/7.3.2/LibreOfficePortable_7.3.2_MultilingualAll.paf.exe'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 
 $PackageArgs = @{
