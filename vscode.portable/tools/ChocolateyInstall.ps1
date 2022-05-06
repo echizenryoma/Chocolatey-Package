@@ -1,12 +1,12 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'vscode'
-$Url32 = 'https://update.code.visualstudio.com/1.66.2/win32-archive/stable'
+$Url32 = 'https://update.code.visualstudio.com/1.67.0/win32-archive/stable'
 $ChecksumType32 = 'sha256'
-$Checksum32 = '7065ae4ef0269c9eaf35659c0eb97fe82e280f6729d06d8f629e4112b1ff6d5a'
-$Url64 = 'https://update.code.visualstudio.com/1.66.2/win32-x64-archive/stable'
+$Checksum32 = '9a7a43bf5f1dc0a8f57ed1bf630a0cf6925c7f1c0b316c9244d0550a7177eb19'
+$Url64 = 'https://update.code.visualstudio.com/1.67.0/win32-x64-archive/stable'
 $ChecksumType64 = 'sha256'
-$Checksum64 = '4cfa11a9740efda50ffeaf6533f744fdcf70598d8f21b7f7726e3c6cde7a1c0b'
+$Checksum64 = '9d3eb1b6d72ff0b925b524c284bdc980c9f15e29da0b630432e664d76f667bbf'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $DataPath = Join-Path $InstallationPath 'data'
 
