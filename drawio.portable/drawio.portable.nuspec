@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>drawio.portable</id>
-    <version>18.0.1</version>
+    <version>18.0.4</version>
     <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/drawio.portable</packageSourceUrl>
     <owners>Echizen Ryoma</owners>
     <title>draw.io (Portable)</title>
