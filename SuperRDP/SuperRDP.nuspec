@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+    <metadata>
+        <id>SuperRDP</id>
+        <title>SuperRDP</title>
+        <version>2.0.0.38</version>
+        <authors>SuperRDP</authors>
+        <owners>echizenryoma</owners>
+        <summary>RDP Wrapper Library</summary>
+        <description>The goal of this project is to enable Remote Desktop Host support and concurrent RDP sessions on reduced functionality systems for home usage.
+		RDP Wrapper works as a layer between Service Control Manager and Terminal Services, so the original termsrv.dll file remains untouched. Also this method is very strong against Windows Update.
+        </description>
+        <projectUrl>https://github.com/anhkgg/SuperRDP</projectUrl>
+        <licenseUrl>https://raw.githubusercontent.com/anhkgg/SuperRDP/master/LICENSE</licenseUrl>
+        <tags>admin rdp remote desktop</tags>
+        <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/SuperRDP</packageSourceUrl>
+    </metadata>
+    <files>
+        <file src="tools\**" target="tools" />
+    </files>
+</package>
