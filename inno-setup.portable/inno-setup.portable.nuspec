@@ -51,6 +51,9 @@ However if you wish to show your appreciation and support its development you ca
     <bugTrackerUrl>https://github.com/jrsoftware/issrc/issues</bugTrackerUrl>
     <projectSourceUrl>https://github.com/jrsoftware/issrc</projectSourceUrl>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/inno-setup</packageSourceUrl>
+    <dependencies>
+      <dependency id="innoextract" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
