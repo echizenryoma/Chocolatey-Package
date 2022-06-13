@@ -20,7 +20,7 @@ Beyond Compare includes built-in comparison viewers for a variety of data types.
     <releaseNotes>https://www.scootersoftware.com/download.php?zz=v4changelog</releaseNotes>
     <copyright>© 1996 Scooter Software Inc</copyright>
     <tags>compare beyondcompare beyond file diff difference trial portable</tags>
-    <packageSourceUrl>https://github.com/flcdrg/au-packages/tree/master/beyondcompare</packageSourceUrl>
+    <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Packages/tree/master/beyondcompare-zh.portable</packageSourceUrl>
     <docsUrl>http://www.scootersoftware.com/v4help/</docsUrl>
     <mailingListUrl>http://www.scootersoftware.com/vbulletin/</mailingListUrl>
     <dependencies>
