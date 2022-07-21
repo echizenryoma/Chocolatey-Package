@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>bcompare-zh.portable</id>
-    <version>4.4.2.26348</version>
+    <version>4.4.3.26655</version>
     <title>Beyond Compare</title>
     <authors>Scooter Software</authors>
     <owners>echizenryoma</owners>
