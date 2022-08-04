@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'Insomnia'
-$Url64 = 'https://github.com/Kong/insomnia/releases/download/core%402022.4.2/insomnia-2022.4.2-full.nupkg'
+$Url64 = 'https://github.com/Kong/insomnia/releases/download/core%402022.5.0/insomnia-2022.5.0-full.nupkg'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $UnzipLocation = Join-Path $InstallationPath 'tmp'
 
