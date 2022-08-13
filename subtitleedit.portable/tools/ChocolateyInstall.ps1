@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'SubtitleEdit'
-$Url = 'https://github.com/SubtitleEdit/subtitleedit/releases/download/3.6.6/SE366.zip'
+$Url = 'https://github.com/SubtitleEdit/subtitleedit/releases/download/3.6.7/SE367.zip'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 $PackageArgs = @{
