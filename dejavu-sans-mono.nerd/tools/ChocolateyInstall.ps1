@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'dejavu-sans-mono.nerd'
-$Url32 = 'https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.0/DejaVuSansMono.zip'
+$Url32 = 'https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.1/DejaVuSansMono.zip'
 $ToolsPath = $(Split-Path -Parent $MyInvocation.MyCommand.Definition)
 
 Get-ChildItem -Directory $ToolsPath | Remove-Item -Recurse -Force -ErrorAction Ignore
