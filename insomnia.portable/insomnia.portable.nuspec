@@ -6,7 +6,7 @@
     <version>2022.6.0</version>
     <packageSourceUrl>https://github.com/TakataSanshiro/Chocolatey-Packages/tree/master/automatic/insomnia-rest-api-client</packageSourceUrl>
     <authors>Floating Keyboard Software</authors>
-    <owners>echizenryoma</owners>
+    <owners>Echizen Ryoma</owners>
     <summary> Debug APIs like a human, not a robot. Finally, a REST client you'll love. For 64bit only.</summary>
     <description>
 Powerful HTTP toolbelt, in one intuitive app

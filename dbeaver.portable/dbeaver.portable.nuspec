@@ -5,7 +5,7 @@
     <version>22.2.1</version>
     <title>DBeaver Community Edition (Portable)</title>
     <authors>Serge Rieder</authors>
-    <owners>echizenryoma</owners>
+    <owners>Echizen Ryoma</owners>
     <licenseUrl>https://github.com/dbeaver/dbeaver/blob/devel/LICENSE.md</licenseUrl>
     <projectUrl>http://dbeaver.jkiss.org/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/majkinetor/chocolatey/dbeaver/icon.png</iconUrl>

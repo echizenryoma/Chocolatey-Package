@@ -7,7 +7,7 @@
     <title>NVM (Windows)</title>
     <version>1.1.9</version>
     <authors>coreybutler</authors>
-    <owners>echizenryoma</owners>
+    <owners>Echizen Ryoma</owners>
     <summary>A node.js version management utility for Windows.</summary>
     <description>Manage multiple installations of node.js on a Windows computer.</description>
     <projectUrl>https://github.com/coreybutler/nvm-windows</projectUrl>
