@@ -2,14 +2,14 @@
 Group=K-Lite Codec Pack
 NoIcons=0
 SetupType=custom
-Components=choice\best, player\mpchc\x64, video\microsoft\vc1, video\microsoft\wmv, video\lav, video\lav\hevc, video\lav\h264, video\lav\mpeg4, video\lav\mpeg2, video\lav\mpeg1, video\lav\other, video\ffproc\manual, audio\microsoft\wma, audio\lav, audio\lav\ac3dts, audio\lav\truehd, audio\lav\aac, audio\lav\flac, audio\lav\mpeg, audio\lav\other, audio\ffproc\manual, sourcefilter\microsoft\avi, sourcefilter\microsoft\mpegps, sourcefilter\microsoft\wmv, sourcefilter\lav, sourcefilter\lav\matroska, sourcefilter\lav\mp4, sourcefilter\lav\mpegts, sourcefilter\lav\other, sourcefilter\dcbass\shoutcast, sourcefilter\dcbass\optimfrog, sourcefilter\dcbass\tracker, subtitles\vsfilter, videovfw\x264, videovfw\ffdshow, videovfw\xvid, videovfw\lagarith, videovfw\huffyuv, audioacm\mp3lame, audioacm\ac3acm, tools\codectweaktool, tools\mediainfo, tools\graphstudio, tools\vobsubstrip, tools\fourcc, shell\icaros_thumbnail, shell\icaros_property, misc\brokencodecs, misc\brokenfilters
-Tasks=reset_settings\fresh, mpc_desktop, mpc_sendto, mediainfo_sendto, config_shortcuts, systray_lavsplitter, systray_lav, systray_ffdshow, wmp_reg_formats, mediainfo_contextmenu, adjust_preferred_decoders, vmr9, w10_disable_thumb_cleanup, h264mvc
+Components=player\mpchc\x64, video\microsoft\vc1, video\microsoft\wmv, video\lav, video\lav\hevc, video\lav\h264, video\lav\mpeg4, video\lav\mpeg2, video\lav\mpeg1, video\lav\other, video\ffproc\manual, audio\microsoft\wma, audio\lav, audio\lav\ac3dts, audio\lav\truehd, audio\lav\aac, audio\lav\flac, audio\lav\mpeg, audio\lav\other, audio\ffproc\manual, sourcefilter\microsoft\avi, sourcefilter\microsoft\mpegps, sourcefilter\microsoft\wmv, sourcefilter\lav, sourcefilter\lav\matroska, sourcefilter\lav\mp4, sourcefilter\lav\mpegts, sourcefilter\lav\other, sourcefilter\dcbass\optimfrog, sourcefilter\dcbass\tracker, subtitles\vsfilter, subtitles\xysubfilter, other\madvr, other\mpcvr, other\haalirenderer, videovfw\x264, videovfw\xvid, videovfw\lagarith, videovfw\huffyuv, audioacm\ac3acm, audioacm\mp3lame, videovfw\ffdshow, tools\codectweaktool, tools\mediainfo, tools\graphstudio, shell\icaros_thumbnail, shell\icaros_property, misc\brokencodecs, misc\brokenfilters
+Tasks=reset_settings\fresh, mpc_sendto, mediainfo_sendto, config_shortcuts, systray_lavsplitter, systray_lav, systray_ffdshow, systray_madvr, wmp_reg_formats, mediainfo_contextmenu, adjust_preferred_decoders, w10_disable_thumb_cleanup, h264mvc
 NoRestart=1
 CloseApplications=0
 [Data]
 uim_version=12
-creationdate=20211003
-creationtime=210028
+creationdate=20221012
+creationtime=110741
 [Settings]
 abort_if_existing_version_is_newer=1
 keep_existing_settings_on_upgrade=1
@@ -18,7 +18,7 @@ install_codecs_only_for_mpchc=0
 [File Associations]
 Media Player Classic (x64)=.avi;.divx;.amv;.mkv;.mk3d;.webm;.mp4;.m4v;.mp4v;.mpv4;.mov;.hdmov;.flv;.f4v;.ogm;.ogv;.mpeg;.mpg;.mp2v;.mpv2;.m1v;.m2v;.m2p;.mpe;.ts;.m2ts;.mts;.m2t;.tp;.trp;.rec;.3gp;.3gpp;.3g2;.3gp2;.wmv;.asf;.dv;.mxf;.bdmv;.mpls;.ssif;.ifo;.vob;.rm;.rmvb;.ram;.avs;.wtv;.ivf;.dav;.264;.bik;.smk;.video;.mp3;.wav;.cda;.mpl;.wma;.ogg;.oga;.mka;.m4a;.aac;.flac;.wv;.mpc;.opus;.alac;.tta;.ac3;.dts;.mlp;.aob;.ape;.tak;.aif;.aiff;.aifc;.caf;.amr;.ra;.spx;.mid;.midi;.dff;.dsf;.mpcpl;.m3u;.m3u8;.pls;.cue;.asx
 [Thumbnails]
-Extensions=.avi;.divx;.amv;.mpeg;.mpg;.m1v;.m2v;.mp2v;.mpv2;.vob;.wmv;.asf;.mp4;.m4v;.mp4v;.mpv4;.mov;.hdmov;.3g2;.3gp;.3gp2;.3gpp;.mkv;.mk3d;.webm;.ts;.m2ts;.mts;.m2t;.tp;.flv;.f4v;.ogm;.ogv;.rm;.rmvb;.dv;.mxf;.ivf;.evo;.webp;.video;.cbr;.cbz;.cb7;.mp3;.wav;.m4a;.ape;.flac;.ogg;.mka;.mpc;.opus;.tak;.wv
+Extensions=.avi;.divx;.amv;.mpeg;.mpg;.m1v;.m2v;.mp2v;.mpv2;.vob;.wmv;.asf;.mp4;.m4v;.mp4v;.mpv4;.mov;.hdmov;.3g2;.3gp;.3gp2;.3gpp;.mkv;.mk3d;.webm;.ts;.m2ts;.mts;.m2t;.tp;.flv;.f4v;.ogm;.ogv;.rm;.rmvb;.dv;.mxf;.ivf;.evo;.webp;.264;.video;.cbr;.cbz;.cb7;.mp3;.wav;.m4a;.ape;.flac;.ogg;.mka;.mpc;.opus;.tak;.wv
 [Audio Configuration]
 audio_passthrough=0
 bitstream_ac3=0
@@ -35,7 +35,7 @@ lang_autodetect=1
 [MPC-HC]
 subtitles=1
 subtitle_download=0
-osd=0
+osd=1
 seekpreview=0
 fast_seek=1
 internal_audio_renderer=0
@@ -46,6 +46,4 @@ use_ini=0
 translations=1
 iconlib=flatro
 playlist_context_menu=1
-default_gui=0
-darktheme=1
-toolbar=standard
+default_gui=1
