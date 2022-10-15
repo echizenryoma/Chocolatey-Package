@@ -3,7 +3,7 @@
 $PackageName = 'npcap'
 $Url32 = 'https://nmap.org/npcap/dist/npcap-1.71.exe'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
-$DownloadPath = Join-Path $ToolsPath "tmp"
+$DownloadPath = (Get-Item -Path $ToolsPath).FullName
 
 $FileName = [IO.Path]::GetFileName($Url32)
 $BinPath = Join-Path $DownloadPath $FileName
@@ -19,4 +19,4 @@ Write-Output "Running Autohotkey installer"
 $AhkScript = Join-Path $ToolsPath "${PackageName}.ahk"
 & AutoHotkey "$AhkScript" install "$BinPath"
 
-Remove-Item -Path $DownloadPath -Force -Recurse -ErrorAction Ignore
+Get-ChildItem $ToolsPath -Include "*.exe" -Recurse | ForEach-Object { $null = New-Item "$($_.FullName).ignore" -Type file -Force }
