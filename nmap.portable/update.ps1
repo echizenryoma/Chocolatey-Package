@@ -16,7 +16,7 @@ function global:au_GetLatest {
   $url = 'https://nmap.org/download.html'
   $page = Invoke-WebRequest -Uri $url -UseBasicParsing
 
-  $url32 = $page.links.href -match '\.zip$' -notmatch 'BETA'
+  $url32 = $page.links.href -match 'setup\.exe$' -notmatch 'BETA'
   $version = $url32 -split '/|-' -match '\d+(\.\d+)+'
 
   return  @{
