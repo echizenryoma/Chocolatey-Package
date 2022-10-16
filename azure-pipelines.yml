@@ -10,6 +10,8 @@ variables:
   GIST_ID: "06bd306e9a1c0a26e8d81fe185ef77d0"
 
 steps:
+  - checkout: self
+    persistCredentials: true
   - powershell: |
       Write-Host '##vso[task.setvariable variable=CHOCOLATEY_API_KEY;issecret=true]secret'
       Write-Host '##vso[task.setvariable variable=GITHUB_API_KEY;issecret=true]secret'
