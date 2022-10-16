@@ -3,21 +3,21 @@
 function global:au_SearchReplace {
     @{
         'tools\ChocolateyInstall.ps1' = @{
-            "(^[$]Url\s*=\s*)('.*')" = "`$1'$($Latest.URL32)'"
+            "(^[$]Url\s*=\s*)('.*')" = "`$1'$($Latest.URL)'"
         }
     }
 }
 
 function global:au_GetLatest {
-    $base = "https://github.com"
-    $url = $base + "/citra-emu/citra-canary/releases/latest"
-    $page = Invoke-WebRequest -UseBasicParsing -Uri $url
-    $url32 = $base + ($page.Links.href -match "windows-mingw.*7z" | Select-Object -First 1)
-    $version = ($url32 -split "/|-" -match "^\d+$") -join "."
-	
+    $page = Invoke-WebRequest -UseBasicParsing -Uri "https://api.github.com/repos/citra-emu/citra-canary/releases/latest"
+    $json = $page.Content | ConvertFrom-Json
+
+    $url = ($json.assets | Where-Object name -Match "windows-mingw.*7z$")[0].browser_download_url
+    $version = ($url -split "/|-" -match "^\d+$") -join "."
+    
     return @{
         Version = $version
-        URL32   = $url32
+        URL     = $url
     }
 }
 
