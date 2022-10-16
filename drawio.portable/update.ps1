@@ -9,14 +9,12 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $domain = "https://github.com"
-    $base = "${domain}/jgraph/drawio-desktop"
+    $page = Invoke-WebRequest -UseBasicParsing -Uri "https://api.github.com/repos/jgraph/drawio-desktop/releases/latest"
+    $json = $page.Content | ConvertFrom-Json
 
-    $url = "${base}/releases/latest"
-    $page = Invoke-WebRequest -UseBasicParsing -Uri $url
-    $version = ($page.Links.href -match "releases/tag/(v?)\d+(\.\d+)+$" | Select-Object -Unique -First 1) -split "/|v" -match "\d+(\.\d+)+" | Select-Object -First 1
-    $url64 = $domain + ($page.Links.href -match "^/.*windows-no-installer" | Select-Object -First 1)
-	
+    $version = $json.tag_name -replace "v", ""
+    $url64 = ($json.assets | Where-Object name -Match "windows-no-installer")[0].browser_download_url
+    
     return @{
         Version = $version
         URL64   = $url64
