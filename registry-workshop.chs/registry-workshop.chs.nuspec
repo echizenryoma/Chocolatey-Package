@@ -2,12 +2,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>registry-workshop.chs</id>
-    <version>5.1.0</version>
-    <title>Registry Workshop</title>
+    <version>5.0.1</version>
+    <title>Registry Workshop (Simplified Chinese)</title>
     <authors>torchsoft</authors>
     <owners>Echizen Ryoma</owners>
     <projectUrl>http://www.torchsoft.com/en/rw_information.html</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/echizenryoma/Chocolatey-Package/master/registry-workshop/registry-workshop.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/echizenryoma/Chocolatey-Package/master/registry-workshop.chs/registry-workshop.png</iconUrl>
     <description>
       <![CDATA[
 Registry Workshop is an advanced registry editor. It is a perfect replacement for RegEdit and RegEdt32 which shipped with Windows.
@@ -20,7 +20,6 @@ Whether you are an advanced user who needs to edit and modify your registry to r
 
 You can read a review of Registry Workshop on PC Magazine's website at http://www.pcmag.com/article2/0,2817,2360098,00.asp
 
- 
 **Key Features**:
 * Multiple undo and redo. The undo history can be saved to disk and reloaded at startup. screen shot
 * Search and replace registry keys, values and data with super fast search algorithm. On a typical PC, you can search the entire registry in about ten seconds! screen shot
@@ -42,7 +41,7 @@ You can read a review of Registry Workshop on PC Magazine's website at http://ww
     <summary>Registry Workshop is an advanced registry editor.</summary>
     <releaseNotes>http://www.torchsoft.com/node/12</releaseNotes>
     <tags>reg registry workshop edit</tags>
-    <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/registry-workshop</packageSourceUrl>
+    <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/registry-workshop.chs</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
