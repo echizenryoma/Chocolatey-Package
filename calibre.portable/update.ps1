@@ -3,24 +3,21 @@
 function global:au_SearchReplace {
     @{
         'tools\ChocolateyInstall.ps1' = @{
-            "(^[$]Url\s*=\s*)('.*')" = "`$1'$($Latest.URL32)'"
+            "(^[$]Url\s*=\s*)('.*')" = "`$1'$($Latest.URL)'"
         }
     }
 }
 
 function global:au_GetLatest {
-    $domain = "https://github.com"
-    $base = "${domain}/kovidgoyal/calibre"
+    $page = Invoke-WebRequest -UseBasicParsing -Uri "https://api.github.com/repos/kovidgoyal/calibre/releases/latest"
+    $json = $page.Content | ConvertFrom-Json
 
-    $url = "${base}/releases/latest"
-    $page = Invoke-WebRequest -UseBasicParsing -Uri $url
-    $version = ($page.Links.href -match "releases/tag/(v?)\d+(\.\d+)+$" | Select-Object -Unique -First 1) -split "/|v" -match "\d+(\.\d+)+" | Select-Object -First 1
-
-    $url32 = $domain + ($page.Links | Where-Object outerHTML -Match "Calibre Portable" | Select-Object -First 1 -ExpandProperty href)
-	
+    $version = $json.tag_name -replace "v", ""
+    $url = ($json.assets | Where-Object name -Match "portable.*\.exe$")[0].browser_download_url
+    
     return @{
         Version = $version
-        URL32   = $url32
+        URL     = $url
     }
 }
 
