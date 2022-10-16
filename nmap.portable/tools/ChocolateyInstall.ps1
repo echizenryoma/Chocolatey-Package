@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'nmap'
-$Url32 = 'https://nmap.org/dist/nmap-7.92-win32.zip'
+$Url32 = 'https://nmap.org/dist/nmap-7.93-setup.exe'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $UnzipLocation = Join-Path $InstallationPath 'tmp'
 
