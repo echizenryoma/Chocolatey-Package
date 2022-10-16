@@ -2,10 +2,6 @@
 
 function global:au_SearchReplace {
 	@{
-		'tools\ChocolateyInstall.ps1' = @{
-			"(^[$]Checksum\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum32)'"
-			"(^[$]ChecksumType\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
-		}
 	}
 }
 
