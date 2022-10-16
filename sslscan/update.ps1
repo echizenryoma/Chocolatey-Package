@@ -13,7 +13,7 @@ function global:au_GetLatest {
     $json = $page.Content | ConvertFrom-Json
 
     $version = $json.tag_name -replace "v", ""
-    $url32 = ($json.assets | Where-Object { $_.name -Match "win" })[0].browser_download_url
+    $url32 = ($json.assets | Where-Object name -Match "sslscan.*zip$")[0].browser_download_url
 
     return @{
         Version = $version
