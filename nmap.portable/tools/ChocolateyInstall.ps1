@@ -2,18 +2,17 @@
 
 $PackageName = 'nmap'
 $Url32 = 'https://nmap.org/dist/nmap-7.93-setup.exe'
-$InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
-$UnzipLocation = Join-Path $InstallationPath 'tmp'
+$ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
+$InstallationPath = (Get-Item -Path $ToolsPath).FullName
 
 $PackageArgs = @{
     PackageName   = $PackageName
     Url           = $Url32
-    UnzipLocation = $UnzipLocation
+    UnzipLocation = $InstallationPath
 }
 Install-ChocolateyZipPackage @PackageArgs
 
-$UnzipPath = (Get-ChildItem $UnzipLocation -Directory | Where-Object Name -Match "${PackageName}" | Select-Object -First 1).FullName
-Copy-Item -Path $(Join-Path $UnzipPath "*") -Destination $InstallationPath -Recurse -Force
-Remove-Item -Path $UnzipLocation -Recurse -Force -ErrorAction Ignore
+Remove-Item -Path $(Join-Path $InstallationPath '$PLUGINSDIR') -Recurse -Force
+Remove-Item -Path $(Join-Path $InstallationPath 'Uninstall.exe') -Force
 
-Install-ChocolateyPath -PathToInstall $InstallationPath -PathType 'Machine'
+Get-ChildItem $ToolsPath -File -Exclude @("ncat.exe", "ndiff.exe", "nmap.exe", "nping.exe", "zenmap.exe") -Recurse | ForEach-Object { $null = New-Item "$($_.FullName).ignore" -Type File -Force }
