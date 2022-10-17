@@ -22,13 +22,7 @@ function global:au_GetLatest {
 
 $PackageName = 'openjdk'
 $Url64=$(global:au_GetLatest).URL64
-$InstallationPath = Get-ToolsLocation
-
-$JdkVersion = ($Url64 -split "/|_" -match "openjdk-\d+(\.\d+)*")[0] -replace "openjdk", "jdk"
-$UnzipLocation = Join-Path $(Get-ToolsLocation) $JdkVersion
-if (Test-Path $UnzipLocation) {
-    Remove-Item -Path $UnzipLocation -Force -Recurse
-}
+$InstallationPath = Join-Path $(Get-ToolsLocation) 'java'
 
 $PackageArgs = @{
     PackageName    = $PackageName
@@ -36,8 +30,3 @@ $PackageArgs = @{
     UnzipLocation  = $InstallationPath
 }
 Install-ChocolateyZipPackage @PackageArgs
-
-$JAVA_HOME = $UnzipLocation
-Install-ChocolateyEnvironmentVariable -VariableName 'JAVA_HOME' -VariableValue $JAVA_HOME -VariableType 'Machine'
-
-Install-ChocolateyPath -PathToInstall $(Join-Path $JAVA_HOME 'bin') -PathType 'Machine'
