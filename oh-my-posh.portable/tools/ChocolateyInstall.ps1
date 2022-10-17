@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'oh-my-posh'
-$Url64 = 'https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.3.1/posh-windows-amd64.7z'
+$Url64 = 'https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.3.2/posh-windows-amd64.7z'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $InstallationPath = (Get-Item -Path $ToolsPath).FullName
 
