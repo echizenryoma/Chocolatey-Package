@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>wiztree.portable</id>
-    <version>4.10</version>
+    <version>4.11</version>
     <packageSourceUrl>https://github.com/echizenryoma/Chocolatey-Package/tree/master/wiztree.portable</packageSourceUrl>
     <owners>DDoSolitary, Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
