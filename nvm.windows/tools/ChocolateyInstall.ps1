@@ -2,7 +2,7 @@
 $ErrorActionPreference = "Stop"
 
 $PackageName = 'nvm'
-$Url = 'https://github.com/coreybutler/nvm-windows/releases/download/1.1.9/nvm-noinstall.zip'
+$Url = 'https://github.com/coreybutler/nvm-windows/releases/download/1.1.10/nvm-noinstall.zip'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $UnzipLocation = Join-Path $InstallationPath 'tmp'
 $PackageArgs = @{

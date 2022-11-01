@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>nvm.windows</id>
     <title>NVM (Windows)</title>
-    <version>1.1.9</version>
+    <version>1.1.10</version>
     <authors>coreybutler</authors>
     <owners>Echizen Ryoma</owners>
     <summary>A node.js version management utility for Windows.</summary>
