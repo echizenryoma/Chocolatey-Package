@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'mitmproxy'
-$Url = 'https://snapshots.mitmproxy.org/9.0.0/mitmproxy-9.0.0-windows.zip'
+$Url = 'https://snapshots.mitmproxy.org/9.0.1/mitmproxy-9.0.1-windows.zip'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 . $(Join-Path $ToolsPath "StopProcess.ps1")
