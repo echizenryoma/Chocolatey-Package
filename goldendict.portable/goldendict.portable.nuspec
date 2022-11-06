@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>goldendict.portable</id>
-    <version>1.5.0.2372</version>
+    <version>22.9.23.221001</version>
     <title>GoldenDict (Portable)</title>
     <authors>Konstantin Isakov</authors>
     <owners>Echizen Ryoma</owners>
