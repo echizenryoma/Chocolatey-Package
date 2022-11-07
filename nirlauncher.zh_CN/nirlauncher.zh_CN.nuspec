@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>nirlauncher.zh_CN</id>
-    <version>1.23.65</version>
+    <version>1.23.66</version>
     <title>NirLauncher (Simplified Chinese)</title>
     <authors>Nir Sofer</authors>
     <owners>Echizen Ryoma</owners>

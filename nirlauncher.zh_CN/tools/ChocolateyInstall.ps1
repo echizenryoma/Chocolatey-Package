@@ -2,7 +2,7 @@
 
 $PackageName = 'NirSoft'
 $Url = 'https://download.nirsoft.net/nirsoft_package_schinese.zip'
-$Checksum = 'bc61f1c71a143148fd17e6d782d4266281e42abcd446a64b404ac4c128126726'
+$Checksum = '30923b180b1d6b252dccab7cd2c3a2bbf942374c1b89232cd935a829df0c8801'
 $ChecksumType = 'sha256'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $TmpLocation = Join-Path $InstallationPath 'tmp'
