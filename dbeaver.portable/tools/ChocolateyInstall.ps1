@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'dbeaver'
-$Url64 = 'https://github.com/dbeaver/dbeaver/releases/download/22.2.4/dbeaver-ce-22.2.4-win32.win32.x86_64.zip'
+$Url64 = 'https://github.com/dbeaver/dbeaver/releases/download/22.2.5/dbeaver-ce-22.2.5-win32.win32.x86_64.zip'
 $InstallationPath = Get-ToolsLocation
 
 $PackageArgs = @{
