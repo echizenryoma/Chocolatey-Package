@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'oh-my-posh'
-$Url32 = 'https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.25.0/posh-windows-386.exe'
-$Url64 = 'https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.25.0/posh-windows-amd64.exe'
-$UrlExtra = 'https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.25.0/themes.zip'
+$Url32 = 'https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.26.0/posh-windows-386.exe'
+$Url64 = 'https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.26.0/posh-windows-amd64.exe'
+$UrlExtra = 'https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v12.26.0/themes.zip'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $InstallationPath = (Get-Item -Path $ToolsPath).FullName
 
