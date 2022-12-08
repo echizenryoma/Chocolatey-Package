@@ -10,7 +10,7 @@ function GetLatestUrl ([string]$arch) {
         "projectId"  = $obj.projectId
         "releaseId"  = ($obj.pool.f.r | Select-Object -Unique -First 1)
         "projectUri" = $obj.pool.u
-        "fileName"   = ($obj.pool.f.n -match "zip" -notmatch "manual" -match "${arch}bit")[0]
+        "fileName"   = ($obj.pool.f.n -match "zip" -notmatch "manual" -match "x${arch}")[0]
         "source"     = $obj.pool.c
     } | ConvertTo-Json -Compress
 
