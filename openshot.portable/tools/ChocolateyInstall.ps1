@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'OpenShot'
-$Url32 = 'https://github.com/OpenShot/openshot-qt/releases/download/v2.6.1/OpenShot-v2.6.1-x86.exe'
-$Url64 = 'https://github.com/OpenShot/openshot-qt/releases/download/v2.6.1/OpenShot-v2.6.1-x86_64.exe'
+$Url32 = 'https://github.com/OpenShot/openshot-qt/releases/download/v3.0.0/OpenShot-v3.0.0-x86.exe'
+$Url64 = 'https://github.com/OpenShot/openshot-qt/releases/download/v3.0.0/OpenShot-v3.0.0-x86_64.exe'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $TmpLocation = Join-Path $InstallationPath 'tmp'
 $UnzipLocation = $TmpLocation

@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>openshot.portable</id>
-    <version>2.6.1</version>
+    <version>3.0.0</version>
     <title>Openshot</title>
     <authors>echizenryoma</authors>
     <owners>Jonathan Thomas</owners>
