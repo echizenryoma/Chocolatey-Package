@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'GoldenDict'
-$Url64 = 'https://github.com/xiaoyifang/goldendict/releases/download/v22.11.22-LightSnow.221123.46633eb4/5.15.2-GoldenDict.exe_windows-2019_20221123.zip'
+$Url64 = 'https://github.com/xiaoyifang/goldendict/releases/download/v22.12.22-WinterSolstice.221220.311d08c6/5.15.2-GoldenDict.exe_windows-2019_20221220.zip'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $UnzipLocation = Join-Path $InstallationPath 'tmp'
 
