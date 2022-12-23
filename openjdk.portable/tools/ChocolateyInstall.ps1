@@ -7,7 +7,7 @@ function global:au_GetLatest {
 
     $page = Invoke-WebRequest -UseBasicParsing -Uri $url
     $url64 = ($page.Links.href -match "windows.*zip$")[0]
-    $version = ($url64 -split '/|_' -match '^openjdk-\d+(\.\d+)*$')[0] -replace "openjdk-",""
+    $version = ($url64 -split '/|_' -match '^openjdk-\d+(\.\d+)*$')[0] -replace "openjdk-", ""
     $dot_count = 2 - ($version.ToCharArray() | Where-Object { $_ -eq '.' } | Measure-Object).Count
     if ($dot_count -lt 0) {
         $dot_count = 0
@@ -20,13 +20,29 @@ function global:au_GetLatest {
     }
 }
 
+$LatestInfo = $(global:au_GetLatest)
+
 $PackageName = 'openjdk'
-$Url64=$(global:au_GetLatest).URL64
+$Url64 = $LatestInfo.URL64
+$Version = $LatestInfo.Version
 $InstallationPath = Join-Path $(Get-ToolsLocation) 'java'
 
 $PackageArgs = @{
-    PackageName    = $PackageName
-    Url64          = $Url64
-    UnzipLocation  = $InstallationPath
+    PackageName   = $PackageName
+    Url64         = $Url64
+    UnzipLocation = $InstallationPath
 }
 Install-ChocolateyZipPackage @PackageArgs
+
+$JdkVersion = ($Url64 -split "/|_" -match "openjdk-\d+(\.\d+)*")[0] -replace "openjdk", "jdk"
+$JdkLinkPath = Join-Path $InstallationPath 'jdk'
+$JdkMajorLinkPath = Join-Path $InstallationPath "jdk$(([Version]$version).Major)"
+
+$UnzipLocation = Join-Path $InstallationPath $JdkVersion
+
+New-Item -ItemType SymbolicLink -Path $JdkMajorLinkPath -Target $UnzipLocation -Force
+New-Item -ItemType SymbolicLink -Path $JdkLinkPath -Target $JdkMajorLinkPath -Force
+
+$JAVA_HOME = $JdkLinkPath
+Install-ChocolateyEnvironmentVariable -VariableName 'JAVA_HOME' -VariableValue $JAVA_HOME -VariableType 'Machine'
+Install-ChocolateyPath -PathToInstall $(Join-Path $JAVA_HOME 'bin') -PathType 'Machine'
