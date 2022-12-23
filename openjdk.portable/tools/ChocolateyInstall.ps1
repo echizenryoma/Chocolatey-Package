@@ -26,21 +26,24 @@ $PackageName = 'openjdk'
 $Url64 = $LatestInfo.URL64
 $Version = $LatestInfo.Version
 $InstallationPath = Join-Path $(Get-ToolsLocation) 'java'
+$TmpLocation = Join-Path $InstallationPath 'tmp'
 
 $PackageArgs = @{
     PackageName   = $PackageName
     Url64         = $Url64
-    UnzipLocation = $InstallationPath
+    UnzipLocation = $TmpLocation
 }
 Install-ChocolateyZipPackage @PackageArgs
 
-$JdkVersion = ($Url64 -split "/|_" -match "openjdk-\d+(\.\d+)*")[0] -replace "openjdk", "jdk"
+$UnzipLocation = Get-ChildItem $TmpLocation -Directory | Select-Object -Last 1
+$JdkLocation = Join-Path $InstallationPath $UnzipLocation.BaseName
+Copy-Item -Path $UnzipLocation.FullName -Destination $JdkLocation -Recurse -Force
+Remove-Item -Path $TmpLocation -Recurse -Force
+
 $JdkLinkPath = Join-Path $InstallationPath 'jdk'
 $JdkMajorLinkPath = Join-Path $InstallationPath "jdk$(([Version]$version).Major)"
 
-$UnzipLocation = Join-Path $InstallationPath $JdkVersion
-
-New-Item -ItemType SymbolicLink -Path $JdkMajorLinkPath -Target $UnzipLocation -Force
+New-Item -ItemType SymbolicLink -Path $JdkMajorLinkPath -Target $JdkLocation -Force
 New-Item -ItemType SymbolicLink -Path $JdkLinkPath -Target $JdkMajorLinkPath -Force
 
 $JAVA_HOME = $JdkLinkPath
