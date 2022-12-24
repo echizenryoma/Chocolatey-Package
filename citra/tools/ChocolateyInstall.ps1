@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'citra'
-$Url = 'https://github.com/citra-emu/citra-canary/releases/download/canary-2344/citra-windows-mingw-20221223-ca590ef.7z'
+$Url = 'https://github.com/citra-emu/citra-canary/releases/download/canary-2345/citra-windows-mingw-20221224-93e5c65.7z'
 $ToolsPath = Join-Path $(Get-ToolsLocation) $PackageName
 
 $PackageArgs = @{
