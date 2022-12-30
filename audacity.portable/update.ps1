@@ -15,11 +15,11 @@ function global:au_GetLatest {
     $url = 'https://www.fosshub.com/Audacity.html'
     $page = Invoke-WebRequest -Uri $url -UseBasicParsing
     $obj = ($page.Content -split "\n" -match "var settings") -split "=" -match "{" | ConvertFrom-Json
-    $file32 = ($obj.pool.f -match "zip" -match "32" -match "win" -notmatch "manual")[0]
+    $file32 = ($obj.pool.f -match "zip" -match "x32" -match "win" -notmatch "manual")[0]
     $checksum_type = 'sha256'
     $checksum32 = $file32.hash.$checksum_type
     $version32 = $file32.n -split "-|\.zip" -match "\d+(\.\d+)+"
-    $file64 = ($obj.pool.f -match "zip" -match "64" -match "win" -notmatch "manual")[0]
+    $file64 = ($obj.pool.f -match "zip" -match "x64" -match "win" -notmatch "manual")[0]
     $checksum64 = $file64.hash.$checksum_type
     $version64 = $file64.n -split "-|\.zip" -match "\d+(\.\d+)+"
 
