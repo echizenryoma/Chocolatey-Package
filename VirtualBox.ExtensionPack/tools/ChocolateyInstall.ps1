@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Ignore'
 
 $PackageName = 'VirtualBox.ExtensionPack'
-$Url = 'https://download.virtualbox.org/virtualbox/7.0.4/Oracle_VM_VirtualBox_Extension_Pack-7.0.4.vbox-extpack'
+$Url = 'https://download.virtualbox.org/virtualbox/7.0.6/Oracle_VM_VirtualBox_Extension_Pack-7.0.6.vbox-extpack'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $VBoxExtensionPack = Join-Path $ToolsPath $([IO.Path]::GetFileName($Url))
 $VBoxManage = Join-Path $Env:VBOX_MSI_INSTALL_PATH "VBoxManage.exe"
