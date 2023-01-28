@@ -2,14 +2,14 @@
 Group=K-Lite Codec Pack
 NoIcons=0
 SetupType=custom
-Components=player\mpchc\x64, video\microsoft\vc1, video\microsoft\wmv, video\lav, video\lav\hevc, video\lav\h264, video\lav\mpeg4, video\lav\mpeg2, video\lav\mpeg1, video\lav\other, video\ffproc\manual, audio\microsoft\wma, audio\lav, audio\lav\ac3dts, audio\lav\truehd, audio\lav\aac, audio\lav\flac, audio\lav\mpeg, audio\lav\other, audio\ffproc\manual, sourcefilter\microsoft\avi, sourcefilter\microsoft\mpegps, sourcefilter\microsoft\wmv, sourcefilter\lav, sourcefilter\lav\matroska, sourcefilter\lav\mp4, sourcefilter\lav\mpegts, sourcefilter\lav\other, sourcefilter\dcbass\optimfrog, sourcefilter\dcbass\tracker, subtitles\vsfilter, subtitles\xysubfilter, other\madvr, other\mpcvr, other\haalirenderer, videovfw\x264, videovfw\xvid, videovfw\lagarith, videovfw\huffyuv, audioacm\ac3acm, audioacm\mp3lame, videovfw\ffdshow, tools\codectweaktool, tools\mediainfo, tools\graphstudio, shell\icaros_thumbnail, shell\icaros_property, misc\brokencodecs, misc\brokenfilters
-Tasks=reset_settings\fresh, mpc_sendto, mediainfo_sendto, config_shortcuts, systray_lavsplitter, systray_lav, systray_ffdshow, systray_madvr, wmp_reg_formats, mediainfo_contextmenu, adjust_preferred_decoders, w10_disable_thumb_cleanup, h264mvc
+Components=player\mpchc\x64, video\microsoft\vc1, video\microsoft\wmv, video\lav, video\lav\hevc, video\lav\h264, video\lav\mpeg4, video\lav\mpeg2, video\lav\mpeg1, video\lav\other, video\ffproc\manual, audio\microsoft\wma, audio\lav, audio\lav\ac3dts, audio\lav\truehd, audio\lav\aac, audio\lav\flac, audio\lav\mpeg, audio\lav\other, audio\ffproc\manual, sourcefilter\microsoft\avi, sourcefilter\microsoft\mpegps, sourcefilter\microsoft\wmv, sourcefilter\lav, sourcefilter\lav\matroska, sourcefilter\lav\mp4, sourcefilter\lav\mpegts, sourcefilter\lav\other, sourcefilter\dcbass\optimfrog, sourcefilter\dcbass\tracker, subtitles\vsfilter, videovfw\x264, videovfw\xvid, videovfw\lagarith, videovfw\huffyuv, audioacm\ac3acm, audioacm\mp3lame, videovfw\ffdshow, tools\codectweaktool, tools\mediainfo, tools\graphstudio, shell\icaros_thumbnail, shell\icaros_property, misc\brokencodecs, misc\brokenfilters
+Tasks=reset_settings\fresh, mpc_desktop, mpc_sendto, mediainfo_sendto, config_shortcuts, systray_lavsplitter, systray_lav, systray_ffdshow, wmp_reg_formats, mediainfo_contextmenu, adjust_preferred_decoders, w10_disable_thumb_cleanup, h264mvc
 NoRestart=1
 CloseApplications=0
 [Data]
 uim_version=12
-creationdate=20221012
-creationtime=110741
+creationdate=20230128
+creationtime=122902
 [Settings]
 abort_if_existing_version_is_newer=1
 keep_existing_settings_on_upgrade=1
