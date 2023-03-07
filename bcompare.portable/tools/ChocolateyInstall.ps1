@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'BeyondCompare'
-$Url64 = 'https://www.scootersoftware.com/BCompare-4.4.5.27371.exe'
+$Url64 = 'https://www.scootersoftware.com/BCompare-4.4.6.27483.exe'
 $InstallationPath = Join-Path $(Get-ToolsLocation) $PackageName
 $TmpLocation = Join-Path $InstallationPath 'tmp'
 $UnzipLocation = $TmpLocation
