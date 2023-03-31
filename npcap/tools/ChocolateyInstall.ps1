@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'npcap'
-$Url32 = 'https://nmap.org/npcap/dist/npcap-1.72.exe'
+$Url32 = 'https://nmap.org/npcap/dist/npcap-1.73.exe'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $DownloadPath = (Get-Item -Path $ToolsPath).FullName
 
