@@ -5,7 +5,7 @@
     <id>npcap</id>
     <title>Npcap</title>
     <owners>Echizen Ryoma</owners>
-    <version>1.73</version>
+    <version>1.74</version>
     <authors>NetGroup, CACE Technologies</authors>
     <licenseUrl>https://raw.githubusercontent.com/nmap/npcap/master/LICENSE</licenseUrl>
     <projectUrl>https://nmap.org/npcap/</projectUrl>
