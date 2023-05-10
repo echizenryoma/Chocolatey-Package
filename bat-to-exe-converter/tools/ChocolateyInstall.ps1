@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$PackageName = 'battoexeconverter'
+$PackageName = 'bat-to-exe-converter'
 $Url = 'https://ipfs.io/ipfs/QmPBp7wBSC9GukPUcp7LXFCGXBvc2e45PUfWUbCJzuLG65?filename=Bat_To_Exe_Converter.zip'
 $ToolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
