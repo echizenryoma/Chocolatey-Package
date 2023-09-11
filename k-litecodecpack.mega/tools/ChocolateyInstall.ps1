@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $PackageName = 'k-litecodecpack.mega'
-$Url32 = 'https://files3.codecguide.com/K-Lite_Codec_Pack_1775_Mega.exe'
-$Checksum32 = '29bf9989578ec2c72a229950a8ff2a158f0260b6ca4934f1f2be1f7e3578e0b6'
+$Url32 = 'https://files3.codecguide.com/K-Lite_Codec_Pack_1780_Mega.exe'
+$Checksum32 = 'a155ce793dc273b2da6507ec7d93cdc193046b838008b60f526bff4f6f02aad5'
 $ChecksumType32 = 'sha256'
 $ToolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
